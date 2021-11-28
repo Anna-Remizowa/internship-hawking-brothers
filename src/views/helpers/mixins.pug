@@ -1,0 +1,34 @@
+mixin social_media(socialList, socialClass)
+  nav.social-media-menu
+    ul.social-media-menu__list
+      each item in #{socialList}
+        a.social-media-menu__item(href= item.href)
+          img(src= item.src, class="social-media-menu__img "+socialClass)
+
+mixin background_image(imageClass)
+  .background-img
+    img(class="background-img__background-circle " + imageClass)
+
+mixin arrows(id)
+  .arrows-container(id= id)
+    .arrows-container__arrow-left
+      img.base-arrow.base-arrow--left
+    .arrows-container__arrow-right
+      img.base-arrow.base-arrow--right
+
+mixin product_slider(product)
+  .bestsellers__slide-container
+    .bestsellers__img-container
+      img.bestsellers__img(src= product.src)
+      .cart-container
+        a.cart-container__link.bestsellers__cart-link
+          img.cart-container__img.bestsellers__cart-img
+    p.text--one-highlight.bestsellers__header-text= product.name
+    p.bestsellers__content-text= product.description
+    .price-container.start__content-price
+      p.price-container__price-new.text--price-highlight= product.costNew
+        span
+          img.currency-unit.price-container__price-currency-unit--highlight
+      p.price-container__price-old= product.costOld
+        span
+          img.currency-unit.price-container__price-currency-unit--not-highlight

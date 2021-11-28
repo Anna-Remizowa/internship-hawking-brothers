@@ -1,0 +1,37 @@
+header.header
+  .container
+    .header__inner
+      .logo
+        a.logo__link(href='/')
+          img.logo__img
+      .menu-minimized
+        a.menu-minimized__link
+          img.menu-minimized__img
+      nav.menu
+        ul.menu__list
+          li.menu__list-item.menu__link--active
+            a.menu__link(href='/') Каталог товаров
+          li.menu__list-item.active
+            a.menu__link(href='/') доставка и оплата
+          li.menu__list-item.active
+            a.menu__link(href='/') Цены
+          li.menu__list-item.active
+            a.menu__link(href='/') Контакты
+      .header__phone
+        a.header__phone-number +7 (812) 509 21 98
+      .header__phone-me
+        a.header__phone-me-link
+
+      +social_media(#{socialList}, "social-media-menu__img--head-foot-style")
+
+      .search
+        a.search__link(href='/')
+          img.search__img
+      .favorites
+        a.favorites__link(href='/')
+          img.favorites__img
+      .cart-container
+        a.cart-container__link.header__cart-link(href='/')
+          img.cart-container__img.header__cart-img
+        .circle-count
+          p.circle-count__count-text

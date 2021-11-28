@@ -1,0 +1,232 @@
+extends ../layouts/default
+include ../helper/mixins
+
+block variables
+  include ../variables/index-var.pug
+
+block content
+  section.start
+    .container
+      .start__inner
+        .start__left-content
+          .start__content-discount
+            p.start__discount-title Скидка
+              span.text.text--price-highlight.start__discount-title--highlight 3%
+            p.start__discount-item на дымоход
+            p.start__discount-note
+              strong *
+              | при покупке комплекта от
+              span.start__discount-note--highlight 10 000
+              span
+                img.currency-unit.start__discount-currency-unit
+          .price-container.start__content-price
+            p.price-container__price-new.text--price-highlight.start__price-new 16 490
+              span
+                img.currency-unit.price-container__price-currency-unit--highlight
+            p.price-container__price-old.start__price-old 16 490
+              span
+                img.currency-unit.price-container__price-currency-unit--not-highlight
+          .start__content-buttons
+            input.button.button--main-color В каталог
+            input.button.button--secondary-color Монтаж
+        .start__right-content
+          .start__img-container
+            //todo: стартовая картинка
+
+  section.bestsellers
+    .container
+        .bestsellers__inner
+          .bestsellers__header
+            h2.title Хиты продаж
+            +arrows("arrowsBestsellers")
+
+          //bestsellers_products определен в index-var
+          .bestsellers__slider
+            each product in #{bestsellers_products}
+              +product_slider(product)
+
+  section.projects
+    .container
+      .projects__inner
+        .projects__img-container
+          .projects__slider
+
+            //todo: слайдер не дублируется - отдельный компонент (не миксин)
+            //projects_products определен в index-var
+            each product in #{projects_products}
+              .projects__slide-container
+                img.projects__img(src= product.src)
+              p.projects__text-header= product.name
+              .projects__product-param
+                p.text.text--weak-highlight.projects__text-param-name Диаметр
+                .border-bottom-text
+                p.text.text--two-highlight.projects__text-param-desc= product.diameter
+              .projects__product-param
+                p.text.text--weak-highlight.projects__text-param-name Сталь
+                .border-bottom-text
+                p.text.text--three-highlight.projects__text-param-desc= product.steel
+              p.projects__text-content= product.description
+
+          +background_image("background-img__background-circle--one")
+
+        .projects__content-container
+          h2.title Выполненные
+            span.title.text--two-highlight проекты
+          p.text
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            | sed do eiusmod tempo
+          +arrows("arrowsProjects")
+
+  section.cost-calculation
+    .container
+      .cost-calculation__inner
+        .cost-calculation__content-container
+          h2.title
+            span.title.text--price-highlight самостоятельный
+            | расчёт стоимости дымохода
+          p.text
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            | sed do eiusmod tempo
+          p.text Для расчета стоимости пройдите тест за
+            span.text.text--one-highlight 1 минуту
+          input.button.button--main-color рассчитать стоимость
+        .cost-calculation__img-container
+          //todo: картинка для раздела рассчитать стоимость
+
+  section.benefits
+    .container
+      .benefits__inner
+        .list-with-img.benefits__list-with-img
+          .list-with-img__box
+            img.list-with-img__img
+            .list-with-img__text-box
+              h3.small-title Бесплатная консультация
+              p.text
+                | Позвонить нам, чтобы получить бесплатную консультацию,
+                | на крепёж, стыковку элементов и «вертикальность»
+          .list-with-img__box
+            img.list-with-img__img
+            .list-with-img__text-box
+              h3.small-title Большой опыт
+              p.text
+                | У нас большой опыт установки, монтажа, убедитесь
+                | в этом прочитав отзывы и посмотрите фотографии наших работ
+        .list-with-img.benefits__list-with-img
+          .list-with-img__box
+            img.list-with-img__img
+            .list-with-img__text-box
+              h3.small-title Бесплатный просчёт
+              p.text
+                | Оставьте заявку или перезвоните нам на расчёт
+                | стоимости монтажа для дома, бани или котельной.
+          .list-with-img__box
+            img.list-with-img__img
+            .list-with-img__text-box
+              h3.small-title Чистка дымохода
+              p.text
+                | Мы производим чистку дымохода с применением
+                | современной профессиональной технологии.
+
+  section.measurement
+    .container
+      .measurement__inner
+
+        +background_image("background-img__background-circle--two")
+
+        .measurement__content
+          .measurement__img-container
+            //todo: картинка для раздела замер
+          .measurement__part-container
+            h2.title Заказать выезд инженера
+              span.title.text--price-highlight на замер
+            p.text Оставьте заявку по телефону
+              span.text.text--three-highlight +7 (812) 509-29-36
+            p.text
+              | Наш инженер-проектировщик приедет в удобное для Вас
+              | время, поможет с выбором места установки печи или котла
+              | и осуществит замер для Вашего дымохода
+
+        include ../../components/form-order/form-order.pug
+
+  section.installation
+    .container
+      .installation__inner
+        .installation__text-container
+          .installation__text-content
+            p.text
+              | Правильная установка очень важна, от этого зависит
+              | не только красота но и ваша безопасность. Не
+              | профессиональная установка газоотводящей системы несёт
+              | большую опасность возникновения пожаров и отравление
+              | угарным газом.
+            p.text
+              | В
+              span.text.text--one-highlight Дымоход ру.
+              | работают профессионалы с большим опытом работы,
+              | они ежегодно проходят курсы повышения квалификации
+            p.text
+              | #[strong Все работы проводим качественно, аккуратно, и на совесть]
+          .installation__img-container
+            //todo: картинка для раздела установка
+
+        .installation__items-container
+          .list-with-img.installation__list-with-img
+            .list-with-img__box
+              img.list-with-img__img
+              .list-with-img__text-box
+                h3.small-title Доступные цены
+                p.text
+                  | Мы предлагаем нашу продукцию, услуги по доступным
+                  | ценам и отличного качества
+            .list-with-img__box
+              img.list-with-img__img
+              .list-with-img__text-box
+                h3.small-title Установка
+                p.text
+                  | Устанавливаем дымоходы, камины, печи, котлы
+                  | всех производителей
+            .list-with-img__box
+              img.list-with-img__img
+              .list-with-img__text-box
+                h3.small-title Профессионализм
+                p.text
+                  | Квалифицированные специалисты. Работаем чисто,
+                  | аккуратно, убираем за собой
+            .list-with-img__box
+              img.list-with-img__img
+              .list-with-img__text-box
+                h3.small-title Гарантия качества
+                p.text
+                  | Мы даём гарантию на все изделия и работы, выполненные
+                  | нашими специалистами.
+
+  section.about
+    .container
+      .about__inner
+        .about__content-container
+          h2.title О компании в цифрах
+          .about__content-items
+            .about__content-part
+              .about__content-item
+                h1.big-title.text--one-highlight 11
+                p.text Магазинов продают нашу продукцию
+              .about__content-item
+                h1.big-title.text--one-highlight 1886
+                p.text Выполненных объектов
+            .about__content-part
+              .about__content-item
+                h1.big-title.text--one-highlight 18
+                p.text Лет опыта работы на рынке с гарантией качества
+              .about__content-item
+                h1.big-title.text--one-highlight 90%
+                p.text рекомендуют и обращаются к нам повторно
+        .about__img-container
+          //todo: картинка для раздела о компании
+
+  section.request
+    .container
+      .request__inner
+        .request__header
+          h2.title.request__title Оставьте заявку
+          h4.very-small-title.request__small-title или свяжитесь с нами в социальных сетях
+        +social_media(#{socialList}, "social-media-menu__img--request-style")
