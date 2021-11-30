@@ -18,10 +18,10 @@ const paths = {
     ]
   },
   scripts: {
-    src: './src/js/index.js',
+    src: './src/js/components.js',
     dist: './dist/assets/js/',
     watch: [
-      './src/js/index.js',
+      './src/js/components.js',
       './src/components/**/*.js'
     ]
   },
