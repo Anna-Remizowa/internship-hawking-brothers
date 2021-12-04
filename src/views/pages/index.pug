@@ -1,37 +1,42 @@
 extends ../layouts/default
-include ../helper/mixins
+include ../helpers/general-mixins
+include ../helpers/index-mixins
 
 block variables
   include ../variables/index-var.pug
 
 block content
   section.start
-    .container
+    .container-fluid
       .start__inner
-        .start__left-content
+        .start__content
           .start__content-discount
             p.start__discount-title Скидка
-              span.text.text--price-highlight.start__discount-title--highlight 3%
-            p.start__discount-item на дымоход
-            p.start__discount-note
-              strong *
-              | при покупке комплекта от
-              span.start__discount-note--highlight 10 000
-              span
-                img.currency-unit.start__discount-currency-unit
+              span.start__discount-title.start__discount-title--highlight  3%
+            p.start__discount-sub-title на дымоход
+            p.start__discount-note.start__discount-note-sign
+              span.start__discount-note.start__discount-note--black-highlight *
+              |  при покупке комплекта от
+              span.start__discount-note.start__discount-note--highlight  10 000
           .price-container.start__content-price
-            p.price-container__price-new.text--price-highlight.start__price-new 16 490
-              span
-                img.currency-unit.price-container__price-currency-unit--highlight
+            p.price-container__price-new.start__price-new 16 490
             p.price-container__price-old.start__price-old 16 490
-              span
-                img.currency-unit.price-container__price-currency-unit--not-highlight
           .start__content-buttons
-            input.button.button--main-color В каталог
-            input.button.button--secondary-color Монтаж
-        .start__right-content
-          .start__img-container
-            //todo: стартовая картинка
+            button.button.button--main-color В каталог
+            button.button.button--secondary-color Монтаж
+        .start__img-container
+          svg.img-absolute.start__img-blob-1
+            use(xlink:href= images.blob1)
+          svg.img-absolute.start__img-dots.start__img-dots--one
+            use(xlink:href= images.dots)
+          svg.img-absolute.start__img-dots.start__img-dots--two
+            use(xlink:href= images.dots)
+          svg.img-absolute.start__img-triangle.start__img-triangle--one
+            use(xlink:href= images.triangle)
+          svg.img-absolute.start__img-triangle.start__img-triangle--two
+            use(xlink:href= images.triangle)
+          .img-absolute.start__img-pipes-1
+          .img-absolute.start__img-pipes-2
 
   section.bestsellers
     .container
@@ -42,7 +47,7 @@ block content
 
         //bestsellers_products определен в index-var
         .bestsellers__slider
-          each product in #{bestsellers_products}
+          each product in bestsellers_products
             +product_slider(product)
 
   section.projects
@@ -53,7 +58,7 @@ block content
 
             //todo: слайдер не дублируется - отдельный компонент (не миксин)
             //projects_products определен в index-var
-            each product in #{projects_products}
+            each product in projects_products
               .projects__slide-container
                 img.projects__img(src= product.src)
               p.projects__text-header= product.name
@@ -89,7 +94,7 @@ block content
             | sed do eiusmod tempo
           p.text Для расчета стоимости пройдите тест за
             span.text.text--one-highlight 1 минуту
-          input.button.button--main-color рассчитать стоимость
+          input.button.button--main-color(value= "рассчитать стоимость")
         .cost-calculation__img-container
           //todo: картинка для раздела рассчитать стоимость
 
@@ -200,7 +205,7 @@ block content
                   | Мы даём гарантию на все изделия и работы, выполненные
                   | нашими специалистами.
 
-  section.about
+  section.J
     .container
       .about__inner
         .about__content-container
@@ -230,7 +235,7 @@ block content
           h2.title.request__title Оставьте заявку
           h4.very-small-title.request__small-title или свяжитесь с нами в социальных сетях
 
-        +social_media(#{socialList}, "social-media-menu__img--request-style")
+        +social_media(socialList, "social-media-menu__img--request-style")
 
         .request__questions-container
           ul.request__questions-part
@@ -289,7 +294,7 @@ block content
             span.title.text--price-highlight без денег
           p.text Теперь возможна оплата в кредит или в рассрочку 0%.
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          input.button.button--main-color купить в кредит
+          input.button.button--main-color(value= "купить в кредит")
         .without-money__img-container
           //todo: картинка для раздела замер
 
@@ -303,7 +308,7 @@ block content
 
         //reviews_list определен в index-var
         .reviews__slider
-          each review in #{reviews_list}
+          each review in reviews_list
             //todo: слайдер не дублируется - отдельный компонент (не миксин)
             .reviews__slide-container
               p.text.text--small= review.comments

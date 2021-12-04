@@ -1,1 +1,33 @@
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $header-height;
+    margin-top:26px;
+  }
 
+  &__phone-number {
+    @extend %text;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    color: $light-green;
+    margin-left: 56px;
+  }
+
+  &__phone-number--highlight {
+    color: $black-base;
+    font-weight: bold;
+  }
+
+  &__phone-me-link {
+    @extend %small-text;
+    color: $red;
+    line-height: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin: 5px 0 0 70px;
+    border-bottom: 1px dashed $red;
+  }
+}

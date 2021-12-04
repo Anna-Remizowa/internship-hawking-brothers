@@ -1,4 +1,5 @@
 block variables
+include ../variables/general-var.pug
 
 doctype html
 html(lang="ru")
@@ -9,9 +10,10 @@ html(lang="ru")
     title #{title ? title : 'Заголовок страницы'}
     link(href="/assets/styles/main.css" rel="stylesheet")
   body
-    main
-      include ../../components/header/header
-      block content
-      include ../../components/footer/footer
-    script(src="/assets/js/components.js")
+    .wrapper
+      main
+        include ../../components/header/header
+        block content
+        include ../../components/footer/footer
+    script(src="/assets/js/index.js")
     block scripts

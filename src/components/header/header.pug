@@ -1,37 +1,44 @@
-header.header
-  .container
+header
+
+  .container-fluid
     .header__inner
       .logo
-        a.logo__link(href='/')
-          img.logo__img
-      .menu-minimized
-        a.menu-minimized__link
-          img.menu-minimized__img
+        a.logo__link(href= routing.logo)
+          img.logo__img(src= images.logo)
+      .icon-line.icon-line--one
+        button.icon-line__button.icon-line__button--main
+          svg.icon.icon-line__button-img
+            use(xlink:href= images.menuMin)
+
       nav.menu
         ul.menu__list
-          li.menu__list-item.menu__link--active
-            a.menu__link(href='/') Каталог товаров
-          li.menu__list-item.active
-            a.menu__link(href='/') доставка и оплата
-          li.menu__list-item.active
-            a.menu__link(href='/') Цены
-          li.menu__list-item.active
-            a.menu__link(href='/') Контакты
-      .header__phone
-        a.header__phone-number +7 (812) 509 21 98
-      .header__phone-me
-        a.header__phone-me-link
+          li.menu__list-item
+            a.menu__link.menu__link--active(href= routing.catalog) Каталог товаров
+          li.menu__list-item
+            a.menu__link(href= routing.delivery) доставка и оплата
+          li.menu__list-item
+            a.menu__link(href= routing.price) Цены
+          li.menu__list-item
+            a.menu__link(href= routing.contacts) Контакты
+      a.header__phone-number(href="tel:+7-812-5092198")
+        | +7 (812)
+        span.header__phone-number--highlight  509 21 98
+      a.header__phone-me-link перезвоните мне
 
-      +social_media(#{socialList}, "social-media-menu__img--head-foot-style")
+      +social_media(socialList, "social-media-menu__img--head-foot-style")
 
-      .search
-        a.search__link(href='/')
-          img.search__img
-      .favorites
-        a.favorites__link(href='/')
-          img.favorites__img
-      .cart-container
-        a.cart-container__link.header__cart-link(href='/')
-          img.cart-container__img.header__cart-img
-        .circle-count
-          p.circle-count__count-text
+      .icon-line
+        .icon-line__button.icon-line__button--light
+          a.icon-line__button-link(href= routing.search)
+            svg.icon.icon-line__button-img
+              use(xlink:href= images.search)
+        .icon-line__button.icon-line__button--light
+          a.icon-line__button-link(href= routing.favorites)
+            svg.icon.icon-line__button-img
+              use(xlink:href= images.favorites)
+        .icon-line__button.icon-line__button--light
+          a.icon-line__button-link(href= routing.cart)
+            svg.icon.icon-line__button-img
+              use(xlink:href= images.cart)
+          .icon-line__button-circle-count
+            p.icon-line__button-count-text 10

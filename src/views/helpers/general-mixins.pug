@@ -1,9 +1,11 @@
-mixin social_media(socialList, socialClass)
+mixin social_media(socialList, socialColorClass)
   nav.social-media-menu
     ul.social-media-menu__list
       each item in socialList
-        a.social-media-menu__item(href= item.href)
-          img(src= item.src, class="social-media-menu__img " + socialClass)
+        li.social-media-menu__item
+          a.social-media-menu__link(href= item.href)
+            svg(class="social-media-menu__img " + socialColorClass + " social-media-menu__img--" + item.name)
+              use(xlink:href= item.src)
 
 mixin background_image(imageClass)
   .background-img

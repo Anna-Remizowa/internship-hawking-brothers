@@ -1,0 +1,407 @@
+html, body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1, h2, h3, h4, h5, h6, p,
+ul, ol, li,
+figure, figcaption,
+blockquote,
+dl, dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container, .container-fluid {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1360px;
+}
+
+.container-fluid {
+  max-width: 1920px;
+  padding: 0 67px;
+  height: 100%;
+}
+
+/*ОСНОВНЫЕ СТИЛИ ШРИФТОВ*/
+p, h1, h2, h3, h4, h5, h6, input, button, textarea, a, span,
+.custom-select-container span, .custom-select-container div {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  white-space: pre-line;
+  color: $font-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+//h1{
+//  font-size: 60px;
+//  line-height: 73px;
+//}
+//
+//h2{
+//  font-size: 40px;
+//  letter-spacing: 49px;
+//}
+//
+//h3{
+//  font-size: 30px;
+//  line-height: 37px;
+//}
+//
+//h4{
+//  font-size: 20px;
+//  line-height: 24px;
+//}
+//
+//p, a, span, .text{
+//  font-size: 16px;
+//  line-height: 30px;
+//}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration-line: none;
+  }
+}
+
+//todo: раскидать по компонентам
+
+/*КАРТИНКИ*/
+.logo {
+  &__img {
+    height: 97px;
+    width: 100px;
+  }
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+}
+
+.img-absolute {
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+/*КНОПКИ*/
+.icon-line {
+  display: flex;
+  margin-left: 44px;
+
+  &__button {
+    position: relative;
+    display: flex;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    border: 1px solid;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 16px;
+  }
+
+  &__button-link {
+    justify-content: center;
+    display: flex;
+  }
+
+  &__button--main {
+    border-color: $light-green;
+  }
+
+  &__button--light {
+    border-color: $background-color;
+  }
+
+  &__button-circle-count {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: $coral;
+    color: $white;
+  }
+
+  &__button-count-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    color: $white;
+  }
+}
+
+.icon-line--one {
+  margin-left: 36px;
+}
+
+.button {
+  height: 56px;
+  width: 240px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  @extend %text;
+  color: $white;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+  text-transform: lowercase;
+
+  &--main-color {
+    background-color: $dark-green;
+  }
+
+  &--secondary-color {
+    background-color: $orange;
+  }
+}
+
+
+/*МЕНЮ В HEADER*/
+.menu {
+  margin-left: 31px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    @extend %text;
+    text-transform: uppercase;
+    color: $light-green;
+    line-height: 23px;
+    font-weight: bold;
+    margin-right: 30px;
+  }
+
+  &__link:hover, &__link--active {
+    color: $black-base;
+  }
+}
+
+/*СТАРТОВЫЙ ЭКРАН*/
+.start {
+  height: calc(891px - #{$header-height});
+
+  &__inner {
+    display: flex;
+    height: inherit;
+    //align-items: center;
+    padding: 94px 0 0 94px;
+  }
+
+  &__content {
+    width: 500px;
+    margin: 65px 137px 0 0;
+  }
+
+  &__content-discount {
+    margin-bottom: 89px;
+  }
+
+  &__discount-title, &__discount-sub-title, &__discount-note {
+    color: $black-base;
+  }
+
+  &__discount-title {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 98px;
+    margin-bottom: 6px;
+  }
+
+  &__discount-title--highlight {
+    color: $coral;
+  }
+
+  &__discount-sub-title {
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 5px;
+  }
+
+  &__discount-note {
+    @extend %text;
+    font-weight: 300;
+    line-height: 23px;
+  }
+
+  &__discount-note-sign:after {
+    content: '\20BD';
+    margin-left: 6px;
+    font-weight: 700;
+  }
+
+  &__discount-note--black-highlight, &__discount-note--highlight {
+    font-weight: 900;
+  }
+
+  &__discount-note--highlight {
+    color: $light-green;
+  }
+
+  &__content-price {
+    margin-bottom: 25px;
+  }
+
+  &__price-new {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  &__price-new:after {
+    margin-left: 15px;
+    font-weight: 700;
+  }
+
+  &__price-old {
+    font-size: 25px;
+    line-height: 30px;
+    margin-left: 45px;
+  }
+
+  &__price-old:after {
+    margin-left: 14px;
+  }
+
+  &__content-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img-container {
+    position: relative;
+    flex-grow: 1;
+    height: inherit;
+  }
+
+  &__img-blob-1 {
+    max-width: 990px;
+    max-height: 699px;
+    left: 47px;
+  }
+
+  &__img-dots {
+    width: 36px;
+    height: 148px;
+  }
+
+  &__img-dots--one {
+    left: 447px;
+  }
+
+  &__img-dots--two {
+    bottom: 0;
+    right: 54px;
+  }
+
+  &__img-triangle {
+    width: 78px;
+    height: 19px;
+  }
+
+  &__img-triangle--one {
+    top: 358px;
+  }
+
+  &__img-triangle--two {
+    right: 98px;
+    top: 134px;
+  }
+
+  &__img-pipes-1 {
+    background: url(/assets/images/content/pipes-1.png) no-repeat;
+    background-size: contain;
+    max-width: 417px;
+    max-height: 402px;
+  }
+
+  &__img-pipes-2 {
+    background: url(/assets/images/content/pipes-2.png) no-repeat;
+    background-size: contain;
+    max-width: 615px;
+    max-height: 542px;
+    top: 70px;
+    left: 270px;
+  }
+}
+
+/*ЦЕНЫ (СТАРАЯ, НОВАЯ) - ДУБЛИРУЮТСЯ, ОТДЕЛЬНЫЙ КОМПОНЕНТ*/
+.price-container {
+  display: flex;
+  align-items: center;
+
+  &__price-new {
+    color: $coral;
+  }
+
+  &__price-old {
+    text-decoration-line: line-through;
+  }
+
+  &__price-old, &__price-old:after {
+    color: $gray;
+  }
+
+  &__price-new:after {
+    color: $black-base;
+  }
+
+  &__price-new:after, &__price-old:after {
+    content: '\20BD';
+    text-decoration-line: none;
+  }
+}
+
+

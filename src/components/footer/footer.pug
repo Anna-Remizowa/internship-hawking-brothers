@@ -1,4 +1,4 @@
-include ../../variables/footer-var.pug
+include ../../views/variables/footer-var.pug
 
 footer.footer
   .container
@@ -7,16 +7,16 @@ footer.footer
         h4.footer__title КАТАЛОГ
         .footer__catalog-items
           ul.footer__ul-items
-            +footer_link(#{footer_part1})
+            +footer_link(footer_part1)
           ul.footer__ul-items
-            +footer_link(#{footer_part2})
+            +footer_link(footer_part2)
       .footer__info-container
         h4.footer__title ИНФОРМАЦИЯ
         .footer__catalog-items
           ul.footer__ul-items
-            +footer_link(#{footer_part3})
+            +footer_link(footer_part3)
           ul.footer__ul-items
-            +footer_link(#{footer_part4})
+            +footer_link(footer_part4)
       .footer__hours-container
         h4.footer__title ВРЕМЯ РАБОТЫ
         .footer__text-icon-box
@@ -25,4 +25,4 @@ footer.footer
         .footer__text-icon-box
           svg.footer__svg
           p г. Санкт - Петербург ,ул. Тамбасова д.7
-        +social_media(#{socialList}, "social-media-menu__img--head-foot-style")
+        +social_media(socialList, "social-media-menu__img--head-foot-style")
