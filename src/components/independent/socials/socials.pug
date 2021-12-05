@@ -1,0 +1,7 @@
+mixin socials(socialList, socialColorClass)
+  .socials
+    ul.socials__list
+      each item in socialList
+        li.socials__item
+          a.socials__link(href= item.href)
+            +svg("socials__img " + socialColorClass + " socials__img--" + item.name, item.src)

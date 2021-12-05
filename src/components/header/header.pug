@@ -1,44 +1,40 @@
-header
+header.header
 
   .container-fluid
     .header__inner
       .logo
-        a.logo__link(href= routing.logo)
-          img.logo__img(src= images.logo)
+        a.logo__link(href= routing.home)
+          img.logo__img(src= "assets/images/logo.png", alt="Logo")
       .icon-line.icon-line--one
-        button.icon-line__button.icon-line__button--main
-          svg.icon.icon-line__button-img
-            use(xlink:href= images.menuMin)
+        button.icon-line__button.icon-line__button--main(type="button")
+          +svg("icon icon-line__button-img", "assets/images/sprite.svg#menu")
 
       nav.menu
         ul.menu__list
           li.menu__list-item
-            a.menu__link.menu__link--active(href= routing.catalog) Каталог товаров
+            a.menu__link(href= routing.catalog) Каталог товаров
           li.menu__list-item
             a.menu__link(href= routing.delivery) доставка и оплата
           li.menu__list-item
             a.menu__link(href= routing.price) Цены
           li.menu__list-item
             a.menu__link(href= routing.contacts) Контакты
-      a.header__phone-number(href="tel:+7-812-5092198")
+      a.header__phone-number(href="tel:+78125092198")
         | +7 (812)
-        span.header__phone-number--highlight  509 21 98
-      a.header__phone-me-link перезвоните мне
+        span.header__phone-number.header__phone-number--highlight  509 21 98
+      a.header__phone-me-link(href= "#") перезвоните мне
 
-      +social_media(socialList, "social-media-menu__img--head-foot-style")
+      +socials(socialList, "")
 
       .icon-line
         .icon-line__button.icon-line__button--light
           a.icon-line__button-link(href= routing.search)
-            svg.icon.icon-line__button-img
-              use(xlink:href= images.search)
+            +svg("icon icon-line__button-img", "assets/images/sprite.svg#search")
         .icon-line__button.icon-line__button--light
           a.icon-line__button-link(href= routing.favorites)
-            svg.icon.icon-line__button-img
-              use(xlink:href= images.favorites)
+            +svg("icon icon-line__button-img", "assets/images/sprite.svg#favorites")
         .icon-line__button.icon-line__button--light
           a.icon-line__button-link(href= routing.cart)
-            svg.icon.icon-line__button-img
-              use(xlink:href= images.cart)
+            +svg("icon icon-line__button-img", "assets/images/sprite.svg#shopping-cart")
           .icon-line__button-circle-count
             p.icon-line__button-count-text 10

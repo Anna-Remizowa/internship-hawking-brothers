@@ -1,0 +1,9 @@
+section.bestsellers
+  .container
+    .bestsellers__header
+      h1.title-overline Хиты продаж
+      +arrows("arrowsBestsellers")
+
+    .product-slider
+      each product in bestsellers_products
+        +product_slider(product)

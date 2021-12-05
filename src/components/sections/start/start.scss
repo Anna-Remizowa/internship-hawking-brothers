@@ -1,0 +1,148 @@
+/*СТАРТОВЫЙ ЭКРАН*/
+.start {
+  height: 794px;
+  margin-bottom: 169px;
+
+  &__inner {
+    display: flex;
+    height: inherit;
+    //align-items: center;
+    padding: 94px 0 0 94px;
+  }
+
+  &__content {
+    width: 500px;
+    margin: 65px 137px 0 0;
+  }
+
+  &__discount {
+    margin-bottom: 89px;
+
+    &-title, &-sub-title, &-note {
+      color: $black-base;
+    }
+
+    &-title {
+      margin-bottom: 6px;
+      font-weight: 700;
+      font-size: 80px;
+      line-height: 98px;
+    }
+
+    &-title--highlight {
+      color: $coral;
+    }
+
+    &-sub-title {
+      margin-bottom: 5px;
+      font-size: 35px;
+      line-height: 43px;
+    }
+
+    &-note {
+      @extend %text;
+      font-weight: 300;
+      line-height: 23px;
+    }
+
+    &-note-sign:after {
+      margin-left: 6px;
+      content: '\20BD';
+      font-weight: 700;
+    }
+
+    &-note--black-highlight, &-note--highlight {
+      font-weight: 900;
+    }
+
+    &-note--highlight {
+      color: $light-green;
+    }
+  }
+
+  &__content-price {
+    margin-bottom: 25px;
+  }
+
+  &__price-new {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 61px;
+
+    &__:after {
+      margin-left: 15px;
+      font-weight: 700;
+    }
+  }
+
+  &__price-old {
+    margin-left: 45px;
+    font-size: 25px;
+    line-height: 30px;
+
+    &:after {
+      margin-left: 14px;
+    }
+  }
+
+  &__content-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img-container {
+    position: relative;
+    height: inherit;
+    flex-grow: 1;
+  }
+
+  &__img-blob-1 {
+    left: 47px;
+    max-width: 990px;
+    max-height: 699px;
+  }
+
+  &__img-dots {
+    width: 36px;
+    height: 148px;
+
+    &--one {
+      left: 447px;
+    }
+
+    &--two {
+      bottom: 100px;
+      right: 54px;
+    }
+  }
+
+  &__img-triangle {
+    width: 78px;
+    height: 19px;
+
+    &--one {
+      top: 358px;
+    }
+
+    &--two {
+      right: 98px;
+      top: 134px;
+    }
+  }
+
+  &__img-pipes-1 {
+    max-width: 417px;
+    max-height: 402px;
+    background: url(/assets/images/content/pipes-1.png) no-repeat;
+    background-size: contain;
+  }
+
+  &__img-pipes-2 {
+    top: 70px;
+    left: 270px;
+    max-width: 615px;
+    max-height: 542px;
+    background: url(/assets/images/content/pipes-2.png) no-repeat;
+    background-size: contain;
+  }
+}

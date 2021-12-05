@@ -1,5 +1,4 @@
 const { src, dest } = require('gulp');
-const cheerio = require('gulp-cheerio');
 const svgstore = require('gulp-svgstore');
 const browserSync = require('browser-sync');
 const plumber = require('gulp-plumber');

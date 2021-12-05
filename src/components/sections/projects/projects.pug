@@ -1,0 +1,27 @@
+section.projects
+  .container
+    .projects__inner
+      .projects__img-container
+        +svg("img-absolute projects__img-blob-2", "assets/images/sprite.svg#blob-2")
+        .projects__slider
+          each product in projects_products
+            .projects__slide
+              img.projects__slide-img(src= product.src, alt= product.name)
+              p.projects__slide-title= product.name
+              .projects__slide-param
+                p.projects__slide-param-name Диаметр
+                .projects__slide-border-dots
+                p.projects__slide-param-desc.projects__slide-param-desc--one= product.diameter
+              .projects__slide-param
+                p.projects__slide-param-name Сталь
+                .projects__slide-border-dots
+                p.projects__slide-param-desc.projects__slide-param-desc--two= product.steel
+              p.projects__slide-text= product.description
+
+      .projects__content-container
+        h1.title.projects__title.projects__title-box Выполненные
+          span.title.projects__title.projects__title--highlight  проекты
+        p.projects__text
+          |  Lorem ipsum dolor sit amet, consectetur
+          |  adipiscing elit, sed do eiusmod tempo
+        +arrows("arrowsProjects")

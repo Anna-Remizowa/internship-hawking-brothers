@@ -1,0 +1,26 @@
+/*СТРЕЛКИ ДЛЯ СЛАЙДЕРОВ*/
+.arrows-container{
+  display: flex;
+
+  &__arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+    width: 54px;
+    height: 54px;
+    background-color: $white;
+    border: 1px solid $background-color;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__arrow-img{
+    width: 12px;
+    height: 20px;
+  }
+
+  &__arrow-img--left{
+    transform: rotate(180deg);
+  }
+}

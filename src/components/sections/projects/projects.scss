@@ -1,0 +1,117 @@
+/*РАЗДЕЛ - ПРОЕКТЫ*/
+.projects {
+  margin-bottom: 230px;
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 415px;
+    margin-left: 74px;
+  }
+
+  &__title-box {
+    margin: 66px 0 26px 0;
+  }
+
+  &__title {
+    text-align: right;
+
+    &--highlight {
+      font-weight: 700;
+      color: $light-green;
+    }
+  }
+
+  &__text {
+    margin-bottom: 58px;
+    @extend %text;
+    line-height: 30px;
+    text-align: right;
+    color: $dark-gray;
+  }
+
+  &__img-container {
+    position: relative;
+  }
+
+  &__img-blob-2 {
+    right: -75px;
+    top: -50px;
+    width: 720px;
+    height: 669px;
+  }
+
+  &__slider {
+    position: relative;
+    display: flex;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    height: 560px;
+    width: 400px;
+    padding: 38px 35px 32px 35px;
+    margin-left: 24px;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+    background: $white;
+
+    &-img {
+      width: 330px;
+      height: 250px;
+      margin-bottom: 34px;
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 20px;
+      color: $black-base;
+      margin-bottom: 15px;
+    }
+
+    &-param {
+      display: flex;
+      margin-bottom: 13px;
+    }
+
+    &-param-name, &-param-desc, &-text {
+      @extend %small-text;
+      line-height: 17px;
+    }
+
+    &-param-name {
+      font-weight: 500;
+      color: $gray;
+    }
+
+    &-border-dots {
+      flex-grow: 1;
+      border-bottom: 1px dashed $background-color;
+    }
+
+    &-param-desc {
+      font-weight: 600;
+    }
+
+    &-param-desc--one {
+      color: $red;
+    }
+
+    &-param-desc--two {
+      color: $light-green;
+    }
+
+    &-text {
+      font-weight: 300;
+      line-height: 22px;
+      color: $black-base;
+    }
+  }
+}

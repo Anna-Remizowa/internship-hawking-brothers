@@ -1,0 +1,24 @@
+.socials{
+  margin-left: 60px;
+
+  &__list{
+    display:flex;
+  }
+  &__item{
+    margin-right:15px;
+
+  }
+  &__link{
+    display: flex;
+  }
+  &__img{
+    height: 16px;
+    width: 15px;
+    &--vk{
+      width: 20px;
+    }
+    &--telegram{
+      width: 19px;
+    }
+  }
+}

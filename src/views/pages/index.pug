@@ -1,101 +1,18 @@
 extends ../layouts/default
-include ../helpers/general-mixins
-include ../helpers/index-mixins
+include ../helpers/mixins
+include ../../components/independent/arrows/arrows
+include ../../components/independent/product-slider/product-slider
+include ../../components/independent/form-order/form-order
 
 block variables
-  include ../variables/index-var.pug
+  include ../variables/variables
 
 block content
-  section.start
-    .container-fluid
-      .start__inner
-        .start__content
-          .start__content-discount
-            p.start__discount-title Скидка
-              span.start__discount-title.start__discount-title--highlight  3%
-            p.start__discount-sub-title на дымоход
-            p.start__discount-note.start__discount-note-sign
-              span.start__discount-note.start__discount-note--black-highlight *
-              |  при покупке комплекта от
-              span.start__discount-note.start__discount-note--highlight  10 000
-          .price-container.start__content-price
-            p.price-container__price-new.start__price-new 16 490
-            p.price-container__price-old.start__price-old 16 490
-          .start__content-buttons
-            button.button.button--main-color В каталог
-            button.button.button--secondary-color Монтаж
-        .start__img-container
-          svg.img-absolute.start__img-blob-1
-            use(xlink:href= images.blob1)
-          svg.img-absolute.start__img-dots.start__img-dots--one
-            use(xlink:href= images.dots)
-          svg.img-absolute.start__img-dots.start__img-dots--two
-            use(xlink:href= images.dots)
-          svg.img-absolute.start__img-triangle.start__img-triangle--one
-            use(xlink:href= images.triangle)
-          svg.img-absolute.start__img-triangle.start__img-triangle--two
-            use(xlink:href= images.triangle)
-          .img-absolute.start__img-pipes-1
-          .img-absolute.start__img-pipes-2
 
-  section.bestsellers
-    .container
-      .bestsellers__header
-        h1.title-overline Хиты продаж
-        +arrows("arrowsBestsellers")
-
-      //bestsellers_products определен в index-var
-      .bestsellers__slider
-        each product in bestsellers_products
-          +product_slider(product)
-
-  section.projects
-    .container
-      .projects__inner
-        .projects__img-container
-          .projects__slider
-
-            //слайдер не дублируется - отдельный компонент (не миксин)
-            //projects_products определен в index-var
-            each product in projects_products
-              .projects__slide-container
-                img.projects__img(src= product.src)
-              p.projects__text-header= product.name
-              .projects__product-param
-                p.text.text--weak-highlight.projects__text-param-name Диаметр
-                .border-bottom-text
-                p.text.text--two-highlight.projects__text-param-desc= product.diameter
-              .projects__product-param
-                p.text.text--weak-highlight.projects__text-param-name Сталь
-                .border-bottom-text
-                p.text.text--three-highlight.projects__text-param-desc= product.steel
-              p.projects__text-content= product.description
-
-          +background_image("background-img__background-circle--one")
-
-        .projects__content-container
-          h2.title Выполненные
-            span.title.text--two-highlight проекты
-          p.text
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            | sed do eiusmod tempo
-          +arrows("arrowsProjects")
-
-  section.cost-calculation
-    .container
-      .cost-calculation__inner
-        .cost-calculation__content-container
-          h2.title
-            span.title.text--price-highlight самостоятельный
-            | расчёт стоимости дымохода
-          p.text
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            | sed do eiusmod tempo
-          p.text Для расчета стоимости пройдите тест за
-            span.text.text--one-highlight 1 минуту
-          input.button.button--main-color(value= "рассчитать стоимость")
-        .cost-calculation__img-container
-          //todo: картинка для раздела рассчитать стоимость
+  include ../../components/sections/start/start
+  include ../../components/sections/bestsellers/bestsellers
+  include ../../components/sections/projects/projects
+  include ../../components/sections/cost-calculation/cost-calculation
 
   section.benefits
     .container
@@ -135,7 +52,7 @@ block content
     .container
       .measurement__inner
 
-        +background_image("background-img__background-circle--two")
+        <!--+background_image("background-img__background-circle--two")-->
 
         .measurement__content
           .measurement__img-container
@@ -234,7 +151,7 @@ block content
           h2.title.request__title Оставьте заявку
           h4.very-small-title.request__small-title или свяжитесь с нами в социальных сетях
 
-        +social_media(socialList, "social-media-menu__img--request-style")
+        +socials(socialList, "")
 
         .request__questions-container
           ul.request__questions-part

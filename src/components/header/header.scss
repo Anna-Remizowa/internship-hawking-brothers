@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: $header-height;
+    min-height: 97px;
     margin-top:26px;
   }
 
@@ -12,22 +12,43 @@
     line-height: 20px;
     letter-spacing: 0.08em;
     color: $light-green;
-    margin-left: 56px;
-  }
 
-  &__phone-number--highlight {
-    color: $black-base;
-    font-weight: bold;
+    &--highlight {
+      color: $black-base;
+      font-weight: bold;
+    }
   }
 
   &__phone-me-link {
+    padding-bottom: 5px;
+    margin: 5px 0 0 70px;
     @extend %small-text;
     color: $red;
     line-height: 17px;
     font-weight: bold;
     text-transform: uppercase;
-    padding-bottom: 5px;
-    margin: 5px 0 0 70px;
     border-bottom: 1px dashed $red;
+  }
+}
+
+/*МЕНЮ В HEADER*/
+.menu {
+  margin: 0 56px 0 31px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    @extend %text;
+    text-transform: uppercase;
+    color: $light-green;
+    line-height: 23px;
+    font-weight: bold;
+    margin-right: 30px;
+
+    &:hover, &--active {
+      color: $black-base;
+    }
   }
 }

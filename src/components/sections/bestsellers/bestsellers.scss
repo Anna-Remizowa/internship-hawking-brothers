@@ -1,0 +1,11 @@
+/*РАЗДЕЛ - ХИТЫ ПРОДАЖ*/
+.bestsellers {
+  margin-bottom: 256px;
+
+  &__header {
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 62px;
+  }
+}

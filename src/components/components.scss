@@ -1,4 +1,14 @@
 @import 'header/header';
 @import 'footer/footer';
 
-@import 'social-media-menu/social-media-menu.scss';
+/*маленькие независимые компоненты*/
+@import 'src/components/independent/socials/socials';
+@import 'src/components/independent/arrows/arrows';
+@import 'src/components/independent/form-order/form-order';
+@import 'src/components/independent/product-slider/product-slider';
+
+/*секции*/
+@import 'src/components/sections/start/start';
+@import 'src/components/sections/bestsellers/bestsellers';
+@import 'src/components/sections/projects/projects';
+@import 'src/components/sections/cost-calculation/cost-calculation';

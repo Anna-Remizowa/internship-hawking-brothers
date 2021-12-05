@@ -1,0 +1,84 @@
+.cost-calculation {
+  margin-bottom: 150px;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    width: 630px;
+    margin-right: 84px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: $black-base;
+    text-transform: lowercase;
+  }
+
+  &__title-box {
+    margin: 66px 0 17px 0;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 63px;
+    color: $coral;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @extend %text;
+    line-height: 30px;
+    color: $dark-gray;
+
+    &--highlight{
+      font-weight: 700;
+      color: $orange;
+    }
+  }
+
+  &__text + &__text {
+    margin-bottom: 58px;
+  }
+
+  &__img-container {
+    position: relative;
+    height: inherit;
+    flex-grow: 1;
+  }
+
+  &__img-blob-3 {
+    max-width: 625px;
+    max-height: 583px;
+  }
+
+  &__img-dots {
+    width: 36px;
+    height: 148px;
+
+    &--one {
+      left: 447px;
+    }
+
+    &--two {
+      bottom: 100px;
+      right: 54px;
+    }
+  }
+
+  &__img-triangle {
+    width: 78px;
+    height: 19px;
+    top: 358px;
+  }
+
+  &__img-calculator {
+    max-width: 474px;
+    max-height: 596px;
+    background: url(/assets/images/content/calculator.png) no-repeat;
+    background-size: contain;
+  }
+}

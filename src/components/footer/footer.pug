@@ -1,4 +1,74 @@
-include ../../views/variables/footer-var.pug
+-
+  var footer_part1 = [{
+    src: "/",
+    name: "Дымоходы",
+  },
+    {
+      src: "/",
+      name: "Дымососы",
+    },
+    {
+      src: "/",
+      name: "Печи для дома",
+    },
+    {
+      src: "/",
+      name: "Печи для бани",
+    },
+  ];
+
+-
+  var footer_part2 = [{
+    src: "/",
+    name: "Камины",
+  },
+    {
+      src: "/",
+      name: "Силикат кальция",
+    },
+    {
+      src: "/",
+      name: "Котлы",
+    },
+    {
+      src: "/",
+      name: "Ещё",
+    },
+  ];
+
+-
+  var footer_part3 = [{
+    src: "/",
+    name: "Каталог",
+  },
+    {
+      src: "/",
+      name: "Установка и монтаж",
+    },
+    {
+      src: "/",
+      name: "Отзывы",
+    },
+    {
+      src: "/",
+      name: "Ликвидация товара",
+    },
+  ];
+
+-
+  var footer_part4 = [{
+    src: "/",
+    name: "Полезное",
+  },
+    {
+      src: "/",
+      name: "Контакты",
+    },
+    {
+      src: "/",
+      name: "Оплата и доставка",
+    },
+  ];
 
 footer.footer
   .container
@@ -25,4 +95,4 @@ footer.footer
         .footer__text-icon-box
           svg.footer__svg
           p г. Санкт - Петербург ,ул. Тамбасова д.7
-        +social_media(socialList, "social-media-menu__img--head-foot-style")
+        +socials(socialList, "")

@@ -1,0 +1,9 @@
+mixin svg(imageClass, imageSrc)
+  svg(class= imageClass)
+      use(href= imageSrc)
+
+mixin footer_link(footerLinks)
+  li.footer__ul-item
+    a.footer__ul-link(href= footerLinks.href)= footerLinks.name
+
+
