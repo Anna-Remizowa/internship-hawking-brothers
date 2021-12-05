@@ -40,15 +40,14 @@ block content
 
   section.bestsellers
     .container
-      .bestsellers__inner
-        .bestsellers__header
-          h2.title Хиты продаж
-          +arrows("arrowsBestsellers")
+      .bestsellers__header
+        h1.title-overline Хиты продаж
+        +arrows("arrowsBestsellers")
 
-        //bestsellers_products определен в index-var
-        .bestsellers__slider
-          each product in bestsellers_products
-            +product_slider(product)
+      //bestsellers_products определен в index-var
+      .bestsellers__slider
+        each product in bestsellers_products
+          +product_slider(product)
 
   section.projects
     .container
@@ -56,7 +55,7 @@ block content
         .projects__img-container
           .projects__slider
 
-            //todo: слайдер не дублируется - отдельный компонент (не миксин)
+            //слайдер не дублируется - отдельный компонент (не миксин)
             //projects_products определен в index-var
             each product in projects_products
               .projects__slide-container

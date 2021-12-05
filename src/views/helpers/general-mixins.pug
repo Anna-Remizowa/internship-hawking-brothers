@@ -13,27 +13,27 @@ mixin background_image(imageClass)
 
 mixin arrows(id)
   .arrows-container(id= id)
-    .arrows-container__arrow-left
-      img.base-arrow.base-arrow--left
-    .arrows-container__arrow-right
-      img.base-arrow.base-arrow--right
+    button.arrows-container__arrow
+      svg.arrows-container__arrow-img.arrows-container__arrow-img--left
+        use(xlink:href= images.arrow)
+    button.arrows-container__arrow
+      svg.arrows-container__arrow-img.arrows-container__arrow-img--right
+        use(xlink:href= images.arrow)
 
 mixin product_slider(product)
   .bestsellers__slide-container
-    .bestsellers__img-container
+    .bestsellers__img-box
       img.bestsellers__img(src= product.src)
-      .cart-container
-        a.cart-container__link.bestsellers__cart-link
-          img.cart-container__img.bestsellers__cart-img
-    p.text--one-highlight.bestsellers__header-text= product.name
-    p.bestsellers__content-text= product.description
-    .price-container.start__content-price
-      p.price-container__price-new.text--price-highlight= product.costNew
-        span
-          img.currency-unit.price-container__price-currency-unit--highlight
-      p.price-container__price-old= product.costOld
-        span
-          img.currency-unit.price-container__price-currency-unit--not-highlight
+      .icon-line.icon-line--one.bestsellers__icon-line
+        button.icon-line__button.icon-line__button--dark
+            svg.icon.icon-line__button-img.icon-line__button-img--light
+              use(xlink:href= images.cart)
+    .bestsellers__content-box
+      p.bestsellers__content-title= product.name
+      p.bestsellers__content-description= product.description
+      .price-container.bestsellers__content-price
+        p.price-container__price-new.bestsellers__price-new= product.costNew
+        p.price-container__price-old.bestsellers__price-old= product.costOld
 
 mixin footer_link(footerLinks)
   li.footer__ul-item
