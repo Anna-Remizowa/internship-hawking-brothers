@@ -1,5 +1,5 @@
 .cost-calculation {
-  margin-bottom: 150px;
+  margin-bottom: 284px;
 
   &__inner {
     display: flex;
@@ -34,7 +34,7 @@
     line-height: 30px;
     color: $dark-gray;
 
-    &--highlight{
+    &--highlight {
       font-weight: 700;
       color: $orange;
     }
@@ -51,33 +51,31 @@
   }
 
   &__img-blob-3 {
-    max-width: 625px;
-    max-height: 583px;
+    left: 80px;
+    top:40px;
+    width: 655px;
+    height: 583px;
   }
 
   &__img-dots {
-    width: 36px;
-    height: 148px;
-
     &--one {
-      left: 447px;
+      left: 150px;
     }
 
     &--two {
-      bottom: 100px;
-      right: 54px;
+      bottom: -180px;
+      right: -65px;
     }
   }
 
   &__img-triangle {
-    width: 78px;
-    height: 19px;
-    top: 358px;
+    top: 280px;
   }
 
   &__img-calculator {
-    max-width: 474px;
-    max-height: 596px;
+    left:180px;
+    width: 474px;
+    height: 596px;
     background: url(/assets/images/content/calculator.png) no-repeat;
     background-size: contain;
   }

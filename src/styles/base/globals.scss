@@ -46,7 +46,7 @@ ul {
 
 .container, .container-fluid {
   margin: 0 auto;
-  padding: 0 67px;
+  padding: 0 15px;
 }
 
 .container {
@@ -54,7 +54,7 @@ ul {
 }
 
 .container-fluid {
-  max-width: 1920px;
+  max-width: 1815px;
   height: 100%;
 }
 
@@ -107,6 +107,28 @@ a {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
+}
+
+.img{
+  &__blob1{
+    background: url(/assets/images/svg/blob-1.svg) no-repeat;
+  }
+  &__blob2{
+    background: url(/assets/images/svg/blob-2.svg) no-repeat;
+  }
+  &__blob3{
+    background: url(/assets/images/svg/blob-3.svg) no-repeat;
+  }
+  &__dots{
+    background: url(/assets/images/svg/dots.svg) no-repeat;
+    width: 36px;
+    height: 148px;
+  }
+  &__triangle{
+    background: url(/assets/images/svg/triangle.svg) no-repeat;
+    width: 78px;
+    height: 19px;
+  }
 }
 
 /*КНОПКИ*/
@@ -218,6 +240,20 @@ a {
   &__price-new:after, &__price-old:after {
     content: '\20BD';
     text-decoration-line: none;
+  }
+}
+
+.list-with-img{
+  display: grid;
+
+  &__box{
+    display: flex;
+  }
+
+  &__img{
+    height: 65px;
+    width: 65px;
+
   }
 }
 
