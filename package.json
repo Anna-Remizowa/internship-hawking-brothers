@@ -24,6 +24,7 @@
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svgstore": "^9.0.0",
+    "normalize-scss": "^7.0.1",
     "postcss": "^8.3.11",
     "postcss-csso": "^5.0.1",
     "postcss-normalize": "^10.0.1",

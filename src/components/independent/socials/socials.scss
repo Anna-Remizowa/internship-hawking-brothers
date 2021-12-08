@@ -1,24 +1,38 @@
-.socials{
+.socials {
   margin-left: 60px;
 
-  &__list{
-    display:flex;
-  }
-  &__item{
-    margin-right:15px;
-
-  }
-  &__link{
+  &__list {
     display: flex;
   }
-  &__img{
+
+  &__item {
+    margin-right: 18px;
+
+  }
+
+  &__img {
     height: 16px;
     width: 15px;
-    &--vk{
+    background-color: $light-green;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    &--vk {
       width: 20px;
+      mask-image: url(/assets/images/svg/vk.svg);
     }
-    &--telegram{
+
+    &--telegram {
       width: 19px;
+      mask-image: url(/assets/images/svg/telegram.svg);
+    }
+
+    &--instagram {
+      mask-image: url(/assets/images/svg/instagram.svg);
+    }
+
+    &--whatsapp {
+      mask-image: url(/assets/images/svg/whatsapp.svg);
     }
   }
 }

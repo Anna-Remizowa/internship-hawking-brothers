@@ -1,0 +1,93 @@
+.measurement {
+  position: relative;
+  margin-bottom: 123px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__part-container {
+    width: 565px;
+    margin-left: 60px;
+  }
+
+  &__title-box {
+    margin: 100px 0 27px 0;
+  }
+
+  &__title--highlight {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 63px;
+    color: $coral;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @extend %text;
+    line-height: 30px;
+    color: $dark-gray;
+
+    &--highlight {
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    &--highlight-color {
+      color: $light-green;
+    }
+  }
+
+  &__text--first {
+    margin-bottom: 34px;
+  }
+
+  &__text + &__text{
+    margin-bottom: 67px;
+  }
+
+  &__img-container {
+    position: relative;
+    height: inherit;
+    flex-grow: 1;
+  }
+
+  &__img-blob-4 {
+    right: 0;
+    top: 80px;
+    width: 766px;
+    height: 540px;
+  }
+
+  &__img-dots {
+    top: 70px;
+    left: 220px;
+  }
+
+  &__img-triangle {
+    &--one {
+      right: 0;
+      top: 130px;
+    }
+
+    &--two {
+      bottom: 100px;
+      left: -110px;
+    }
+  }
+
+  &__img-man {
+    right: 0;
+    width: 433px;
+    height: 476px;
+    background: url(/assets/images/content/man.png) no-repeat;
+    background-size: contain;
+  }
+}

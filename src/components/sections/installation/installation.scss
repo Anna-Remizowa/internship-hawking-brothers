@@ -1,0 +1,61 @@
+.installation{
+  margin-bottom: 136px;
+
+  &__inner{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title{
+    margin-bottom: 66px;
+  }
+
+  &__text-container{
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+  &__text-content{
+    margin-right: 74px;
+  }
+
+  &__text{
+    @extend %text;
+    line-height: 30px;
+    color: $black-base;
+
+    &--highlight, &--highlight-black{
+      font-weight: 700;
+    }
+
+    &--highlight{
+      color: $orange;
+    }
+
+    &--highlight-black{
+      margin-top: 50px;
+    }
+  }
+
+  &__img{
+    background: url(/assets/images/content/installation.png);
+    min-width: 624px;
+    height: 313px;
+  }
+
+  &__list-with-img{
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 42px 87px;
+    //margin: 72px 56px;
+  }
+
+  &__list-box{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list-text-box{
+    margin-left: 0;
+  }
+}

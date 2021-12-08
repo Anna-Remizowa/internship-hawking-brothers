@@ -4,7 +4,7 @@ mixin product_slider(product)
       img.product-slider__img(src= product.src)
       .icon-line.icon-line--one.product-slider__icon-line
         button.icon-line__button.icon-line__button--dark
-          +svg("icon icon-line__button-img icon-line__button-img--light", "assets/images/sprite.svg#shopping-cart")
+          .icon.icon-line__button-img.icon-line__button-img--shopping.icon-line__button-img--light
     .product-slider__content-box
       p.product-slider__content-title= product.name
       p.product-slider__content-description= product.description
