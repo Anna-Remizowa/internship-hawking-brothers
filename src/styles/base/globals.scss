@@ -11,6 +11,7 @@ body {
   font-weight: normal;
   font-style: normal;
   color: $font-color;
+  overflow-x: hidden;
 }
 
 body,
@@ -91,6 +92,20 @@ a {
   font-size: 40px;
   line-height: 50px;
   color: $black-base;
+
+  &--highlight {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 63px;
+    color: $coral;
+    text-transform: uppercase;
+  }
+}
+
+.text{
+  @extend %text;
+  line-height: 30px;
+  color: $dark-gray;
 }
 
 /*КАРТИНКИ*/
@@ -129,6 +144,22 @@ a {
 
   &__blob4 {
     background: url(/assets/images/svg/blob-4.svg) no-repeat;
+  }
+
+  &__blob5 {
+    background: url(/assets/images/svg/blob-5.svg) no-repeat;
+  }
+
+  &__blob6 {
+    background: url(/assets/images/svg/blob-6.svg) no-repeat;
+  }
+
+  &__blob7 {
+    background: url(/assets/images/svg/blob-7.svg) no-repeat;
+  }
+
+  &__blob8 {
+    background: url(/assets/images/svg/blob-8.svg) no-repeat;
   }
 
   &__dots {
@@ -308,19 +339,16 @@ a {
     margin-left: 30px;
   }
 
+
   &__title, &__text {
-    line-height: 30px;
     color: $black-base;
   }
 
   &__title {
     margin-bottom: 11px;
     font-size: 22px;
+    line-height: 30px;
     font-weight: bold;
-  }
-
-  &__text {
-    @extend %text;
   }
 }
 

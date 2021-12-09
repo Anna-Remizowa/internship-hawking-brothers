@@ -21,8 +21,6 @@
   }
 
   &__text{
-    @extend %text;
-    line-height: 30px;
     color: $black-base;
 
     &--highlight, &--highlight-black{
@@ -53,6 +51,12 @@
   &__list-box{
     display: flex;
     flex-direction: column;
+  }
+
+  &__list-img{
+    margin-bottom: 32px;
+    width: 79px;
+    height: 79px;
   }
 
   &__list-text-box{

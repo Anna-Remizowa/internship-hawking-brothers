@@ -1,0 +1,9 @@
+.footer{
+  background: #0C2F33;
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    height:350px;
+  }
+}

@@ -1,8 +1,8 @@
-mixin socials(socialList, socialColorClass)
-  .socials
+mixin socials(socialList, specialClass)
+  .socials(class= specialClass)
     ul.socials__list
       each item in socialList
         li.socials__item
           a.socials__link(href= item.href)
-            div(class="socials__img " + socialColorClass + " socials__img--" + item.name)
+            div(class="socials__img socials__img--" + item.name)
 

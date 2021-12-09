@@ -1,0 +1,27 @@
+section.request
+  .container
+    .request__inner
+      .request__header
+        h1.request__title Оставьте заявку
+        p.request__small-title или свяжитесь с нами в социальных сетях
+
+      +socials(socialList, "request__socials")
+
+      .request__line
+      .request__questions
+        ul.request__questions-part
+          li.request__questions-item
+            span.request__questions-text Какой дымоход лучше выбрать?
+          li.request__questions-item
+            span.request__questions-text Сколько стоит монтаж дымохода?
+          li.request__questions-item
+            span.request__questions-text Из какой стали выбрать дымоход?
+        ul.request__questions-part
+          li.request__questions-item
+            span.request__questions-text Занимаетесь обслуживанием дымоходов?
+          li.request__questions-item
+            span.request__questions-text Сколько стоит выезд инженера на замер?
+          li.request__questions-item
+            span.request__questions-text Сколько стоит выезд инженера на замер?
+
+      +form_order("С Вами свяжутся в ближайшее время")

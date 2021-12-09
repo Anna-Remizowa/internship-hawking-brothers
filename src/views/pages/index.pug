@@ -8,7 +8,6 @@ block variables
   include ../variables/variables
 
 block content
-
   include ../../components/sections/start/start
   include ../../components/sections/bestsellers/bestsellers
   include ../../components/sections/projects/projects
@@ -16,120 +15,12 @@ block content
   include ../../components/sections/benefits/benefits
   include ../../components/sections/measurement/measurement
   include ../../components/sections/installation/installation
-
-
-  section.J
-    .container
-      .about__inner
-        .about__content-container
-          h2.title О компании в цифрах
-          .about__content-items
-            .about__content-part
-              .about__content-item
-                h1.big-title.text--one-highlight 11
-                p.text Магазинов продают нашу продукцию
-              .about__content-item
-                h1.big-title.text--one-highlight 1886
-                p.text Выполненных объектов
-            .about__content-part
-              .about__content-item
-                h1.big-title.text--one-highlight 18
-                p.text Лет опыта работы на рынке с гарантией качества
-              .about__content-item
-                h1.big-title.text--one-highlight 90%
-                p.text рекомендуют и обращаются к нам повторно
-        .about__img-container
-          //todo: картинка для раздела о компании
-
-  section.request
-    .container
-      .request__inner
-        .request__header
-          h2.title.request__title Оставьте заявку
-          h4.very-small-title.request__small-title или свяжитесь с нами в социальных сетях
-
-        +socials(socialList, "")
-
-        .request__questions-container
-          ul.request__questions-part
-            li.request__questions-item Какой дымоход лучше выбрать?
-            li.request__questions-item Сколько стоит монтаж дымохода?
-            li.request__questions-item Из какой стали выбрать дымоход?
-          ul.request__questions-part
-            li.request__questions-item Занимаетесь обслуживанием дымоходов?
-            li.request__questions-item Сколько стоит выезд инженера на замер?
-            li.request__questions-item Сколько стоит выезд инженера на замер?
-
-        +form_order("С Вами свяжутся в ближайшее время")
-
-  section.video
-    .container
-      .video__inner
-        h2.title Видео
-        p2.text
-          | Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          | sed do eiusmod tempor incididunt ut labore et dolore magna
-          | aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          | ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          | Duis aute irure dolor in reprehenderit in voluptate velit
-          | esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          | occaecat cupidatat non proident, sunt in culpa qui officia
-          | deserunt mollit anim id est laborum.
-        .video__container
-          iframe(src="https://www.youtube.com/watch?v=Nxg6UfofZX0")
-
-  section.causes
-    .container
-      .causes__inner
-        h2.title Причины приобрести нашу продукцию
-        .couses__content-container
-          ol.causes__item
-            li.causes__item-text
-              | Мы предоставляем полный комплекс услуг включающий
-              | консультацию и поддержку на всех этапах сотрудничества,
-              | от покупки до установки. Дальнейшую очистку дымоходов.
-            li.causes__item-text
-              | Точное выполнение договорённости, сроков, стоимости и
-              | качеству произведенного монтажа, наличие всех необходимых
-              | сертификатов и технических документов.
-            li.causes__item-text
-              | Гарантия на выполненные работы:
-              | #[strong 3 года] на гидроизоляцию кровельных элементов
-              | #[strong 5 лет] на сквозную коррозию внутренней и наружной трубы
-              | #[strong 10 лет] на крепёж, стыковку элементов и «вертикальность»
-          .causes__img-container
-
-  section.without-money
-    .container
-      .without-money__inner
-        .without-money__content-container
-          h2.title Купите любую продукцию
-            span.title.text--price-highlight без денег
-          p.text Теперь возможна оплата в кредит или в рассрочку 0%.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          input.button.button--main-color(value= "купить в кредит")
-        .without-money__img-container
-          //todo: картинка для раздела замер
-
-  section.reviews
-    .container
-      .reviews__inner
-        .reviews__header
-          h2.title Отзывы наших клиентов
-          p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          +arrows("arrowsReviews")
-
-        //reviews_list определен в index-var
-        .reviews__slider
-          each review in reviews_list
-            //todo: слайдер не дублируется - отдельный компонент (не миксин)
-            .reviews__slide-container
-              p.text.text--small= review.comments
-              .reviews__photo-box
-                img.image-circle(src= review.src)
-                .reviews__text-box
-                  p.text.reviews__text-name= review.name
-                  p.text.reviews__text-date= review.date
+  include ../../components/sections/about/about
+  include ../../components/sections/request/request
+  include ../../components/sections/video/video
+  include ../../components/sections/causes/causes
+  include ../../components/sections/without-money/without-money
+  include ../../components/sections/reviews/reviews
 
 
 

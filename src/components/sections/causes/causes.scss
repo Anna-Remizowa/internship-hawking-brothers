@@ -1,0 +1,50 @@
+.causes {
+  margin-bottom: 140px;
+
+  &__inner {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 113px;
+  }
+
+  &__content-container {
+    display: flex;
+  }
+
+  &__items {
+    margin-right: 34px;
+    counter-reset: my-awesome-counter;
+    list-style: none;
+
+    &-li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      counter-increment: counter;
+    }
+
+    &-li:before {
+      min-width: 60px;
+      margin-right: 40px;
+      content: counter(counter);
+      font-weight: bold;
+      font-size: 100px;
+      line-height: 122px;
+      color: $coral;
+      opacity: 0.2;
+    }
+
+    &-text {
+      color: $black-base;
+    }
+  }
+
+  &__img {
+    background: url(/assets/images/content/causes.png);
+    min-width: 602px;
+    height: 403px;
+  }
+}

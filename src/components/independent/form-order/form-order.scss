@@ -22,8 +22,11 @@
 
   &__text {
     margin-bottom: 22px;
-    @extend %text;
-    line-height: 30px;
     color: $black-base;
+  }
+
+  &__form{
+    display: flex;
+    justify-content: space-between;
   }
 }

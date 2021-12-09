@@ -1,0 +1,79 @@
+.request{
+  margin-bottom: 113px;
+
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title, &__small-title{
+    line-height: 40px;
+    text-align: center;
+    color: $black-base;
+  }
+
+  &__header{
+    margin-bottom: 35px;
+  }
+
+  &__title{
+    font-weight: 800;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  &__small-title{
+    font-size: 22px;
+    font-weight: 300;
+  }
+
+  &__socials .socials__item:not(:last-child){
+    margin-right: 36px;
+  }
+
+  &__socials .socials__img{
+    background-color: $orange;
+  }
+
+  &__socials .socials__img--vk,
+  &__socials .socials__img--telegram{
+    width: 22px;
+    height: 22px;
+  }
+
+  &__socials .socials__img--instagram,
+  &__socials .socials__img--whatsapp{
+    width: 18px;
+    height: 19px;
+  }
+
+  &__line{
+    width: 594px;
+    height: 1px;
+    margin: 35px 0 31px 0;
+    background: #E5E5E5;
+  }
+
+  &__questions{
+    display: flex;
+    justify-content: space-between;
+    width: 866px;
+    margin-bottom: 36px;
+
+    &-item{
+      list-style-type: disc;
+      list-style-position: inside;
+      font-size: 27px;
+      color: $coral;
+    }
+
+    &-text{
+      margin-left:-0.5em;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 40px;
+      color: $black-base;
+    }
+  }
+}

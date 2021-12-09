@@ -9,12 +9,12 @@ html(lang="ru")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title #{title ? title : 'Заголовок страницы'}
-    link(href="/assets/styles/main.css" rel="stylesheet")
+    link(href="assets/styles/main.css" rel="stylesheet")
   body
     .wrapper
       main.main
         include ../../components/header/header
         block content
         include ../../components/footer/footer
-    script(src="/assets/js/index.js")
+    script(src="assets/js/index.js")
     block scripts

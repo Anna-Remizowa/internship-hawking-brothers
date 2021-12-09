@@ -21,19 +21,7 @@
     margin: 100px 0 27px 0;
   }
 
-  &__title--highlight {
-    font-weight: 800;
-    font-size: 50px;
-    line-height: 63px;
-    color: $coral;
-    text-transform: uppercase;
-  }
-
   &__text {
-    @extend %text;
-    line-height: 30px;
-    color: $dark-gray;
-
     &--highlight {
       font-weight: 600;
       font-size: 25px;

@@ -30,10 +30,6 @@
   }
 
   &__text {
-    @extend %text;
-    line-height: 30px;
-    color: $dark-gray;
-
     &--highlight {
       font-weight: 700;
       color: $orange;
