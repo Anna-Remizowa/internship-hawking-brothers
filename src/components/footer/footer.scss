@@ -1,9 +1,94 @@
-.footer{
+.footer {
   background: #0C2F33;
 
-  &__inner{
+  &__inner {
     display: flex;
+    //grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
-    height:350px;
+    align-items: center;
+    height: 350px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+  }
+
+  &__title, &__ul-link, &__text {
+    color: $white;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  &__catalog-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 19px 56px;
+  }
+
+  &__ul-link {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__text-icon-box {
+    position: relative;
+    margin-bottom: 11px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+
+    &--highlight {
+      color: $light-green;
+    }
+  }
+
+  &__icon {
+    &:before {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 8px;
+      background-size: 15px 15px;
+      content: '';
+    }
+
+    &--time:before {
+      background-image: url(/assets/images/svg/time.svg);
+    }
+
+    &--location:before {
+      background-image: url(/assets/images/svg/location.svg);
+    }
+  }
+
+  &__socials{
+    margin-top: 10px;
+  }
+
+  &__socials .socials__item:not(:last-child){
+    margin-right: 36px;
+  }
+
+  &__socials .socials__img--vk,
+  &__socials .socials__img--telegram{
+    width: 22px;
+    height: 22px;
+  }
+
+  &__socials .socials__img--instagram,
+  &__socials .socials__img--whatsapp{
+    width: 18px;
+    height: 19px;
   }
 }

@@ -27,12 +27,14 @@
   }
 
   &__slide-container {
+    position:relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 260px;
     width: 400px;
     margin-right: 25px;
-    padding: 33px 29px 36px 33px;
+    padding: 33px 29px 36px 52px;
     background: #FFFFFF;
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
   }
@@ -43,18 +45,26 @@
     line-height: 22px;
     color: $black-base;
     margin-bottom: 17px;
+
+    &:before {
+      position: absolute;
+      top: 38px;
+      left: 33px;
+      height: 99px;
+      width: 3px;
+      content: '';
+      background-color: $coral;
+    }
   }
 
   &__photo-box, &__text-box {
     display: flex;
   }
 
-  &__photo-box {
-    justify-content: center;
-  }
-
   &__text-box {
     flex-direction: column;
+    justify-content: center;
+    margin-left: 23px;
   }
 
   &__text-name {

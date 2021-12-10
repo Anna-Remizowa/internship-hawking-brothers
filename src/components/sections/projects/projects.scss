@@ -33,15 +33,15 @@
     text-align: right;
   }
 
-  &__img-container {
+  &__img {
     position: relative;
-  }
 
-  &__img-blob-2 {
-    right: -75px;
-    top: -50px;
-    width: 750px;
-    height: 669px;
+    &-blob-2 {
+      right: -75px;
+      top: -50px;
+      width: 750px;
+      height: 669px;
+    }
   }
 
   &__slider {

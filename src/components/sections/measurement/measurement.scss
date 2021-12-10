@@ -41,41 +41,41 @@
     margin-bottom: 67px;
   }
 
-  &__img-container {
+  &__img {
     position: relative;
     height: inherit;
     flex-grow: 1;
-  }
 
-  &__img-blob-4 {
-    right: 0;
-    top: 80px;
-    width: 766px;
-    height: 540px;
-  }
-
-  &__img-dots {
-    top: 70px;
-    left: 220px;
-  }
-
-  &__img-triangle {
-    &--one {
+    &-blob-4 {
       right: 0;
-      top: 130px;
+      top: 80px;
+      width: 766px;
+      height: 540px;
     }
 
-    &--two {
-      bottom: 100px;
-      left: -110px;
+    &-dots {
+      top: 70px;
+      left: 220px;
     }
-  }
 
-  &__img-man {
-    right: 0;
-    width: 433px;
-    height: 476px;
-    background: url(/assets/images/content/man.png) no-repeat;
-    background-size: contain;
+    &-triangle {
+      &--one {
+        right: 0;
+        top: 130px;
+      }
+
+      &--two {
+        bottom: 100px;
+        left: -110px;
+      }
+    }
+
+    &-man {
+      right: 0;
+      width: 433px;
+      height: 476px;
+      background: url(/assets/images/content/man.png) no-repeat;
+      background-size: contain;
+    }
   }
 }

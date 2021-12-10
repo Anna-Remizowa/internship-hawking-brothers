@@ -40,39 +40,39 @@
     margin-bottom: 58px;
   }
 
-  &__img-container {
+  &__img {
     position: relative;
     height: inherit;
     flex-grow: 1;
-  }
 
-  &__img-blob-3 {
-    left: 80px;
-    top:40px;
-    width: 655px;
-    height: 583px;
-  }
-
-  &__img-dots {
-    &--one {
-      left: 150px;
+    &-blob-3 {
+      left: 80px;
+      top:40px;
+      width: 655px;
+      height: 583px;
     }
 
-    &--two {
-      bottom: -180px;
-      right: -65px;
+    &-dots {
+      &--one {
+        left: 150px;
+      }
+
+      &--two {
+        bottom: -180px;
+        right: -65px;
+      }
     }
-  }
 
-  &__img-triangle {
-    top: 280px;
-  }
+    &-triangle {
+      top: 280px;
+    }
 
-  &__img-calculator {
-    left:180px;
-    width: 474px;
-    height: 596px;
-    background: url(/assets/images/content/calculator.png) no-repeat;
-    background-size: contain;
+    &-calculator {
+      left:180px;
+      width: 474px;
+      height: 596px;
+      background: url(/assets/images/content/calculator.png) no-repeat;
+      background-size: contain;
+    }
   }
 }
