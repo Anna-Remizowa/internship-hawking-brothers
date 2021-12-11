@@ -1,65 +1,65 @@
-.installation{
+.installation {
   margin-bottom: 136px;
 
-  &__inner{
+  &__inner {
     position: relative;
     display: flex;
     flex-direction: column;
   }
 
-  &__title{
+  &__title {
     margin-bottom: 66px;
   }
 
-  &__text-container{
+  &__text-container {
     display: flex;
     margin-bottom: 60px;
   }
 
-  &__text-content{
+  &__text-content {
     margin-right: 74px;
   }
 
-  &__text{
+  &__text {
     color: $black-base;
 
-    &--highlight, &--highlight-black{
+    &--highlight, &--highlight-black {
       font-weight: 700;
     }
 
-    &--highlight{
+    &--highlight {
       color: $orange;
     }
 
-    &--highlight-black{
+    &--highlight-black {
       margin-top: 50px;
     }
   }
 
-  &__img{
+  &__img {
     background: url(/assets/images/content/installation.png);
     min-width: 624px;
     height: 313px;
   }
 
-  &__list-with-img{
+  &__list-with-img {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 42px 87px;
     //margin: 72px 56px;
   }
 
-  &__list-box{
+  &__list-box {
     display: flex;
     flex-direction: column;
   }
 
-  &__list-img{
+  &__list-img {
     margin-bottom: 32px;
     width: 79px;
     height: 79px;
   }
 
-  &__list-text-box{
+  &__list-text-box {
     margin-left: 0;
   }
 }

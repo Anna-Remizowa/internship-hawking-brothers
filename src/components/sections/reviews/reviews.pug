@@ -4,14 +4,15 @@ section.reviews
       h1.title-overline.reviews__title Отзывы наших клиентов
       p.text.reviews__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-      .reviews__container
-        +arrows("arrowsReviews")
-        .reviews__slider
-          each review in reviews_list
-            .reviews__slide-container
-              p.reviews__slide-text= review.comments
-              .reviews__photo-box
-                img.image-circle(src= review.src, alt="Image")
-                .reviews__text-box
-                  p.text.reviews__text-name= review.name
-                  p.text.reviews__text-date= review.date
+      +arrows("reviews")
+
+  .reviews__slider.swiper
+    .swiper-wrapper
+      each review in reviews_list
+        .reviews__slide-container.swiper-slide
+          p.reviews__slide-text= review.comments
+          .reviews__photo-box
+            img.image-circle(src= review.src, alt="Image")
+            .reviews__text-box
+              p.text.reviews__text-name= review.name
+              p.text.reviews__text-date= review.date

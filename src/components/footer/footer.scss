@@ -72,23 +72,16 @@
     }
   }
 
-  &__socials{
+  &__socials {
     margin-top: 10px;
   }
 
-  &__socials .socials__item:not(:last-child){
+  &__socials &__socials-item:not(:last-child) {
     margin-right: 36px;
   }
 
-  &__socials .socials__img--vk,
-  &__socials .socials__img--telegram{
+  &__social-img {
     width: 22px;
     height: 22px;
-  }
-
-  &__socials .socials__img--instagram,
-  &__socials .socials__img--whatsapp{
-    width: 18px;
-    height: 19px;
   }
 }

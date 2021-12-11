@@ -1,13 +1,14 @@
 mixin product_slider(product)
-  .product-slider__slide-container
-    .product-slider__img-box
-      img.product-slider__img(src= product.src)
-      .icon-line.icon-line--one.product-slider__icon-line
-        button.icon-line__button.icon-line__button--dark
-          .icon.icon-line__button-img.icon-line__button-img--shopping.icon-line__button-img--light
-    .product-slider__content-box
-      p.product-slider__content-title= product.name
-      p.product-slider__content-description= product.description
-      .price-container.product-slider__content-price
-        p.price-container__price-new.product-slider__price-new= product.costNew
-        p.price-container__price-old.product-slider__price-old= product.costOld
+  .product-slider__slide-container.swiper-slide
+    .product-slider__wrapper
+      .product-slider__img-box
+        img.product-slider__img(src= product.src)
+        .icon-line.icon-line--one.product-slider__icon-line
+          button.icon-line__button.icon-line__button--dark
+            .icon.icon-line__button-img.icon-line__button-img--shopping.icon-line__button-img--light
+      .product-slider__content-box
+        p.product-slider__content-title= product.name
+        p.product-slider__content-description= product.description
+        .price-container.product-slider__content-price
+          p.price-container__price-new.product-slider__price-new= product.costNew
+          p.price-container__price-old.product-slider__price-old= product.costOld

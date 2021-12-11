@@ -1,11 +1,11 @@
-.benefits{
-  margin-bottom:100px;
+.benefits {
+  margin-bottom: 100px;
 
-  &__inner{
+  &__inner {
     position: relative;
   }
 
-  &__list-with-img{
+  &__list-with-img {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 42px 87px;
     margin: 72px 56px;

@@ -90,53 +90,53 @@
     justify-content: space-between;
   }
 
-  &__img-container {
+  &__img {
     position: relative;
     height: inherit;
     flex-grow: 1;
-  }
 
-  &__img-blob-1 {
-    left: 47px;
-    width: 990px;
-    height: 699px;
-  }
-
-  &__img-dots {
-    &--one {
-      left: 447px;
+    &-blob-1 {
+      left: 47px;
+      width: 990px;
+      height: 699px;
     }
 
-    &--two {
-      bottom: 0;
-      right: 65px;
+    &-dots {
+      &--one {
+        left: 447px;
+      }
+
+      &--two {
+        bottom: 0;
+        right: 65px;
+      }
     }
-  }
 
-  &__img-triangle {
-    &--one {
-      top: 358px;
+    &-triangle {
+      &--one {
+        top: 358px;
+      }
+
+      &--two {
+        right: 98px;
+        top: 134px;
+      }
     }
 
-    &--two {
-      right: 98px;
-      top: 134px;
+    &-pipes-1 {
+      width: 417px;
+      height: 402px;
+      background: url(/assets/images/content/pipes-1.png) no-repeat;
+      background-size: contain;
     }
-  }
 
-  &__img-pipes-1 {
-    width: 417px;
-    height: 402px;
-    background: url(/assets/images/content/pipes-1.png) no-repeat;
-    background-size: contain;
-  }
-
-  &__img-pipes-2 {
-    top: 70px;
-    left: 270px;
-    width: 615px;
-    height: 542px;
-    background: url(/assets/images/content/pipes-2.png) no-repeat;
-    background-size: contain;
+    &-pipes-2 {
+      top: 70px;
+      left: 270px;
+      width: 615px;
+      height: 542px;
+      background: url(/assets/images/content/pipes-2.png) no-repeat;
+      background-size: contain;
+    }
   }
 }

@@ -31,7 +31,7 @@ ul {
   list-style: none;
 }
 
-input{
+input {
   outline: none;
 }
 
@@ -55,7 +55,7 @@ input{
 }
 
 .container {
-  max-width: 1352px;
+  max-width: 1248px;
 }
 
 .container-fluid {
@@ -102,7 +102,7 @@ a {
   }
 }
 
-.text{
+.text {
   @extend %text;
   line-height: 30px;
   color: $dark-gray;
@@ -314,7 +314,7 @@ a {
   line-height: 22px;
   color: $black-base;
 
-  &[placeholder]{
+  &[placeholder] {
     color: $gray;
   }
 }

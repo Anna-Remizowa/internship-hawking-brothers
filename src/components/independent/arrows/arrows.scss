@@ -1,10 +1,10 @@
 /*СТРЕЛКИ ДЛЯ СЛАЙДЕРОВ*/
-.arrows-container{
+.arrows-container {
   display: flex;
   justify-content: space-between;
-  min-width: 116px;
+  width: 116px;
 
-  &__arrow{
+  &__arrow {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,12 +16,12 @@
     cursor: pointer;
   }
 
-  &__arrow-img{
+  &__arrow-img {
     width: 12px;
     height: 20px;
   }
 
-  &__arrow-img--left{
+  &__arrow-img--left {
     transform: rotate(180deg);
   }
 }

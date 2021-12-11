@@ -11,6 +11,7 @@
 
   &__content-container {
     display: flex;
+    align-items: center;
   }
 
   &__items {
@@ -44,7 +45,7 @@
 
   &__img {
     background: url(/assets/images/content/causes.png);
-    min-width: 602px;
+    min-width: 550px;
     height: 403px;
   }
 }

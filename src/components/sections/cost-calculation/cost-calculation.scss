@@ -46,8 +46,8 @@
     flex-grow: 1;
 
     &-blob-3 {
-      left: 80px;
-      top:40px;
+      left: 70px;
+      top: 40px;
       width: 655px;
       height: 583px;
     }
@@ -59,7 +59,7 @@
 
       &--two {
         bottom: -180px;
-        right: -65px;
+        right: -160px;
       }
     }
 
@@ -68,7 +68,8 @@
     }
 
     &-calculator {
-      left:180px;
+      top: -40px;
+      left: 180px;
       width: 474px;
       height: 596px;
       background: url(/assets/images/content/calculator.png) no-repeat;
