@@ -1,10 +1,17 @@
 .header {
-  &__inner {
+  &__inner, &__wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    min-height: 97px;
+  }
+
+  &__inner {
+    height: 97px;
     margin-top: 26px;
+  }
+
+  &__wrapper {
+    justify-content: space-between;
+    flex-grow: 1;
   }
 
   &__phone-number {
@@ -29,6 +36,60 @@
     text-transform: uppercase;
     border-bottom: 1px dashed $red;
   }
+
+  @include _desktop1795 {
+    &__icon {
+      flex-grow: 1;
+    }
+  }
+
+  @include _tablet1248 {
+    &__inner, &__wrapper {
+      align-items: flex-start;
+    }
+
+    &__inner {
+      height: 88px;
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    &__wrapper {
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+    }
+
+    &__icon {
+      margin-left: 7px;
+      flex-grow: 0;
+    }
+
+    &__icon-line .icon-line__button {
+      margin-left: 24px;
+    }
+
+    &__phone-number, &__phone-me-link, &__socials {
+      display: none;
+    }
+  }
+
+  @include _mobile767 {
+    &__inner {
+      height: 63px;
+      margin-top: 16px;
+    }
+
+    &__icon-line > .icon-line__button:not(:last-child) {
+      display: none;
+    }
+
+    &__icon-line .icon-line__button-img--shopping {
+      width: 18px;
+    }
+
+    &__icon-line .icon-line__button-circle-count{
+      right: -8px;
+    }
+  }
 }
 
 /*МЕНЮ В HEADER*/
@@ -50,5 +111,9 @@
     &:hover, &--active {
       color: $black-base;
     }
+  }
+
+  @include _desktop1795 {
+    display: none;
   }
 }

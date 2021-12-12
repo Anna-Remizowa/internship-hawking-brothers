@@ -8,4 +8,8 @@
     justify-content: space-between;
     margin-bottom: 62px;
   }
+
+  @include _tablet1248 {
+    margin-bottom: 117px;
+  }
 }

@@ -6,6 +6,8 @@
   }
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
     height: 400px;
     border: 1px solid #E5E5E5;
   }
@@ -88,6 +90,28 @@
 
     &:after {
       margin-left: 4px;
+    }
+  }
+
+  @include _tablet1248 {
+    &__img-box{
+      margin-bottom: 40px;
+
+      &:after{
+        bottom: -14px;
+        width: calc(100% - 120px);
+      }
+    }
+
+    &__img{
+      height: 231px;
+      width: 231px;
+    }
+
+    &__content-box{
+      max-width: 310px;
+      text-align: center;
+      align-self: center;
     }
   }
 }

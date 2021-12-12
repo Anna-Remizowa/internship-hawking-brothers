@@ -3,6 +3,11 @@
   height: 794px;
   margin-bottom: 169px;
 
+  &--container-fluid {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__inner {
     display: flex;
     height: inherit;
@@ -11,8 +16,9 @@
   }
 
   &__content {
+    flex-shrink: 0;
     width: 500px;
-    margin: 65px 137px 0 0;
+    margin: 65px 184px 0 0;
   }
 
   &__discount {
@@ -88,6 +94,13 @@
   &__content-buttons {
     display: flex;
     justify-content: space-between;
+
+    &--tablet {
+      margin-top: 36px;
+      display: none;
+      align-self: center;
+      width: 510px;
+    }
   }
 
   &__img {
@@ -96,47 +109,350 @@
     flex-grow: 1;
 
     &-blob-1 {
-      left: 47px;
-      width: 990px;
-      height: 699px;
+      width: 100%;
+      height: 100%;
     }
 
     &-dots {
       &--one {
-        left: 447px;
+        left: 400px;
       }
 
       &--two {
         bottom: 0;
-        right: 65px;
+        right: 115px;
       }
     }
 
     &-triangle {
       &--one {
         top: 358px;
+        left: -47px;
       }
 
       &--two {
-        right: 98px;
+        right: 160px;
         top: 134px;
       }
     }
 
     &-pipes-1 {
-      width: 417px;
-      height: 402px;
+      left: -47px;
+      width: 60%;
+      height: 60%;
       background: url(/assets/images/content/pipes-1.png) no-repeat;
       background-size: contain;
     }
 
     &-pipes-2 {
-      top: 70px;
-      left: 270px;
-      width: 615px;
-      height: 542px;
+      top: 80px;
+      left: 220px;
+      width: 80%;
+      height: 80%;
       background: url(/assets/images/content/pipes-2.png) no-repeat;
       background-size: contain;
+    }
+  }
+
+  @include _desktop1795 {
+    height: 715px;
+    margin-bottom: 150px;
+
+    &__img {
+      &-dots--one {
+        left: 360px;
+      }
+
+      &-triangle--two {
+        top: 100px;
+      }
+
+      &-dots--two {
+        right: 70px;
+      }
+    }
+  }
+
+  @include _desktop1630 {
+    height: 670px;
+    margin-bottom: 130px;
+
+    &__inner {
+      padding: 74px 0 0 74px;
+    }
+
+    &__content {
+      margin-top: 50px;
+      margin-right: 90px;
+    }
+
+    &__img {
+      &-dots--two {
+        display: none;
+      }
+    }
+  }
+
+  @include _desktop1490 {
+    height: 620px;
+
+    &__inner {
+      padding: 66px 0 0 66px;
+    }
+
+    &__content {
+      margin-top: 20px;
+      margin-right: 60px;
+    }
+
+    &__img {
+      &-pipes-2 {
+        top: 60px;
+        left: 160px;
+      }
+
+      &-triangle, &-dots {
+        display: none;
+      }
+    }
+  }
+
+  @include _desktop1385 {
+    height: 570px;
+    margin-bottom: 115px;
+
+    &__inner {
+      padding-left: 36px;
+    }
+
+    &__content {
+      margin-right: 44px;
+    }
+  }
+
+  @include _tablet1248 {
+    height: 600px;
+    margin-bottom: 81px;
+
+    &__inner {
+      padding: 40px 0 0 0;
+    }
+
+    &__content {
+      width: 350px;
+      margin: 60px 44px 0 50px;
+    }
+
+    &__img {
+      &-pipes-2 {
+        left: 20%;
+      }
+    }
+
+    &__content .price-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__discount {
+      margin-bottom: 29px;
+
+      &-title {
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 61px;
+      }
+
+      &-sub-title {
+        margin-bottom: 10px;
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }
+
+    &__content-price {
+      margin-bottom: 0;
+    }
+
+    &__price-new {
+      font-size: 40px;
+      line-height: 49px;
+
+      &__:after {
+        margin-left: 11px;
+      }
+    }
+
+    &__price-old {
+      margin-left: 0;
+      font-size: 25px;
+      line-height: 30px;
+
+      &:after {
+        margin-left: 14px;
+      }
+    }
+
+    &__content-buttons {
+      display: none;
+
+      &--tablet {
+        display: flex;
+      }
+    }
+  }
+
+  @include _tablet1050 {
+    height: 530px;
+
+    &__content {
+      margin-top: 26px;
+    }
+
+    &__img-pipes-2 {
+      left: 25%;
+      width: 70%;
+      height: 70%;
+    }
+  }
+
+  @include _tablet910 {
+    height: 400px;
+
+    &__content {
+      width: 310px;
+    }
+
+    &__img-pipes-1 {
+      left: 0;
+    }
+
+    &__img-pipes-2 {
+      left: 30%;
+      width: 80%;
+      height: 80%;
+    }
+  }
+
+  @include _tablet790 {
+    &__content {
+      margin-left: 0;
+    }
+  }
+
+  @include _mobile767 {
+    height: 100%;
+
+    &__inner {
+      flex-direction: column-reverse;
+    }
+
+    &__img-blob-1 {
+      height: 500px;
+    }
+
+    &__content {
+      width: 100%;
+      margin: 21px 0 0 0;
+      text-align: center;
+    }
+
+    &__content .price-container {
+      align-items: center;
+    }
+
+    &__content-buttons {
+      flex-direction: column;
+      align-items: center;
+      height: 128px;
+    }
+  }
+
+  @include _mobile670 {
+    &__img-blob-1 {
+      height: 400px;
+    }
+  }
+
+  @include _mobile580 {
+    &__img-blob-1 {
+      height: 350px;
+    }
+  }
+
+  @include _mobile470 {
+    &__discount {
+      margin-bottom: 17px;
+
+      &-title {
+        margin-bottom: 8px;
+        font-size: 30px;
+        line-height: 37px;
+      }
+
+      &-sub-title {
+        margin-bottom: 6px;
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      &-note {
+        font-size: 14px;
+        line-height: 23px;
+      }
+    }
+
+    &__price-new {
+      font-size: 30px;
+      line-height: 37px;
+
+      &__:after {
+        margin-left: 7px;
+      }
+    }
+
+    &__price-old {
+      font-size: 14px;
+      line-height: 17px;
+
+      &:after {
+        margin-left: 7px;
+      }
+    }
+
+    &__content-buttons {
+      margin-top: 22px;
+    }
+
+    &__img-blob-1 {
+      height: 300px;
+    }
+
+    &__img-pipes-2 {
+      top: 20%;
+      width: 70%;
+      height: 70%;
+    }
+
+    &__img-pipes-1 {
+      left: 5%;
+      width: 55%;
+      height: 55%;
+    }
+  }
+
+  @include _mobile400 {
+    &__img-blob-1 {
+      height: 205px;
+    }
+    &__img-pipes-2 {
+      width: 80%;
+      height: 80%;
+    }
+
+    &__img-pipes-1 {
+      width: 60%;
+      height: 60%;
     }
   }
 }

@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *, *::after, *::before {
@@ -114,13 +115,21 @@ a {
     height: 97px;
     width: 100px;
   }
-}
 
-.icon {
-  width: 22px;
-  height: 22px;
-}
+  @include _tablet1248 {
+    &__img {
+      height: 64px;
+      width: 64px;
+    }
+  }
 
+  @include _mobile767 {
+    &__img {
+      height: 47px;
+      width: 48px;
+    }
+  }
+}
 
 .img {
   &-absolute {
@@ -132,6 +141,8 @@ a {
 
   &__blob1 {
     background: url(/assets/images/svg/blob-1.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 
   &__blob2 {
@@ -186,6 +197,17 @@ a {
 }
 
 /*КНОПКИ*/
+.icon {
+  width: 22px;
+  height: 22px;
+  mask-size: cover;
+
+  @include _mobile767 {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 .icon-line {
   display: flex;
   margin-left: 29px;
@@ -253,6 +275,13 @@ a {
       font-size: 11px;
       line-height: 13px;
       color: $white;
+    }
+  }
+
+  @include _mobile767 {
+    &__button{
+      width: 44px;
+      height: 44px;
     }
   }
 }
