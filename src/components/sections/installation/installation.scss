@@ -42,24 +42,25 @@
     height: 313px;
   }
 
-  &__list-with-img {
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 42px 87px;
-    //margin: 72px 56px;
-  }
+  &__list{
+    &-with-img {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 42px 87px;
+    }
 
-  &__list-box {
-    display: flex;
-    flex-direction: column;
-  }
+    &-box {
+      display: flex;
+      flex-direction: column;
+    }
 
-  &__list-img {
-    margin-bottom: 32px;
-    width: 79px;
-    height: 79px;
-  }
+    &-img {
+      margin-bottom: 32px;
+      width: 79px;
+      height: 79px;
+    }
 
-  &__list-text-box {
-    margin-left: 0;
+    &-text-box {
+      margin-left: 0;
+    }
   }
 }

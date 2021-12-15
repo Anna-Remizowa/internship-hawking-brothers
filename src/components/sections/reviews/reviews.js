@@ -2,7 +2,7 @@ import Swiper, {Navigation} from 'swiper';
 
 Swiper.use([Navigation])
 
-document.addEventListener("DOMContentLoaded", () => {
+export const initializeSliderReviews = () => {
   const swiper = new Swiper('.reviews__slider', {
     direction: 'horizontal',
     loop: false,
@@ -13,4 +13,4 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: '.reviews__arrow-left',
     },
   });
-});
+};

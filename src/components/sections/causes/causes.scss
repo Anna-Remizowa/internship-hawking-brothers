@@ -16,10 +16,10 @@
 
   &__items {
     margin-right: 34px;
-    counter-reset: my-awesome-counter;
+    counter-reset: counter;
     list-style: none;
 
-    &-li {
+    &-element {
       position: relative;
       display: flex;
       align-items: center;
@@ -27,7 +27,7 @@
       counter-increment: counter;
     }
 
-    &-li:before {
+    &-element::before {
       min-width: 60px;
       margin-right: 40px;
       content: counter(counter);

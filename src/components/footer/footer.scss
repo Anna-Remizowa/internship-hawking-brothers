@@ -1,21 +1,18 @@
 .footer {
   background: #0C2F33;
+  padding: 88px 0;
 
   &__inner {
     display: flex;
-    //grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
-    align-items: center;
-    height: 350px;
   }
 
   &__container {
     display: flex;
     flex-direction: column;
-    height: 170px;
   }
 
-  &__title, &__ul-link, &__text {
+  &__title, &__link, &__text {
     color: $white;
   }
 
@@ -32,7 +29,7 @@
     grid-gap: 19px 56px;
   }
 
-  &__ul-link {
+  &__link {
     font-size: 14px;
     line-height: 17px;
   }
@@ -54,7 +51,7 @@
   }
 
   &__icon {
-    &:before {
+    &::before {
       display: inline-block;
       width: 15px;
       height: 15px;
@@ -63,11 +60,11 @@
       content: '';
     }
 
-    &--time:before {
+    &--time::before {
       background-image: url(/assets/images/svg/time.svg);
     }
 
-    &--location:before {
+    &--location::before {
       background-image: url(/assets/images/svg/location.svg);
     }
   }

@@ -2,8 +2,8 @@ import Swiper, {Navigation} from 'swiper';
 
 Swiper.use([Navigation])
 
-document.addEventListener("DOMContentLoaded", () => {
-  const swiper = new Swiper('.product-slider', {
+export const initializeSliderBestsellers = () => {
+  const swiper = new Swiper('.bestsellers__slider', {
     direction: 'horizontal',
     loop: true,
     spaceBetween: 30,
@@ -23,4 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
-});
+};
+
+
+

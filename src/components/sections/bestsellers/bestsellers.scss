@@ -1,6 +1,6 @@
 /*РАЗДЕЛ - ХИТЫ ПРОДАЖ*/
 .bestsellers {
-  margin-bottom: 256px;
+  padding: 156px 0;
 
   &__header {
     position: relative;
@@ -10,6 +10,10 @@
   }
 
   @include _tablet1248 {
-    margin-bottom: 117px;
+    padding: 74px 0;
+  }
+
+  @include _mobile767 {
+    padding: 51px 0;
   }
 }

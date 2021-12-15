@@ -42,14 +42,6 @@ input {
   min-height: 100%;
 }
 
-//.main {
-//  flex: 1 0 auto;
-//}
-
-//.footer {
-//  flex: 0 0 auto;
-//}
-
 .container, .container-fluid {
   margin: 0 auto;
   padding: 0 15px;
@@ -64,6 +56,10 @@ input {
   height: 100%;
 }
 
+.hidden {
+  display: none;
+}
+
 /*ОСНОВНЫЕ СТИЛИ ШРИФТОВ*/
 a {
   text-decoration: none;
@@ -76,7 +72,7 @@ a {
   line-height: 49px;
   color: $black-base;
 
-  &:before {
+  &::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -140,9 +136,7 @@ a {
   }
 
   &__blob1 {
-    background: url(/assets/images/svg/blob-1.svg) no-repeat;
-    background-size: contain;
-    background-position: center;
+    background: url(/assets/images/svg/blob-1.svg) center / contain no-repeat;
   }
 
   &__blob2 {
@@ -174,15 +168,15 @@ a {
   }
 
   &__dots {
-    background: url(/assets/images/svg/dots.svg) no-repeat;
-    width: 36px;
-    height: 148px;
+    background: url(/assets/images/svg/dots.svg) left / contain no-repeat;
+    width: 5%;
+    height: 20%;
   }
 
   &__triangle {
-    background: url(/assets/images/svg/triangle.svg) no-repeat;
-    width: 78px;
-    height: 19px;
+    background: url(/assets/images/svg/triangle.svg) left / contain no-repeat;
+    width: 10%;
+    height: 5%;
   }
 
   &__border {
@@ -229,14 +223,16 @@ a {
     background-color: transparent;
     cursor: pointer;
 
-    &-img--shopping {
-      width: 24px;
-      mask-image: url(/assets/images/svg/shopping-cart.svg);
-      background-color: $black-base;
-    }
+    &-img {
+      &--shopping {
+        width: 24px;
+        mask-image: url(/assets/images/svg/shopping-cart.svg);
+        background-color: $black-base;
+      }
 
-    &-img--light {
-      background-color: $white;
+      &--light {
+        background-color: $white;
+      }
     }
 
     &-link {
@@ -279,7 +275,7 @@ a {
   }
 
   @include _mobile767 {
-    &__button{
+    &__button {
       width: 44px;
       height: 44px;
     }
@@ -326,7 +322,7 @@ a {
     color: $gray;
   }
 
-  &__price-new:after, &__price-old:after {
+  &__price-new::after, &__price-old::after {
     content: '\20BD';
     text-decoration-line: none;
   }

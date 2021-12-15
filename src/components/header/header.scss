@@ -78,7 +78,7 @@
       margin-top: 16px;
     }
 
-    &__icon-line > .icon-line__button:not(:last-child) {
+    .icon-line__button:not(:last-of-type) {
       display: none;
     }
 

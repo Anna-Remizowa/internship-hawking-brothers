@@ -1,7 +1,5 @@
 /*СТАРТОВЫЙ ЭКРАН*/
 .start {
-  height: 794px;
-  margin-bottom: 169px;
 
   &--container-fluid {
     display: flex;
@@ -11,14 +9,13 @@
   &__inner {
     display: flex;
     height: inherit;
-    //align-items: center;
-    padding: 94px 0 0 94px;
+    padding-top: 95px;
   }
 
   &__content {
     flex-shrink: 0;
     width: 500px;
-    margin: 65px 184px 0 0;
+    margin: 65px 137px 230px 95px;
   }
 
   &__discount {
@@ -75,7 +72,7 @@
     font-size: 50px;
     line-height: 61px;
 
-    &__:after {
+    &__::after {
       margin-left: 15px;
       font-weight: 700;
     }
@@ -86,7 +83,7 @@
     font-size: 25px;
     line-height: 30px;
 
-    &:after {
+    &::after {
       margin-left: 14px;
     }
   }
@@ -110,143 +107,64 @@
 
     &-blob-1 {
       width: 100%;
-      height: 100%;
+      height: auto;
     }
 
     &-dots {
       &--one {
-        left: 400px;
+        top: 5%;
+        left: 45%;
       }
 
       &--two {
         bottom: 0;
-        right: 115px;
+        right: 10%;
       }
     }
 
     &-triangle {
       &--one {
-        top: 358px;
-        left: -47px;
+        top: 50%;
+        left: -3%;
       }
 
       &--two {
-        right: 160px;
-        top: 134px;
+        right: 10%;
+        top: 20%;
       }
     }
 
     &-pipes-1 {
-      left: -47px;
+      left: -5%;
       width: 60%;
       height: 60%;
-      background: url(/assets/images/content/pipes-1.png) no-repeat;
-      background-size: contain;
+      background: url(/assets/images/content/pipes-1.png) center / contain no-repeat;
     }
 
     &-pipes-2 {
-      top: 80px;
-      left: 220px;
-      width: 80%;
-      height: 80%;
-      background: url(/assets/images/content/pipes-2.png) no-repeat;
-      background-size: contain;
-    }
-  }
-
-  @include _desktop1795 {
-    height: 715px;
-    margin-bottom: 150px;
-
-    &__img {
-      &-dots--one {
-        left: 360px;
-      }
-
-      &-triangle--two {
-        top: 100px;
-      }
-
-      &-dots--two {
-        right: 70px;
-      }
+      top: 20%;
+      left: 20%;
+      width: 70%;
+      height: 70%;
+      background: url(/assets/images/content/pipes-2.png) center / contain no-repeat;
     }
   }
 
   @include _desktop1630 {
-    height: 670px;
-    margin-bottom: 130px;
-
-    &__inner {
-      padding: 74px 0 0 74px;
-    }
-
     &__content {
-      margin-top: 50px;
-      margin-right: 90px;
-    }
-
-    &__img {
-      &-dots--two {
-        display: none;
-      }
-    }
-  }
-
-  @include _desktop1490 {
-    height: 620px;
-
-    &__inner {
-      padding: 66px 0 0 66px;
-    }
-
-    &__content {
-      margin-top: 20px;
-      margin-right: 60px;
-    }
-
-    &__img {
-      &-pipes-2 {
-        top: 60px;
-        left: 160px;
-      }
-
-      &-triangle, &-dots {
-        display: none;
-      }
-    }
-  }
-
-  @include _desktop1385 {
-    height: 570px;
-    margin-bottom: 115px;
-
-    &__inner {
-      padding-left: 36px;
-    }
-
-    &__content {
-      margin-right: 44px;
+      margin-left: 60px;
+      margin-bottom: 60px;
     }
   }
 
   @include _tablet1248 {
-    height: 600px;
-    margin-bottom: 81px;
-
     &__inner {
-      padding: 40px 0 0 0;
+      padding-top: 40px;
     }
 
     &__content {
-      width: 350px;
-      margin: 60px 44px 0 50px;
-    }
-
-    &__img {
-      &-pipes-2 {
-        left: 20%;
-      }
+      width: 400px;
+      margin: 26px 45px 70px 80px;
     }
 
     &__content .price-container {
@@ -278,7 +196,7 @@
       font-size: 40px;
       line-height: 49px;
 
-      &__:after {
+      &__::after {
         margin-left: 11px;
       }
     }
@@ -288,7 +206,7 @@
       font-size: 25px;
       line-height: 30px;
 
-      &:after {
+      &::after {
         margin-left: 14px;
       }
     }
@@ -303,46 +221,13 @@
   }
 
   @include _tablet1050 {
-    height: 530px;
-
-    &__content {
-      margin-top: 26px;
-    }
-
-    &__img-pipes-2 {
-      left: 25%;
-      width: 70%;
-      height: 70%;
-    }
-  }
-
-  @include _tablet910 {
-    height: 400px;
-
     &__content {
       width: 310px;
-    }
-
-    &__img-pipes-1 {
-      left: 0;
-    }
-
-    &__img-pipes-2 {
-      left: 30%;
-      width: 80%;
-      height: 80%;
-    }
-  }
-
-  @include _tablet790 {
-    &__content {
-      margin-left: 0;
+      margin-left: 16px;
     }
   }
 
   @include _mobile767 {
-    height: 100%;
-
     &__inner {
       flex-direction: column-reverse;
     }
@@ -374,13 +259,11 @@
     }
   }
 
-  @include _mobile580 {
+  @include _mobile510 {
     &__img-blob-1 {
       height: 350px;
     }
-  }
 
-  @include _mobile470 {
     &__discount {
       margin-bottom: 17px;
 
@@ -406,7 +289,7 @@
       font-size: 30px;
       line-height: 37px;
 
-      &__:after {
+      &__::after {
         margin-left: 7px;
       }
     }
@@ -415,7 +298,7 @@
       font-size: 14px;
       line-height: 17px;
 
-      &:after {
+      &::after {
         margin-left: 7px;
       }
     }
@@ -423,36 +306,11 @@
     &__content-buttons {
       margin-top: 22px;
     }
-
-    &__img-blob-1 {
-      height: 300px;
-    }
-
-    &__img-pipes-2 {
-      top: 20%;
-      width: 70%;
-      height: 70%;
-    }
-
-    &__img-pipes-1 {
-      left: 5%;
-      width: 55%;
-      height: 55%;
-    }
   }
 
   @include _mobile400 {
     &__img-blob-1 {
       height: 205px;
-    }
-    &__img-pipes-2 {
-      width: 80%;
-      height: 80%;
-    }
-
-    &__img-pipes-1 {
-      width: 60%;
-      height: 60%;
     }
   }
 }

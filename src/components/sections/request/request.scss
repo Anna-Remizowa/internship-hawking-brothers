@@ -28,7 +28,7 @@
     font-weight: 300;
   }
 
-  &__socials &__socials-item:not(:last-child) {
+  &__socials-item:not(:last-of-type) {
     margin-right: 36px;
   }
 
