@@ -5,7 +5,7 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    height: 400px;
+    padding: 20px 30px 30px 30px;
     border: 1px solid #E5E5E5;
   }
 
@@ -13,12 +13,12 @@
     position: relative;
     display: flex;
     justify-content: center;
-    margin: 21px 0 26px 0;
+    margin: 0 0 26px 0;
 
     &::after {
       position: absolute;
       bottom: 0;
-      left: 31px;
+      left: 0;
       height: 1px;
       width: 154px;
       content: '';
@@ -34,19 +34,15 @@
 
   &__icon-line {
     position: absolute;
-    right: 31px;
+    right: 0;
     bottom: -24px;
     height: 56px;
     width: 56px;
   }
 
-  &__icon-line .icon-line__button {
+  .icon-line__button {
     margin-left: 0;
     border: none;
-  }
-
-  &__content-box {
-    margin: 0 30px;
   }
 
   &__content-title, &__content-description {
@@ -91,24 +87,62 @@
   }
 
   @include _tablet1248 {
-    &__img-box{
+    &__wrapper {
+      margin-bottom: 34px;
+      padding: 15px 30px 37px 30px;
+    }
+
+    &__icon-line {
+      right: auto;
+      bottom: -82%;
+      margin-left: 0;
+    }
+
+    &__img-box {
       margin-bottom: 40px;
 
-      &::after{
+      &::after {
         bottom: -14px;
-        width: calc(100% - 120px);
+        width: 100%;
       }
     }
 
-    &__img{
+    &__img {
       height: 231px;
       width: 231px;
     }
 
-    &__content-box{
+    &__content-box {
       max-width: 310px;
       text-align: center;
       align-self: center;
+    }
+  }
+
+  @include _mobile767 {
+    &__wrapper {
+      margin-bottom: 51px;
+      padding: 30px 24px 44px 24px;
+    }
+
+    &__img-box {
+      margin-bottom: 44px;
+
+      &::after{
+        bottom: -22px;
+      }
+    }
+
+    &__content-price {
+      flex-direction: column;
+    }
+
+    &__price-new{
+      margin-bottom: 4px;
+    }
+
+    &__icon-line {
+      bottom: -96%;
     }
   }
 }

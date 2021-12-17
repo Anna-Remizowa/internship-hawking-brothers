@@ -8,3 +8,6 @@ section.bestsellers
       .swiper-wrapper
         each product in bestsellers_products
           +product_slider(product)
+
+    .bestsellers_arrows
+      +arrows("bestsellers", true)

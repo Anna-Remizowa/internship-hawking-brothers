@@ -4,7 +4,6 @@ Swiper.use([Navigation])
 
 export const initializeSliderBestsellers = () => {
   const swiper = new Swiper('.bestsellers__slider', {
-    direction: 'horizontal',
     loop: true,
     spaceBetween: 30,
     navigation: {

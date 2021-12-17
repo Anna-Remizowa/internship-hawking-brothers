@@ -11,6 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeSliderReviews();
 });
 
-window.addEventListener('resize', function(event){
-  console.log(document.querySelector('.start__img-blob-1').offsetHeight);
-});
+// window.addEventListener('resize', function(event){
+//   console.log(document.querySelector('.projects__slider').offsetHeight);
+// });

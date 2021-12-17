@@ -9,11 +9,37 @@
     margin-bottom: 62px;
   }
 
+  &__arrows-container-adaptive {
+    display: none;
+  }
+
+  &_arrows {
+    display: flex;
+    justify-content: center;
+  }
+
   @include _tablet1248 {
-    padding: 74px 0;
+    padding: 81px 0 37px 0;
+
+    &__header{
+      margin-bottom: 40px;
+    }
   }
 
   @include _mobile767 {
-    padding: 51px 0;
+    padding: 56px 0 25px 0;
+
+    &__header{
+      margin-bottom: 21px;
+    }
+
+    &__arrows-container {
+      display: none;
+
+      &-adaptive {
+        display: flex;
+        width: 138px;
+      }
+    }
   }
 }

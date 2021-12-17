@@ -7,8 +7,8 @@ header.header
           img.logo__img(src= "assets/images/logo.png", alt="Logo")
       .header__wrapper
         .icon-line.icon-line--one.header__icon
-          button.icon-line__button.icon-line__button--main(type="button")
-            +svg("icon icon-line__button-img", "assets/images/sprite.svg#menu")
+          button.icon-line__button.icon-line__button--main.header__icon-line-button(type="button")
+            +svg("icon icon-line__button-img header__img-icon", "assets/images/sprite.svg#menu")
 
         nav.menu
           ul.menu__list
@@ -28,14 +28,14 @@ header.header
         +socials(socialList, "header")
 
         .icon-line.header__icon-line
-          .icon-line__button.icon-line__button--light
+          .icon-line__button.icon-line__button--light.header__icon-line-button
             a.icon-line__button-link(href= routing.search)
-              +svg("icon icon-line__button-img", "assets/images/sprite.svg#search")
-          .icon-line__button.icon-line__button--light
+              +svg("icon icon-line__button-img header__img-icon", "assets/images/sprite.svg#search")
+          .icon-line__button.icon-line__button--light.header__icon-line-button
             a.icon-line__button-link(href= routing.favorites)
-              +svg("icon icon-line__button-img", "assets/images/sprite.svg#favorites")
-          .icon-line__button.icon-line__button--light
+              +svg("icon icon-line__button-img header__img-icon", "assets/images/sprite.svg#favorites")
+          .icon-line__button.icon-line__button--light.header__icon-line-button
             a.icon-line__button-link(href= routing.cart)
-              .icon.icon-line__button-img.icon-line__button-img--shopping
+              .icon.icon-line__button-img.header__img-icon.icon-line__button-img--shopping
             .icon-line__button-circle-count
               p.icon-line__button-count-text 10
