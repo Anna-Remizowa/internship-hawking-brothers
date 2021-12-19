@@ -1,11 +1,16 @@
 .reviews {
   position: relative;
-  margin-bottom: 136px;
+  padding: 140px 0;
 
   &__inner {
-    position: relative;
     display: flex;
     flex-direction: column;
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__container {
@@ -21,7 +26,8 @@
   }
 
   &__text {
-    width: 520px;
+    max-width: 520px;
+    width: 100%;
     margin-bottom: 68px;
     color: $black-base;
 
@@ -49,12 +55,16 @@
 
   &__arrows-container {
     height: 260px;
+
+    &-adaptive {
+      display: none;
+    }
   }
 
   &__slider {
     position: absolute;
     right: 0;
-    bottom: -35px;
+    bottom: 105px;
     width: 72%;
     padding: 35px
   }
@@ -63,11 +73,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 260px;
     width: 400px;
     padding: 33px 29px 36px 52px;
     background: $white;
-    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
   }
 
@@ -86,6 +95,78 @@
       width: 3px;
       content: '';
       background-color: $coral;
+    }
+  }
+
+  @include _tablet1248 {
+    padding: 28px 0 80px 0;
+
+    &__title {
+      margin-bottom: 45px;
+    }
+
+    &__text {
+      margin-bottom: 7px;
+    }
+
+    &__arrows-container {
+      display: none;
+
+      &-adaptive {
+        display: flex;
+      }
+    }
+
+    &__slider {
+      position: relative;
+      top: 0;
+      width: calc(100% + 35px);
+      left: -35px;
+    }
+  }
+
+  @include _mobile767 {
+    padding-bottom: 34px;
+
+    &__title {
+      margin-bottom: 23px;
+    }
+
+    &__text {
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    &__slider-inner {
+      position: relative;
+      top: -14px;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    &__slider {
+      left: 0;
+      padding: 35px 0;
+    }
+
+    &__slide-text{
+      min-height: 99px;
+    }
+
+    &__text-name{
+      font-size: 14px;
+    }
+
+    &__arrows-container {
+      height: auto;
+      width: 138px;
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+
+      &-adaptive {
+        display: none;
+      }
     }
   }
 }

@@ -232,8 +232,14 @@
       flex-direction: column-reverse;
     }
 
-    &__img-blob-1 {
-      height: 500px;
+    &__img{
+      &-blob-1 {
+        height: 500px;
+      }
+
+      &-dots, &-triangle {
+        display: none;
+      }
     }
 
     &__content {

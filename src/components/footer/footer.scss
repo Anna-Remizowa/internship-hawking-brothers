@@ -81,4 +81,19 @@
     width: 22px;
     height: 22px;
   }
+
+  @include _tablet1248 {
+    padding: 25px 0;
+
+    &__container:not(:last-of-type),
+    &__title,
+    &__text-icon-box{
+      display: none;
+    }
+
+    &__container{
+      width: 100%;
+      align-items: center;
+    }
+  }
 }

@@ -1,5 +1,5 @@
 .without-money {
-  margin-bottom: 181px;
+  padding: 40px 0 140px 0;
 
   &__inner {
     display: flex;
@@ -31,30 +31,32 @@
     }
 
     &-dots {
+      height: 30%;
+
       &--one {
-        right: -100px;
-        bottom: -150px;
+        right: -20%;
+        bottom: -25%;
       }
 
       &--two {
-        left: 260px;
+        left: 45%;
       }
     }
 
     &-triangle {
       &--one {
-        right: -170px;
-        top: 50px;
+        right: -25%;
+        top: 10%;
       }
 
       &--two {
-        top: 150px;
-        left: 20px;
+        top: 33%;
+        left: 5%;
       }
     }
 
     &-fireplace {
-      right: -110px;
+      right: -18%;
       width: 480px;
       height: 480px;
       background: url(/assets/images/content/fireplace-2.png) center / contain no-repeat;
@@ -63,12 +65,73 @@
 
   &__discount {
     position: absolute;
-    bottom: 70px;
-    left: -90px;
+    bottom: 17%;
+    left: -15%;
     font-weight: 800;
     font-size: 250px;
     line-height: 30px;
     color: $black-base;
     opacity: 0.1;
+  }
+
+  @include _tablet1248 {
+    padding: 40px 0;
+
+    &__content-container {
+      width: auto;
+    }
+
+    &__text {
+      max-width: 303px;
+      width: 100%;
+      margin-bottom: 29px;
+    }
+
+    &__img {
+      &-blob-8 {
+        left: -5%;
+        width: 100%;
+        height: 100%;
+      }
+
+      &-fireplace {
+        right: -10%;
+        top: -15%;
+        width: 100%;
+        height: 100%;
+      }
+
+      &-dots, &-triangle--one, &-triangle--two {
+        display: none;
+      }
+    }
+
+    &__discount {
+      top: 45%;
+      left: 7%;
+      font-size: 100px;
+    }
+  }
+
+  @include _mobile767 {
+    padding: 16px 0;
+
+    &__content-container {
+      width: 100%;
+      align-items: center;
+    }
+
+    &__title-box {
+      text-align: center;
+    }
+
+    &__text {
+      max-width: 100%;
+      margin-bottom: 19px;
+    }
+
+    &__img {
+      display: none;
+    }
   }
 }

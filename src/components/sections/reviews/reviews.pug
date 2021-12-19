@@ -1,18 +1,21 @@
 section.reviews
   .container
     .reviews__inner
-      h2.title-overline.reviews__title Отзывы наших клиентов
+      .reviews__header
+        h2.title-overline.reviews__title Отзывы наших клиентов
+        +arrows("reviews", true)
       p.text.reviews__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-      +arrows("reviews")
+      .reviews__slider-inner
+        +arrows("reviews")
+        .reviews__slider.swiper
+          .swiper-wrapper
+            each review in reviews_list
+              .reviews__slide-container.swiper-slide
+                p.reviews__slide-text= review.comments
+                .reviews__photo-box
+                  img.image-circle(src= review.src, alt="Image")
+                  .reviews__text-box
+                    p.text.reviews__text-name= review.name
+                    p.text.reviews__text-date= review.date
 
-  .reviews__slider.swiper
-    .swiper-wrapper
-      each review in reviews_list
-        .reviews__slide-container.swiper-slide
-          p.reviews__slide-text= review.comments
-          .reviews__photo-box
-            img.image-circle(src= review.src, alt="Image")
-            .reviews__text-box
-              p.text.reviews__text-name= review.name
-              p.text.reviews__text-date= review.date

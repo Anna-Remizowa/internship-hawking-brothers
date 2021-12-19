@@ -1,6 +1,6 @@
 .measurement {
   position: relative;
-  margin-bottom: 123px;
+  padding: 50px 0;
 
   &__inner {
     display: flex;
@@ -48,25 +48,27 @@
 
     &-blob-4 {
       right: 0;
-      top: 80px;
+      top: 15%;
       width: 766px;
       height: 540px;
     }
 
     &-dots {
-      top: 70px;
-      left: 120px;
+      width: 10%;
+      height: 30%;
+      top: 15%;
+      left: 20%;
     }
 
     &-triangle {
       &--one {
         right: 0;
-        top: 130px;
+        top: 25%;
       }
 
       &--two {
-        bottom: 100px;
-        left: -210px;
+        bottom: 20%;
+        left: -35%;
       }
     }
 
@@ -75,6 +77,77 @@
       width: 433px;
       height: 476px;
       background: url(/assets/images/content/man.png) center / contain no-repeat;
+    }
+  }
+
+  @include _desktop1630 {
+    &__img {
+      &-blob-4 {
+        width: 650px;
+      }
+
+      &-triangle--two{
+        left: -15%;
+      }
+    }
+  }
+
+  @include _tablet1248 {
+    padding: 36px 0;
+
+    &__content {
+      flex-direction: column-reverse;
+    }
+
+    &__part-container {
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+    }
+
+    &__title-box {
+      margin: 0 0 21px 0;
+    }
+
+    &__text + &__text {
+      margin-bottom: 48px;
+    }
+
+    &__img {
+      height: 476px;
+
+      &-blob-4, &-man {
+        width: 100%;
+      }
+
+      &-triangle--one, &-triangle--two {
+        display: none;
+      }
+    }
+  }
+
+  @include _mobile767 {
+    padding: 13px 0;
+
+    &__text {
+      font-size: 14px;
+      margin-bottom: 21px;
+
+      &--highlight {
+        font-size: 20px;
+      }
+
+      &--highlight-first{
+        display: block;
+      }
+    }
+
+    &__text + &__text {
+      margin-bottom: 24px;
+    }
+
+    &__img {
+      display: none;
     }
   }
 }
