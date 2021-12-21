@@ -1,5 +1,5 @@
 .benefits {
-  padding: 130px 0 0;
+  padding: 146px 0 0;
 
   &__inner {
     position: relative;
@@ -7,8 +7,8 @@
 
   &__list-with-img {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 42px 87px;
-    margin: 72px 56px;
+    grid-gap: 32px 26px;
+    margin: 63px 0;
   }
 
   @include _tablet1248 {

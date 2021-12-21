@@ -5,18 +5,19 @@ section.measurement
         .measurement__img
           .img-absolute.img.img__blob4.measurement__img-blob-4
           .img-absolute.img.img__dots.measurement__img-dots
-          .img-absolute.img.img__triangle.measurement__img-triangle--one
-          .img-absolute.img.img__triangle.measurement__img-triangle--two
+          .img-absolute.img.img__triangle.measurement__img-triangle.measurement__img-triangle--one
+          .img-absolute.img.img__triangle.measurement__img-triangle.measurement__img-triangle--two
           .img-absolute.measurement__img-man
         .measurement__part-container
           h2.title.measurement__title.measurement__title-box Заказать выезд инженера
             .title.title--highlight.measurement__title на замер
           p.text.measurement__text.measurement__text--first Оставьте заявку по телефону
             a.text.measurement__text.measurement__text--highlight.measurement__text--highlight-first(href="tel:+78125092198")  +7 (812)
-              span.text.measurement__text.measurement__text--highlight.measurement__text--highlight-color  509-29-36
+              span.text.measurement__text.measurement__text--highlight.measurement__text--highlight-color 509-29-36
           p.text.measurement__text
             | Наш инженер-проектировщик приедет в удобное для Вас
             | время, поможет с выбором места установки печи или котла
             | и осуществит замер для Вашего дымохода
 
-      +form_order("И получите полную смету требуемых изделий и монтажных работ")
+      +form_order("И получите полную смету требуемых изделий и монтажных работ", "measurement")
+      +svg("img img-absolute measurement__img-arrow", "assets/images/sprite.svg#arrow-down")

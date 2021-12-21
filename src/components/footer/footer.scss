@@ -4,12 +4,15 @@
 
   &__inner {
     display: flex;
-    justify-content: space-between;
   }
 
   &__container {
     display: flex;
     flex-direction: column;
+  }
+
+  &__container:last-of-type{
+    margin-left: 15px;
   }
 
   &__title, &__link, &__text {
@@ -26,7 +29,12 @@
   &__catalog-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 19px 56px;
+    grid-gap: 18px 82px;
+    margin-right: 105px;
+  }
+
+  &__catalog-items--spec{
+    grid-gap: 18px 60px;
   }
 
   &__link {
@@ -36,13 +44,11 @@
 
   &__text-icon-box {
     position: relative;
-    margin-bottom: 11px;
+    margin-bottom: 5px;
   }
 
   &__text {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 24px;
 
     &--highlight {
@@ -70,11 +76,11 @@
   }
 
   &__socials {
-    margin-top: 10px;
+    margin-top: 26px;
   }
 
   &__socials &__socials-item:not(:last-child) {
-    margin-right: 36px;
+    margin-right: 45px;
   }
 
   &__social-img {

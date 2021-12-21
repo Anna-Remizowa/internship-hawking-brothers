@@ -1,5 +1,5 @@
 .installation {
-  padding: 73px 0;
+  padding: 86px 0;
 
   &__inner {
     position: relative;
@@ -8,12 +8,13 @@
   }
 
   &__title {
-    margin-bottom: 66px;
+    margin-bottom: 68px;
   }
 
   &__text-container {
     display: flex;
-    margin-bottom: 60px;
+    align-items: center;
+    margin-bottom: 50px;
   }
 
   &__text-content {
@@ -32,7 +33,7 @@
     }
 
     &--highlight-black {
-      margin-top: 50px;
+      margin-top: 30px;
     }
   }
 
@@ -45,7 +46,7 @@
   &__list{
     &-with-img {
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 42px 87px;
+      grid-gap: 30px;
     }
 
     &-box {
@@ -57,6 +58,10 @@
       margin-bottom: 32px;
       width: 79px;
       height: 79px;
+    }
+
+    &-title{
+      font-size: 20px;
     }
 
     &-text-box {

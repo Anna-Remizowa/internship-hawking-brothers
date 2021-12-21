@@ -5,13 +5,7 @@
   }
 
   &__inner {
-    height: 97px;
     margin-top: 26px;
-  }
-
-  &__wrapper {
-    justify-content: space-between;
-    flex-grow: 1;
   }
 
   &__phone-number {
@@ -28,7 +22,7 @@
 
   &__phone-me-link {
     padding-bottom: 5px;
-    margin: 5px 60px 0 70px;
+    margin: 5px 65px 0 70px;
     @extend %small-text;
     color: $red;
     line-height: 17px;
@@ -104,7 +98,7 @@
 
 /*МЕНЮ В HEADER*/
 .menu {
-  margin: 0 56px 0 31px;
+  margin: 0 62px 0 31px;
 
   &__list {
     display: flex;
@@ -116,7 +110,7 @@
     color: $light-green;
     line-height: 23px;
     font-weight: bold;
-    margin-right: 30px;
+    margin-right: 36px;
 
     &:hover, &--active {
       color: $black-base;

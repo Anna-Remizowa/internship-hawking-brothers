@@ -1,8 +1,9 @@
 .measurement {
   position: relative;
-  padding: 50px 0;
+  padding: 39px 0;
 
   &__inner {
+    position: relative;
     display: flex;
     flex-direction: column;
   }
@@ -14,7 +15,7 @@
 
   &__part-container {
     width: 565px;
-    margin-left: 60px;
+    margin-left: 50px;
   }
 
   &__title-box {
@@ -23,6 +24,7 @@
 
   &__text {
     &--highlight {
+      margin-left: 8px;
       font-weight: 600;
       font-size: 25px;
       line-height: 30px;
@@ -38,7 +40,7 @@
   }
 
   &__text + &__text {
-    margin-bottom: 67px;
+    margin-bottom: 65px;
   }
 
   &__img {
@@ -55,29 +57,42 @@
 
     &-dots {
       width: 10%;
-      height: 30%;
-      top: 15%;
-      left: 20%;
+      height: 32%;
+      top: 17%;
+      left: 18%;
     }
 
     &-triangle {
+      width: 13%;
+
       &--one {
         right: 0;
-        top: 25%;
+        top: 27.5%;
       }
 
       &--two {
         bottom: 20%;
-        left: -35%;
+        left: -34%;
       }
     }
 
     &-man {
-      right: 0;
+      right: 2%;
       width: 433px;
       height: 476px;
       background: url(/assets/images/content/man.png) center / contain no-repeat;
     }
+
+    &-arrow{
+      width: 143px;
+      height: 125px;
+      bottom: 23.5%;
+      right: 4.5%;
+    }
+  }
+
+  &__form-order{
+    left: -82px;
   }
 
   @include _desktop1630 {
@@ -86,7 +101,7 @@
         width: 650px;
       }
 
-      &-triangle--two{
+      &-triangle--two {
         left: -15%;
       }
     }
@@ -137,7 +152,7 @@
         font-size: 20px;
       }
 
-      &--highlight-first{
+      &--highlight-first {
         display: block;
       }
     }

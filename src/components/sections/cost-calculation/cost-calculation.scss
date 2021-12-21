@@ -1,5 +1,5 @@
 .cost-calculation {
-  padding: 150px 0;
+  padding: 120px 0;
 
   &__inner {
     display: flex;
@@ -21,15 +21,17 @@
   }
 
   &__title-box {
-    margin: 66px 0 17px 0;
+    margin: 67px 0 18px 0;
     font-weight: 800;
     font-size: 50px;
-    line-height: 63px;
+    line-height: 61px;
     color: $coral;
     text-transform: uppercase;
   }
 
   &__text {
+    margin-bottom: 2px;
+
     &--highlight {
       font-weight: 700;
       color: $orange;
@@ -37,7 +39,7 @@
   }
 
   &__text + &__text {
-    margin-bottom: 58px;
+    margin-bottom: 95px;
   }
 
   &__img {
@@ -46,33 +48,34 @@
     flex-grow: 1;
 
     &-blob-3 {
-      left: 12%;
-      width: 625px;
-      height: 580px;
+      top: 2%;
+      left: 13%;
+      width: 650px;
+      height: 600px;
     }
 
     &-dots {
       width: 10%;
-      height: 30%;
+      height: 34%;
 
       &--one {
-        left: 30%;
+        left: 31%;
       }
 
       &--two {
-        bottom: -35%;
-        right: -30%;
+        bottom: -29%;
+        right: -36%;
       }
     }
 
     &-triangle {
       width: 15%;
-      top: 65%;
+      top: 61%;
     }
 
     &-calculator {
-      top: -10%;
-      left: 35%;
+      top: -6%;
+      left: 38%;
       width: 474px;
       height: 596px;
       background: url(/assets/images/content/calculator.png) center / contain no-repeat;

@@ -1,7 +1,7 @@
 /*РАЗДЕЛ - ПРОЕКТЫ*/
 .projects {
   position: relative;
-  padding: 90px 0 250px 0;
+  padding: 50px 0 250px 0;
 
   &__inner {
     position: relative;
@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 415px;
+    width: 400px;
     margin-left: 74px;
   }
 
@@ -28,7 +28,7 @@
   }
 
   &__title-box {
-    margin: 80px 0 26px 0;
+    margin: 107px 0 26px 0;
   }
 
   &__title {
@@ -49,7 +49,7 @@
     position: relative;
 
     &-blob-2 {
-      left: 30px;
+      left: 60px;
       top: -20px;
       width: 750px;
       height: 700px;
@@ -58,7 +58,7 @@
 
   &__slider {
     position: absolute;
-    width: 57%;
+    width: 58.5%;
     padding: 35px;
 
     &-wrapper{
@@ -74,7 +74,7 @@
     &-wrapper{
       display: flex;
       flex-direction: column;
-      padding: 38px 35px 32px 35px;
+      padding: 38px 32px 32px 35px;
     }
 
     &-img {
@@ -86,7 +86,7 @@
     &-title {
       font-weight: 600;
       font-size: 20px;
-      line-height: 20px;
+      line-height: 22px;
       color: $black-base;
       margin-bottom: 15px;
     }

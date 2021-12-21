@@ -7,7 +7,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+body, input, button {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -44,11 +44,12 @@ input {
 
 .container, .container-fluid {
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 7px 0 23px;
 }
 
 .container {
   max-width: 1248px;
+  padding: 0 7px 0 23px;
 }
 
 .container-fluid {
@@ -66,7 +67,7 @@ a {
 }
 
 .title-overline {
-  padding-top: 11px;
+  padding-top: 15px;
   font-weight: 600;
   font-size: 40px;
   line-height: 49px;
@@ -197,13 +198,13 @@ a {
 
   &__dots {
     background: url(/assets/images/svg/dots.svg) left / contain no-repeat;
-    width: 5%;
-    height: 20%;
+    width: 4%;
+    height: 21%;
   }
 
   &__triangle {
     background: url(/assets/images/svg/triangle.svg) left / contain no-repeat;
-    width: 10%;
+    width: 8%;
     height: 5%;
   }
 
@@ -232,7 +233,7 @@ a {
 
 .icon-line {
   display: flex;
-  margin-left: 29px;
+  margin-left: 33px;
 
   &--one {
     margin-left: 36px;
@@ -285,7 +286,7 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
-      right: 0;
+      right: -3px;
       top: 0;
       width: 21px;
       height: 21px;
@@ -344,6 +345,7 @@ a {
   }
 
   &__price-new::after, &__price-old::after {
+    margin-left: 15px;
     content: '\20BD';
     text-decoration-line: none;
   }
@@ -387,8 +389,8 @@ a {
   }
 
   &__img {
-    height: 65px;
-    width: 65px;
+    height: 70px;
+    width: 70px;
   }
 
   &__text-box {

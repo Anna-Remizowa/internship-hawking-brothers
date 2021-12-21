@@ -1,5 +1,5 @@
 .without-money {
-  padding: 40px 0 140px 0;
+  padding: 55px 0 164px 0;
 
   &__inner {
     display: flex;
@@ -12,12 +12,12 @@
   }
 
   &__title-box {
-    margin-bottom: 23px;
+    margin-bottom: 27px;
   }
 
   &__text {
     width: 485px;
-    margin-bottom: 86px;
+    margin-bottom: 67px;
   }
 
   &__img {
@@ -26,37 +26,43 @@
     flex-grow: 1;
 
     &-blob-8 {
+      left: -3%;
       width: 766px;
       height: 540px;
     }
 
     &-dots {
-      height: 30%;
+      width: 10%;
+      height: 36%;
 
       &--one {
-        right: -20%;
-        bottom: -25%;
+        right: -21%;
+        bottom: -37%;
       }
 
       &--two {
-        left: 45%;
+        top: -2%;
+        left: 44%;
       }
     }
 
     &-triangle {
+      width: 15%;
+
       &--one {
-        right: -25%;
-        top: 10%;
+        right: -29%;
+        top: 11%;
       }
 
       &--two {
         top: 33%;
-        left: 5%;
+        left: 0;
       }
     }
 
     &-fireplace {
-      right: -18%;
+      top: 3%;
+      right: -17%;
       width: 480px;
       height: 480px;
       background: url(/assets/images/content/fireplace-2.png) center / contain no-repeat;
@@ -66,7 +72,7 @@
   &__discount {
     position: absolute;
     bottom: 17%;
-    left: -15%;
+    left: -17%;
     font-weight: 800;
     font-size: 250px;
     line-height: 30px;

@@ -1,23 +1,24 @@
 .causes {
-  padding: 100px 0;
+  padding: 60px 0;
 
   &__inner {
     position: relative;
   }
 
   &__title {
-    margin-bottom: 113px;
+    margin-bottom: 117px;
   }
 
   &__content-container {
     display: flex;
-    align-items: center;
   }
 
   &__items {
     display: flex;
     flex-direction: column;
-    margin-right: 34px;
+    max-width: 620px;
+    width: 100%;
+    margin-right: 74px;
     counter-reset: counter;
     list-style: none;
 
@@ -25,17 +26,18 @@
       position: relative;
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 44px;
       counter-increment: counter;
     }
 
     &-element::before {
       min-width: 60px;
-      margin-right: 40px;
+      height: 75px;
+      margin-right: 42px;
       content: counter(counter);
       font-weight: bold;
       font-size: 100px;
-      line-height: 122px;
+      line-height: 75px;
       color: $coral;
       opacity: 0.2;
     }
@@ -47,7 +49,7 @@
 
   &__img {
     background: url(/assets/images/content/causes.png);
-    min-width: 550px;
+    width: 550px;
     height: 403px;
   }
 
