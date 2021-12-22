@@ -1,10 +1,8 @@
 html {
   box-sizing: border-box;
-  overflow-y: hidden;
 }
 
 html, body{
-  height: 100%;
   overflow-x: hidden;
 }
 
@@ -239,14 +237,16 @@ a {
   mask-size: cover;
 
   &__menu {
-    width: 18px;
-    height: 18px;
     mask-image: url(/assets/images/svg/menu.svg);
     background-color: $light-green;
 
     &.close {
       mask-image: url(/assets/images/svg/close.svg);
+    }
 
+    @include _mobile767 {
+      width: 18px;
+      height: 18px;
     }
   }
 }

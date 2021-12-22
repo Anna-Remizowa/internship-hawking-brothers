@@ -6,7 +6,7 @@ export const clickMenuButton = () => {
 
   if (headerButton !== null && adaptiveMenu !== null) {
     headerButton.addEventListener("click", () => {
-      document.body.classList.toggle("blocked");
+      document.documentElement.classList.toggle("blocked");
       iconMenu.classList.toggle("close");
 
       if(adaptiveMenu.classList.contains("open")){
