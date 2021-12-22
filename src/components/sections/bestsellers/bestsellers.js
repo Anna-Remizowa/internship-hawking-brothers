@@ -14,7 +14,7 @@ export const initializeSliderBestsellers = () => {
       320: {
         slidesPerView: 1,
       },
-      767: {
+      769: {
         slidesPerView: 2,
       },
       1248: {

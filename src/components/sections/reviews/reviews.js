@@ -14,7 +14,7 @@ export const initializeSliderReviews = () => {
       320: {
         slidesPerView: 1,
       },
-      767: {
+      769: {
         slidesPerView: 'auto',
       },
     }

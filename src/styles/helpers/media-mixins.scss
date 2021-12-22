@@ -1,9 +1,3 @@
-@mixin _desktop1810 {
-  @media (max-width: 1810px) {
-    @content;
-  }
-}
-
 @mixin _desktop1630 {
   @media (max-width: 1630px) {
     @content;
@@ -23,25 +17,7 @@
 }
 
 @mixin _mobile767 {
-  @media (max-width: 767px) {
-    @content;
-  }
-}
-
-@mixin _mobile670 {
-  @media (max-width: 670px) {
-    @content;
-  }
-}
-
-@mixin _mobile510 {
-  @media (max-width: 510px) {
-    @content;
-  }
-}
-
-@mixin _mobile400 {
-  @media (max-width: 470px) {
+  @media (max-width: 768px) {
     @content;
   }
 }

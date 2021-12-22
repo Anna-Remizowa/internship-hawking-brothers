@@ -4,13 +4,11 @@ import './footer/footer';
 import {initializeSliderBestsellers} from './sections/bestsellers/bestsellers';
 import {initializeSliderProjects} from './sections/projects/projects';
 import {initializeSliderReviews} from './sections/reviews/reviews';
+import {clickMenuButton} from './header/header';
 
 document.addEventListener("DOMContentLoaded", () => {
   initializeSliderBestsellers();
   initializeSliderProjects();
   initializeSliderReviews();
+  clickMenuButton();
 });
-
-// window.addEventListener('resize', function(event){
-//   console.log(document.querySelector('.projects__slider').offsetHeight);
-// });

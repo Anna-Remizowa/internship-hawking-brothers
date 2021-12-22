@@ -1,15 +1,7 @@
 .footer {
+  @include general-footer-header;
   background: #0C2F33;
   padding: 88px 0;
-
-  &__inner {
-    display: flex;
-  }
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-  }
 
   &__container:last-of-type{
     margin-left: 15px;
@@ -19,59 +11,24 @@
     color: $white;
   }
 
-  &__title {
-    margin-bottom: 18px;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 27px;
-  }
-
   &__catalog-items {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: 18px 82px;
     margin-right: 105px;
-  }
 
-  &__catalog-items--spec{
-    grid-gap: 18px 60px;
-  }
-
-  &__link {
-    font-size: 14px;
-    line-height: 17px;
+    &--spec{
+      grid-gap: 18px 60px;
+    }
   }
 
   &__text-icon-box {
-    position: relative;
     margin-bottom: 5px;
   }
 
   &__text {
     font-size: 13px;
-    line-height: 24px;
 
     &--highlight {
       color: $light-green;
-    }
-  }
-
-  &__icon {
-    &::before {
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      margin-right: 8px;
-      background-size: 15px 15px;
-      content: '';
-    }
-
-    &--time::before {
-      background-image: url(/assets/images/svg/time.svg);
-    }
-
-    &--location::before {
-      background-image: url(/assets/images/svg/location.svg);
     }
   }
 

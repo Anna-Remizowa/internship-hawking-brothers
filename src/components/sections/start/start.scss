@@ -260,13 +260,13 @@
     }
   }
 
-  @include _mobile670 {
+  @media (max-width: 670px) {
     &__img-blob-1 {
       height: 400px;
     }
   }
 
-  @include _mobile510 {
+  @media (max-width: 510px) {
     &__img-blob-1 {
       height: 350px;
     }
@@ -315,7 +315,7 @@
     }
   }
 
-  @include _mobile400 {
+  @media (max-width: 470px) {
     &__img-blob-1 {
       height: 205px;
     }

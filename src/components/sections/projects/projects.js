@@ -15,7 +15,7 @@ export const initializeSliderProjects = () => {
           spaceBetween: 30,
           initialSlide : 0,
         },
-        767: {
+        769: {
           slidesPerView: 'auto',
           spaceBetween: 30,
           initialSlide : 0,

@@ -6,9 +6,9 @@ header.header
         a.logo__link(href= routing.home)
           img.logo__img(src= "assets/images/logo.png", alt="Logo")
       .header__wrapper
-        .icon-line.icon-line--one.header__icon
+        .icon-line.icon-line--one.header__icon.header-menu-js
           button.icon-line__button.icon-line__button--main.header__icon-line-button(type="button")
-            +svg("icon icon-line__button-img header__img-icon", "assets/images/sprite.svg#menu")
+            .icon.icon__menu.icon-menu-js
 
         nav.menu
           ul.menu__list
@@ -39,3 +39,58 @@ header.header
               .icon.icon-line__button-img.header__img-icon.icon-line__button-img--shopping
             .icon-line__button-circle-count
               p.icon-line__button-count-text 10
+
+header.header.header-big.header-big-js
+  .container
+    .header-big__inner
+      .header-big__box-lists
+        .header-big__container
+          p.header-big__title КАТАЛОГ
+          ul.header-big__catalog-items
+            li.header-big__item
+              a.header-big__link(href="#") Дымоходы
+            li.header-big__item
+              a.header-big__link(href="#") Камины
+            li.header-big__item
+              a.header-big__link(href="#") Дымососы
+            li.header-big__item
+              a.header-big__link(href="#") Силикат кальция
+            li.header-big__item
+              a.header-big__link(href="#") Печи для дома
+            li.header-big__item
+              a.header-big__link(href="#") Котлы
+            li.header-big__item
+              a.header-big__link(href="#") Печи для бани
+            li.header-big__item
+              a.header-big__link(href="#") Ещё
+        .header-big__container
+          p.header-big__title ИНФОРМАЦИЯ
+            ul.header-big__catalog-items.header-big__catalog-items--spec
+              li.header-big__item
+                a.header-big__link(href="#") Каталог
+              li.header-big__item
+                a.header-big__link(href="#") Полезное
+              li.header-big__item
+                a.header-big__link(href="#") Установка и монтаж
+              li.header-big__item
+                a.header-big__link(href="#") Контакты
+              li.header-big__item
+                a.header-big__link(href="#") Отзывы
+              li.header-big__item
+                a.header-big__link(href="#") Оплата и доставка
+              li.header-big__item
+                a.header-big__link(href="#") Ликвидация товара
+      .header-big__box-support
+        .header-big__inner
+          a.header__phone-number.header-big__phone-number(href="tel:+78125092198")
+            | +7 (812) &nbsp
+            span.header__phone-number.header-big__phone-number.header__phone-number--highlight 509 21 98
+          a.header__phone-me-link.header-big__phone-me-link(href= "#") перезвоните мне
+        .header-big__inner
+          .header-big__text-icon-box
+            p.header-big__text.header-big__text--highlight.header-big__icon.header-big__icon--time пн-пт
+              span.header-big__text  9:00 – 20:00
+              span.header-big__text.header-big__text--highlight   сб-вс
+              span.header-big__text  10:00 – 18:00
+          .header-big__text-icon-box
+            p.header-big__text.header-big__icon.header-big__icon--location г. Санкт - Петербург, ул. Тамбасова д.7

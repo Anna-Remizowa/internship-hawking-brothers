@@ -1,5 +1,10 @@
 html {
   box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+html, body{
+  height: 100%;
   overflow-x: hidden;
 }
 
@@ -12,7 +17,6 @@ body, input, button {
   font-weight: normal;
   font-style: normal;
   color: $font-color;
-  overflow-x: hidden;
 }
 
 body,
@@ -55,6 +59,10 @@ input {
 .container-fluid {
   max-width: 1815px;
   height: 100%;
+}
+
+.blocked{
+  overflow-y: hidden;
 }
 
 .hidden {
@@ -229,6 +237,18 @@ a {
   width: 22px;
   height: 22px;
   mask-size: cover;
+
+  &__menu {
+    width: 18px;
+    height: 18px;
+    mask-image: url(/assets/images/svg/menu.svg);
+    background-color: $light-green;
+
+    &.close {
+      mask-image: url(/assets/images/svg/close.svg);
+
+    }
+  }
 }
 
 .icon-line {
@@ -370,12 +390,12 @@ a {
   @include _tablet1248 {
     margin-bottom: 15px;
 
-    &:not([type='button'], [type='submit']){
+    &:not([type='button'], [type='submit']) {
       max-width: 354px;
       width: 100%;
     }
 
-    &:not([type='button'], [type='submit']) + &:not([type='button'], [type='submit']){
+    &:not([type='button'], [type='submit']) + &:not([type='button'], [type='submit']) {
       margin-bottom: 25px;
     }
   }

@@ -1,0 +1,60 @@
+@mixin general-footer-header {
+
+  &__inner {
+    display: flex;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  &__catalog-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 19px 80px;
+
+    &--spec{
+      grid-gap: 19px 55px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__text-icon-box {
+    position: relative;
+  }
+
+  &__text {
+    line-height: 24px;
+  }
+
+  &__icon {
+    &::before {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 8px;
+      background-size: 15px 15px;
+      content: '';
+    }
+
+    &--time::before {
+      background-image: url(/assets/images/svg/time.svg);
+    }
+
+    &--location::before {
+      background-image: url(/assets/images/svg/location.svg);
+    }
+  }
+}
