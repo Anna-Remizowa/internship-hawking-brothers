@@ -9,14 +9,11 @@ section.projects
           .projects__slide-wrapper
             img.projects__slide-img(src= product.src, alt= product.name)
             p.projects__slide-title= product.name
-            .projects__slide-param
-              p.projects__slide-param-name Диаметр
-              .projects__slide-border-dots
-              p.projects__slide-param-desc.projects__slide-param-desc--one= product.diameter
-            .projects__slide-param
-              p.projects__slide-param-name Сталь
-              .projects__slide-border-dots
-              p.projects__slide-param-desc.projects__slide-param-desc--two= product.steel
+            each char in product.characteristics
+              .projects__slide-param
+                p.projects__slide-param-name= char.key
+                .projects__slide-border-dots
+                p.projects__slide-param-desc= char.value
             p.projects__slide-text= product.description
 
   .container

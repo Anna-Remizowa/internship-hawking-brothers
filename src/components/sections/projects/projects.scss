@@ -94,6 +94,14 @@
     &-param {
       display: flex;
       margin-bottom: 13px;
+
+      &:nth-child(even) &-desc{
+        color: $light-green;
+      }
+
+      &:nth-child(odd) &-desc{
+        color: $red;
+      }
     }
 
     &-param-name, &-param-desc, &-text {
@@ -113,14 +121,6 @@
 
     &-param-desc {
       font-weight: 600;
-    }
-
-    &-param-desc--one {
-      color: $red;
-    }
-
-    &-param-desc--two {
-      color: $light-green;
     }
 
     &-text {
