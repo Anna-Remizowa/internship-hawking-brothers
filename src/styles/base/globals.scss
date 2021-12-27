@@ -47,11 +47,14 @@ input {
 .container, .container-fluid {
   margin: 0 auto;
   padding: 0 7px 0 23px;
+
+  @include _tablet1248 {
+    padding: 0 15px;
+  }
 }
 
 .container {
   max-width: 1248px;
-  padding: 0 7px 0 23px;
 }
 
 .container-fluid {
@@ -149,6 +152,8 @@ a {
 
   @include _tablet1248 {
     &__img {
+      position: relative;
+      top: -8px;
       height: 64px;
       width: 64px;
     }
@@ -222,6 +227,10 @@ a {
     min-width: 179px;
     height: 142px;
     background: url(/assets/images/svg/border.svg) center / cover no-repeat;
+
+    @include _tablet1050 {
+      height: 139px;
+    }
 
     @include _mobile767 {
       min-width: 121px;
@@ -450,6 +459,7 @@ a {
 
     &__text {
       font-size: 14px;
+      line-height: 26px;
       text-align: center;
     }
   }

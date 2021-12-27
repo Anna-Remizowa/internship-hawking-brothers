@@ -87,6 +87,14 @@
       width: auto;
     }
 
+    &__title{
+      line-height: 50px;
+    }
+
+    &__title-box{
+      margin-bottom: 22px;
+    }
+
     &__text {
       max-width: 303px;
       width: 100%;

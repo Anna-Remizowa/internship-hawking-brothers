@@ -94,7 +94,7 @@
 
     &__icon-line {
       right: auto;
-      bottom: -82%;
+      bottom: -80%;
       margin-left: 0;
     }
 
@@ -116,6 +116,10 @@
       max-width: 310px;
       text-align: center;
       align-self: center;
+    }
+
+    &__content-description {
+      margin-bottom: 8px;
     }
   }
 

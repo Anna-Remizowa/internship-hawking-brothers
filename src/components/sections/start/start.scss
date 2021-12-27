@@ -177,6 +177,7 @@
       margin-bottom: 29px;
 
       &-title {
+        margin-bottom: 0;
         font-weight: bold;
         font-size: 50px;
         line-height: 61px;
@@ -186,6 +187,10 @@
         margin-bottom: 10px;
         font-size: 25px;
         line-height: 30px;
+      }
+
+      &-note-sign:after {
+        margin-left: 8px;
       }
     }
 
@@ -197,13 +202,13 @@
       font-size: 40px;
       line-height: 49px;
 
-      &__::after {
-        margin-left: 11px;
+      &::after {
+        margin-left: 12px;
       }
     }
 
     &__price-old {
-      margin-left: 0;
+      margin: 4px 0 0;
       font-size: 25px;
       line-height: 30px;
 
@@ -219,12 +224,42 @@
         display: flex;
       }
     }
+
+    &__img {
+      &-blob-1 {
+        top: -20px;
+      }
+
+      &-pipes-1 {
+        left: 0%;
+        top: 8%;
+        width: 50%;
+        height: 50%;
+      }
+
+      &-pipes-2 {
+        top: 15%;
+        left: 30%;
+        width: 68%;
+        height: 68%;
+      }
+    }
   }
 
   @include _tablet1050 {
     &__content {
       width: 310px;
-      margin-left: 16px;
+      margin: 26px 45px 44px 0;
+    }
+
+    &__content-buttons {
+      margin-top: 0;
+    }
+
+    &__img{
+      &-dots, &-triangle {
+        display: none;
+      }
     }
   }
 
@@ -236,10 +271,6 @@
     &__img{
       &-blob-1 {
         height: 500px;
-      }
-
-      &-dots, &-triangle {
-        display: none;
       }
     }
 

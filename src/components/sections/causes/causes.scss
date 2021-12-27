@@ -61,17 +61,23 @@
     }
 
     &__title {
-      margin-bottom: 32px;
+      margin-bottom: 58px;
     }
 
     &__items {
+      max-width: 100%;
       flex-direction: row;
       margin-right: 0;
 
       &-element {
+        width: 100%;
+        margin-bottom: 0;
         flex-direction: column;
         align-items: flex-start;
-        width: 100%;
+
+        &::before{
+          margin-bottom: 19px;
+        }
       }
 
       &-element:not(:last-of-type) {
@@ -81,6 +87,7 @@
 
       &-text {
         font-size: 14px;
+        line-height: 26px;
       }
     }
   }

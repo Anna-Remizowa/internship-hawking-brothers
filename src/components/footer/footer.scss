@@ -43,6 +43,7 @@
   &__social-img {
     width: 22px;
     height: 22px;
+    mask-size: contain;
   }
 
   @include _tablet1248 {
@@ -57,6 +58,10 @@
     &__container{
       width: 100%;
       align-items: center;
+    }
+
+    &__socials {
+      margin-top: 0;
     }
   }
 }

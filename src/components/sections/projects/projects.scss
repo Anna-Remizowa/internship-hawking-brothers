@@ -162,7 +162,14 @@
       max-width: 350px;
       margin-bottom: 0;
       text-align: left;
+    }
 
+    &__slide{
+      width: 354px;
+    }
+
+    &__slide-wrapper{
+      padding-bottom: 48px;
     }
 
     &__slider {
@@ -175,7 +182,7 @@
       align-self: center;
       width: 290px;
       height: 220px;
-      margin-bottom: 23px;
+      margin-bottom: 21px;
     }
   }
 

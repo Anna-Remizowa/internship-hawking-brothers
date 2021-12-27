@@ -144,11 +144,6 @@
     }
 
     &__img {
-      &-blob-3, &-calculator {
-        top: 0;
-        height: 400px;
-      }
-
       &-dots {
         height: 40%;
 
@@ -176,17 +171,29 @@
         height: 100%;
       }
 
+      &-blob-3{
+        top: 10%;
+      }
+
+      &-calculator{
+        top: 8%;
+      }
+
       &-calculator {
         left: 0;
       }
 
       &-dots {
+        width: 13%;
+        height: 42%;
+
         &--one {
           left: 15%;
         }
 
         &--two {
-          bottom: 0;
+          right: 2%;
+          bottom: -12.5%;
         }
       }
     }

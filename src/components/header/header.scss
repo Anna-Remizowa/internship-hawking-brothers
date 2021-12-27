@@ -23,7 +23,7 @@
 
   &__phone-me-link {
     padding-bottom: 5px;
-    margin: 5px 65px 0 70px;
+    margin: 5px 60px 0 70px;
     @extend %small-text;
     color: $red;
     line-height: 17px;
@@ -61,8 +61,9 @@
     }
 
     &__inner {
-      height: 88px;
+      height: 80px;
       border-bottom: 1px solid #E5E5E5;
+      margin-top: 32px;
     }
 
     &__wrapper {
@@ -140,14 +141,16 @@
   }
 }
 
+/*HEADER ВСПЛЫВАЮЩЕЕ*/
 .header-big {
   @include general-footer-header;
-  position: absolute;
-  top: 127px;
+  position: relative;
+  top: 0;
   z-index: 100;
+  overflow-y: auto;
   display: none;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 128px);
   padding: 49px 0;
   opacity: 0;
   transition: opacity 0.3s ease-out;
@@ -185,10 +188,10 @@
   }
 
   &__catalog-items {
-    grid-gap: 19px 80px;
+    grid-gap: 18px 80px;
 
     &--spec {
-      grid-gap: 19px 55px;
+      grid-gap: 18px 55px;
     }
   }
 
@@ -211,11 +214,20 @@
   }
 
   @include _tablet1248 {
-    top: 114px;
+    height: calc(100vh - 112px);
+
+    &__box-lists {
+      padding-bottom: 30px;
+      border-bottom-style: dashed;
+    }
+
+    &__box-support {
+      padding-top: 36px;
+    }
   }
 
   @include _mobile767 {
-    top: 79px;
+    height: calc(100vh - 80px);
     padding-top: 42px;
 
     &__box-lists, &__box-support {

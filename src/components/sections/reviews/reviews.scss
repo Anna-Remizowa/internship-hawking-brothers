@@ -81,11 +81,12 @@
   }
 
   &__slide-text {
+    margin-bottom: 17px;
+    flex-grow: 1;
     font-weight: 300;
     font-size: 14px;
     line-height: 22px;
     color: $black-base;
-    margin-bottom: 17px;
 
     &::before {
       position: absolute;
@@ -99,7 +100,7 @@
   }
 
   @include _tablet1248 {
-    padding: 28px 0 80px 0;
+    padding: 26px 0 46px 0;
 
     &__title {
       margin-bottom: 45px;
@@ -122,6 +123,12 @@
       top: 0;
       width: calc(100% + 35px);
       left: -35px;
+    }
+
+    &__slide-container{
+      width: 354px;
+      height: auto;
+      padding-bottom: 30px;
     }
   }
 

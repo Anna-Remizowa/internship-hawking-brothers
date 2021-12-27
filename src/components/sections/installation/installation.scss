@@ -70,14 +70,14 @@
   }
 
   @include _tablet1248 {
-    padding: 47px 0;
+    padding: 29px 0;
 
     &__img {
       display: none;
     }
 
     &__text-container {
-      margin-bottom: 48px;
+      margin-bottom: 50px;
     }
 
     &__text-content {
@@ -85,7 +85,7 @@
     }
 
     &__title {
-      margin-bottom: 40px;
+      margin-bottom: 42px;
     }
 
     &__text--highlight-black {
@@ -95,10 +95,12 @@
     &__list{
       &-with-img {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 28px 30px;
+        grid-gap: 30px 30px;
       }
 
       &-img{
+        width: 74px;
+        height: 74px;
         margin-bottom: 0;
       }
     }
