@@ -21,7 +21,7 @@ const paths = {
     src: './src/js/index.js',
     dist: './dist/assets/js/',
     watch: [
-      './src/js/index.js',
+      './src/js/*.js',
       './src/components/**/*.js'
     ]
   },

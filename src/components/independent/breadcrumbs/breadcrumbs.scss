@@ -1,0 +1,25 @@
+.breadcrumbs{
+  padding: 11px 0 16px 0;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+
+  &__link{
+    font-size: 12px;
+    line-height: 15px;
+    color: $gray;
+
+    &.active{
+      color: $dark-green;
+    }
+  }
+
+  &__small-arrow{
+    width: 7px;
+    height: 7px;
+    margin: 0 6px 0 4px;
+  }
+
+  @include _mobile767 {
+    padding: 8px 0 9px 0;
+  }
+}

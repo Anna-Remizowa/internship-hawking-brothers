@@ -1,25 +1,15 @@
+import {toggleModal} from "../../js/utils";
+
 export const clickMenuButton = () => {
 
   const headerButton = document.querySelector('.header-menu-js');
   const adaptiveMenu = document.querySelector('.header-big-js');
   const iconMenu = document.querySelector('.icon-menu-js');
 
-  if (headerButton !== null && adaptiveMenu !== null) {
+  if (headerButton !== null && adaptiveMenu !== null && iconMenu !== null) {
     headerButton.addEventListener("click", () => {
-      document.documentElement.classList.toggle("blocked");
+      toggleModal(adaptiveMenu);
       iconMenu.classList.toggle("close");
-
-      if(adaptiveMenu.classList.contains("open")){
-        adaptiveMenu.classList.toggle("visible");
-        setTimeout(() => adaptiveMenu.classList.toggle("open"),
-          300);
-
-      }else{
-        adaptiveMenu.classList.toggle("open");
-        setTimeout(() => adaptiveMenu.classList.toggle("visible"),
-          100);
-      }
     });
   }
-
 };

@@ -1,4 +1,5 @@
 include ../../components/independent/socials/socials
+include ../../components/header/header
 
 block variables
 
@@ -12,9 +13,9 @@ html(lang="ru")
     link(href="assets/styles/main.css" rel="stylesheet")
   body
     .wrapper
+      +header(headerTitle ? headerTitle : null)
       main.main
-        include ../../components/header/header
         block content
-        include ../../components/footer/footer
+      include ../../components/footer/footer
     script(src="assets/js/index.js")
     block scripts

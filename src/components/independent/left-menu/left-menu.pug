@@ -1,0 +1,26 @@
+mixin left-menu(menuContent)
+  menu.left-menu.js__left-menu
+    .left-menu__header
+      h2.left-menu__header-title= menuContent.menuName
+      .back.js__menu-back
+        p.back__link Назад
+        .back__arrow
+
+    ul.left-menu__tree.open
+      each contentLevelOne in menuContent.items
+        li.left-menu__tree-item.left-menu__tree-item--one.js__item
+          .left-menu__tree-link-box
+            a.left-menu__tree-link.left-menu__tree-link--one.js__left-menu-link(id= contentLevelOne.levelOneId)= contentLevelOne.levelOneName
+            .left-menu__arrow.left-menu__arrow--one.js__left-menu-arrow
+          ul.left-menu__tree.left-menu__tree--two.js__tree
+            each contentLevelTwo in contentLevelOne.levelOneItems
+              li.left-menu__tree-item.js__item
+                .left-menu__tree-link-box.left-menu__tree-link-box--two
+                  a.left-menu__tree-link.left-menu__tree-link--two.js__left-menu-link(id= contentLevelTwo.levelTwoId)= contentLevelTwo.levelTwoName
+                  .left-menu__arrow.left-menu__arrow--two.js__left-menu-arrow
+                ul.left-menu__tree.left-menu__tree--three.js__tree
+                  each contentLevelThree in contentLevelTwo.levelTwoItems
+                    li.left-menu__tree-item.js__item
+                      .left-menu__tree-link-box.left-menu__tree-link-box--three
+                        .left-menu__arrow.left-menu__arrow--three.left-menu__arrow--left.js__left-menu-arrow
+                        a.left-menu__tree-link.left-menu__tree-link--three.js__left-menu-link(id= contentLevelThree.levelThreeId)= contentLevelThree.levelThreeName

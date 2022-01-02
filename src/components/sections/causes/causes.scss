@@ -103,6 +103,7 @@
       flex-direction: column;
 
       &-element::before {
+        margin-right: 0;
         align-self: center;
         font-size: 60px;
         line-height: 73px;

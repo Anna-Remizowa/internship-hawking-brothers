@@ -1,5 +1,5 @@
-mixin product_slider(product)
-  .product-slider.swiper-slide
+mixin product_slider(product, addClass)
+  .product-slider(class= addClass)
     .product-slider__wrapper
       .product-slider__img-box
         img.product-slider__img(src= product.src)

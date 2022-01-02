@@ -2,22 +2,28 @@
 @import 'footer/footer';
 
 /*маленькие независимые компоненты*/
-@import 'src/components/independent/socials/socials';
-@import 'src/components/independent/arrows/arrows';
-@import 'src/components/independent/form-order/form-order';
-@import 'src/components/independent/product-slider/product-slider';
+@import 'independent/socials/socials';
+@import 'independent/arrows/arrows';
+@import 'independent/form-order/form-order';
+@import 'independent/product-slider/product-slider';
+@import 'independent/breadcrumbs/breadcrumbs';
+@import 'src/components/independent/title/title';
+@import 'src/components/independent/left-menu/left-menu';
+@import 'src/components/independent/catalog-item/catalog-item';
 
 /*секции*/
-@import 'src/components/sections/start/start';
-@import 'src/components/sections/bestsellers/bestsellers';
-@import 'src/components/sections/projects/projects';
-@import 'src/components/sections/cost-calculation/cost-calculation';
-@import 'src/components/sections/benefits/benefits';
-@import 'src/components/sections/measurement/measurement';
-@import 'src/components/sections/installation/installation';
-@import 'src/components/sections/about/about';
-@import 'src/components/sections/request/request';
-@import 'src/components/sections/video/video';
-@import 'src/components/sections/causes/causes';
-@import 'src/components/sections/without-money/without-money';
-@import 'src/components/sections/reviews/reviews';
+@import 'sections/start/start';
+@import 'sections/bestsellers/bestsellers';
+@import 'sections/projects/projects';
+@import 'sections/cost-calculation/cost-calculation';
+@import 'sections/benefits/benefits';
+@import 'sections/measurement/measurement';
+@import 'sections/installation/installation';
+@import 'sections/about/about';
+@import 'sections/request/request';
+@import 'sections/video/video';
+@import 'sections/causes/causes';
+@import 'sections/without-money/without-money';
+@import 'sections/reviews/reviews';
+@import 'sections/category/category';
+@import 'sections/catalog/catalog';

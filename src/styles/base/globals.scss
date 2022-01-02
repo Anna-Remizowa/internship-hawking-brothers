@@ -4,7 +4,12 @@ html {
 
 html, body{
   overflow-x: hidden;
+  /*закоментарить для pixelperfect*/
+  height: 100%;
 }
+
+/*раскоментарить для pixelperfect*/
+//html::-webkit-scrollbar { width: 0; }
 
 *, *::after, *::before {
   box-sizing: inherit;
@@ -38,6 +43,14 @@ input {
   outline: none;
 }
 
+header, footer{
+  flex: 0 0 auto;
+}
+
+main{
+  flex: 1 0 auto;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -46,11 +59,7 @@ input {
 
 .container, .container-fluid {
   margin: 0 auto;
-  padding: 0 7px 0 23px;
-
-  @include _tablet1248 {
-    padding: 0 15px;
-  }
+  padding: 0 15px;
 }
 
 .container {
@@ -137,6 +146,23 @@ a {
   }
 }
 
+.title-big{
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 73px;
+  color: $black-base;
+
+  @include _tablet1248 {
+    font-size: 45px;
+    line-height: 55px;
+  }
+
+  @include _mobile767 {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
 .text {
   @extend %text;
   line-height: 30px;
@@ -207,6 +233,18 @@ a {
     background: url(/assets/images/svg/blob-8.svg) center / contain no-repeat;
   }
 
+  &__blob9 {
+    background: url(/assets/images/svg/blob-9.svg) center / contain no-repeat;
+  }
+
+  &__blob10 {
+    background: url(/assets/images/svg/blob-10.svg) center / contain no-repeat;
+  }
+
+  &__blob11 {
+    background: url(/assets/images/svg/blob-11.svg) center / contain no-repeat;
+  }
+
   &__dots {
     background: url(/assets/images/svg/dots.svg) left / contain no-repeat;
     width: 4%;
@@ -217,6 +255,12 @@ a {
     background: url(/assets/images/svg/triangle.svg) left / contain no-repeat;
     width: 8%;
     height: 5%;
+  }
+
+  &__triangle-2 {
+    background: url(/assets/images/svg/triangle-2.svg) left / contain no-repeat;
+    width: 27%;
+    height: 27%;
   }
 
   &__border {
@@ -237,6 +281,14 @@ a {
       height: 95px;
     }
   }
+}
+
+@mixin arrow {
+  width: 12px;
+  height: 12px;
+  mask-image: url(/assets/images/svg/select-arrow.svg);
+  mask-size: cover;
+  border: none;
 }
 
 /*КНОПКИ*/
@@ -478,6 +530,36 @@ a {
       margin-bottom: 3px;
       font-size: 16px;
     }
+  }
+}
+
+.back {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+
+  &__link {
+    margin-right: 17px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    color: $light-green;
+  }
+
+  &__arrow {
+    @include arrow;
+    background-color: $light-green;
+    transform: rotate(-90deg);
+  }
+
+  @include _tablet1248 {
+    display: flex;
+  }
+
+  @include _mobile767 {
+    margin-right: 0;
   }
 }
 
