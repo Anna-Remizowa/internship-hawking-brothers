@@ -32,7 +32,7 @@
     filter: drop-shadow(0px 46px 145px rgba(52, 29, 30, 0.18)) drop-shadow(0px 11px 33px rgba(52, 29, 143, 0.11)) drop-shadow(0px 4px 10px rgba(52, 29, 143, 0.08));
   }
 
-  &__img{
+  &__img {
     &-blob-6 {
       right: 2%;
       top: -8%;
@@ -57,7 +57,7 @@
 
       &--two {
         top: -12%;
-        right: 7.5%;
+        right: 7%;
       }
     }
   }
@@ -69,8 +69,8 @@
       margin-bottom: 34px;
     }
 
-    &__img{
-      &-blob-6, &-blob-7, &-dots{
+    &__img {
+      &-blob-6, &-blob-7, &-dots {
         display: none;
       }
     }
@@ -99,7 +99,7 @@
   @include _mobile767 {
     padding: 16px 0;
 
-    &__title{
+    &__title {
       margin-bottom: 28px;
     }
 

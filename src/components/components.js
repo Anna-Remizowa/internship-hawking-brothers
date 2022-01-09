@@ -19,16 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const filterForm = document.querySelector(".js__form-filter");
   const leftMenu = document.querySelector(".js__left-menu");
-  if (filterForm !== null || leftMenu !== null){
-    window.addEventListener('resize', function() {
-      if (window.innerWidth > 1248){
+  if (filterForm || leftMenu) {
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1248) {
         closeModalIfResize(filterForm);
         closeModalIfResize(leftMenu);
       }
     }, true);
 
-    function closeModalIfResize(element){
-      if (element !== null && element.classList.contains("open")){
+    function closeModalIfResize(element) {
+      if (element && element.classList.contains("open")) {
         toggleModal(element);
         document.body.classList.remove("blocked");
       }

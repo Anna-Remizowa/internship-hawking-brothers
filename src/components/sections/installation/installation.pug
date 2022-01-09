@@ -20,32 +20,33 @@ section.installation
             | Все работы проводим качественно, аккуратно, и на совесть
         .installation__img
 
+      -
+        var installationList = [{
+          svg: "install-1",
+          title: "Доступные цены",
+          text: "Мы предлагаем нашу продукцию, услуги по доступным ценам и отличного качества"
+        },
+          {
+            svg: "install-2",
+            title: "Установка",
+            text: "Устанавливаем дымоходы, камины, печи, котлы всех производителей"
+          },
+          {
+            svg: "install-3",
+            title: "Профессионализм",
+            text: "Квалифицированные специалисты. Работаем чисто, аккуратно, убираем за собой"
+          },
+          {
+            svg: "install-4",
+            title: "Гарантия качества",
+            text: "Мы даём гарантию на все изделия и работы, выполненные нашими специалистами."
+          },
+        ]
+
       .list-with-img.installation__list-with-img
-        .list-with-img__box.installation__list-box
-          +svg("img list-with-img__img installation__list-img", "assets/images/sprite.svg#install-1")
-          .list-with-img__text-box.installation__list-text-box
-            p.list-with-img__title.installation__list-title Доступные цены
-            p.text.list-with-img__text.installation__text
-              | Мы предлагаем нашу продукцию, услуги по доступным
-              | ценам и отличного качества
-        .list-with-img__box.installation__list-box
-          +svg("img list-with-img__img installation__list-img", "assets/images/sprite.svg#install-2")
-          .list-with-img__text-box.installation__list-text-box
-            p.list-with-img__title.installation__list-title Установка
-            p.text.list-with-img__text.installation__text
-              | Устанавливаем дымоходы, камины, печи, котлы
-              | всех производителей
-        .list-with-img__box.installation__list-box
-          +svg("img list-with-img__img installation__list-img", "assets/images/sprite.svg#install-3")
-          .list-with-img__text-box.installation__list-text-box
-            p.list-with-img__title.installation__list-title Профессионализм
-            p.text.list-with-img__text.installation__text
-              | Квалифицированные специалисты. Работаем чисто,
-              | аккуратно, убираем за собой
-        .list-with-img__box.installation__list-box
-          +svg("img list-with-img__img installation__list-img", "assets/images/sprite.svg#install-4")
-          .list-with-img__text-box.installation__list-text-box
-            p.list-with-img__title.installation__list-title Гарантия качества
-            p.text.list-with-img__text.installation__text
-              | Мы даём гарантию на все изделия и работы, выполненные
-              | нашими специалистами.
+        each item in installationList
+          .list-with-img__box.installation__list-box
+            +svg("img list-with-img__img installation__list-img", "assets/images/sprite.svg#" + item.svg)
+            .list-with-img__text-box.installation__list-text-box
+              p.list-with-img__title.installation__list-title= item.title
+              p.text.list-with-img__text.installation__text= item.text

@@ -6,7 +6,7 @@
   padding: 35px 26px 18px 26px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
 
-  &__header{
+  &__header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
@@ -149,12 +149,12 @@
       display: block;
     }
 
-    &__header{
+    &__header {
       margin-bottom: 8px;
     }
 
     &__tree {
-      &--three{
+      &--three {
         margin: 0 0 0 22px;
       }
     }

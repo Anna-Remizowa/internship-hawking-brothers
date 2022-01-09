@@ -2,14 +2,14 @@ html {
   box-sizing: border-box;
 }
 
-html, body{
+html, body {
   overflow-x: hidden;
   /*закоментарить для pixelperfect*/
-  height: 100%;
+  //height: 100%;
 }
 
 /*раскоментарить для pixelperfect*/
-//html::-webkit-scrollbar { width: 0; }
+html::-webkit-scrollbar { width: 0; }
 
 *, *::after, *::before {
   box-sizing: inherit;
@@ -43,11 +43,11 @@ input {
   outline: none;
 }
 
-header, footer{
+header, footer {
   flex: 0 0 auto;
 }
 
-main{
+main {
   flex: 1 0 auto;
 }
 
@@ -71,7 +71,7 @@ main{
   height: 100%;
 }
 
-.blocked{
+.blocked {
   overflow-y: hidden;
 }
 
@@ -146,7 +146,7 @@ a {
   }
 }
 
-.title-big{
+.title-big {
   font-weight: bold;
   font-size: 60px;
   line-height: 73px;
@@ -194,71 +194,83 @@ a {
 }
 
 .img {
+  background-size: contain;
+  background-repeat: no-repeat;
+
   &-absolute {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
+  }
+
+  &__blob1, &__blob2, &__blob3, &__blob4,
+  &__blob8, &__blob9, &__blob10, &__blob11,
+  &__border{
+    background-position: center;
   }
 
   &__blob1 {
-    background: url(/assets/images/svg/blob-1.svg) center / contain no-repeat;
+    background-image: url(/assets/images/svg/blob-1.svg);
   }
 
   &__blob2 {
-    background: url(/assets/images/svg/blob-2.svg) center / contain no-repeat;
+    background-image: url(/assets/images/svg/blob-2.svg);
   }
 
   &__blob3 {
-    background: url(/assets/images/svg/blob-3.svg) center / contain no-repeat;
+    background-image: url(/assets/images/svg/blob-3.svg);
   }
 
   &__blob4 {
-    background: url(/assets/images/svg/blob-4.svg) center / contain no-repeat;
+    background-image: url(/assets/images/svg/blob-4.svg);
   }
 
   &__blob5 {
-    background: url(/assets/images/svg/blob-5.svg) no-repeat;
+    background-image: url(/assets/images/svg/blob-5.svg);
   }
 
   &__blob6 {
-    background: url(/assets/images/svg/blob-6.svg) no-repeat;
+    background-image: url(/assets/images/svg/blob-6.svg);
   }
 
   &__blob7 {
-    background: url(/assets/images/svg/blob-7.svg) no-repeat;
+    background-image: url(/assets/images/svg/blob-7.svg);
   }
 
   &__blob8 {
-    background: url(/assets/images/svg/blob-8.svg) center / contain no-repeat;
+    background-image: url(/assets/images/svg/blob-8.svg);
   }
 
   &__blob9 {
-    background: url(/assets/images/svg/blob-9.svg) center / contain no-repeat;
+    background-image: url(/assets/images/svg/blob-9.svg);
   }
 
   &__blob10 {
-    background: url(/assets/images/svg/blob-10.svg) center / contain no-repeat;
+    background-image: url(/assets/images/svg/blob-10.svg);
   }
 
   &__blob11 {
-    background: url(/assets/images/svg/blob-11.svg) center / contain no-repeat;
+    background-image: url(/assets/images/svg/blob-11.svg);
+  }
+
+  &__dots, &__triangle, &__triangle-2{
+    background-position: left;
   }
 
   &__dots {
-    background: url(/assets/images/svg/dots.svg) left / contain no-repeat;
+    background-image: url(/assets/images/svg/dots.svg);
     width: 4%;
     height: 21%;
   }
 
   &__triangle {
-    background: url(/assets/images/svg/triangle.svg) left / contain no-repeat;
+    background-image: url(/assets/images/svg/triangle.svg);
     width: 8%;
     height: 5%;
   }
 
   &__triangle-2 {
-    background: url(/assets/images/svg/triangle-2.svg) left / contain no-repeat;
+    background-image: url(/assets/images/svg/triangle-2.svg);
     width: 27%;
     height: 27%;
   }
@@ -270,7 +282,7 @@ a {
     align-items: center;
     min-width: 179px;
     height: 142px;
-    background: url(/assets/images/svg/border.svg) center / cover no-repeat;
+    background-image: url(/assets/images/svg/border.svg);
 
     @include _tablet1050 {
       height: 139px;
@@ -386,6 +398,9 @@ a {
 }
 
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 56px;
   width: 240px;
   border: none;
@@ -394,7 +409,6 @@ a {
   color: $white;
   font-weight: bold;
   line-height: 20px;
-  text-align: center;
   text-transform: lowercase;
   cursor: pointer;
 

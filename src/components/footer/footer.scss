@@ -1,9 +1,9 @@
 .footer {
   @include general-footer-header;
-  background: #0C2F33;
+  background-color: #0C2F33;
   padding: 88px 0;
 
-  &__container:last-of-type{
+  &__container:last-of-type {
     margin-left: 15px;
   }
 
@@ -15,7 +15,7 @@
     grid-gap: 18px 82px;
     margin-right: 105px;
 
-    &--spec{
+    &--spec {
       grid-gap: 18px 60px;
     }
   }
@@ -34,10 +34,10 @@
 
   &__socials {
     margin-top: 26px;
-  }
 
-  &__socials &__socials-item:not(:last-child) {
-    margin-right: 45px;
+    &-item:not(:last-child) {
+      margin-right: 45px;
+    }
   }
 
   &__social-img {
@@ -51,11 +51,11 @@
 
     &__container:not(:last-of-type),
     &__title,
-    &__text-icon-box{
+    &__text-icon-box {
       display: none;
     }
 
-    &__container{
+    &__container {
       width: 100%;
       align-items: center;
     }

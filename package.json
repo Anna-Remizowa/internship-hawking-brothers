@@ -10,8 +10,7 @@
   "author": "Anna-Remizowa",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.6.0",
-    "select2": "^4.1.0-rc.0",
+    "choices.js": "^10.0.0",
     "swiper": "^7.3.1"
   },
   "devDependencies": {

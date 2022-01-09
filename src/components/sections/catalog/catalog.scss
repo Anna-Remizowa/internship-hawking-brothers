@@ -39,9 +39,6 @@
     &__title {
       margin-bottom: 15px;
     }
-  }
-
-  @media (max-width: 550px) {
 
     &__container {
       justify-content: center;
@@ -49,7 +46,7 @@
     }
 
     &__container > * {
-      margin: 16px 0;
+      margin: 16px;
     }
   }
 }

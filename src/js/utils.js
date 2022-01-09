@@ -1,5 +1,5 @@
 export const toggleModal = (element) => {
-  if (element === null){
+  if (element === null) {
     return;
   }
 
@@ -11,7 +11,7 @@ export const toggleModal = (element) => {
     toggle("open", "visible");
   }
 
-  function toggle(firstClass, secondClass){
+  function toggle(firstClass, secondClass) {
     element.classList.toggle(firstClass);
     setTimeout(() => element.classList.toggle(secondClass),
       200);

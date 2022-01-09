@@ -18,11 +18,16 @@ mixin category(content)
             .back.js__filter-back
               p.back__link Назад
               .back__arrow
-          select.category__select.js__category-select--brand
-          select.category__select.js__category-select--material
-          select.category__select.js__category-select--location
-          select.category__select.js__category-select--series
-          select.category__select.js__category-select--beam
+          select.category__select.js__category-select
+            option(selected disabled) Бренд
+          select.category__select.js__category-select
+            option(selected disabled) Материал облицовки
+          select.category__select.js__category-select
+            option(selected disabled) Расположение
+          select.category__select.js__category-select
+            option(selected disabled) Серия
+          select.category__select.js__category-select
+            option(selected disabled) Балка
           .category__filter-price-box
             p.category__filter-text Цена
             .category__filter-values
@@ -41,13 +46,13 @@ mixin category(content)
           .category__content-header
             .category__content-header-box.category__content-header-box--sort
               p.category__content-text Сортировать по:
-              select.category__select.js__category-select--sort
+              select.category__select.js__category-select
                 option.category__select-option от нового к старому
                 option.category__select-option от старого к новому
                 option.category__select-option по популярности
             .category__content-header-box.category__content-header-box--count
               p.category__content-text Выводить по:
-              select.category__select.js__category-select--count
+              select.category__select.js__category-select.js__category-select--mini
                 option.category__select-option 15
                 option.category__select-option 50
                 option.category__select-option 100
@@ -57,4 +62,4 @@ mixin category(content)
               .category__filter-icon
           .category__content-items
             - for (var x = 0; x < 12; x++)
-              +product_slider(bestsellers_product, "category__product-slider")
+              +product_slider(bestsellers_products[0], "category__product-slider")

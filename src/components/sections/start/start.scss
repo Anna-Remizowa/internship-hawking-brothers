@@ -124,7 +124,7 @@
 
     &-triangle {
       &--one {
-        top: 51.5%;
+        top: 51%;
         left: -3%;
       }
 
@@ -231,7 +231,7 @@
       }
 
       &-pipes-1 {
-        left: 0%;
+        left: 0;
         top: 8%;
         width: 50%;
         height: 50%;
@@ -256,7 +256,7 @@
       margin-top: 0;
     }
 
-    &__img{
+    &__img {
       &-dots, &-triangle {
         display: none;
       }
@@ -268,7 +268,7 @@
       flex-direction: column-reverse;
     }
 
-    &__img{
+    &__img {
       &-blob-1 {
         height: 500px;
       }

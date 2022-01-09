@@ -1,5 +1,5 @@
 .without-money {
-  padding: 55px 0 164px 0;
+  padding: 57px 0 164px 0;
 
   &__inner {
     display: flex;
@@ -11,7 +11,7 @@
     width: 630px;
   }
 
-  &__title-box {
+  &__title:last-of-type{
     margin-bottom: 27px;
   }
 
@@ -81,18 +81,18 @@
   }
 
   @include _tablet1248 {
-    padding: 40px 0;
+    padding: 50px 0;
 
     &__content-container {
       width: auto;
     }
 
-    &__title{
+    &__title {
       line-height: 50px;
-    }
 
-    &__title-box{
-      margin-bottom: 22px;
+      &:last-of-type{
+        margin-bottom: 18px;
+      }
     }
 
     &__text {
@@ -135,8 +135,13 @@
       align-items: center;
     }
 
-    &__title-box {
-      text-align: center;
+    &__title{
+      font-size: 18px;
+      line-height: 26px;
+
+      &:last-of-type{
+        font-size: 24px;
+      }
     }
 
     &__text {

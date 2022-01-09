@@ -9,6 +9,31 @@
     margin-top: 26px;
   }
 
+  &__menu {
+    margin: 0 62px 0 31px;
+
+    &-list {
+      display: flex;
+    }
+
+    &-link {
+      @extend %text;
+      text-transform: uppercase;
+      color: $light-green;
+      line-height: 23px;
+      font-weight: bold;
+      margin-right: 36px;
+
+      &:hover, &.active {
+        color: $black-base;
+      }
+    }
+
+    @include _tablet1248 {
+      display: none;
+    }
+  }
+
   &__phone-number {
     @extend %text;
     line-height: 20px;
@@ -91,21 +116,25 @@
       margin-top: 16px;
     }
 
-    .icon-line__button:not(:last-of-type) {
-      display: none;
-    }
+    &__icon-line{
+      &-button{
+        width: 44px;
+        height: 44px;
+      }
 
-    &__icon-line .icon-line__button-img--shopping {
-      width: 18px;
-    }
+      & .icon-line__button {
+        &:not(:last-of-type){
+          display: none;
+        }
 
-    &__icon-line .icon-line__button-circle-count {
-      right: -8px;
-    }
+        &-img--shopping {
+          width: 18px;
+        }
 
-    &__icon-line-button {
-      width: 44px;
-      height: 44px;
+        &-circle-count {
+          right: -8px;
+        }
+      }
     }
 
     &__img-icon {
@@ -115,38 +144,12 @@
   }
 }
 
-/*МЕНЮ В HEADER*/
-.menu {
-  margin: 0 62px 0 31px;
-
-  &__list {
-    display: flex;
-  }
-
-  &__link {
-    @extend %text;
-    text-transform: uppercase;
-    color: $light-green;
-    line-height: 23px;
-    font-weight: bold;
-    margin-right: 36px;
-
-    &:hover, &.active {
-      color: $black-base;
-    }
-  }
-
-  @include _tablet1248 {
-    display: none;
-  }
-}
-
 /*HEADER ВСПЛЫВАЮЩЕЕ*/
 .header-big {
   @include general-footer-header;
   position: relative;
   top: 0;
-  z-index: 100;
+  z-index: 10;
   overflow-y: auto;
   display: none;
   width: 100%;
@@ -247,7 +250,7 @@
       padding-top: 18px;
     }
 
-    &__inner{
+    &__inner {
       align-self: center;
     }
 

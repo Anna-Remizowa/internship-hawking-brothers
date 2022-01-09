@@ -9,24 +9,15 @@
     display: flex;
     flex-direction: column;
     max-width: 630px;
-    margin-right: 84px;
+    margin: 76px 84px 0 0;
   }
 
   &__title {
-    font-weight: 600;
-    font-size: 40px;
     line-height: 48px;
-    color: $black-base;
-    text-transform: lowercase;
-  }
 
-  &__title-box {
-    margin: 67px 0 18px 0;
-    font-weight: 800;
-    font-size: 50px;
-    line-height: 61px;
-    color: $coral;
-    text-transform: uppercase;
+    &:last-of-type{
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
@@ -122,17 +113,20 @@
 
     &__content-container {
       max-width: 470px;
+      margin-top: 0;
     }
 
     &__title {
       font-size: 23px;
       line-height: 32px;
-    }
 
-    &__title-box {
-      margin: 0 0 27px 0;
-      font-size: 30px;
-      line-height: 32px;
+      &:first-of-type{
+        font-size: 30px;
+      }
+
+      &:last-of-type{
+        margin-bottom: 27px;
+      }
     }
 
     &__text {
@@ -171,11 +165,11 @@
         height: 100%;
       }
 
-      &-blob-3{
+      &-blob-3 {
         top: 10%;
       }
 
-      &-calculator{
+      &-calculator {
         top: 8%;
       }
 
@@ -193,7 +187,7 @@
 
         &--two {
           right: 2%;
-          bottom: -12.5%;
+          bottom: -12%;
         }
       }
     }
@@ -215,10 +209,17 @@
     &__title {
       font-size: 18px;
       line-height: 26px;
+
+      &:first-of-type{
+        font-size: 24px;
+      }
+
+      &:last-of-type{
+        margin-bottom: 28px;
+      }
     }
 
     &__title-box {
-      margin-bottom: 28px;
       font-size: 24px;
       line-height: 26px;
       text-align: center;

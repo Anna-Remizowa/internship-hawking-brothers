@@ -6,14 +6,14 @@ export const initializeLeftMenu = () => {
   const classItem = ".js__item";
 
   /*клик по стрелочке - раскрывается вложенное меню*/
-  if (leftMenuArrows !== null) {
+  if (leftMenuArrows) {
 
     leftMenuArrows.forEach(arrow => {
-      arrow.addEventListener('click', function(){
-        if (this.parentElement !== null && this.closest(classItem) !== null){
+      arrow.addEventListener('click', function () {
+        if (this.parentElement !== null && this.closest(classItem) !== null) {
           this.classList.toggle("active");
           const tree = this.closest(classItem).querySelector(".js__tree");
-          if (tree !== null){
+          if (tree) {
             tree.classList.toggle("open");
           }
         }
@@ -28,11 +28,10 @@ export const initializeLeftMenu = () => {
   const leftMenu = document.querySelector(".js__left-menu");
 
   /*клик по ссылке - меняется раздел*/
-  if (leftMenuLinks !== null && headerTitle !== null
-    && breadcrumbsActive !== null) {
+  if (leftMenuLinks && headerTitle && breadcrumbsActive) {
 
     leftMenuLinks.forEach(link => {
-      link.addEventListener('click', function(){
+      link.addEventListener('click', function () {
         headerTitle.forEach(title => {
           title.textContent = this.textContent;
         })
@@ -47,12 +46,12 @@ export const initializeLeftMenu = () => {
         });
 
         let item = this.closest(classItem);
-        while (item !== null) {
+        while (item) {
           setActiveLinkWithArrow(item);
           item = item.parentElement.closest(classItem);
         }
 
-        if (leftMenu !== null && leftMenu.classList.contains("open")){
+        if (leftMenu && leftMenu.classList.contains("open")) {
           toggleModal(leftMenu);
         }
       });
@@ -60,32 +59,39 @@ export const initializeLeftMenu = () => {
 
   }
 
-  function setActiveLinkWithArrow(item){
-    if (item !== null){
+  function setActiveLinkWithArrow(item) {
+    if (item) {
       const link = item.querySelector(".js__left-menu-link");
-      if (link !== null){
+      if (link) {
         link.classList.add("active");
       }
       const arrow = item.querySelector(".js__left-menu-arrow");
-      if (arrow !== null){
+      if (arrow) {
         arrow.classList.add("active-color");
       }
     }
   }
 
+
+  /*todo: сделать активной текущую через параметр url*/
+  // var url_string = window.location.href;
+  // var url = new URL(url_string);
+  // var c = url.searchParams.get("menu");
+  // console.log(c);
   /*делаем текущей активной первую ссылку из левого меню*/
   const active = document.querySelector(".js__left-menu-link");
-  if (active !== null){
+  if (active) {
     active.dispatchEvent(new Event("click"));
   }
+
 
   /*инициализация открывающегося окна с левым меню для адаптива*/
   const leftMenuButton = document.querySelector(".js__open-catalog");
   const leftMenuBack = document.querySelector(".js__menu-back");
 
-  if (leftMenuButton !== null && leftMenuBack !== null && leftMenu !== null){
+  if (leftMenuButton && leftMenuBack && leftMenu) {
     leftMenuButton.addEventListener("click", function (e) {
-      if (window.innerWidth <= 1248){
+      if (window.innerWidth <= 1248) {
         e.preventDefault();
         toggleModal(leftMenu);
       }

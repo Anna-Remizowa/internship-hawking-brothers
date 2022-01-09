@@ -11,16 +11,16 @@ mixin header(active)
             button.icon-line__button.icon-line__button--main.header__icon-line-button(type="button")
               .icon.icon__menu.icon-menu-js
 
-          nav.menu
-            ul.menu__list
-              li.menu__list-item
-                a.menu__link(href= routing.catalog class= (active && active.catalog ? active.catalog : "")) Каталог товаров
-              li.menu__list-item
-                a.menu__link(href= routing.delivery class= (active && active.delivery ? active.delivery : "")) доставка и оплата
-              li.menu__list-item
-                a.menu__link(href= routing.price class= (active && active.price ? active.price : "")) Цены
-              li.menu__list-item
-                a.menu__link(href= routing.contacts class= (active && active.contacts ? active.contacts : "")) Контакты
+          nav.header__menu
+            ul.header__menu-list
+              li.header__menu-item
+                a.header__menu-link(href= routing.catalog class= (active && active.catalog ? active.catalog : "")) Каталог товаров
+              li.header__menu-item
+                a.header__menu-link(href= routing.delivery class= (active && active.delivery ? active.delivery : "")) доставка и оплата
+              li.header__menu-item
+                a.header__menu-link(href= routing.price class= (active && active.price ? active.price : "")) Цены
+              li.header__menu-item
+                a.header__menu-link(href= routing.contacts class= (active && active.contacts ? active.contacts : "")) Контакты
           a.header__phone-number(href="tel:+78125092198")
             | +7 (812)
             span.header__phone-number.header__phone-number--highlight  509 21 98
@@ -45,42 +45,7 @@ mixin header(active)
     .container
       .header-big__inner
         .header-big__box-lists
-          .header-big__container
-            p.header-big__title КАТАЛОГ
-            ul.header-big__catalog-items
-              li.header-big__item
-                a.header-big__link(href="#") Дымоходы
-              li.header-big__item
-                a.header-big__link(href="#") Камины
-              li.header-big__item
-                a.header-big__link(href="#") Дымососы
-              li.header-big__item
-                a.header-big__link(href="#") Силикат кальция
-              li.header-big__item
-                a.header-big__link(href="#") Печи для дома
-              li.header-big__item
-                a.header-big__link(href="#") Котлы
-              li.header-big__item
-                a.header-big__link(href="#") Печи для бани
-              li.header-big__item
-                a.header-big__link(href="#") Ещё
-          .header-big__container
-            p.header-big__title ИНФОРМАЦИЯ
-              ul.header-big__catalog-items.header-big__catalog-items--spec
-                li.header-big__item
-                  a.header-big__link(href="/catalog.html") Каталог
-                li.header-big__item
-                  a.header-big__link(href="#") Полезное
-                li.header-big__item
-                  a.header-big__link(href="#") Установка и монтаж
-                li.header-big__item
-                  a.header-big__link(href="#") Контакты
-                li.header-big__item
-                  a.header-big__link(href="#") Отзывы
-                li.header-big__item
-                  a.header-big__link(href="#") Оплата и доставка
-                li.header-big__item
-                  a.header-big__link(href="#") Ликвидация товара
+          +header-footer-menu("header-big")
         .header-big__box-support
           .header-big__inner
             a.header__phone-number.header-big__phone-number(href="tel:+78125092198")

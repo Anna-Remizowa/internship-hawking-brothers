@@ -1,12 +1,52 @@
+-
+  var catalogs = [{
+    img: 'img__blob9',
+    imgClass: 'catalog-item__img-content--1',
+    title: "Дымоходы",
+    href: "#"
+  },
+    {
+      img: 'img__blob10',
+      imgClass: 'catalog-item__img-content--2',
+      title: "Отопительные печи",
+      href: "#"
+    },
+    {
+      img: 'img__blob11',
+      imgClass: 'catalog-item__img-content--3',
+      title: "Печи для бани",
+      href: "#"
+    },
+    {
+      img: 'img__blob9',
+      imgClass: 'catalog-item__img-content--4',
+      title: "Камины",
+      href: "/fireplaces.html"
+    },
+    {
+      img: 'img__blob10',
+      imgClass: 'catalog-item__img-content--5',
+      title: "Котлы",
+      href: "#"
+    },
+    {
+      img: 'img__blob11',
+      imgClass: 'catalog-item__img-content--6',
+      title: "Дымососы",
+      href: "#"
+    },
+    {
+      img: 'img__blob9',
+      imgClass: 'catalog-item__img-content--7',
+      title: "Силикат кальция",
+      href: "#"
+    },
+  ]
+
 .catalog
   .container
     h1.title-big.catalog__title Каталог товаров
     +breadcrumbs(breadcrumbsCategory_Catalog)
     .catalog__container
-      +catalog-item("img__blob9", "catalog-item__img-content--1", "Дымоходы", "#")
-      +catalog-item("img__blob10", "catalog-item__img-content--2", "Отопительные печи", "#")
-      +catalog-item("img__blob11", "catalog-item__img-content--3", "Печи для бани", "#")
-      +catalog-item("img__blob9", "catalog-item__img-content--4", "Камины", "/fireplaces.html")
-      +catalog-item("img__blob10", "catalog-item__img-content--5", "Котлы", "#")
-      +catalog-item("img__blob11", "catalog-item__img-content--6", "Дымососы", "#")
-      +catalog-item("img__blob9", "catalog-item__img-content--7", "Силикат кальция", "#")
+      each catalog in catalogs
+        +catalog-item(catalog.img, catalog.imgClass, catalog.title, catalog.href)

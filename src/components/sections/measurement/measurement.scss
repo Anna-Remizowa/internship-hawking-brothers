@@ -15,11 +15,11 @@
 
   &__part-container {
     width: 565px;
-    margin-left: 50px;
+    margin: 100px 0 65px 50px;
   }
 
-  &__title-box {
-    margin: 100px 0 27px 0;
+  &__title:last-of-type {
+    margin-bottom: 27px;
   }
 
   &__text {
@@ -33,14 +33,10 @@
     &--highlight-color {
       color: $light-green;
     }
-  }
 
-  &__text--first {
-    margin-bottom: 34px;
-  }
-
-  &__text + &__text {
-    margin-bottom: 65px;
+    &:first-of-type{
+      margin-bottom: 34px;
+    }
   }
 
   &__img {
@@ -67,7 +63,7 @@
 
       &--one {
         right: 0;
-        top: 27.5%;
+        top: 27%;
       }
 
       &--two {
@@ -83,15 +79,15 @@
       background: url(/assets/images/content/man.png) center / contain no-repeat;
     }
 
-    &-arrow{
+    &-arrow {
       width: 143px;
       height: 125px;
-      bottom: 23.5%;
-      right: 4.5%;
+      bottom: 23%;
+      right: 4%;
     }
   }
 
-  &__form-order{
+  &__form-order {
     left: -82px;
   }
 
@@ -116,20 +112,19 @@
 
     &__part-container {
       width: 100%;
-      margin-left: 0;
+      margin: 0 0 48px 0;
       text-align: center;
     }
 
-    &__title-box {
-      margin: 0 0 21px 0;
-    }
-
-    &__title{
+    &__title {
       line-height: 50px;
+
+      &:last-of-type {
+        margin-bottom: 21px;
+      }
     }
 
     &__text + &__text {
-      margin-bottom: 48px;
       text-align: left;
     }
 
@@ -140,12 +135,12 @@
         width: 100%;
       }
 
-      &-triangle--one, &-triangle--two, &-arrow  {
+      &-triangle--one, &-triangle--two, &-arrow {
         display: none;
       }
     }
 
-    &__form-order{
+    &__form-order {
       top: -11px;
       left: 0;
     }
@@ -154,9 +149,18 @@
   @include _mobile767 {
     padding: 13px 0;
 
+    &__title {
+      font-size: 18px;
+      line-height: 26px;
+
+      &:last-of-type{
+        font-size: 24px;
+      }
+    }
+
     &__text {
       font-size: 14px;
-      margin-bottom: 21px;
+      margin-bottom: 0;
 
       &--highlight {
         font-size: 20px;
@@ -165,9 +169,13 @@
       &--highlight-first {
         display: block;
       }
+
+      &:first-of-type{
+        margin-bottom: 21px;
+      }
     }
 
-    &__text + &__text {
+    &__part-container {
       margin-bottom: 24px;
     }
 

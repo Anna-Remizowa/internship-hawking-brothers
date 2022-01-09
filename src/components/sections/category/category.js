@@ -1,53 +1,26 @@
-import $ from 'jquery';
-import select2 from 'select2/dist/js/select2.full.js';
 import {toggleModal} from "../../../js/utils";
-
-select2($);
-
-const selects = [{
-  name: "brand",
-  placeholder: "Бренд",
-},
-  {
-    name: "material",
-    placeholder: "Материал облицовки",
-  },
-  {
-    name: "location",
-    placeholder: "Расположение",
-  },
-  {
-    name: "series",
-    placeholder: "Серия",
-  },
-  {
-    name: "beam",
-    placeholder: "Балка",
-  },
-  {
-    name: "sort",
-    dropdownParent: $('.category__content-header-box--sort')
-  },
-  {
-    name: "count",
-    selectionCssClass: "select2-selection--mini",
-    dropdownCssClass: "select2-dropdown--mini"
-  },
-];
+import Choices from "choices.js";
 
 export const initializeFilters = () => {
 
   /*инициализация селекторов*/
-  selects.forEach(sel => {
-    $('.js__category-select--' + sel.name).select2({
-      placeholder: sel.placeholder,
-      width: "100%",
-      minimumResultsForSearch: -1,
-      selectionCssClass: sel.selectionCssClass,
-      dropdownCssClass: sel.dropdownCssClass,
-      dropdownParent: sel.dropdownParent,
-    });
-  })
+  const selects = document.querySelectorAll(".js__category-select");
+  if (selects) {
+    selects.forEach(sel => {
+      let containerClass = 'choices';
+      if (sel.classList.contains("js__category-select--mini")) {
+        containerClass += " choices--mini";
+      }
+      new Choices(sel, {
+        allowHTML: false,
+        searchEnabled: false,
+        placeholderValue: 'Please Choose…',
+        classNames: {
+          containerOuter: containerClass,
+        },
+      });
+    })
+  }
 
   /*инициализация range-бара с ценами*/
   const rangeOne = document.querySelector(".js__range-1");
@@ -58,8 +31,7 @@ export const initializeFilters = () => {
   const regularDivide = /\B(?=(\d{3})+(?!\d))/g;
   const minGap = 0;
 
-  if (rangeOne !== null && rangeTwo !== null &&
-    rangeValOne !== null && rangeValTwo !== null && rangeTrack !== null) {
+  if (rangeOne && rangeTwo && rangeValOne && rangeValTwo && rangeTrack) {
     const sliderMax = rangeOne.max;
 
     slideOne();
@@ -97,8 +69,8 @@ export const initializeFilters = () => {
   const filterForm = document.querySelector(".js__form-filter");
   const filterNumber = document.querySelector(".js__filter-number");
   const filterSubmit = document.querySelector(".js__filter-submit");
-  if (filterButton !== null && filterBack !== null && filterForm !== null
-    && filterNumber !== null && filterSubmit !== null) {
+  if (filterButton && filterBack && filterForm &&
+    filterNumber && filterSubmit) {
 
     filterButton.addEventListener("click", function () {
       toggleModal(filterForm);
