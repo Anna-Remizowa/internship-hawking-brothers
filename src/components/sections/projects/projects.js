@@ -1,30 +1,29 @@
-import Swiper, {Navigation} from 'swiper';
+import {Slider} from "../../utils/Slider";
 
-Swiper.use([Navigation])
+export const initProjectsSection = () => {
+  let initSlide = 0;
+  const slides = document.querySelectorAll(".projects__slide");
+  if (slides) {
+    initSlide = slides.length;
+  }
 
-export const initializeSliderProjects = () => {
-  const swiper = new Swiper('.projects__slider', {
-    loop: false,
-    navigation: {
-      nextEl: '.projects__arrow-right',
-      prevEl: '.projects__arrow-left',
+  const breakpoints = {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      initialSlide: 0,
     },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        initialSlide: 0,
-      },
-      769: {
-        slidesPerView: 'auto',
-        spaceBetween: 30,
-        initialSlide: 0,
-      },
-      1248: {
-        slidesPerView: 'auto',
-        spaceBetween: 24,
-        initialSlide: document.querySelectorAll(".projects__slide").length,
-      }
+    769: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      initialSlide: 0,
+    },
+    1248: {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+      initialSlide: initSlide,
     }
-  });
+  };
+
+  new Slider("projects", false, 'auto', breakpoints);
 };

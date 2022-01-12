@@ -1,37 +1,35 @@
 import './header/header';
 import './footer/footer';
 
-import {initializeSliderBestsellers} from './sections/bestsellers/bestsellers';
-import {initializeSliderProjects} from './sections/projects/projects';
-import {initializeSliderReviews} from './sections/reviews/reviews';
-import {clickMenuButton} from './header/header';
-import {initializeFilters} from "./sections/category/category";
-import {initializeLeftMenu} from "./independent/left-menu/left-menu";
-import {toggleModal} from "../js/utils";
+import {initBestsellersSection} from './sections/bestsellers/bestsellers';
+import {initProjectsSection} from './sections/projects/projects';
+import {initReviewsSection} from './sections/reviews/reviews';
+import {initHeader} from './header/header';
+import {Category} from "./sections/category/category";
+import {LeftMenu} from "./independent/left-menu/left-menu";
+import {toggleModal} from "./utils/utils";
 
 document.addEventListener("DOMContentLoaded", () => {
-  initializeSliderBestsellers();
-  initializeSliderProjects();
-  initializeSliderReviews();
-  clickMenuButton();
-  initializeFilters();
-  initializeLeftMenu();
+  initBestsellersSection();
+  initProjectsSection();
+  initReviewsSection();
+  initHeader();
+  Category.initModal();
+  Category.initFilters();
+  LeftMenu.initModal();
+  LeftMenu.initLeftMenu();
 
-  const filterForm = document.querySelector(".js__form-filter");
-  const leftMenu = document.querySelector(".js__left-menu");
-  if (filterForm || leftMenu) {
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 1248) {
-        closeModalIfResize(filterForm);
-        closeModalIfResize(leftMenu);
-      }
-    }, true);
-
-    function closeModalIfResize(element) {
-      if (element && element.classList.contains("open")) {
-        toggleModal(element);
-        document.body.classList.remove("blocked");
-      }
-    }
+  const modals = document.querySelectorAll(".js__modal");
+  if (modals) {
+    modals.forEach(modal => {
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 1248) {
+          if (modal.classList.contains("open")) {
+            toggleModal(modal);
+            document.body.classList.remove("blocked");
+          }
+        }
+      }, true);
+    })
   }
 });

@@ -1,27 +1,18 @@
-import Swiper, {Navigation} from 'swiper';
+import {Slider} from "../../utils/Slider";
 
-Swiper.use([Navigation])
-
-export const initializeSliderBestsellers = () => {
-  const swiper = new Swiper('.bestsellers__slider', {
-    loop: true,
-    spaceBetween: 30,
-    navigation: {
-      nextEl: '.bestsellers__arrow-right',
-      prevEl: '.bestsellers__arrow-left',
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
-      769: {
-        slidesPerView: 2,
-      },
-      1248: {
-        slidesPerView: 4,
-      }
-    }
-  });
+export const initBestsellersSection = () => {
+    const breakpoints = {
+        320: {
+            slidesPerView: 1,
+        },
+        769: {
+            slidesPerView: 2,
+        },
+        1248: {
+            slidesPerView: 4,
+        }
+    };
+    new Slider("bestsellers", true, 30, breakpoints);
 };
 
 

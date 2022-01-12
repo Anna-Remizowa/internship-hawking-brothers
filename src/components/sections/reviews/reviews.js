@@ -1,22 +1,14 @@
-import Swiper, {Navigation} from 'swiper';
+import {Slider} from "../../utils/Slider";
 
-Swiper.use([Navigation])
-
-export const initializeSliderReviews = () => {
-  const swiper = new Swiper('.reviews__slider', {
-    loop: false,
-    spaceBetween: 24,
-    navigation: {
-      nextEl: '.reviews__arrow-right',
-      prevEl: '.reviews__arrow-left',
+export const initReviewsSection = () => {
+  const breakpoints = {
+    320: {
+      slidesPerView: 1,
     },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
-      769: {
-        slidesPerView: 'auto',
-      },
-    }
-  });
+    769: {
+      slidesPerView: 'auto',
+    },
+  };
+
+  new Slider("reviews", false, 24, breakpoints);
 };

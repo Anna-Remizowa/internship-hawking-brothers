@@ -11,7 +11,7 @@ mixin category(content)
       .category__header
         h3.category__header-title.js__title
         .category__header-arrow
-      form.category__filter.js__form-filter
+      form.category__filter.js__form-filter.js__modal
         .category__filter-container
           .category__filter-hidden
             +resetBox("category__filter-reset-box--hidden")
@@ -52,7 +52,7 @@ mixin category(content)
                 option.category__select-option по популярности
             .category__content-header-box.category__content-header-box--count
               p.category__content-text Выводить по:
-              select.category__select.js__category-select.js__category-select--mini
+              select.category__select.js__category-select.js__select-mini
                 option.category__select-option 15
                 option.category__select-option 50
                 option.category__select-option 100

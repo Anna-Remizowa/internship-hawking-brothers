@@ -57,10 +57,6 @@
         background-color: $light-green;
       }
     }
-
-    &--left {
-      margin-right: 11px;
-    }
   }
 
   &__tree {
@@ -92,8 +88,13 @@
       }
 
       &--three {
-        justify-content: flex-start;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
         padding: 0;
+
+        & > .left-menu__arrow{
+          margin-right: 11px;
+        }
       }
     }
 
