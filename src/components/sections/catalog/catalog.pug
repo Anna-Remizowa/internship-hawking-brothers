@@ -44,9 +44,6 @@
   ]
 
 .catalog
-  .container
-    h1.title-big.catalog__title Каталог товаров
-    +breadcrumbs(breadcrumbsCategory_Catalog)
-    .catalog__container
-      each catalog in catalogs
-        +catalog-item(catalog.img, catalog.imgClass, catalog.title, catalog.href)
+  .catalog__container
+    each catalog in catalogs
+      +catalog-item(catalog.img, catalog.imgClass, catalog.title, catalog.href)

@@ -1,6 +1,9 @@
 @import 'header/header';
 @import 'footer/footer';
 
+/*шаблоны*/
+@import '../views/layouts/page/page';
+
 /*маленькие независимые компоненты*/
 @import 'independent/socials/socials';
 @import 'independent/arrows/arrows';

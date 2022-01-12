@@ -1,10 +1,6 @@
 .category {
   position: relative;
-  padding: 52px 0 102px 0;
-
-  &__title {
-    margin-bottom: 41px;
-  }
+  padding-bottom: 74px;
 
   &__header {
     display: none;
@@ -183,6 +179,7 @@
     &-box {
       padding: 20px 0 0 30px;
       flex-direction: column;
+      flex-grow: 1;
     }
 
     &-header {

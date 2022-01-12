@@ -1,0 +1,8 @@
+extends ../default
+
+block content
+  .page
+    .container
+      h1.title-big.page__title.js__title #{title ? title : 'Заголовок страницы'}
+      +breadcrumbs(breadcrumbs)
+      block pageContent

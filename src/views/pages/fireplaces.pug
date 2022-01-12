@@ -1,4 +1,4 @@
-extends ../layouts/default
+extends ../layouts/page/page
 include ../helpers/mixins
 include ../../components/sections/category/category
 include ../../components/independent/breadcrumbs/breadcrumbs
@@ -10,15 +10,9 @@ block variables
   include ../variables/breadcrumbs
   include ../variables/left-menu
 
-  -
-    var content = {
-      name: "Камины",
-      breadcrumbs: breadcrumbsCategory_Fireplaces,
-      leftMenu: leftMenu_Fireplaces
-    };
-
   - var headerTitle = activeCatalog;
   - var title = 'Камины'
+  - var breadcrumbs = breadcrumbsCategory_Fireplaces
 
-block content
-  +category(content)
+block pageContent
+  +category(leftMenu_Fireplaces)
