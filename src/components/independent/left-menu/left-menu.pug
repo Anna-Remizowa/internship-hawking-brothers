@@ -6,14 +6,14 @@ mixin left-menu(menuContent)
         p.back__link Назад
         .back__arrow
 
-    +left-menu-tree(menuContent, true)
+    +left-menu-tree(menuContent, true, menuContent.location)
 
-mixin left-menu-tree(content, root)
+mixin left-menu-tree(content, root, location)
   if (content.items && content.items.length > 0)
     ul.left-menu__tree(class= "left-menu__tree--" + content.level + (root ? " open" : " js__tree"))
       each item in content.items
         li.left-menu__tree-item.js__item(class= "left-menu__tree-item--" + content.level)
           .left-menu__tree-link-box(class= "left-menu__tree-link-box--" + content.level)
-            a.left-menu__tree-link.js__left-menu-link(id= item.id class= "left-menu__tree-link--" + content.level)= item.name
+            a.left-menu__tree-link.js__left-menu-link(id= item.id class= "left-menu__tree-link--" + content.level href=location + "?active=" + item.id)= item.name
             .left-menu__arrow.js__left-menu-arrow(class= "left-menu__arrow--" + content.level)
-          +left-menu-tree(item)
+          +left-menu-tree(item, false, location)

@@ -1,0 +1,11 @@
+extends ../layouts/page/page
+include ../../components/independent/left-menu/left-menu
+
+block append variables
+  include ../../views/variables/left-menu
+  - var headerTitle = activeCatalog;
+  - var title = 'Каминная топка Kratki'
+  - var breadcrumbs = breadcrumbsCategory_Product
+
+block pageContent
+  include ../../components/sections/product/product

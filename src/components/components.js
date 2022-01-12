@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeader();
   Category.initModal();
   Category.initFilters();
-  LeftMenu.initModal();
-  LeftMenu.initLeftMenu();
+  const leftMenu = new LeftMenu(".js__left-menu");
+  leftMenu.initModal(".js__open-catalog");
+  leftMenu.initLeftMenu();
 
   const modals = document.querySelectorAll(".js__modal");
   if (modals) {

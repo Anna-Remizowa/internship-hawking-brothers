@@ -12,11 +12,6 @@
   }
 
   @include _tablet1248 {
-    padding: 56px 0 7px 0;
-
-    &__title {
-      margin-bottom: 30px;
-    }
 
     &__container {
       justify-content: space-around;
@@ -29,12 +24,6 @@
   }
 
   @include _mobile767 {
-    padding: 41px 0 33px 0;
-
-    &__title {
-      margin-bottom: 15px;
-    }
-
     &__container {
       justify-content: center;
       margin: 10px 35px 0 0;

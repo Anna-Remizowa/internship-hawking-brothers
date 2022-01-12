@@ -227,11 +227,7 @@
   }
 
   @include _tablet1248 {
-    padding: 56px 0 27px 0;
-
-    &__title {
-      margin-bottom: 30px;
-    }
+    padding-bottom: 20px;
 
     &__header {
       display: flex;
@@ -384,12 +380,6 @@
   }
 
   @include _mobile767 {
-    padding: 41px 0 32px 0;
-
-    &__title {
-      margin-bottom: 14px;
-    }
-
     &__header {
       margin-top: 16px;
     }

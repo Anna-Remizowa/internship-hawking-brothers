@@ -45,6 +45,11 @@
     border: none;
   }
 
+  &__content-box{
+    display: flex;
+    flex-direction: column;
+  }
+
   &__content-title, &__content-description {
     line-height: 22px;
   }
