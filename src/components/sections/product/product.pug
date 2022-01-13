@@ -1,3 +1,97 @@
+mixin productDetail(product)
+  .detail
+    p.detail__header= product.header
+    .detail__items
+      each item in product.items
+        .detail__item-box
+          input.detail__radio(type="radio" name=product.name value=item.value id=product.name + " " + item.value)
+          label.detail__label(for = product.name + " " + item.value)= item.text
+
 .product
   +left-menu(leftMenu_Fireplaces)
   .product__container
+    .product__info
+
+      .product__info-slider
+        .product__info-img-box
+          img.product__info-img.product__info-img--main(src="assets/images/slider-products/product-1.png" alt="Продукт")
+          button.product__icon-button.product__icon-button--zoom(type="button")
+            +svg("product__icon product__icon--zoom", "assets/images/sprite.svg#zoom")
+        .product__info-img-horizontal
+          .product__info-img-box.product__info-img-box--mini
+            img.product__info-img.product__info-img--mini(src="assets/images/slider-products/product-1.png" alt="Продукт")
+          .product__info-img-box.product__info-img-box--mini
+            img.product__info-img.product__info-img--mini(src="assets/images/slider-products/product-1.png" alt="Продукт")
+          .product__info-img-box.product__info-img-box--mini
+            img.product__info-img.product__info-img--mini(src="assets/images/slider-products/product-1.png" alt="Продукт")
+          .product__info-img-box.product__info-img-box--mini
+            img.product__info-img.product__info-img--mini(src="assets/images/slider-products/product-1.png" alt="Продукт")
+          .product__info-img-box.product__info-img-box--mini
+            img.product__info-img.product__info-img--mini(src="assets/images/slider-products/product-1.png" alt="Продукт")
+
+      form.product__info-form
+        p.product__text.product__text--vendor-code Артикул: 3242526
+        .product__text-box
+          p.product__text.product__text--highlight В наличии
+          p.product__text.product__text--weak.product__text--price 160 490
+        p.product__text.product__text--price.product__text--price-highlight 160 490
+
+        -
+          var detailBrand = {
+            header: "Марка стали",
+            name: "brand",
+            items: [{
+              value: "economy430",
+              text: "Эконом 430"
+            },
+              {
+                value: "optimul304",
+                text: "Оптимул 304"
+              },
+              {
+                value: "elit321",
+                text: "Элит 321"
+              }
+            ]
+          }
+
+        +productDetail(detailBrand)
+
+        -
+          var detailLength = {
+            header: "Длина дымохода",
+            name: "length",
+            items: [{
+              value: "1000",
+              text: "1000 мм"
+            },
+              {
+                value: "500",
+                text: "500 мм"
+              },
+              {
+                value: "250",
+                text: "250 мм"
+              }
+            ]
+          }
+
+        +productDetail(detailLength)
+
+        p.product__text.product__text--bold Количество
+        .product__text-box
+          .product__text-box.product__text-box--items
+            button.product__icon-button.product__text.product__text--icon(type="button") +
+            .icon-line__button.icon-line__button--light.product__button.product__button--number
+              .product__text.product__text--number 1
+            button.product__icon-button.product__text.product__text--icon(type="button") -
+          .product__text-box.product__text-box--items
+            button.icon-line__button.icon-line__button--light.product__button.product__button--circle(type="button")
+              .product__icon.product__icon---favorites
+            button.icon-line__button.icon-line__button--light.product__button.product__button--circle(type="button")
+              .product__icon.product__icon---comparison
+
+        .product__buttons-box
+          button.button.button--main-color.product__button--main(type="button") В корзину
+          button.button.button--secondary-color.product__button--second(type="button") купить в 1 клик
+
