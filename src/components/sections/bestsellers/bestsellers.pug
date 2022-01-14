@@ -4,7 +4,7 @@ section.bestsellers
       h2.title-overline Хиты продаж
       +arrows("bestsellers")
 
-    .bestsellers__slider.swiper
+    .bestsellers__slider.swiper.js__bestsellers-slider
       .swiper-wrapper
         each product in bestsellers_products
           +product_slider(product, "swiper-slide")

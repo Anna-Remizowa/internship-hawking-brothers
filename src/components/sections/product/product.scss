@@ -10,9 +10,19 @@
   }
 
   &__icon {
-    &--zoom {
-      width: 24px;
-      height: 24px;
+    width: 24px;
+    height: 24px;
+    mask-size: cover;
+
+    &--favorites {
+      height: 22px;
+      mask-image: url(/assets/images/svg/favorites.svg);
+      background-color: $coral;
+    }
+
+    &--comparison {
+      mask-image: url(/assets/images/svg/balance.svg);
+      background-color: $light-green;
     }
   }
 
@@ -25,6 +35,7 @@
       position: absolute;
       bottom: 24px;
       right: 24px;
+      z-index: 10;
     }
   }
 
@@ -33,8 +44,38 @@
       margin: 0 15px 0 13px;
     }
 
-    &--circle {
+    &--favorites {
+      &:hover,
+      &.active {
+        background: #AE2236;
+      }
+    }
+
+    &--comparison {
+      position: relative;
       margin-left: 11px;
+
+      &:hover,
+      &.active {
+        background: #215359;
+      }
+
+      &.active:hover .product__tooltip {
+        display: block;
+      }
+    }
+
+    &--count {
+      display: none;
+    }
+
+    &:hover .product__icon,
+    &.active .product__icon {
+      background-color: $white;
+    }
+
+    &.active &--count {
+      display: flex;
     }
 
     &--main {
@@ -45,6 +86,38 @@
     &--second {
       max-width: 200px;
       width: 100%;
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: -60px;
+    left: -53px;
+    z-index: 10;
+    display: none;
+    width: max-content;
+    padding: 11px 15px 18px 15px;
+    background: $white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 6px;
+      border-style: solid;
+      border-color: $white transparent transparent transparent;
+    }
+
+    &-link {
+      padding-bottom: 3px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      color: $orange;
+      border-bottom: 1px dashed $orange;
     }
   }
 
@@ -119,9 +192,22 @@
     }
 
     &--number {
+      width: 85%;
       font-weight: bold;
       font-size: 22px;
       line-height: 27px;
+      text-align: center;
+      border: none;
+    }
+
+    &--number::-webkit-outer-spin-button,
+    &--number::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &--number {
+      -moz-appearance: textfield;
     }
   }
 
@@ -129,38 +215,67 @@
     display: flex;
 
     &-slider {
-      display: flex;
-      margin-right: 26px;
-    }
+      max-height: 530px;
+      height: 100%;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
 
-    &-img {
-      &-box {
-        position: relative;
-        padding: 87px 37px 100px 36px;
+      &--main {
+        max-width: 416px;
+        flex-shrink: 0;
+        margin-right: 8px;
         border: 1px solid #E5E5E5;
         border-radius: 4px;
+      }
 
-        &--mini {
-          padding: 11px;
+      &--thumb {
+        max-width: 100px;
+        box-sizing: border-box;
+        margin-right: 26px;
+      }
+    }
+
+    &-slide {
+      &--thumb {
+        cursor: pointer;
+      }
+
+      &.swiper-slide-thumb-active &-wrapper--thumb {
+        border: 1px solid $coral;
+      }
+
+      &-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+
+        &--main {
+          padding: 87px 37px 98px 36px;
+        }
+
+        &--thumb {
+          padding: 12px 13px;
+          border: 1px solid #E5E5E5;
         }
       }
 
-      &-horizontal {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-left: 8px;
-      }
+      &-img {
+        display: block;
+        object-fit: cover;
+        background-size: cover;
+        background-position: center;
 
-      &--main {
-        width: 343px;
-        height: 343px;
-      }
+        &--main {
+          width: 343px;
+          height: 343px;
+        }
 
-      &--mini {
-        width: 74px;
-        height: 74px;
-        cursor: pointer;
+        &--thumb {
+          width: 74px;
+          height: 74px;
+        }
       }
     }
 
@@ -169,50 +284,79 @@
     }
   }
 
+  &__detail {
+    padding: 16px 0 17px 0;
+    border-bottom: 1px dashed #E5E5E5;
+
+    &-header {
+      margin-bottom: 16px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: $black-base;
+    }
+
+    &-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 15px;
+    }
+
+    &-label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 19px;
+      cursor: pointer;
+      user-select: none;
+
+      & .product__detail-radio:checked ~ .product__detail-checkmark:after {
+        display: block;
+      }
+
+      & .product__detail-radio:checked ~ .product__detail-text {
+        color: $black-base;
+      }
+    }
+
+    &-radio {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    &-checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 19px;
+      width: 19px;
+      border: 1px solid #D5D5D5;
+      border-radius: 50%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        top: 4.5px;
+        left: 4px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: $orange;
+      }
+    }
+
+    &-text {
+      padding-left: 30px;
+      font-size: 14px;
+      color: #7E7E7E;
+    }
+  }
+
   &__buttons-box {
     display: flex;
     justify-content: space-between;
     margin-top: 17px;
-  }
-}
-
-.detail {
-  padding: 16px 0 17px 0;
-  border-bottom: 1px dashed #E5E5E5;
-
-  &__header {
-    margin-bottom: 16px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    color: $black-base;
-  }
-
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 15px;
-  }
-
-  &__item-box {
-    display: flex;
-    align-items: center;
-  }
-
-  &__radio {
-    width: 19px;
-    height: 19px;
-    cursor: pointer;
-  }
-
-  &__label {
-    margin-left: 11px;
-    font-size: 14px;
-    line-height: 17px;
-    color: #7E7E7E;
-
-    &.active {
-      color: $black-base;
-    }
   }
 }

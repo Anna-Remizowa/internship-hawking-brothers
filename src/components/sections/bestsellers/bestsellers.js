@@ -12,7 +12,11 @@ export const initBestsellersSection = () => {
             slidesPerView: 4,
         }
     };
-    new Slider("bestsellers", true, 30, breakpoints);
+    new Slider("bestsellers-slider")
+      .addLoop(true)
+      .addSpaceBetween(30)
+      .addBreakpoints(breakpoints)
+      .build();
 };
 
 

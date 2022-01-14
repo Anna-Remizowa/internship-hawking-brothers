@@ -1,33 +1,33 @@
-mixin productDetail(product)
-  .detail
-    p.detail__header= product.header
-    .detail__items
-      each item in product.items
-        .detail__item-box
-          input.detail__radio(type="radio" name=product.name value=item.value id=product.name + " " + item.value)
-          label.detail__label(for = product.name + " " + item.value)= item.text
-
 .product
   +left-menu(leftMenu_Fireplaces)
   .product__container
     .product__info
 
-      .product__info-slider
-        .product__info-img-box
-          img.product__info-img.product__info-img--main(src="assets/images/slider-products/product-1.png" alt="Продукт")
-          button.product__icon-button.product__icon-button--zoom(type="button")
-            +svg("product__icon product__icon--zoom", "assets/images/sprite.svg#zoom")
-        .product__info-img-horizontal
-          .product__info-img-box.product__info-img-box--mini
-            img.product__info-img.product__info-img--mini(src="assets/images/slider-products/product-1.png" alt="Продукт")
-          .product__info-img-box.product__info-img-box--mini
-            img.product__info-img.product__info-img--mini(src="assets/images/slider-products/product-1.png" alt="Продукт")
-          .product__info-img-box.product__info-img-box--mini
-            img.product__info-img.product__info-img--mini(src="assets/images/slider-products/product-1.png" alt="Продукт")
-          .product__info-img-box.product__info-img-box--mini
-            img.product__info-img.product__info-img--mini(src="assets/images/slider-products/product-1.png" alt="Продукт")
-          .product__info-img-box.product__info-img-box--mini
-            img.product__info-img.product__info-img--mini(src="assets/images/slider-products/product-1.png" alt="Продукт")
+      -
+        var productImages = [
+          "assets/images/slider-products/product-1.png",
+          "assets/images/slider-products/product-1.png",
+          "assets/images/slider-products/product-1.png",
+          "assets/images/slider-products/product-1.png",
+          "assets/images/slider-products/product-1.png"
+        ]
+
+      -
+        var jsClassesForSliders = [
+          "--main",
+          "--thumb"
+        ]
+
+      each jsClass, index in jsClassesForSliders
+        .swiper.product__info-slider(class="product__info-slider" + jsClass + " js__product-slider" + jsClass)
+          if (index == 0)
+            button.product__icon-button.product__icon-button--zoom.js__product-slider-zoom(type="button")
+              +svg("product__icon product__icon--zoom", "assets/images/sprite.svg#zoom")
+          .swiper-wrapper
+            each image in productImages
+              .swiper-slide.product__info-slide(class="product__info-slide" + jsClass)
+                .swiper-zoom-container.product__info-slide-wrapper(class="product__info-slide-wrapper" + jsClass)
+                  img.product__info-slide-img(class="product__info-slide-img" + jsClass src=image)
 
       form.product__info-form
         p.product__text.product__text--vendor-code Артикул: 3242526
@@ -37,59 +37,69 @@ mixin productDetail(product)
         p.product__text.product__text--price.product__text--price-highlight 160 490
 
         -
-          var detailBrand = {
-            header: "Марка стали",
-            name: "brand",
-            items: [{
-              value: "economy430",
-              text: "Эконом 430"
-            },
-              {
-                value: "optimul304",
-                text: "Оптимул 304"
+          var details = [
+            {
+              header: "Марка стали",
+              name: "brand",
+              items: [{
+                value: "economy430",
+                text: "Эконом 430"
               },
-              {
-                value: "elit321",
-                text: "Элит 321"
-              }
-            ]
-          }
-
-        +productDetail(detailBrand)
-
-        -
-          var detailLength = {
-            header: "Длина дымохода",
-            name: "length",
-            items: [{
-              value: "1000",
-              text: "1000 мм"
+                {
+                  value: "optimul304",
+                  text: "Оптимул 304"
+                },
+                {
+                  value: "elit321",
+                  text: "Элит 321"
+                }
+              ]
             },
-              {
-                value: "500",
-                text: "500 мм"
+            {
+              header: "Длина дымохода",
+              name: "length",
+              items: [{
+                value: "1000",
+                text: "1000 мм"
               },
-              {
-                value: "250",
-                text: "250 мм"
-              }
-            ]
-          }
+                {
+                  value: "500",
+                  text: "500 мм"
+                },
+                {
+                  value: "250",
+                  text: "250 мм"
+                }
+              ]
+            }
+          ]
 
-        +productDetail(detailLength)
+        each detail in details
+          .product__detail
+            p.product__detail-header= detail.header
+            .product__detail-items
+              each item, index in detail.items
+                label.product__detail-label
+                  input.product__detail-radio(type="radio" name=detail.name value=item.value id=detail.name + " " + item.value checked=(index == 0))
+                  span.product__detail-checkmark
+                  span.product__detail-text= item.text
 
         p.product__text.product__text--bold Количество
         .product__text-box
           .product__text-box.product__text-box--items
-            button.product__icon-button.product__text.product__text--icon(type="button") +
+            button.product__icon-button.product__text.product__text--icon.js__product-plus-count(type="button") +
             .icon-line__button.icon-line__button--light.product__button.product__button--number
-              .product__text.product__text--number 1
-            button.product__icon-button.product__text.product__text--icon(type="button") -
+              input.product__text.product__text--number.js__product-count(type="number" name="count" value="1")
+            button.product__icon-button.product__text.product__text--icon.js__product-minus-count(type="button") -
           .product__text-box.product__text-box--items
-            button.icon-line__button.icon-line__button--light.product__button.product__button--circle(type="button")
-              .product__icon.product__icon---favorites
-            button.icon-line__button.icon-line__button--light.product__button.product__button--circle(type="button")
-              .product__icon.product__icon---comparison
+            button.icon-line__button.icon-line__button--light.product__button.product__button--favorites.js__product-button-icon(type="button")
+              .product__icon.product__icon--favorites
+            button.icon-line__button.icon-line__button--light.product__button.product__button--comparison.js__product-button-icon(type="button")
+              .product__icon.product__icon--comparison
+              .icon-line__button-circle-count.product__button--count
+                p.icon-line__button-count-text 1
+              .product__tooltip
+                a.product__tooltip-link(href="#") Перейти к сравнению
 
         .product__buttons-box
           button.button.button--main-color.product__button--main(type="button") В корзину

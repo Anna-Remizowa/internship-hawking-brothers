@@ -8,14 +8,18 @@ import {initHeader} from './header/header';
 import {Category} from "./sections/category/category";
 import {LeftMenu} from "./independent/left-menu/left-menu";
 import {toggleModal} from "./utils/utils";
+import {initProductSection} from "./sections/product/product";
 
 document.addEventListener("DOMContentLoaded", () => {
+  initHeader();
   initBestsellersSection();
   initProjectsSection();
   initReviewsSection();
-  initHeader();
+  initProductSection();
+
   Category.initModal();
   Category.initFilters();
+
   const leftMenu = new LeftMenu(".js__left-menu");
   leftMenu.initModal(".js__open-catalog");
   leftMenu.initLeftMenu();

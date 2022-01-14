@@ -10,5 +10,9 @@ export const initReviewsSection = () => {
     },
   };
 
-  new Slider("reviews", false, 24, breakpoints);
+  new Slider("reviews-slider")
+    .addLoop(false)
+    .addSpaceBetween(24)
+    .addBreakpoints(breakpoints)
+    .build();
 };

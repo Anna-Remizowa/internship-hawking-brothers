@@ -25,5 +25,8 @@ export const initProjectsSection = () => {
     }
   };
 
-  new Slider("projects", false, 'auto', breakpoints);
+  new Slider("projects-slider")
+    .addLoop(false)
+    .addBreakpoints(breakpoints)
+    .build();
 };
