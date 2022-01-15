@@ -3,6 +3,7 @@ include ../helpers/mixins
 include ../../components/independent/arrows/arrows
 include ../../components/independent/product-slider/product-slider
 include ../../components/independent/form-order/form-order
+include ../../components/sections/bestsellers/bestsellers
 
 block variables
   include ../variables/variables
@@ -10,7 +11,7 @@ block variables
 
 block content
   include ../../components/sections/start/start
-  include ../../components/sections/bestsellers/bestsellers
+  +bestsellers("Хиты продаж")
   include ../../components/sections/projects/projects
   include ../../components/sections/cost-calculation/cost-calculation
   include ../../components/sections/benefits/benefits

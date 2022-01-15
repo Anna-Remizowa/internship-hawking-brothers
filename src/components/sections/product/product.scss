@@ -1,12 +1,12 @@
 .product {
   display: flex;
-  padding-top: 47px;
+  padding: 47px 0;
 
   &__container {
-    width: 100%;
     display: flex;
     flex-direction: column;
     margin-left: 30px;
+    row-gap: 62px;
   }
 
   &__icon {
@@ -362,5 +362,162 @@
     display: flex;
     justify-content: space-between;
     margin-top: 17px;
+  }
+
+  &__tabs {
+    &-list {
+      display: flex;
+      border-bottom: 4px solid #EDF3F3;
+    }
+
+    &-item {
+
+      &:not(:last-of-type) {
+        margin-right: 68px;
+      }
+    }
+
+    &-btn {
+      cursor: pointer;
+      position: relative;
+      padding: 0 0 29px;
+      border: none;
+      background-color: $white;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: $gray;
+
+      &.active {
+        color: $black-base;
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: -4px;
+          width: 100%;
+          height: 4px;
+          background-color: $light-green;
+        }
+      }
+    }
+
+    &-content {
+      display: none;
+      flex-direction: column;
+      padding-top: 26px;
+
+      &.active {
+        display: flex;
+      }
+    }
+
+    &-text {
+      color: $black-base;
+      white-space: pre-line;
+
+      &:first-line {
+        line-height: 0;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+
+      &--highlight {
+        font-weight: 700;
+        color: $orange;
+      }
+
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__char {
+    &-box {
+      display: flex;
+      align-items: center;
+    }
+
+    &-text {
+      position: relative;
+      line-height: 50px;
+      color: $black-base;
+      white-space: nowrap;
+    }
+
+    &-dots {
+      width: 100%;
+      height: 15px;
+      border-bottom: 1px dashed #D5D5D5;
+    }
+  }
+
+  &__reviews {
+    margin: -3px 0 18px 0;
+
+    &-form, &-form-box, &-box {
+      display: flex;
+    }
+
+    &-form, &-form-box--inputs, &-box {
+      flex-direction: column;
+    }
+
+    &-form-box {
+      gap: 8px;
+    }
+
+    &-form-box--inputs .input {
+      width: 240px;
+    }
+
+    &-submit {
+      margin-top: 32px;
+      align-self: center;
+    }
+
+    &-box:not(&-box--line){
+      margin-top: 24px;
+      border-bottom: 1px solid #E0E0E0;
+    }
+
+    &-box--line{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-text{
+      font-size: 14px;
+      line-height: 24px;
+      color: $black-base;
+
+      &--header, &--date{
+        margin-top: 25px;
+      }
+
+      &--header{
+        margin-left: 17px;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      &--date{
+        font-weight: 500;
+        color: $gray;
+      }
+
+      &--content{
+        margin: 16px 0 21px;
+      }
+    }
+  }
+
+  .bestsellers,
+  .bestsellers .container {
+    max-width: 906px;
+    padding: 0;
   }
 }

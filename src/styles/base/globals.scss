@@ -15,7 +15,7 @@ html, body {
   box-sizing: inherit;
 }
 
-body, input, button {
+body, input, button, textarea {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -39,7 +39,7 @@ ul {
   list-style: none;
 }
 
-input {
+input, textarea {
   outline: none;
 }
 
@@ -450,10 +450,8 @@ a {
   }
 }
 
-.input {
-  height: 56px;
-  max-width: 240px;
-  width: 100%;
+.input, .textarea{
+  width:100%;
   padding: 17px;
   border-radius: 4px;
   border: 1px solid #E5E5E5;
@@ -464,6 +462,16 @@ a {
 
   &[placeholder] {
     color: $gray;
+  }
+}
+
+.input {
+  height: 56px;
+  max-width: 240px;
+
+  &--photo{
+    height: auto;
+    max-width: 120px;
   }
 
   @include _tablet1248 {
@@ -478,6 +486,10 @@ a {
       margin-bottom: 25px;
     }
   }
+}
+
+.textarea{
+  resize: none;
 }
 
 .list-with-img {

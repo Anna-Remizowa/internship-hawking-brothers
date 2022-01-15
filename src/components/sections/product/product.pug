@@ -102,6 +102,133 @@
                 a.product__tooltip-link(href="#") Перейти к сравнению
 
         .product__buttons-box
-          button.button.button--main-color.product__button--main(type="button") В корзину
-          button.button.button--secondary-color.product__button--second(type="button") купить в 1 клик
+          button.button.button--main-color.product__button.product__button--main(type="button") В корзину
+          button.button.button--secondary-color.product__button.product__button--second(type="button") купить в 1 клик
 
+    .product__tabs
+      ul.product__tabs-list
+        li.product__tabs-item
+          button.product__tabs-btn.active(type="button" data-tabs-path="description") Описание
+        li.product__tabs-item
+          button.product__tabs-btn(type="button" data-tabs-path="characteristic") Характеристики
+        li.product__tabs-item
+          button.product__tabs-btn(type="button" data-tabs-path="payment") Оплата и доставка
+        li.product__tabs-item
+          button.product__tabs-btn(type="button" data-tabs-path="reviews") Отзывы
+
+      .product__tabs-content.active(data-tabs-target="description")
+        p.text.product__tabs-text Каминная облицовка Damask EW90C изготовлена из колотого песчаника и полированного мрамора Emperador.
+          |  Данная модель устанавливается в угол. Подходит под любые каминные топки 700ой серии, но на заказ может быть изготовлена под любую топку. Свяжитесь с нами для уточнения деталей заказа.
+          |  Верхняя балка сделана также из полированного мрамора Emperador.
+        p.text.product__tabs-text Каминная облицовка Damask EW90C изготовлена из колотого песчаника и полированного мрамора Emperador.
+          |  Данная модель устанавливается в угол. Подходит под любые каминные топки 700ой серии, но на заказ может быть изготовлена под любую топку. Свяжитесь с нами для уточнения деталей заказа.
+          |  Верхняя балка сделана также из полированного мрамора Emperador.
+        p.text.product__tabs-text Каминная облицовка Damask EW90C изготовлена из колотого песчаника и полированного мрамора Emperador.
+          |  Данная модель устанавливается в угол. Подходит под любые каминные топки 700ой серии, но на заказ может быть изготовлена под любую топку. Свяжитесь с нами для уточнения деталей заказа.
+          |  Верхняя балка сделана также из полированного мрамора Emperador.
+
+      .product__tabs-content(data-tabs-target="characteristic")
+        -
+          var charasteristics = [
+            {
+              title: "Бренд",
+              value: "Stimlex"
+            },
+            {
+              title: "Страна",
+              value: "Украина"
+            },
+            {
+              title: "Гарантия",
+              value: "1 год"
+            },
+            {
+              title: "Размеры, мм",
+              value: "1020х1710х1000"
+            },
+            {
+              title: "Масса, кг",
+              value: "330"
+            },
+            {
+              title: "Балка",
+              value: "из камня"
+            },
+            {
+              title: "Серия",
+              value: "700"
+            },
+            {
+              title: "Расположение (облицовки)",
+              value: "угловая"
+            },
+            {
+              title: "Материал облицовки",
+              value: "из натурального камня"
+            }
+          ]
+
+        each char in charasteristics
+          .product__char-box
+            p.text.product__char-text= char.title
+            span.product__char-dots
+            p.text.product__char-text= char.value
+
+      .product__tabs-content(data-tabs-target="payment")
+        p.text.product__tabs-text
+          | Самостоятельно забрать товар вы можете из любого нашего из любого из наших магазинов. Адреса магазинов указаны <span><a class="text product__tabs-text product__tabs-text--highlight" href="#">тут.<a></span>
+          | При оформлении заказа выбирайте способ приобретения товара «самовывоз», далее указывайте удобный вам магазин. Заказ будет передан в указанный вами пункт, и в короткое время наш сотрудник свяжется с вами для уточнения деталей. При оформлении заказа выбирайте способ приобретения товара «самовывоз», далее указывайте удобный вам магазин. Заказ будет передан в указанный вами пункт, и в короткое время наш сотрудник свяжется с вами для уточнения деталей. При оформлении заказа выбирайте способ приобретения товара «самовывоз», далее указывайте удобный вам магазин. Заказ будет передан в указанный вами пункт, и в короткое время наш сотрудник свяжется с вами для уточнения деталей.
+          | Возможна доставка покупки на любую сумму.
+          | Услуга предоставляется с понедельника по пятницу с 11 до 18 часов*, оформляется минимум на день вперед. Водитель звонит за 2 часа до доставки
+          | Подробнее об условиях читайте в разделе <span><a class="text product__tabs-text product__tabs-text--highlight" href="#">“Доставка и оплата”.</a></span>
+
+      .product__tabs-content(data-tabs-target="reviews")
+        form.product__reviews-form
+          .product__reviews-form-box
+            .product__reviews-form-box.product__reviews-form-box--inputs
+              input.input(type="text", placeholder="Ваше имя")
+              input.input(type="text", placeholder="Ваш email")
+            textarea.textarea(placeholder="Текст отзыва")
+            input.input.input--photo(placeholder="Ваше фото")
+          button.button.button--main-color.product__reviews-submit(type="submit") Оставить заявку
+
+        -
+          var reviews = [{
+            name:"Иванова Ольга",
+            src: "assets/images/slider-reviews/human-1.png",
+            date: "20.05.2020",
+            review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          },
+            {
+              name: "Иванова Ольга",
+              src: "assets/images/slider-reviews/human-1.png",
+              date: "20.05.2020",
+              review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            },
+            {
+              name: "Иванова Ольга",
+              src: "assets/images/slider-reviews/human-1.png",
+              date: "20.05.2020",
+              review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            },
+            {
+              name: "Иванова Ольга",
+              src: "assets/images/slider-reviews/human-1.png",
+              date: "20.05.2020",
+              review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+          ]
+
+        .product__reviews
+          each review in reviews
+            .product__reviews-box
+              .product__reviews-box.product__reviews-box--line
+                .product__reviews-box.product__reviews-box--line
+                  img.image-circle(src= review.src, alt= review.name)
+                  p.product__reviews-text.product__reviews-text--header= review.name
+                p.product__reviews-text.product__reviews-text--date= review.date
+              p.product__reviews-text.text.product__reviews-text--content= review.review
+
+
+
+    +bestsellers("С этим товаром покупают")

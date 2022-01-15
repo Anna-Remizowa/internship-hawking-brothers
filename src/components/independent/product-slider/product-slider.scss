@@ -1,5 +1,6 @@
 /*СЛАЙДЕР С ПРОДУКТАМИ*/
 .product-slider {
+  max-width: 282px;
   border-radius: 4px;
 
   &__wrapper {
@@ -92,6 +93,8 @@
   }
 
   @include _tablet1248 {
+    max-width: 100%;
+
     &__wrapper {
       margin-bottom: 34px;
       padding: 15px 30px 37px 30px;

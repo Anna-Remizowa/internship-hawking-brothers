@@ -44,4 +44,23 @@ export const initProductSection = () => {
       button.classList.toggle("active");
     });
   })
+
+  const tabs = document.querySelector(".product__tabs");
+  if (tabs){
+    const tabsButtons = tabs.querySelectorAll(".product__tabs-btn");
+    const tabsContent = tabs.querySelectorAll(".product__tabs-content");
+
+    if (tabsButtons && tabsContent){
+      tabsButtons.forEach(button => {
+        button.addEventListener("click", function () {
+          tabsButtons.forEach(btn => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          tabsContent.forEach(content => content.classList.remove("active"));
+          tabs.querySelector(`[data-tabs-target="${button.dataset.tabsPath}"]`)
+            .classList.add("active");
+        })
+      })
+    }
+  }
 }
