@@ -1,14 +1,14 @@
-import {Slider} from "../../utils/Slider";
+import {SwiperBuilder} from "../../utils/SwiperBuilder";
 
 export const initProductSection = () => {
-  const productSwiperThumb = new Slider("product-slider--thumb")
+  const productSwiperThumb = new SwiperBuilder("product-slider--thumb")
     .addDirection("vertical")
     .addLoop(false)
     .addSpaceBetween(8)
     .addSlidesPerView(5)
     .addDisabledNavigation(true)
     .build();
-  const productSwiperMain = new Slider("product-slider--main")
+  const productSwiperMain = new SwiperBuilder("product-slider--main")
     .addLoop(true)
     .addSpaceBetween(10)
     .addSlidesPerView(1)

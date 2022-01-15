@@ -1,4 +1,4 @@
-import {Slider} from "../../utils/Slider";
+import {SwiperBuilder} from "../../utils/SwiperBuilder";
 
 export const initBestsellersSection = () => {
     const breakpoints = {
@@ -12,7 +12,7 @@ export const initBestsellersSection = () => {
             slidesPerView: 4,
         }
     };
-    new Slider("bestsellers-slider")
+    new SwiperBuilder("bestsellers-slider")
       .addLoop(true)
       .addSpaceBetween(30)
       .addBreakpoints(breakpoints)

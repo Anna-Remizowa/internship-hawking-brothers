@@ -2,7 +2,7 @@ import Swiper, {Navigation, Thumbs, Zoom} from 'swiper';
 
 Swiper.use([Navigation, Thumbs, Zoom])
 
-export class Slider {
+export class SwiperBuilder {
   constructor(sliderName) {
     this.sliderName = sliderName;
   }

@@ -1,4 +1,4 @@
-import {Slider} from "../../utils/Slider";
+import {SwiperBuilder} from "../../utils/SwiperBuilder";
 
 export const initProjectsSection = () => {
   let initSlide = 0;
@@ -25,7 +25,7 @@ export const initProjectsSection = () => {
     }
   };
 
-  new Slider("projects-slider")
+  new SwiperBuilder("projects-slider")
     .addLoop(false)
     .addBreakpoints(breakpoints)
     .build();
