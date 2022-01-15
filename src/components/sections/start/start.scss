@@ -265,6 +265,7 @@
 
   @include _mobile767 {
     &__inner {
+      padding-top: 60px;
       flex-direction: column-reverse;
     }
 
@@ -272,11 +273,25 @@
       &-blob-1 {
         height: 500px;
       }
+
+      &-pipes-1 {
+        top: 1%;
+        left: -3%;
+        width: 56%;
+        height: 56%;
+      }
+
+      &-pipes-2 {
+        top: 11%;
+        left: 25%;
+        width: 77%;
+        height: 77%;
+      }
     }
 
     &__content {
       width: 100%;
-      margin: 21px 0 0 0;
+      margin: 6px 0 0 0;
       text-align: center;
     }
 
@@ -303,7 +318,7 @@
     }
 
     &__discount {
-      margin-bottom: 17px;
+      margin-bottom: 13px;
 
       &-title {
         margin-bottom: 8px;
@@ -320,6 +335,14 @@
       &-note {
         font-size: 14px;
         line-height: 23px;
+
+        &-sign {
+          margin-left: 8px;
+
+          &:after {
+            margin-left: 0;
+          }
+        }
       }
     }
 
@@ -327,12 +350,13 @@
       font-size: 30px;
       line-height: 37px;
 
-      &__::after {
+      &::after {
         margin-left: 7px;
       }
     }
 
     &__price-old {
+      margin: 0;
       font-size: 14px;
       line-height: 17px;
 
@@ -342,7 +366,7 @@
     }
 
     &__content-buttons {
-      margin-top: 22px;
+      margin-top: 20px;
     }
   }
 

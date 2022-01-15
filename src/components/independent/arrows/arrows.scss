@@ -22,8 +22,14 @@
       transform: rotate(180deg);
     }
 
-    &:first-of-type{
+    &:first-of-type {
       margin-right: 8px;
+    }
+  }
+
+  @include _mobile767 {
+    &__arrow:first-of-type {
+      margin-right: 30px;
     }
   }
 }

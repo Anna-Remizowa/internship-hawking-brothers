@@ -136,7 +136,7 @@
     padding-bottom: 34px;
 
     &__title {
-      margin-bottom: 23px;
+      margin-bottom: 25px;
     }
 
     &__text {
@@ -144,20 +144,34 @@
       margin-bottom: 7px;
     }
 
-    &__slider-inner {
-      position: relative;
-      top: -14px;
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
     &__slider {
       left: 0;
-      padding: 35px 0;
+      width: 100%;
+      padding: 28px 0;
+
+      &-inner {
+        position: relative;
+        top: -14px;
+        display: flex;
+        flex-direction: column-reverse;
+      }
     }
 
-    &__slide-text {
-      min-height: 99px;
+    &__slide {
+      &-container {
+        padding: 21px 17px 25px 37px;
+      }
+
+      &-text {
+        position: relative;
+        min-height: 99px;
+        margin-bottom: 21px;
+
+        &:before {
+          top: 5px;
+          left: -19px;
+        }
+      }
     }
 
     &__text-name {

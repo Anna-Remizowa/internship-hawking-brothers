@@ -120,7 +120,7 @@
   }
 
   @include _mobile767 {
-    padding: 4px 0;
+    padding: 17px 0;
 
     &__title {
       margin-bottom: 47px;
@@ -135,12 +135,16 @@
       width: 100%;
 
       &-item {
-        padding: 32px 19px 19px;
+        padding: 32px 19px 14px;
       }
 
       &-title {
-        top: -25px;
-        left: auto;
+        top: -22px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: max-content;
         font-size: 40px;
         line-height: 49px;
       }
@@ -148,6 +152,7 @@
       &-text {
         font-size: 14px;
         text-align: center;
+        align-self: center;
       }
     }
   }

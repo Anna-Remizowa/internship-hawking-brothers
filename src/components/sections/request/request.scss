@@ -109,11 +109,13 @@
   @include _mobile767 {
 
     &__title {
+      margin-bottom: 0;
       font-size: 22px;
     }
 
     &__small-title {
       font-size: 14px;
+      line-height: 27px;
     }
 
     &__header {
@@ -126,6 +128,11 @@
 
     &__questions {
       flex-direction: column;
+      margin-bottom: 22px;
+
+      &-text {
+        margin-left: -6px;
+      }
     }
   }
 }

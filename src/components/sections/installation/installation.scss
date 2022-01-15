@@ -107,28 +107,40 @@
   }
 
   @include _mobile767 {
-    padding: 37px 0;
+    padding: 26px 0;
 
     &__text-container {
-      margin-bottom: 31px;
+      margin-bottom: 34px;
     }
 
     &__title {
       margin-bottom: 28px;
     }
 
-    &__text--highlight-black {
-      margin-top: 20px;
-    }
-
     &__text {
       font-size: 14px;
+
+      &:last-of-type {
+        margin-top: 26px;
+      }
     }
 
     &__list {
       &-with-img {
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 26px;
+        grid-gap: 30px;
+      }
+
+      &-text-box {
+        margin-top: 26px;
+
+        .installation__text:last-of-type {
+          margin-top: 0;
+        }
+      }
+
+      &-title {
+        font-size: 18px;
       }
     }
   }

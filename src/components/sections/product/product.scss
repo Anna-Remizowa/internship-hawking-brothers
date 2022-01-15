@@ -33,8 +33,8 @@
 
     &--zoom {
       position: absolute;
-      bottom: 24px;
-      right: 24px;
+      bottom: 17px;
+      right: 17px;
       z-index: 10;
     }
   }
@@ -172,7 +172,7 @@
         color: #E33E54;
 
         &:after {
-          margin-left: 10px;
+          margin-left: 8px;
           color: $black-base;
         }
       }
@@ -187,8 +187,12 @@
     }
 
     &--bold {
-      margin: 16px 0 17px 0;
+      margin: 16px 0;
       font-weight: 600;
+    }
+
+    &--icon {
+      padding: 0;
     }
 
     &--number {

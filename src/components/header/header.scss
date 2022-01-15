@@ -112,18 +112,22 @@
 
   @include _mobile767 {
     &__inner {
-      height: 63px;
-      margin-top: 16px;
+      height: 61px;
+      margin-top: 18px;
     }
 
-    &__icon-line{
-      &-button{
+    .logo {
+      margin-top: 5px;
+    }
+
+    &__icon-line {
+      &-button {
         width: 44px;
         height: 44px;
       }
 
       & .icon-line__button {
-        &:not(:last-of-type){
+        &:not(:last-of-type) {
           display: none;
         }
 
@@ -235,6 +239,10 @@
 
     &__box-lists, &__box-support {
       flex-direction: column;
+    }
+
+    &__catalog-items {
+      grid-gap: 18px 29px;
     }
 
     &__container:not(:last-of-type) {

@@ -14,8 +14,7 @@
   @include _tablet1248 {
 
     &__container {
-      justify-content: space-around;
-      margin: 32px 35px 0 0;
+      margin: 32px 25px 0 0;
     }
 
     &__container > * {
@@ -30,7 +29,7 @@
     }
 
     &__container > * {
-      margin: 16px;
+      margin: 14px 16px;
     }
   }
 }

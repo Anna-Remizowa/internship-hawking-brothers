@@ -34,7 +34,7 @@
       color: $light-green;
     }
 
-    &:first-of-type{
+    &:first-of-type {
       margin-bottom: 34px;
     }
   }
@@ -153,8 +153,9 @@
       font-size: 18px;
       line-height: 26px;
 
-      &:last-of-type{
+      &:last-of-type {
         font-size: 24px;
+        margin-bottom: 14px;
       }
     }
 
@@ -170,13 +171,18 @@
         display: block;
       }
 
-      &:first-of-type{
-        margin-bottom: 21px;
+      &:first-of-type {
+        line-height: 31px;
+        margin-bottom: 18px;
       }
     }
 
+    &__text + &__text {
+      text-align: center;
+    }
+
     &__part-container {
-      margin-bottom: 24px;
+      margin-bottom: 35px;
     }
 
     &__img {

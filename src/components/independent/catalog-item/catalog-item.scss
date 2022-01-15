@@ -116,6 +116,11 @@
     }
 
     &__img {
+      &-blob {
+        background-size: contain;
+        height: 260px;
+      }
+
       &-triangle {
         width: 20%;
         height: 22%;

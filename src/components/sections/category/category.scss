@@ -1,6 +1,6 @@
 .category {
   position: relative;
-  padding-bottom: 74px;
+  padding-bottom: 16px;
 
   &__header {
     display: none;
@@ -223,7 +223,7 @@
 
   &__product-slider {
     max-width: 282px;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 
   @include _tablet1248 {
@@ -263,7 +263,7 @@
       &-container {
         height: max-content;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 70px repeat(3, minmax(56px, auto)) 102px;
+        grid-template-rows: 72px repeat(3, minmax(56px, auto)) 100px;
         grid-gap: 22px 31px;
       }
 
@@ -304,7 +304,7 @@
     &__product-slider {
       max-width: 100%;
       width: 48%;
-      margin-bottom: 24px;
+      margin-bottom: 25px;
     }
 
     &__content {
@@ -415,8 +415,16 @@
     }
 
     &__content {
+      &-header{
+        margin-bottom: 21px;
+      }
+
       &-header-box {
         margin-left: 0;
+      }
+
+      &-filter-box{
+        margin-right: 0;
       }
 
       &-header-box--sort .choices {

@@ -11,7 +11,7 @@
     width: 630px;
   }
 
-  &__title:last-of-type{
+  &__title:last-of-type {
     margin-bottom: 27px;
   }
 
@@ -90,7 +90,7 @@
     &__title {
       line-height: 50px;
 
-      &:last-of-type{
+      &:last-of-type {
         margin-bottom: 18px;
       }
     }
@@ -135,11 +135,12 @@
       align-items: center;
     }
 
-    &__title{
+    &__title {
       font-size: 18px;
       line-height: 26px;
 
-      &:last-of-type{
+      &:last-of-type {
+        margin-bottom: 22px;
         font-size: 24px;
       }
     }
@@ -147,6 +148,7 @@
     &__text {
       max-width: 100%;
       margin-bottom: 19px;
+      font-size: 14px;
     }
 
     &__img {
