@@ -1,5 +1,5 @@
 mixin left-menu(menuContent)
-  menu.left-menu.js__left-menu.js__modal
+  menu.left-menu.js__left-menu.js__modal.js__modal--adaptive
     .left-menu__header
       h2.left-menu__header-title= menuContent.name
       .back.js__menu-back
@@ -15,5 +15,6 @@ mixin left-menu-tree(content, root, location)
         li.left-menu__tree-item.js__item(class= "left-menu__tree-item--" + content.level)
           .left-menu__tree-link-box(class= "left-menu__tree-link-box--" + content.level)
             a.left-menu__tree-link.js__left-menu-link(id= item.id class= "left-menu__tree-link--" + content.level href=location + "?active=" + item.id)= item.name
-            .left-menu__arrow.js__left-menu-arrow(class= "left-menu__arrow--" + content.level)
+            if (item.items && item.items.length > 0)
+              .left-menu__arrow.js__left-menu-arrow(class= "left-menu__arrow--" + content.level)
           +left-menu-tree(item, false, location)

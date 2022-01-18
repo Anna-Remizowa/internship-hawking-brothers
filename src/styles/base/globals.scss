@@ -7,11 +7,8 @@ body {
   overflow-x: hidden;
 
   /* закоментарить для pixelperfect */
-  //height: 100%;
+  height: 100%;
 }
-
-/* раскоментарить для pixelperfect */
-//html::-webkit-scrollbar { width: 0; }
 
 *,
 *::after,
@@ -94,6 +91,27 @@ main {
 
 .blocked {
   overflow-y: hidden;
+
+  main {
+    margin-top: 128px;
+
+    @include _tablet1248 {
+      margin-top: 112px;
+    }
+
+    @include _mobile767 {
+      margin-top: 80px;
+    }
+  }
+
+  .header,
+  .footer {
+    position: fixed;
+  }
+
+  .footer {
+    bottom: 0;
+  }
 }
 
 .hidden {

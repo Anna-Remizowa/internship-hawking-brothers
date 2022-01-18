@@ -230,6 +230,10 @@
   @include _tablet1248 {
     padding-bottom: 20px;
 
+    &__container{
+      flex-direction: column;
+    }
+
     &__header {
       display: flex;
       justify-content: space-between;

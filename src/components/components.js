@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   leftMenu.initModal('.js__open-catalog');
   leftMenu.initLeftMenu();
 
-  const modals = document.querySelectorAll('.js__modal');
+  const modals = document.querySelectorAll('.js__modal--adaptive');
   if (modals) {
     modals.forEach((modal) => {
       window.addEventListener('resize', () => {

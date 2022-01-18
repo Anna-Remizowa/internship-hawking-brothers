@@ -1,24 +1,34 @@
 import Choices from 'choices.js';
 
+const modals = document.querySelectorAll('.js__modal');
+
 export const toggleModal = (element) => {
   if (element === null) {
     return;
   }
 
-  document.body.classList.toggle('blocked');
+  modals.forEach(modal => {
+    if (modal !== element) {
+      modal.classList.remove('visible', 'open');
+    }
+  })
 
   if (element.classList.contains('open')) {
-    toggle('visible', 'open');
-  } else {
-    toggle('open', 'visible');
-  }
-
-  function toggle(firstClass, secondClass) {
-    element.classList.toggle(firstClass);
+    element.classList.remove('visible');
     setTimeout(
-      () => element.classList.toggle(secondClass),
-      200,
+      () => {
+        element.classList.remove('open');
+        document.body.classList.remove('blocked');
+      },
+      300,
     );
+  } else {
+    element.classList.add('open');
+    setTimeout(
+      () => element.classList.add('visible'),
+      100,
+    );
+    document.body.classList.add('blocked');
   }
 };
 

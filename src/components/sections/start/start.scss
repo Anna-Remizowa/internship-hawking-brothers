@@ -309,6 +309,7 @@
       flex-direction: column;
       align-items: center;
       height: 128px;
+      margin-top: 20px;
     }
   }
 
@@ -369,10 +370,6 @@
       &::after {
         margin-left: 7px;
       }
-    }
-
-    &__content-buttons {
-      margin-top: 20px;
     }
   }
 

@@ -21,18 +21,13 @@ export class Category {
     const selects = document.querySelectorAll('.js__category-select');
     initSelects(selects);
 
-    const rangeOne = document.querySelector('.js__range-1');
-    const rangeTwo = document.querySelector('.js__range-2');
-    const rangeValOne = document.querySelector('.js__range-value-start');
-    const rangeValTwo = document.querySelector('.js__range-value-end');
-    const rangeTrack = document.querySelector('.js__range-track');
-    new RangeBar(
-      rangeOne,
-      rangeTwo,
-      rangeValOne,
-      rangeValTwo,
-      rangeTrack,
-    ).initialize();
+    const values = {
+      min:0,
+      max: 1000000,
+      start: 20000,
+      end: 500000
+    };
+    new RangeBar(".js_range", values).initialize();
 
     const filterSubmit = document.querySelector('.js__filter-submit');
     const openButton = document.querySelector('.js__open-filter');

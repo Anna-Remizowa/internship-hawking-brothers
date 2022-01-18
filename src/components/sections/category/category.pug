@@ -5,10 +5,7 @@ mixin resetBox(resetClass)
 
 mixin category(leftMenu)
   .category
-    .category__header
-      h3.category__header-title.js__title
-      .category__header-arrow
-    form.category__filter.js__form-filter.js__modal
+    form.category__filter.js__form-filter.js__modal.js__modal--adaptive
       .category__filter-container
         .category__filter-hidden
           +resetBox("category__filter-reset-box--hidden")
@@ -25,19 +22,22 @@ mixin category(leftMenu)
           option(selected disabled) Серия
         select.category__select.js__category-select
           option(selected disabled) Балка
-        .category__filter-price-box
+        .category__filter-price-box.js_range
           p.category__filter-text Цена
           .category__filter-values
             p.category__filter-range-value.js__range-value-start 0
             p.category__filter-range-value.js__range-value-end 100
           .category__slider-range
             .category__slider-track.js__range-track
-            input.category__range.js__range-1(type="range" value="20000" min="0" max="1000000" step="1")
-            input.category__range.js__range-2(type="range" value="500000" min="0" max="1000000" step="1")
+            input.category__range.js__range-1(type="range" step="1")
+            input.category__range.js__range-2(type="range" step="1")
         +resetBox()
         button.button.button--secondary-color.category__filter-button.js__filter-submit(type="submit") Применить фильтр
 
     .category__container
+      .category__header
+        h3.category__header-title.js__title
+        .category__header-arrow.js__open-catalog
       +left-menu(leftMenu)
       .category__content-box
         .category__content-header

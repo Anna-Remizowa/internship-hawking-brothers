@@ -1,4 +1,8 @@
 .header {
+  width: 100%;
+  z-index: 10;
+  background-color: $white;
+
   &__inner,
   &__wrapper {
     display: flex;
@@ -158,18 +162,9 @@
 /* HEADER ВСПЛЫВАЮЩЕЕ */
 .header-big {
   @include general-footer-header;
+  @include modal;
 
-  position: relative;
-  top: 0;
-  z-index: 10;
-  overflow-y: auto;
-  display: none;
-  width: 100%;
-  height: calc(100vh - 128px);
   padding: 49px 0;
-  opacity: 0;
-  transition: opacity 0.2s ease-out;
-  background-color: $white;
 
   &.open,
   &__box-lists,
@@ -178,10 +173,6 @@
   &__phone-me-link,
   &__phone-number {
     display: flex;
-  }
-
-  &.visible {
-    opacity: 1;
   }
 
   &__inner {
@@ -235,7 +226,6 @@
   }
 
   @include _tablet1248 {
-    height: calc(100vh - 112px);
 
     &__box-lists {
       padding-bottom: 30px;
@@ -248,16 +238,11 @@
   }
 
   @include _mobile767 {
-    height: calc(100vh - 80px);
     padding-top: 42px;
 
     &__box-lists,
     &__box-support {
       flex-direction: column;
-    }
-
-    &__catalog-items {
-      grid-gap: 18px 29px;
     }
 
     &__container:not(:last-of-type) {
@@ -283,6 +268,12 @@
 
     &__text {
       font-size: 14px;
+    }
+  }
+
+  @media (max-width: 510px) {
+    &__catalog-items {
+      grid-gap: 18px 29px;
     }
   }
 }
