@@ -100,7 +100,9 @@
       }
     }
 
-    &-param-name, &-param-desc, &-text {
+    &-param-name,
+    &-param-desc,
+    &-text {
       @extend %small-text;
       line-height: 17px;
     }

@@ -2,7 +2,8 @@ html {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   /*закоментарить для pixelperfect*/
   //height: 100%;
@@ -11,11 +12,16 @@ html, body {
 /*раскоментарить для pixelperfect*/
 //html::-webkit-scrollbar { width: 0; }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
-body, input, button, textarea {
+body,
+input,
+button,
+textarea {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -23,15 +29,26 @@ body, input, button, textarea {
 }
 
 body,
-h1, h2, h3, h4, h5, h6, p,
-ul, ol, li,
-figure, figcaption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
 blockquote,
-dl, dd {
+dl,
+dd {
   margin: 0;
 }
 
-ul, ol {
+ul,
+ol {
   padding: 0;
 }
 
@@ -39,11 +56,13 @@ ul {
   list-style: none;
 }
 
-input, textarea {
+input,
+textarea {
   outline: none;
 }
 
-header, footer {
+header,
+footer {
   flex: 0 0 auto;
 }
 
@@ -57,7 +76,8 @@ main {
   min-height: 100%;
 }
 
-.container, .container-fluid {
+.container,
+.container-fluid {
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -207,8 +227,14 @@ a {
     height: 100%;
   }
 
-  &__blob1, &__blob2, &__blob3, &__blob4,
-  &__blob8, &__blob9, &__blob10, &__blob11,
+  &__blob1,
+  &__blob2,
+  &__blob3,
+  &__blob4,
+  &__blob8,
+  &__blob9,
+  &__blob10,
+  &__blob11,
   &__border {
     background-position: center;
   }
@@ -257,7 +283,9 @@ a {
     background-image: url(/assets/images/svg/blob-11.svg);
   }
 
-  &__dots, &__triangle, &__triangle-2 {
+  &__dots,
+  &__triangle,
+  &__triangle-2 {
     background-position: left;
   }
 
@@ -443,18 +471,20 @@ a {
     color: $gray;
   }
 
-  &__price-new::after, &__price-old::after {
+  &__price-new::after,
+  &__price-old::after {
     margin-left: 15px;
     content: '\20BD';
     text-decoration-line: none;
   }
 }
 
-.input, .textarea{
-  width:100%;
+.input,
+.textarea {
+  width: 100%;
   padding: 17px;
   border-radius: 4px;
-  border: 1px solid #E5E5E5;
+  border: 1px solid #e5e5e5;
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
@@ -469,7 +499,7 @@ a {
   height: 56px;
   max-width: 240px;
 
-  &--photo{
+  &--photo {
     height: auto;
     max-width: 120px;
   }
@@ -482,13 +512,14 @@ a {
       width: 100%;
     }
 
-    &:not([type='button'], [type='submit']) + &:not([type='button'], [type='submit']) {
+    &:not([type='button'], [type='submit'])
+      + &:not([type='button'], [type='submit']) {
       margin-bottom: 25px;
     }
   }
 }
 
-.textarea{
+.textarea {
   resize: none;
 }
 
@@ -511,8 +542,8 @@ a {
     margin-left: 30px;
   }
 
-
-  &__title, &__text {
+  &__title,
+  &__text {
     color: $black-base;
   }
 
@@ -592,6 +623,3 @@ a {
     margin-right: 0;
   }
 }
-
-
-

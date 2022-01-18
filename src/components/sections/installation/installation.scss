@@ -24,7 +24,8 @@
   &__text {
     color: $black-base;
 
-    &--highlight, &--highlight-black {
+    &--highlight,
+    &--highlight-black {
       font-weight: 700;
     }
 

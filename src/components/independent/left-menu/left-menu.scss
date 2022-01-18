@@ -99,7 +99,7 @@
     }
 
     &-item:not(:last-of-type) &-link-box:not(&-link-box--three) {
-      border-bottom: 1px dashed #E5E5E5;
+      border-bottom: 1px dashed #e5e5e5;
     }
 
     &-link {
@@ -120,7 +120,7 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 20px;
-        color: #8C8C8C;
+        color: #8c8c8c;
 
         &.active {
           color: $orange;
@@ -132,7 +132,7 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 30px;
-        color: #8C8C8C;
+        color: #8c8c8c;
 
         &.active {
           color: $light-green;

@@ -1,13 +1,15 @@
 .footer {
   @include general-footer-header;
-  background-color: #0C2F33;
+  background-color: #0c2f33;
   padding: 88px 0;
 
   &__container:last-of-type {
     margin-left: 15px;
   }
 
-  &__title, &__link, &__text {
+  &__title,
+  &__link,
+  &__text {
     color: $white;
   }
 

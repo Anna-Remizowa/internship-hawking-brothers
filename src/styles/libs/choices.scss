@@ -6,10 +6,10 @@
     min-height: 56px;
     padding: 16px 21px 20px 13px;
     background-color: $white;
-    border: 1px solid #E5E5E5;
+    border: 1px solid #e5e5e5;
   }
 
-  &[data-type*=select-one] {
+  &[data-type*='select-one'] {
     &::after {
       top: 37%;
       right: 23px;
@@ -47,7 +47,7 @@
   &__item {
     font-size: 16px;
     line-height: 20px;
-    color: #8C8C8C;
+    color: #8c8c8c;
 
     &--choice {
       font-size: 14px;
@@ -58,7 +58,8 @@
       display: none;
     }
 
-    &.is-selected, &.is-highlighted {
+    &.is-selected,
+    &.is-highlighted {
       background-color: $white;
       color: $orange;
     }
@@ -69,7 +70,7 @@
   }
 
   &--mini {
-    &[data-type*=select-one]::after {
+    &[data-type*='select-one']::after {
       right: 14px;
     }
 

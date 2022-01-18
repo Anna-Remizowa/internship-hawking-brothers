@@ -9,7 +9,7 @@
   &__filter {
     margin: 48px 0 42px 0;
     padding: 32px;
-    border: 1px dashed #4C858B;
+    border: 1px dashed #4c858b;
     border-radius: 4px;
 
     &-container {
@@ -62,7 +62,8 @@
       justify-content: space-between;
     }
 
-    &-range-value, &-number {
+    &-range-value,
+    &-number {
       font-weight: 600;
       font-size: 16px;
       line-height: 20px;
@@ -73,7 +74,7 @@
       width: 28px;
       height: 24.5px;
       mask-image: url(/assets/images/svg/filter.svg);
-      background-color: #D5D5D5;
+      background-color: #d5d5d5;
       mask-size: cover;
     }
 
@@ -97,7 +98,7 @@
       margin: 9px 0;
       width: 100%;
       height: 3px;
-      background-color: #E5E5E5;
+      background-color: #e5e5e5;
     }
   }
 
@@ -171,8 +172,9 @@
   }
 
   &__content {
-
-    &-box, &-header, &-items {
+    &-box,
+    &-header,
+    &-items {
       display: flex;
     }
 
@@ -266,7 +268,8 @@
         grid-gap: 22px 31px;
       }
 
-      &-hidden, &-button {
+      &-hidden,
+      &-button {
         grid-column-start: 1;
         grid-column-end: 3;
       }
@@ -333,11 +336,11 @@
           border: none;
         }
 
-        &[data-type*=select-one] .choices__inner {
+        &[data-type*='select-one'] .choices__inner {
           padding-bottom: 0;
         }
 
-        &[data-type*=select-one]::after {
+        &[data-type*='select-one']::after {
           top: 30%;
           right: 6px;
         }
@@ -413,7 +416,7 @@
     }
 
     &__content {
-      &-header{
+      &-header {
         margin-bottom: 21px;
       }
 
@@ -421,7 +424,7 @@
         margin-left: 0;
       }
 
-      &-filter-box{
+      &-filter-box {
         margin-right: 0;
       }
 

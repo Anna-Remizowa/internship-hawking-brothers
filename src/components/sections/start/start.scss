@@ -1,6 +1,5 @@
 /*СТАРТОВЫЙ ЭКРАН*/
 .start {
-
   &--container-fluid {
     display: flex;
     flex-direction: column;
@@ -21,7 +20,9 @@
   &__discount {
     margin-bottom: 89px;
 
-    &-title, &-sub-title, &-note {
+    &-title,
+    &-sub-title,
+    &-note {
       color: $black-base;
     }
 
@@ -54,7 +55,8 @@
       font-weight: 700;
     }
 
-    &-note--black-highlight, &-note--highlight {
+    &-note--black-highlight,
+    &-note--highlight {
       font-weight: 900;
     }
 
@@ -139,7 +141,8 @@
       top: 2%;
       width: 57%;
       height: 57%;
-      background: url(/assets/images/content/pipes-1.png) center / contain no-repeat;
+      background: url(/assets/images/content/pipes-1.png) center / contain
+        no-repeat;
     }
 
     &-pipes-2 {
@@ -147,7 +150,8 @@
       left: 15%;
       width: 77%;
       height: 77%;
-      background: url(/assets/images/content/pipes-2.png) center / contain no-repeat;
+      background: url(/assets/images/content/pipes-2.png) center / contain
+        no-repeat;
     }
   }
 
@@ -257,7 +261,8 @@
     }
 
     &__img {
-      &-dots, &-triangle {
+      &-dots,
+      &-triangle {
         display: none;
       }
     }

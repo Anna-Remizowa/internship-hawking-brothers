@@ -7,7 +7,8 @@
     align-items: center;
   }
 
-  &__title, &__small-title {
+  &__title,
+  &__small-title {
     line-height: 40px;
     text-align: center;
     color: $black-base;
@@ -44,7 +45,7 @@
     width: 100%;
     height: 1px;
     margin: 35px 0 31px 0;
-    background: #E5E5E5;
+    background: #e5e5e5;
   }
 
   &__questions {
@@ -107,7 +108,6 @@
   }
 
   @include _mobile767 {
-
     &__title {
       margin-bottom: 0;
       font-size: 22px;

@@ -65,7 +65,8 @@
       right: -17%;
       width: 480px;
       height: 480px;
-      background: url(/assets/images/content/fireplace-2.png) center / contain no-repeat;
+      background: url(/assets/images/content/fireplace-2.png) center / contain
+        no-repeat;
     }
   }
 
@@ -115,7 +116,9 @@
         height: 100%;
       }
 
-      &-dots, &-triangle--one, &-triangle--two {
+      &-dots,
+      &-triangle--one,
+      &-triangle--two {
         display: none;
       }
     }

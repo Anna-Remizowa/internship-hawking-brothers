@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     padding: 20px 30px 30px 30px;
-    border: 1px solid #E5E5E5;
+    border: 1px solid #e5e5e5;
   }
 
   &__img-box {
@@ -51,7 +51,8 @@
     flex-direction: column;
   }
 
-  &__content-title, &__content-description {
+  &__content-title,
+  &__content-description {
     line-height: 22px;
   }
 

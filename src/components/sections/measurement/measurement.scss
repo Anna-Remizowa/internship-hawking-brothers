@@ -131,11 +131,14 @@
     &__img {
       height: 476px;
 
-      &-blob-4, &-man {
+      &-blob-4,
+      &-man {
         width: 100%;
       }
 
-      &-triangle--one, &-triangle--two, &-arrow {
+      &-triangle--one,
+      &-triangle--two,
+      &-arrow {
         display: none;
       }
     }

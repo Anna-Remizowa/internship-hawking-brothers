@@ -21,7 +21,8 @@
     margin-bottom: 50px;
   }
 
-  &__photo-box, &__text-box {
+  &__photo-box,
+  &__text-box {
     display: flex;
   }
 
@@ -66,7 +67,7 @@
     right: 0;
     bottom: 100px;
     width: 72%;
-    padding: 35px
+    padding: 35px;
   }
 
   &__slide-container {

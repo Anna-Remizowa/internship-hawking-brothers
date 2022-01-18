@@ -1,5 +1,6 @@
 .header {
-  &__inner, &__wrapper {
+  &__inner,
+  &__wrapper {
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -24,7 +25,8 @@
       font-weight: bold;
       margin-right: 36px;
 
-      &:hover, &.active {
+      &:hover,
+      &.active {
         color: $black-base;
       }
     }
@@ -75,19 +77,21 @@
   }
 
   @include _desktop1630 {
-    &__phone-me-link, &__phone-number {
+    &__phone-me-link,
+    &__phone-number {
       display: none;
     }
   }
 
   @include _tablet1248 {
-    &__inner, &__wrapper {
+    &__inner,
+    &__wrapper {
       align-items: flex-start;
     }
 
     &__inner {
       height: 80px;
-      border-bottom: 1px solid #E5E5E5;
+      border-bottom: 1px solid #e5e5e5;
       margin-top: 32px;
     }
 
@@ -163,8 +167,12 @@
   transition: opacity 0.2s ease-out;
   background-color: $white;
 
-  &.open, &__box-lists, &__box-support, &__box-support-inner,
-  &__phone-me-link, &__phone-number {
+  &.open,
+  &__box-lists,
+  &__box-support,
+  &__box-support-inner,
+  &__phone-me-link,
+  &__phone-number {
     display: flex;
   }
 
@@ -178,7 +186,7 @@
 
   &__box-lists {
     padding-bottom: 34px;
-    border-bottom: 1px solid #E5E5E5;
+    border-bottom: 1px solid #e5e5e5;
   }
 
   &__box-support {
@@ -190,7 +198,9 @@
     margin-right: 51px;
   }
 
-  &__title, &__link, &__text {
+  &__title,
+  &__link,
+  &__text {
     color: $dark-green;
   }
 
@@ -237,7 +247,8 @@
     height: calc(100vh - 80px);
     padding-top: 42px;
 
-    &__box-lists, &__box-support {
+    &__box-lists,
+    &__box-support {
       flex-direction: column;
     }
 
