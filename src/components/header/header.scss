@@ -19,6 +19,7 @@
 
     &-link {
       @extend %text;
+
       text-transform: uppercase;
       color: $light-green;
       line-height: 23px;
@@ -38,6 +39,7 @@
 
   &__phone-number {
     @extend %text;
+
     line-height: 20px;
     letter-spacing: 0.08em;
     color: $light-green;
@@ -52,6 +54,7 @@
     padding-bottom: 5px;
     margin: 5px 60px 0 70px;
     @extend %small-text;
+
     color: $red;
     line-height: 17px;
     font-weight: bold;
@@ -152,9 +155,10 @@
   }
 }
 
-/*HEADER ВСПЛЫВАЮЩЕЕ*/
+/* HEADER ВСПЛЫВАЮЩЕЕ */
 .header-big {
   @include general-footer-header;
+
   position: relative;
   top: 0;
   z-index: 10;

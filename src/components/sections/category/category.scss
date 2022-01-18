@@ -7,7 +7,7 @@
   }
 
   &__filter {
-    margin: 48px 0 42px 0;
+    margin: 48px 0 42px;
     padding: 32px;
     border: 1px dashed #4c858b;
     border-radius: 4px;
@@ -246,6 +246,7 @@
 
       &-arrow {
         @include arrow;
+
         width: 16px;
         height: 16px;
         background-color: $white;
@@ -254,6 +255,7 @@
 
     &__filter {
       @include modal;
+
       padding: 12px 15px;
       border: none;
 
@@ -356,7 +358,7 @@
           width: 309px;
           height: max-content;
           border: none;
-          box-shadow: 0 3px 45px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 45px rgb(0 0 0 / 10%);
           border-radius: 4px;
         }
       }

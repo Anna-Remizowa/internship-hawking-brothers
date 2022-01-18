@@ -1,12 +1,12 @@
 .page {
-  padding: 52px 0 90px 0;
+  padding: 52px 0 90px;
 
   &__title {
     margin-bottom: 41px;
   }
 
   @include _tablet1248 {
-    padding: 56px 0 7px 0;
+    padding: 56px 0 7px;
 
     &__title {
       margin-bottom: 30px;
@@ -14,7 +14,7 @@
   }
 
   @include _mobile767 {
-    padding: 41px 0 32px 0;
+    padding: 41px 0 32px;
 
     &__title {
       margin-bottom: 15px;

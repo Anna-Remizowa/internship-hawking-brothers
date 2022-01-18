@@ -1,4 +1,4 @@
-/*СТАРТОВЫЙ ЭКРАН*/
+/* СТАРТОВЫЙ ЭКРАН */
 .start {
   &--container-fluid {
     display: flex;
@@ -45,11 +45,12 @@
 
     &-note {
       @extend %text;
+
       font-weight: 300;
       line-height: 23px;
     }
 
-    &-note-sign:after {
+    &-note-sign::after {
       margin-left: 6px;
       content: '\20BD';
       font-weight: 700;
@@ -193,7 +194,7 @@
         line-height: 30px;
       }
 
-      &-note-sign:after {
+      &-note-sign::after {
         margin-left: 8px;
       }
     }
@@ -296,7 +297,7 @@
 
     &__content {
       width: 100%;
-      margin: 6px 0 0 0;
+      margin: 6px 0 0;
       text-align: center;
     }
 
@@ -344,7 +345,7 @@
         &-sign {
           margin-left: 8px;
 
-          &:after {
+          &::after {
             margin-left: 0;
           }
         }

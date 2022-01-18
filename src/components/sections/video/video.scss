@@ -30,9 +30,9 @@
     left: -9px;
     width: 771px;
     height: 438px;
-    filter: drop-shadow(0px 46px 145px rgba(52, 29, 30, 0.18))
-      drop-shadow(0px 11px 33px rgba(52, 29, 143, 0.11))
-      drop-shadow(0px 4px 10px rgba(52, 29, 143, 0.08));
+    filter: drop-shadow(0 46px 145px rgb(52 29 30 / 18%))
+      drop-shadow(0 11px 33px rgb(52 29 143 / 11%))
+      drop-shadow(0 4px 10px rgb(52 29 143 / 8%));
   }
 
   &__img {
@@ -98,9 +98,9 @@
       height: 100%;
       border-width: 0;
       outline-width: 0;
-      filter: drop-shadow(0px 46px 145px rgba(52, 29, 30, 0.18))
-        drop-shadow(0px 11px 33px rgba(52, 29, 143, 0.11))
-        drop-shadow(0px 4px 10px rgba(52, 29, 143, 0.08));
+      filter: drop-shadow(0 46px 145px rgb(52 29 30 / 18%))
+        drop-shadow(0 11px 33px rgb(52 29 143 / 11%))
+        drop-shadow(0 4px 10px rgb(52 29 143 / 8%));
     }
   }
 

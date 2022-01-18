@@ -1,6 +1,6 @@
-import Swiper, {Navigation, Thumbs, Zoom} from 'swiper';
+import Swiper, { Navigation, Thumbs, Zoom } from 'swiper';
 
-Swiper.use([Navigation, Thumbs, Zoom])
+Swiper.use([Navigation, Thumbs, Zoom]);
 
 export class SwiperBuilder {
   constructor(sliderName) {
@@ -43,19 +43,19 @@ export class SwiperBuilder {
   }
 
   build() {
-    return new Swiper('.js__' + this.sliderName, {
-      direction: this.direction ? this.direction : "horizontal",
+    return new Swiper(`.js__${this.sliderName}`, {
+      direction: this.direction ? this.direction : 'horizontal',
       loop: this.loop,
       spaceBetween: this.spaceBetween,
       slidesPerView: this.slidesPerView,
       navigation: this.isDisabledNavigation ? {} : {
-        nextEl: '.js__' + this.sliderName + '-arrow--right',
-        prevEl: '.js__' + this.sliderName + '-arrow--left',
+        nextEl: `.js__${this.sliderName}-arrow--right`,
+        prevEl: `.js__${this.sliderName}-arrow--left`,
       },
       thumbs: {
-        swiper: this.thumbs
+        swiper: this.thumbs,
       },
-      breakpoints: this.breakpoints
+      breakpoints: this.breakpoints,
     });
   }
 }

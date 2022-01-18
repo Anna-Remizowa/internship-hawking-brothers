@@ -5,11 +5,12 @@ html {
 html,
 body {
   overflow-x: hidden;
-  /*закоментарить для pixelperfect*/
+
+  /* закоментарить для pixelperfect */
   //height: 100%;
 }
 
-/*раскоментарить для pixelperfect*/
+/* раскоментарить для pixelperfect */
 //html::-webkit-scrollbar { width: 0; }
 
 *,
@@ -99,7 +100,7 @@ main {
   display: none;
 }
 
-/*ОСНОВНЫЕ СТИЛИ ШРИФТОВ*/
+/* ОСНОВНЫЕ СТИЛИ ШРИФТОВ */
 a {
   text-decoration: none;
 }
@@ -185,6 +186,7 @@ a {
 
 .text {
   @extend %text;
+
   line-height: 30px;
   color: $dark-gray;
 
@@ -193,7 +195,7 @@ a {
   }
 }
 
-/*КАРТИНКИ*/
+/* КАРТИНКИ */
 .logo {
   &__img {
     height: 97px;
@@ -335,7 +337,7 @@ a {
   border: none;
 }
 
-/*КНОПКИ*/
+/* КНОПКИ */
 .icon {
   width: 22px;
   height: 22px;
@@ -438,6 +440,7 @@ a {
   border: none;
   border-radius: 4px;
   @extend %text;
+
   color: $white;
   font-weight: bold;
   line-height: 20px;
@@ -453,7 +456,7 @@ a {
   }
 }
 
-/*ЦЕНЫ (СТАРАЯ, НОВАЯ) - ДУБЛИРУЮТСЯ*/
+/* ЦЕНЫ (СТАРАЯ, НОВАЯ) - ДУБЛИРУЮТСЯ */
 .price-container {
   display: flex;
   align-items: center;
@@ -461,7 +464,7 @@ a {
   &__price-new {
     color: $coral;
 
-    &:after {
+    &::after {
       color: $black-base;
     }
   }
@@ -611,6 +614,7 @@ a {
 
   &__arrow {
     @include arrow;
+
     background-color: $light-green;
     transform: rotate(-90deg);
   }

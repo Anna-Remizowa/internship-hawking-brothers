@@ -3,8 +3,8 @@
   flex-shrink: 0;
   margin: 0;
   height: max-content;
-  padding: 35px 26px 18px 26px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+  padding: 35px 26px 18px;
+  box-shadow: 0 0 40px rgb(0 0 0 / 15%);
 
   &__header {
     display: flex;
@@ -143,6 +143,7 @@
 
   @include _tablet1248 {
     @include modal;
+
     max-width: 100%;
     padding: 32px 15px;
 

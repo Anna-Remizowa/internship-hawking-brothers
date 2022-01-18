@@ -1,4 +1,4 @@
-/*СЛАЙДЕР С ПРОДУКТАМИ*/
+/* СЛАЙДЕР С ПРОДУКТАМИ */
 .product-slider {
   max-width: 282px;
   border-radius: 4px;
@@ -6,7 +6,7 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    padding: 20px 30px 30px 30px;
+    padding: 20px 30px 30px;
     border: 1px solid #e5e5e5;
   }
 
@@ -14,7 +14,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
 
     &::after {
       position: absolute;
@@ -59,6 +59,7 @@
   &__content-title {
     margin-bottom: 4px;
     @extend %small-text;
+
     font-weight: bold;
     color: $orange;
   }
@@ -66,6 +67,7 @@
   &__content-description {
     margin-bottom: 16px;
     @extend %text;
+
     font-weight: 500;
     color: $black-base;
   }
@@ -98,7 +100,7 @@
 
     &__wrapper {
       margin-bottom: 34px;
-      padding: 15px 30px 37px 30px;
+      padding: 15px 30px 37px;
     }
 
     &__icon-line {

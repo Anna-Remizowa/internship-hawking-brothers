@@ -1,10 +1,10 @@
 @import 'header/header';
 @import 'footer/footer';
 
-/*шаблоны*/
+/* шаблоны */
 @import '../views/layouts/page/page';
 
-/*маленькие независимые компоненты*/
+/* маленькие независимые компоненты */
 @import 'independent/socials/socials';
 @import 'independent/arrows/arrows';
 @import 'independent/form-order/form-order';
@@ -13,7 +13,7 @@
 @import 'src/components/independent/left-menu/left-menu';
 @import 'src/components/independent/catalog-item/catalog-item';
 
-/*секции*/
+/* секции */
 @import 'sections/start/start';
 @import 'sections/bestsellers/bestsellers';
 @import 'sections/projects/projects';

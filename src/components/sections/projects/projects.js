@@ -1,8 +1,8 @@
-import {SwiperBuilder} from "../../utils/SwiperBuilder";
+import { SwiperBuilder } from '../../utils/SwiperBuilder';
 
 export const initProjectsSection = () => {
   let initSlide = 0;
-  const slides = document.querySelectorAll(".projects__slide");
+  const slides = document.querySelectorAll('.projects__slide');
   if (slides) {
     initSlide = slides.length;
   }
@@ -22,10 +22,10 @@ export const initProjectsSection = () => {
       slidesPerView: 'auto',
       spaceBetween: 24,
       initialSlide: initSlide,
-    }
+    },
   };
 
-  new SwiperBuilder("projects-slider")
+  new SwiperBuilder('projects-slider')
     .addLoop(false)
     .addBreakpoints(breakpoints)
     .build();

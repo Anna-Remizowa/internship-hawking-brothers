@@ -1,14 +1,14 @@
-import {SwiperBuilder} from "../../utils/SwiperBuilder";
+import { SwiperBuilder } from '../../utils/SwiperBuilder';
 
 export const initProductSection = () => {
-  const productSwiperThumb = new SwiperBuilder("product-slider--thumb")
-    .addDirection("vertical")
+  const productSwiperThumb = new SwiperBuilder('product-slider--thumb')
+    .addDirection('vertical')
     .addLoop(false)
     .addSpaceBetween(8)
     .addSlidesPerView(5)
     .addDisabledNavigation(true)
     .build();
-  const productSwiperMain = new SwiperBuilder("product-slider--main")
+  const productSwiperMain = new SwiperBuilder('product-slider--main')
     .addLoop(true)
     .addSpaceBetween(10)
     .addSlidesPerView(1)
@@ -16,21 +16,21 @@ export const initProductSection = () => {
     .addThumbs(productSwiperThumb)
     .build();
 
-  const sliderZoomButton = document.querySelector(".js__product-slider-zoom");
+  const sliderZoomButton = document.querySelector('.js__product-slider-zoom');
   if (sliderZoomButton && productSwiperMain) {
-    sliderZoomButton.addEventListener("click", function () {
+    sliderZoomButton.addEventListener('click', () => {
       productSwiperMain.zoom.toggle();
     });
   }
 
-  const plusCount = document.querySelector(".js__product-plus-count");
-  const minusCount = document.querySelector(".js__product-minus-count");
-  const count = document.querySelector(".js__product-count");
+  const plusCount = document.querySelector('.js__product-plus-count');
+  const minusCount = document.querySelector('.js__product-minus-count');
+  const count = document.querySelector('.js__product-count');
   if (plusCount && minusCount && count) {
-    plusCount.addEventListener("click", function () {
+    plusCount.addEventListener('click', () => {
       count.value = parseInt(count.value) + 1;
     });
-    minusCount.addEventListener("click", function () {
+    minusCount.addEventListener('click', () => {
       const number = parseInt(count.value);
       if (number > 1) {
         count.value = number - 1;
@@ -38,29 +38,29 @@ export const initProductSection = () => {
     });
   }
 
-  const buttonIcons = document.querySelectorAll(".js__product-button-icon");
-  buttonIcons.forEach(button => {
-    button.addEventListener("click", function () {
-      button.classList.toggle("active");
+  const buttonIcons = document.querySelectorAll('.js__product-button-icon');
+  buttonIcons.forEach((button) => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('active');
     });
-  })
+  });
 
-  const tabs = document.querySelector(".product__tabs");
-  if (tabs){
-    const tabsButtons = tabs.querySelectorAll(".product__tabs-btn");
-    const tabsContent = tabs.querySelectorAll(".product__tabs-content");
+  const tabs = document.querySelector('.product__tabs');
+  if (tabs) {
+    const tabsButtons = tabs.querySelectorAll('.product__tabs-btn');
+    const tabsContent = tabs.querySelectorAll('.product__tabs-content');
 
-    if (tabsButtons && tabsContent){
-      tabsButtons.forEach(button => {
-        button.addEventListener("click", function () {
-          tabsButtons.forEach(btn => btn.classList.remove("active"));
-          button.classList.add("active");
+    if (tabsButtons && tabsContent) {
+      tabsButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          tabsButtons.forEach((btn) => btn.classList.remove('active'));
+          button.classList.add('active');
 
-          tabsContent.forEach(content => content.classList.remove("active"));
+          tabsContent.forEach((content) => content.classList.remove('active'));
           tabs.querySelector(`[data-tabs-target="${button.dataset.tabsPath}"]`)
-            .classList.add("active");
-        })
-      })
+            .classList.add('active');
+        });
+      });
     }
   }
-}
+};

@@ -1,4 +1,4 @@
-/*РАЗДЕЛ - ХИТЫ ПРОДАЖ*/
+/* РАЗДЕЛ - ХИТЫ ПРОДАЖ */
 .bestsellers {
   padding: 169px 0;
 
@@ -19,7 +19,7 @@
   }
 
   @include _tablet1248 {
-    padding: 81px 0 45px 0;
+    padding: 81px 0 45px;
 
     &__header {
       margin-bottom: 40px;
@@ -27,7 +27,7 @@
   }
 
   @include _mobile767 {
-    padding: 56px 0 25px 0;
+    padding: 56px 0 25px;
 
     &__header {
       margin-bottom: 21px;

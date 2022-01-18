@@ -77,7 +77,7 @@
     width: 400px;
     padding: 33px 29px 36px 52px;
     background: $white;
-    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 50px rgb(0 0 0 / 15%);
     box-sizing: border-box;
   }
 
@@ -101,7 +101,7 @@
   }
 
   @include _tablet1248 {
-    padding: 26px 0 46px 0;
+    padding: 26px 0 46px;
 
     &__title {
       margin-bottom: 45px;
@@ -168,7 +168,7 @@
         min-height: 99px;
         margin-bottom: 21px;
 
-        &:before {
+        &::before {
           top: 5px;
           left: -19px;
         }
