@@ -1,0 +1,80 @@
+@mixin general-footer-header {
+
+  &__inner {
+    display: flex;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    text-transform: uppercase;
+  }
+
+  &__catalog-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 19px 80px;
+
+    &--spec {
+      grid-gap: 19px 55px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__text-icon-box {
+    position: relative;
+  }
+
+  &__text {
+    line-height: 24px;
+  }
+
+  &__icon {
+    &::before {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 8px;
+      background-size: 15px 15px;
+      content: '';
+    }
+
+    &--time::before {
+      background-image: url(/assets/images/svg/time.svg);
+    }
+
+    &--location::before {
+      background-image: url(/assets/images/svg/location.svg);
+    }
+  }
+}
+
+@mixin modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+  background-color: $white;
+
+  &.visible {
+    opacity: 1;
+  }
+}

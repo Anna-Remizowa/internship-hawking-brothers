@@ -1,0 +1,52 @@
+.catalog {
+  padding: 52px 0 28px 0;
+
+  &__title {
+    margin-bottom: 41px;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 42px 70px 0 0;
+  }
+
+  &__container > * {
+    margin: 54px 0;
+  }
+
+  @include _tablet1248 {
+    padding: 56px 0 7px 0;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__container {
+      justify-content: space-around;
+      margin: 32px 35px 0 0;
+    }
+
+    &__container > * {
+      margin: 45px 0;
+    }
+  }
+
+  @include _mobile767 {
+    padding: 41px 0 33px 0;
+
+    &__title {
+      margin-bottom: 15px;
+    }
+
+    &__container {
+      justify-content: center;
+      margin: 10px 35px 0 0;
+    }
+
+    &__container > * {
+      margin: 16px;
+    }
+  }
+}

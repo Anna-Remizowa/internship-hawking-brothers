@@ -1,0 +1,36 @@
+.socials {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 14px;
+  }
+
+  &__img {
+    height: 19px;
+    width: 18px;
+    background-color: $light-green;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    &--vk {
+      width: 20px;
+      mask-image: url(/assets/images/svg/vk.svg);
+    }
+
+    &--telegram {
+      width: 19px;
+      mask-image: url(/assets/images/svg/telegram.svg);
+    }
+
+    &--instagram {
+      mask-image: url(/assets/images/svg/instagram.svg);
+    }
+
+    &--whatsapp {
+      mask-image: url(/assets/images/svg/whatsapp.svg);
+    }
+  }
+}

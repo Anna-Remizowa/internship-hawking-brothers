@@ -1,0 +1,28 @@
+@import 'header/header';
+@import 'footer/footer';
+
+/*маленькие независимые компоненты*/
+@import 'independent/socials/socials';
+@import 'independent/arrows/arrows';
+@import 'independent/form-order/form-order';
+@import 'independent/product-slider/product-slider';
+@import 'independent/breadcrumbs/breadcrumbs';
+@import 'src/components/independent/left-menu/left-menu';
+@import 'src/components/independent/catalog-item/catalog-item';
+
+/*секции*/
+@import 'sections/start/start';
+@import 'sections/bestsellers/bestsellers';
+@import 'sections/projects/projects';
+@import 'sections/cost-calculation/cost-calculation';
+@import 'sections/benefits/benefits';
+@import 'sections/measurement/measurement';
+@import 'sections/installation/installation';
+@import 'sections/about/about';
+@import 'sections/request/request';
+@import 'sections/video/video';
+@import 'sections/causes/causes';
+@import 'sections/without-money/without-money';
+@import 'sections/reviews/reviews';
+@import 'sections/category/category';
+@import 'sections/catalog/catalog';

@@ -1,0 +1,10 @@
+mixin form_order(text, classParent)
+  .form-order(class=classParent + "__form-order")
+    p.form-order__title Для
+      span.form-order__title.form-order__title--highlight  заказа
+      |  замера заполните форму!
+    p.text.form-order__text= text
+    form.form-order__form
+      input.input(type="text", placeholder="Ваше имя")
+      input.input(type="tel", placeholder="Ваш телефон")
+      button.button.button--main-color(type="submit") оставить заявку

@@ -1,0 +1,6 @@
+mixin catalog-item(imgBlobClass, imgClass, itemName, link)
+  a.catalog-item.catalog-item__img.catalog-item__img-blob(class= imgBlobClass href= link)
+    .img-absolute.img.img__triangle-2.catalog-item__img-triangle.catalog-item__img-triangle--one
+    .img-absolute.img.img__triangle-2.catalog-item__img-triangle.catalog-item__img-triangle--two
+    .img-absolute.img.catalog-item__img-content(class= imgClass)
+    h3.catalog-item__title= itemName

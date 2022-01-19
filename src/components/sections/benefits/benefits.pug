@@ -1,0 +1,36 @@
+section.benefits
+  .container
+    .benefits__inner
+      h2.title-overline Наши преимущества
+
+      -
+        var benefitsList = [{
+          svg: "benefits-1",
+          title: "Бесплатная консультация",
+          text: "Позвонить нам, чтобы получить бесплатную консультацию, на крепёж, стыковку элементов и «вертикальность»"
+        },
+          {
+            svg: "benefits-3",
+            title: "Бесплатный просчёт",
+            text: "Оставьте заявку или перезвоните нам на расчёт стоимости монтажа для дома, бани или котельной."
+          },
+          {
+            svg: "benefits-2",
+            title: "Большой опыт",
+            text: "У нас большой опыт установки, монтажа, убедитесь в этом прочитав отзывы и посмотрите фотографии наших"
+          },
+          {
+            svg: "benefits-4",
+            title: "Чистка дымохода",
+            text: "Мы производим чистку дымохода с применением современной профессиональной технологии."
+          },
+        ]
+
+      .list-with-img.benefits__list-with-img
+        each item in benefitsList
+          .list-with-img__box
+            .img.img__border
+              +svg("img img-absolute list-with-img__img", "assets/images/sprite.svg#"+ item.svg)
+            .list-with-img__text-box
+              p.list-with-img__title= item.title
+              p.text.list-with-img__text= item.text

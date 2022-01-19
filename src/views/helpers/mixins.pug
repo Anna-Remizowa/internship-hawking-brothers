@@ -1,0 +1,41 @@
+mixin svg(imageClass, imageSrc)
+  svg(class= imageClass)
+    use(href= imageSrc)
+
+mixin header-footer-menu(clazz)
+  .header-footer__container(class=clazz + "__container")
+    p(class=clazz + "__title") Каталог
+    ul(class=clazz + "__catalog-items")
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="#") Дымоходы
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="/fireplaces.html") Камины
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="#") Дымососы
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="#") Силикат кальция
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="#") Печи для дома
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="#") Котлы
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="#") Печи для бани
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="#") Ещё
+  .header-footer__container(class=clazz + "__container")
+    p(class=clazz + "__title") Информация
+    ul(class=clazz + "__catalog-items " + clazz + "__catalog-items--spec")
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="/catalog.html") Каталог
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="#") Полезное
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="#") Установка и монтаж
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="#") Контакты
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="#") Отзывы
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="#") Оплата и доставка
+      li(class=clazz + "__item")
+        a(class=clazz + "__link" href="#") Ликвидация товара

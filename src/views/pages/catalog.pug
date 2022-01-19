@@ -1,0 +1,13 @@
+extends ../layouts/default
+include ../helpers/mixins
+include ../../components/independent/breadcrumbs/breadcrumbs
+include ../../components/independent/catalog-item/catalog-item
+
+block variables
+  include ../variables/variables
+  include ../variables/breadcrumbs
+  - var headerTitle = activeCatalog;
+  - var title = 'Каталог'
+
+block content
+  include ../../components/sections/catalog/catalog

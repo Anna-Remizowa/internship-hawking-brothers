@@ -1,0 +1,30 @@
+section.projects
+  .projects_arrows
+    +arrows("projects", true)
+
+  .projects__slider.swiper
+    .projects__slider-wrapper.swiper-wrapper
+      each product in projects_products
+        .projects__slide.swiper-slide
+          .projects__slide-wrapper
+            img.projects__slide-img(src= product.src, alt= product.name)
+            p.projects__slide-title= product.name
+            each char in product.characteristics
+              .projects__slide-param
+                p.projects__slide-param-name= char.key
+                .projects__slide-border-dots
+                p.projects__slide-param-desc= char.value
+            p.projects__slide-text= product.description
+
+  .container
+    .projects__inner
+
+      .img-absolute.img.img__blob2.projects__img-blob-2
+
+      .projects__content-container
+        h2.title.projects__title.projects__title-box Выполненные
+          span.title.projects__title.projects__title--highlight  проекты
+        p.text.projects__text
+          | Lorem ipsum dolor sit amet, consectetur
+          | adipiscing elit, sed do eiusmod tempo
+        +arrows("projects")

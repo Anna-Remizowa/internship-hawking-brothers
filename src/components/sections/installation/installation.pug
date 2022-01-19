@@ -1,0 +1,52 @@
+section.installation
+  .container
+    .installation__inner
+      h2.title-overline.installation__title Установка и отношение к работе
+
+      .installation__text-container
+        .installation__text-content
+          p.text.installation__text
+            | Правильная установка очень важна, от этого зависит
+            | не только красота но и ваша безопасность. Не
+            | профессиональная установка газоотводящей системы несёт
+            | большую опасность возникновения пожаров и отравление
+            | угарным газом.
+          p.text.installation__text
+            | В
+            span.text.installation__text.installation__text--highlight  Дымоход ру.
+            |  работают профессионалы с большим опытом работы,
+            | они ежегодно проходят курсы повышения квалификации
+          p.text.installation__text.installation__text--highlight-black
+            | Все работы проводим качественно, аккуратно, и на совесть
+        .installation__img
+
+      -
+        var installationList = [{
+          svg: "install-1",
+          title: "Доступные цены",
+          text: "Мы предлагаем нашу продукцию, услуги по доступным ценам и отличного качества"
+        },
+          {
+            svg: "install-2",
+            title: "Установка",
+            text: "Устанавливаем дымоходы, камины, печи, котлы всех производителей"
+          },
+          {
+            svg: "install-3",
+            title: "Профессионализм",
+            text: "Квалифицированные специалисты. Работаем чисто, аккуратно, убираем за собой"
+          },
+          {
+            svg: "install-4",
+            title: "Гарантия качества",
+            text: "Мы даём гарантию на все изделия и работы, выполненные нашими специалистами."
+          },
+        ]
+
+      .list-with-img.installation__list-with-img
+        each item in installationList
+          .list-with-img__box.installation__list-box
+            +svg("img list-with-img__img installation__list-img", "assets/images/sprite.svg#" + item.svg)
+            .list-with-img__text-box.installation__list-text-box
+              p.list-with-img__title.installation__list-title= item.title
+              p.text.list-with-img__text.installation__text= item.text

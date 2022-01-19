@@ -1,0 +1,62 @@
+mixin header(active)
+  header.header
+
+    .container-fluid
+      .header__inner
+        .logo
+          a.logo__link(href= routing.home)
+            img.logo__img(src= "assets/images/logo.png", alt="Дымоход.ру")
+        .header__wrapper
+          .icon-line.icon-line--one.header__icon.header-menu-js
+            button.icon-line__button.icon-line__button--main.header__icon-line-button(type="button")
+              .icon.icon__menu.icon-menu-js
+
+          nav.header__menu
+            ul.header__menu-list
+              li.header__menu-item
+                a.header__menu-link(href= routing.catalog class= (active && active.catalog ? active.catalog : "")) Каталог товаров
+              li.header__menu-item
+                a.header__menu-link(href= routing.delivery class= (active && active.delivery ? active.delivery : "")) доставка и оплата
+              li.header__menu-item
+                a.header__menu-link(href= routing.price class= (active && active.price ? active.price : "")) Цены
+              li.header__menu-item
+                a.header__menu-link(href= routing.contacts class= (active && active.contacts ? active.contacts : "")) Контакты
+          a.header__phone-number(href="tel:+78125092198")
+            | +7 (812)
+            span.header__phone-number.header__phone-number--highlight  509 21 98
+          a.header__phone-me-link(href= "#") перезвоните мне
+
+          +socials(socialList, "header")
+
+          .icon-line.header__icon-line
+            .icon-line__button.icon-line__button--light.header__icon-line-button
+              a.icon-line__button-link(href= routing.search)
+                +svg("icon icon-line__button-img header__img-icon", "assets/images/sprite.svg#search")
+            .icon-line__button.icon-line__button--light.header__icon-line-button
+              a.icon-line__button-link(href= routing.favorites)
+                +svg("icon icon-line__button-img header__img-icon", "assets/images/sprite.svg#favorites")
+            .icon-line__button.icon-line__button--light.header__icon-line-button
+              a.icon-line__button-link(href= routing.cart)
+                .icon.icon-line__button-img.header__img-icon.icon-line__button-img--shopping
+              .icon-line__button-circle-count
+                p.icon-line__button-count-text 10
+
+  header.header.header-big.header-big-js
+    .container
+      .header-big__inner
+        .header-big__box-lists
+          +header-footer-menu("header-big")
+        .header-big__box-support
+          .header-big__inner
+            a.header__phone-number.header-big__phone-number(href="tel:+78125092198")
+              | +7 (812) &nbsp
+              span.header__phone-number.header-big__phone-number.header__phone-number--highlight 509 21 98
+            a.header__phone-me-link.header-big__phone-me-link(href= "#") перезвоните мне
+          .header-big__inner
+            .header-big__text-icon-box
+              p.header-big__text.header-big__text--highlight.header-big__icon.header-big__icon--time пн-пт
+                span.header-big__text  9:00 – 20:00
+                span.header-big__text.header-big__text--highlight   сб-вс
+                span.header-big__text  10:00 – 18:00
+            .header-big__text-icon-box
+              p.header-big__text.header-big__icon.header-big__icon--location г. Санкт - Петербург, ул. Тамбасова д.7

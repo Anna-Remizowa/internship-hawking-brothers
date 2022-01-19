@@ -1,0 +1,36 @@
+.benefits {
+  padding: 146px 0 0;
+
+  &__inner {
+    position: relative;
+  }
+
+  &__list-with-img {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px 26px;
+    margin: 63px 0;
+  }
+
+  @include _tablet1248 {
+    padding-bottom: 0;
+
+    &__list-with-img {
+      grid-gap: 38px 30px;
+      margin: 40px 0;
+    }
+  }
+
+  @include _tablet1050 {
+    padding-top: 65px;
+  }
+
+  @include _mobile767 {
+    padding-top: 25px;
+
+    &__list-with-img {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 19px;
+      margin: 29px 0;
+    }
+  }
+}

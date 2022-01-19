@@ -1,0 +1,111 @@
+.video {
+  padding: 54px 0;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 66px;
+  }
+
+  &__text {
+    color: $black-base;
+    margin-bottom: 100px;
+  }
+
+  &__container, &__frame {
+    position: relative;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__frame {
+    left: -9px;
+    width: 771px;
+    height: 438px;
+    filter: drop-shadow(0px 46px 145px rgba(52, 29, 30, 0.18)) drop-shadow(0px 11px 33px rgba(52, 29, 143, 0.11)) drop-shadow(0px 4px 10px rgba(52, 29, 143, 0.08));
+  }
+
+  &__img {
+    &-blob-6 {
+      right: 2%;
+      top: -8%;
+      width: 630px;
+      height: 392px;
+    }
+
+    &-blob-7 {
+      left: 3%;
+      top: 14%;
+      width: 472px;
+      height: 294px;
+    }
+
+    &-dots {
+      height: 30%;
+
+      &--one {
+        left: 8%;
+        top: 51%;
+      }
+
+      &--two {
+        top: -12%;
+        right: 7%;
+      }
+    }
+  }
+
+  @include _tablet1248 {
+    padding: 40px 0;
+
+    &__title, &__text {
+      margin-bottom: 34px;
+    }
+
+    &__img {
+      &-blob-6, &-blob-7, &-dots {
+        display: none;
+      }
+    }
+  }
+
+  @include _tablet1050 {
+    &__container {
+      position: relative;
+      padding-bottom: 56.25%;
+      display: flex;
+      justify-content: center;
+      height: 0;
+    }
+
+    &__frame {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-width: 0;
+      outline-width: 0;
+      filter: drop-shadow(0px 46px 145px rgba(52, 29, 30, 0.18)) drop-shadow(0px 11px 33px rgba(52, 29, 143, 0.11)) drop-shadow(0px 4px 10px rgba(52, 29, 143, 0.08));
+    }
+  }
+
+  @include _mobile767 {
+    padding: 16px 0;
+
+    &__title {
+      margin-bottom: 28px;
+    }
+
+    &__text {
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+  }
+}

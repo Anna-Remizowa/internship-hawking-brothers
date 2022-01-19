@@ -1,0 +1,122 @@
+.causes {
+  padding: 60px 0;
+
+  &__inner {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 117px;
+  }
+
+  &__content-container {
+    display: flex;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    max-width: 620px;
+    width: 100%;
+    margin-right: 74px;
+    counter-reset: counter;
+    list-style: none;
+
+    &-element {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 44px;
+      counter-increment: counter;
+    }
+
+    &-element::before {
+      min-width: 60px;
+      height: 75px;
+      margin-right: 42px;
+      content: counter(counter);
+      font-weight: bold;
+      font-size: 100px;
+      line-height: 75px;
+      color: $coral;
+      opacity: 0.2;
+    }
+
+    &-text {
+      color: $black-base;
+    }
+  }
+
+  &__img {
+    background: url(/assets/images/content/causes.png);
+    width: 550px;
+    height: 403px;
+  }
+
+  @include _tablet1248 {
+    padding: 40px 0;
+
+    &__img {
+      display: none;
+    }
+
+    &__title {
+      margin-bottom: 58px;
+    }
+
+    &__items {
+      max-width: 100%;
+      flex-direction: row;
+      margin-right: 0;
+
+      &-element {
+        width: 100%;
+        margin-bottom: 0;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &::before {
+          margin-bottom: 19px;
+        }
+      }
+
+      &-element:not(:last-of-type) {
+        margin-right: 32px;
+        margin-bottom: 0;
+      }
+
+      &-text {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  @include _mobile767 {
+    padding: 32px 0;
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__items {
+      flex-direction: column;
+
+      &-element::before {
+        margin-right: 0;
+        align-self: center;
+        font-size: 60px;
+        line-height: 73px;
+      }
+
+      &-element:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 17px;
+      }
+
+      &-element:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

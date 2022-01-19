@@ -1,0 +1,152 @@
+/*СЛАЙДЕР С ПРОДУКТАМИ*/
+.product-slider {
+  border-radius: 4px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px 30px 30px;
+    border: 1px solid #E5E5E5;
+  }
+
+  &__img-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 26px 0;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 154px;
+      content: '';
+      background-color: $background-color;
+    }
+  }
+
+  &__img {
+    bottom: 0;
+    height: 213px;
+    width: 210px;
+  }
+
+  &__icon-line {
+    position: absolute;
+    right: 0;
+    bottom: -24px;
+    height: 56px;
+    width: 56px;
+  }
+
+  .icon-line__button {
+    margin-left: 0;
+    border: none;
+  }
+
+  &__content-title, &__content-description {
+    line-height: 22px;
+  }
+
+  &__content-title {
+    margin-bottom: 4px;
+    @extend %small-text;
+    font-weight: bold;
+    color: $orange;
+  }
+
+  &__content-description {
+    margin-bottom: 16px;
+    @extend %text;
+    font-weight: 500;
+    color: $black-base;
+  }
+
+  &__content-price {
+    justify-content: space-between;
+  }
+
+  &__price-new {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+
+    &::after {
+      margin-left: 5px;
+    }
+  }
+
+  &__price-old {
+    font-size: 14px;
+    line-height: 17px;
+
+    &::after {
+      margin-left: 4px;
+    }
+  }
+
+  @include _tablet1248 {
+    &__wrapper {
+      margin-bottom: 34px;
+      padding: 15px 30px 37px 30px;
+    }
+
+    &__icon-line {
+      right: auto;
+      bottom: -80%;
+      margin-left: 0;
+    }
+
+    &__img-box {
+      margin-bottom: 40px;
+
+      &::after {
+        bottom: -14px;
+        width: 100%;
+      }
+    }
+
+    &__img {
+      height: 231px;
+      width: 231px;
+    }
+
+    &__content-box {
+      max-width: 310px;
+      text-align: center;
+      align-self: center;
+    }
+
+    &__content-description {
+      margin-bottom: 8px;
+    }
+  }
+
+  @include _mobile767 {
+    &__wrapper {
+      margin-bottom: 51px;
+      padding: 30px 24px 44px 24px;
+    }
+
+    &__img-box {
+      margin-bottom: 44px;
+
+      &::after {
+        bottom: -22px;
+      }
+    }
+
+    &__content-price {
+      flex-direction: column;
+    }
+
+    &__price-new {
+      margin-bottom: 4px;
+    }
+
+    &__icon-line {
+      bottom: -96%;
+    }
+  }
+}

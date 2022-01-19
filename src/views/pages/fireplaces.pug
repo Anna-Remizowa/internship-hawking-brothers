@@ -1,0 +1,24 @@
+extends ../layouts/default
+include ../helpers/mixins
+include ../../components/sections/category/category
+include ../../components/independent/breadcrumbs/breadcrumbs
+include ../../components/independent/product-slider/product-slider
+include ../../components/independent/left-menu/left-menu
+
+block variables
+  include ../variables/variables
+  include ../variables/breadcrumbs
+  include ../variables/left-menu
+
+  -
+    var content = {
+      name: "Камины",
+      breadcrumbs: breadcrumbsCategory_Fireplaces,
+      leftMenu: leftMenu_Fireplaces
+    };
+
+  - var headerTitle = activeCatalog;
+  - var title = 'Камины'
+
+block content
+  +category(content)

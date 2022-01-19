@@ -1,0 +1,61 @@
+.form-order {
+  position: relative;
+  max-width: 866px;
+  width: 100%;
+  padding: 57px 54px 60px 60px;
+  align-self: center;
+  background-color: $white;
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.15);
+
+  &__title {
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: $black-base;
+
+    &--highlight {
+      color: $orange;
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    margin-bottom: 22px;
+    color: $black-base;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include _tablet1248 {
+    padding: 50px;
+
+    &__title, &__text {
+      text-align: center;
+    }
+
+    &__form {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @include _mobile767 {
+    padding: 0;
+    box-shadow: none;
+
+    &__title {
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    &__text {
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+  }
+}
