@@ -76,7 +76,8 @@
       right: 2%;
       width: 433px;
       height: 476px;
-      background: url(/assets/images/content/man.png) center / contain no-repeat;
+      background: url('/assets/images/content/man.png') center / contain
+        no-repeat;
     }
 
     &-arrow {
@@ -91,7 +92,7 @@
     left: -82px;
   }
 
-  @include _desktop1630 {
+  @include desktop1630 {
     &__img {
       &-blob-4 {
         width: 650px;
@@ -103,7 +104,7 @@
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 39px 0;
 
     &__content {
@@ -149,7 +150,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 13px 0;
 
     &__title {

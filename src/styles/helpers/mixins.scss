@@ -50,11 +50,11 @@
     }
 
     &--time::before {
-      background-image: url(/assets/images/svg/time.svg);
+      background-image: url('/assets/images/svg/time.svg');
     }
 
     &--location::before {
-      background-image: url(/assets/images/svg/location.svg);
+      background-image: url('/assets/images/svg/location.svg');
     }
   }
 }
@@ -81,13 +81,13 @@
     left: 0;
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     top: 112px;
     height: calc(100vh - 112px - 69px);
     box-shadow: none;
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     top: 80px;
     height: calc(100vh - 80px - 69px);
   }

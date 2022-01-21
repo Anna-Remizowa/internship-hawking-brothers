@@ -27,7 +27,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     &__arrow:first-of-type {
       margin-right: 30px;
     }

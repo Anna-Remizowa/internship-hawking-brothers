@@ -1,23 +1,23 @@
-@mixin _desktop1630 {
+@mixin desktop1630 {
   @media (max-width: 1630px) {
     @content;
   }
 }
 
-@mixin _tablet1248 {
+@mixin tablet1248 {
   @media (max-width: 1248px) {
     @content;
   }
 }
 
-@mixin _tablet1050 {
+@mixin tablet1050 {
   @media (max-width: 1050px) {
     @content;
   }
 }
 
-@mixin _mobile767 {
-  @media (max-width: 768px) {
+@mixin mobile767 {
+  @media (max-width: 767px) {
     @content;
   }
 }

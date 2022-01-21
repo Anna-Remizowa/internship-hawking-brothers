@@ -89,12 +89,12 @@
       right: 2%;
       width: 385px;
       height: 550px;
-      background: url(/assets/images/content/fireplace.png) center / contain
+      background: url('/assets/images/content/fireplace.png') center / contain
         no-repeat;
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 53px 0;
 
     &__title {
@@ -120,7 +120,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 17px 0;
 
     &__title {
@@ -128,12 +128,9 @@
     }
 
     &__content {
+      width: 100%;
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 37px;
-    }
-
-    &__content {
-      width: 100%;
 
       &-item {
         padding: 32px 19px 14px;

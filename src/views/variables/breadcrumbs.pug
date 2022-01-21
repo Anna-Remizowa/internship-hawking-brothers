@@ -13,7 +13,7 @@
     breadcrumbHome,
     breadcrumbCatalog,
     {
-      href: "#",
+      href: routing.fireplaces,
       name: "Камины",
     },
     {
@@ -27,23 +27,8 @@
   var breadcrumbsCategory_Catalog = [
     breadcrumbHome,
     {
-      href: routing.catalog,
-      name: "Каталог",
+      href: breadcrumbCatalog.href,
+      name: breadcrumbCatalog.name,
       customClass: "active"
     },
   ]
-
--
-  var breadcrumbsCategory_Product = [
-    breadcrumbHome,
-    breadcrumbCatalog,
-    {
-      href: routing.fireplaces,
-      name: "Камины"
-    },
-    {
-      href: "#",
-      name: "",
-      customClass: "active"
-    }
-  ];

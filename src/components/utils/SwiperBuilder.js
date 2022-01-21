@@ -22,11 +22,6 @@ export class SwiperBuilder {
     return this;
   }
 
-  addDisabledNavigation(isDisabled) {
-    this.isDisabledNavigation = isDisabled;
-    return this;
-  }
-
   addDirection(direction) {
     this.direction = direction;
     return this;
@@ -42,16 +37,25 @@ export class SwiperBuilder {
     return this;
   }
 
+  addNavigation(nextElClass, prevElClass) {
+    this.navigation = {
+      nextEl: nextElClass,
+      prevEl: prevElClass,
+    };
+    return this;
+  }
+
   build() {
-    return new Swiper(`.js__${this.sliderName}`, {
+    return new Swiper(this.sliderName, {
       direction: this.direction ? this.direction : 'horizontal',
       loop: this.loop,
       spaceBetween: this.spaceBetween,
       slidesPerView: this.slidesPerView,
-      navigation: this.isDisabledNavigation ? {} : {
-        nextEl: `.js__${this.sliderName}-arrow--right`,
-        prevEl: `.js__${this.sliderName}-arrow--left`,
-      },
+      navigation: this.navigation ? this.navigation : {},
+      //   {
+      //   nextEl: `.js__${this.sliderName}-arrow--right`,
+      //   prevEl: `.js__${this.sliderName}-arrow--left`,
+      // },
       thumbs: {
         swiper: this.thumbs,
       },

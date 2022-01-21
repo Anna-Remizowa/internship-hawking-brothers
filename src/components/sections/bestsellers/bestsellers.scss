@@ -18,7 +18,7 @@
     justify-content: center;
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 81px 0 45px;
 
     &__header {
@@ -26,7 +26,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 56px 0 25px;
 
     &__header {

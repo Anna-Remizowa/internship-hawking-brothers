@@ -87,19 +87,6 @@
       margin-bottom: 15px;
     }
 
-    &-param {
-      display: flex;
-      margin-bottom: 13px;
-
-      &:nth-child(even) &-desc {
-        color: $light-green;
-      }
-
-      &:nth-child(odd) &-desc {
-        color: $red;
-      }
-    }
-
     &-param-name,
     &-param-desc,
     &-text {
@@ -122,6 +109,19 @@
       font-weight: 600;
     }
 
+    &-param {
+      display: flex;
+      margin-bottom: 13px;
+
+      &:nth-child(even) &-desc {
+        color: $light-green;
+      }
+
+      &:nth-child(odd) &-desc {
+        color: $red;
+      }
+    }
+
     &-text {
       font-weight: 300;
       line-height: 22px;
@@ -129,14 +129,13 @@
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     display: flex;
     flex-direction: column-reverse;
     padding: 37px 0 0;
 
     &__content-container {
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       justify-content: space-between;
       width: 100%;
       margin: 0 0 15px;
@@ -185,7 +184,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 25px 0;
 
     &__content-container {

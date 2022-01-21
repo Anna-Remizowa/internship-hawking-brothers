@@ -7,11 +7,11 @@ export const toggleModal = (element) => {
     return;
   }
 
-  modals.forEach(modal => {
+  modals.forEach((modal) => {
     if (modal !== element) {
       modal.classList.remove('visible', 'open');
     }
-  })
+  });
 
   if (element.classList.contains('open')) {
     element.classList.remove('visible');
@@ -40,7 +40,7 @@ export const initSelects = (selects) => {
       if (sel.classList.contains('js__select-mini')) {
         containerClass += ' choices--mini';
       }
-      new Choices(sel, {
+      return new Choices(sel, {
         allowHTML: false,
         searchEnabled: false,
         placeholderValue: 'Please Choose…',
@@ -50,4 +50,6 @@ export const initSelects = (selects) => {
       });
     });
   }
+
+  return null;
 };

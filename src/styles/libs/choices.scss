@@ -15,10 +15,10 @@
       right: 23px;
       width: 12px;
       height: 12px;
-      content: url(/assets/images/svg/select-arrow.svg);
+      content: url('/assets/images/svg/select-arrow.svg');
       border: none;
 
-      @include _tablet1248 {
+      @include tablet1248 {
         right: 15px;
       }
     }
@@ -37,11 +37,6 @@
     &--single {
       padding: 0;
     }
-  }
-
-  &__list--dropdown &__item,
-  &__list--dropdown &__item--selectable {
-    padding: 0;
   }
 
   &__item {
@@ -63,6 +58,11 @@
       background-color: $white;
       color: $orange;
     }
+  }
+
+  &__list--dropdown &__item,
+  &__list--dropdown &__item--selectable {
+    padding: 0;
   }
 
   &__list--dropdown &__item--selectable.is-highlighted {

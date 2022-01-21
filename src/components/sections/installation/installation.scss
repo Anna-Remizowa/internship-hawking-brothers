@@ -39,7 +39,7 @@
   }
 
   &__img {
-    background: url(/assets/images/content/installation.png);
+    background: url('/assets/images/content/installation.png');
     min-width: 624px;
     height: 313px;
   }
@@ -70,7 +70,7 @@
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 29px 0;
 
     &__img {
@@ -107,7 +107,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 26px 0;
 
     &__text-container {

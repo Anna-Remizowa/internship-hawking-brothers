@@ -1,18 +1,16 @@
 import { SwiperBuilder } from '../../utils/SwiperBuilder';
 
 export const initProductSection = () => {
-  const productSwiperThumb = new SwiperBuilder('product-slider--thumb')
+  const productSwiperThumb = new SwiperBuilder('.js__product-slider--thumb')
     .addDirection('vertical')
-    .addLoop(false)
+    .addLoop(true)
     .addSpaceBetween(8)
     .addSlidesPerView(5)
-    .addDisabledNavigation(true)
     .build();
-  const productSwiperMain = new SwiperBuilder('product-slider--main')
+  const productSwiperMain = new SwiperBuilder('.js__product-slider--main')
     .addLoop(true)
     .addSpaceBetween(10)
     .addSlidesPerView(1)
-    .addDisabledNavigation(true)
     .addThumbs(productSwiperThumb)
     .build();
 
@@ -28,10 +26,10 @@ export const initProductSection = () => {
   const count = document.querySelector('.js__product-count');
   if (plusCount && minusCount && count) {
     plusCount.addEventListener('click', () => {
-      count.value = parseInt(count.value) + 1;
+      count.value = parseInt(count.value, 10) + 1;
     });
     minusCount.addEventListener('click', () => {
-      const number = parseInt(count.value);
+      const number = parseInt(count.value, 10);
       if (number > 1) {
         count.value = number - 1;
       }

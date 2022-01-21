@@ -20,7 +20,7 @@ body,
 input,
 button,
 textarea {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: normal;
   font-style: normal;
   color: $font-color;
@@ -95,11 +95,11 @@ main {
   main {
     margin-top: 128px;
 
-    @include _tablet1248 {
+    @include tablet1248 {
       margin-top: 112px;
     }
 
-    @include _mobile767 {
+    @include mobile767 {
       margin-top: 80px;
     }
   }
@@ -141,12 +141,12 @@ a {
     background-color: $coral;
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     font-size: 30px;
     line-height: 37px;
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     font-size: 20px;
     line-height: 30px;
   }
@@ -166,7 +166,7 @@ a {
     text-transform: uppercase;
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     font-size: 30px;
     line-height: 54px;
 
@@ -175,7 +175,7 @@ a {
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     font-size: 18px;
     line-height: 30px;
 
@@ -191,12 +191,12 @@ a {
   line-height: 73px;
   color: $black-base;
 
-  @include _tablet1248 {
+  @include tablet1248 {
     font-size: 45px;
     line-height: 55px;
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     font-size: 30px;
     line-height: 37px;
   }
@@ -208,7 +208,7 @@ a {
   line-height: 30px;
   color: $dark-gray;
 
-  @include _mobile767 {
+  @include mobile767 {
     line-height: 26px;
   }
 }
@@ -220,7 +220,7 @@ a {
     width: 100px;
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     &__img {
       position: relative;
       top: -8px;
@@ -229,7 +229,7 @@ a {
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     &__img {
       height: 47px;
       width: 48px;
@@ -260,47 +260,47 @@ a {
   }
 
   &__blob1 {
-    background-image: url(/assets/images/svg/blob-1.svg);
+    background-image: url('/assets/images/svg/blob-1.svg');
   }
 
   &__blob2 {
-    background-image: url(/assets/images/svg/blob-2.svg);
+    background-image: url('/assets/images/svg/blob-2.svg');
   }
 
   &__blob3 {
-    background-image: url(/assets/images/svg/blob-3.svg);
+    background-image: url('/assets/images/svg/blob-3.svg');
   }
 
   &__blob4 {
-    background-image: url(/assets/images/svg/blob-4.svg);
+    background-image: url('/assets/images/svg/blob-4.svg');
   }
 
   &__blob5 {
-    background-image: url(/assets/images/svg/blob-5.svg);
+    background-image: url('/assets/images/svg/blob-5.svg');
   }
 
   &__blob6 {
-    background-image: url(/assets/images/svg/blob-6.svg);
+    background-image: url('/assets/images/svg/blob-6.svg');
   }
 
   &__blob7 {
-    background-image: url(/assets/images/svg/blob-7.svg);
+    background-image: url('/assets/images/svg/blob-7.svg');
   }
 
   &__blob8 {
-    background-image: url(/assets/images/svg/blob-8.svg);
+    background-image: url('/assets/images/svg/blob-8.svg');
   }
 
   &__blob9 {
-    background-image: url(/assets/images/svg/blob-9.svg);
+    background-image: url('/assets/images/svg/blob-9.svg');
   }
 
   &__blob10 {
-    background-image: url(/assets/images/svg/blob-10.svg);
+    background-image: url('/assets/images/svg/blob-10.svg');
   }
 
   &__blob11 {
-    background-image: url(/assets/images/svg/blob-11.svg);
+    background-image: url('/assets/images/svg/blob-11.svg');
   }
 
   &__dots,
@@ -310,19 +310,19 @@ a {
   }
 
   &__dots {
-    background-image: url(/assets/images/svg/dots.svg);
+    background-image: url('/assets/images/svg/dots.svg');
     width: 4%;
     height: 21%;
   }
 
   &__triangle {
-    background-image: url(/assets/images/svg/triangle.svg);
+    background-image: url('/assets/images/svg/triangle.svg');
     width: 8%;
     height: 5%;
   }
 
   &__triangle-2 {
-    background-image: url(/assets/images/svg/triangle-2.svg);
+    background-image: url('/assets/images/svg/triangle-2.svg');
     width: 27%;
     height: 27%;
   }
@@ -334,13 +334,13 @@ a {
     align-items: center;
     min-width: 179px;
     height: 142px;
-    background-image: url(/assets/images/svg/border.svg);
+    background-image: url('/assets/images/svg/border.svg');
 
-    @include _tablet1050 {
+    @include tablet1050 {
       height: 139px;
     }
 
-    @include _mobile767 {
+    @include mobile767 {
       min-width: 121px;
       height: 95px;
     }
@@ -350,7 +350,7 @@ a {
 @mixin arrow {
   width: 12px;
   height: 12px;
-  mask-image: url(/assets/images/svg/select-arrow.svg);
+  mask-image: url('/assets/images/svg/select-arrow.svg');
   mask-size: cover;
   border: none;
 }
@@ -362,14 +362,14 @@ a {
   mask-size: cover;
 
   &__menu {
-    mask-image: url(/assets/images/svg/menu.svg);
+    mask-image: url('/assets/images/svg/menu.svg');
     background-color: $light-green;
 
     &.close {
-      mask-image: url(/assets/images/svg/close.svg);
+      mask-image: url('/assets/images/svg/close.svg');
     }
 
-    @include _mobile767 {
+    @include mobile767 {
       width: 18px;
       height: 18px;
     }
@@ -400,7 +400,7 @@ a {
     &-img {
       &--shopping {
         width: 24px;
-        mask-image: url(/assets/images/svg/shopping-cart.svg);
+        mask-image: url('/assets/images/svg/shopping-cart.svg');
         background-color: $black-base;
       }
 
@@ -474,7 +474,7 @@ a {
   }
 }
 
-/* ЦЕНЫ (СТАРАЯ, НОВАЯ) - ДУБЛИРУЮТСЯ */
+/* ЦЕНЫ (СТАРАЯ, НОВАЯ) */
 .price-container {
   display: flex;
   align-items: center;
@@ -525,7 +525,7 @@ a {
     max-width: 120px;
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     margin-bottom: 15px;
 
     &:not([type='button'], [type='submit']) {
@@ -575,7 +575,7 @@ a {
     font-weight: bold;
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     &__box {
       flex-direction: column;
       align-items: center;
@@ -598,7 +598,7 @@ a {
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     &__img {
       height: 50px;
       width: 50px;
@@ -637,11 +637,106 @@ a {
     transform: rotate(-90deg);
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     display: flex;
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     margin-right: 0;
+  }
+}
+
+.range {
+  &__values-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__value {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: $black-base;
+  }
+
+  &__track {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: 9px 0;
+    width: 100%;
+    height: 3px;
+    background-color: #e5e5e5;
+  }
+
+  &__slider-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__slider {
+    position: absolute;
+    appearance: none;
+    width: 100%;
+    outline: none;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    pointer-events: none;
+
+    &::-webkit-slider-runnable-track {
+      appearance: none;
+      height: 3px;
+    }
+
+    &::-moz-range-track {
+      appearance: none;
+      height: 3px;
+    }
+
+    &::-ms-track {
+      appearance: none;
+      height: 3px;
+    }
+
+    &::-webkit-slider-thumb {
+      position: relative;
+      appearance: none;
+      height: 15px;
+      width: 11px;
+      top: 17px;
+      mask-image: url('/assets/images/svg/range.svg');
+      background-color: $light-green;
+      mask-size: cover;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    &::-moz-range-thumb {
+      position: relative;
+      appearance: none;
+      height: 15px;
+      width: 11px;
+      top: 17px;
+      mask-image: url('/assets/images/svg/range.svg');
+      background-color: $light-green;
+      mask-size: cover;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    &::-ms-thumb {
+      position: relative;
+      appearance: none;
+      height: 15px;
+      width: 11px;
+      top: 17px;
+      mask-image: url('/assets/images/svg/range.svg');
+      background-color: $light-green;
+      mask-size: cover;
+      cursor: pointer;
+      pointer-events: auto;
+    }
   }
 }

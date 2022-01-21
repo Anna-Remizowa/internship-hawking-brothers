@@ -65,7 +65,7 @@
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 40px 0;
 
     &__title,
@@ -82,7 +82,7 @@
     }
   }
 
-  @include _tablet1050 {
+  @include tablet1050 {
     &__container {
       position: relative;
       padding-bottom: 56.25%;
@@ -104,7 +104,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 16px 0;
 
     &__title {

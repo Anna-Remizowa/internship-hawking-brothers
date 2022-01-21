@@ -22,15 +22,9 @@ mixin category(leftMenu)
           option(selected disabled) Серия
         select.category__select.js__category-select
           option(selected disabled) Балка
-        .category__filter-price-box.js_range
+        .category__filter-price-box
           p.category__filter-text Цена
-          .category__filter-values
-            p.category__filter-range-value.js__range-value-start 0
-            p.category__filter-range-value.js__range-value-end 100
-          .category__slider-range
-            .category__slider-track.js__range-track
-            input.category__range.js__range-1(type="range" step="1")
-            input.category__range.js__range-2(type="range" step="1")
+          .category__range(data-range='category-range')
         +resetBox()
         button.button.button--secondary-color.category__filter-button.js__filter-submit(type="submit") Применить фильтр
 

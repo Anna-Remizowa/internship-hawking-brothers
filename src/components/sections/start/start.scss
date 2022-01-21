@@ -142,7 +142,7 @@
       top: 2%;
       width: 57%;
       height: 57%;
-      background: url(/assets/images/content/pipes-1.png) center / contain
+      background: url('/assets/images/content/pipes-1.png') center / contain
         no-repeat;
     }
 
@@ -151,19 +151,19 @@
       left: 15%;
       width: 77%;
       height: 77%;
-      background: url(/assets/images/content/pipes-2.png) center / contain
+      background: url('/assets/images/content/pipes-2.png') center / contain
         no-repeat;
     }
   }
 
-  @include _desktop1630 {
+  @include desktop1630 {
     &__content {
       margin-left: 60px;
       margin-bottom: 60px;
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     &__inner {
       padding-top: 40px;
     }
@@ -251,7 +251,7 @@
     }
   }
 
-  @include _tablet1050 {
+  @include tablet1050 {
     &__content {
       width: 310px;
       margin: 26px 45px 44px 0;
@@ -269,7 +269,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     &__inner {
       padding-top: 60px;
       flex-direction: column-reverse;

@@ -69,12 +69,12 @@
       left: 38%;
       width: 474px;
       height: 596px;
-      background: url(/assets/images/content/calculator.png) center / contain
+      background: url('/assets/images/content/calculator.png') center / contain
         no-repeat;
     }
   }
 
-  @include _desktop1630 {
+  @include desktop1630 {
     &__content-container {
       margin-right: 50px;
     }
@@ -108,7 +108,7 @@
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 45px 0 60px;
 
     &__content-container {
@@ -153,7 +153,7 @@
     }
   }
 
-  @include _tablet1050 {
+  @include tablet1050 {
     &__content-container {
       max-width: 370px;
       margin-right: 0;
@@ -172,9 +172,6 @@
 
       &-calculator {
         top: 8%;
-      }
-
-      &-calculator {
         left: 0;
       }
 
@@ -194,7 +191,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 25px 0;
 
     &__content-container {

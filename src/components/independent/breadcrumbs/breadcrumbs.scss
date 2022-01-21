@@ -19,7 +19,7 @@
     margin: 0 6px 0 4px;
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 8px 0 9px;
   }
 }

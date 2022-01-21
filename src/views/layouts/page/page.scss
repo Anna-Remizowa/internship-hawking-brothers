@@ -5,7 +5,7 @@
     margin-bottom: 41px;
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 56px 0 7px;
 
     &__title {
@@ -13,7 +13,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 41px 0 32px;
 
     &__title {

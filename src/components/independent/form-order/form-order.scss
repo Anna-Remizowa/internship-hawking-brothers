@@ -30,7 +30,7 @@
     justify-content: space-between;
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 50px;
 
     &__title,
@@ -44,7 +44,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 0;
     box-shadow: none;
 

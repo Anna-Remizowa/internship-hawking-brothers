@@ -5,16 +5,20 @@ export const initBestsellersSection = () => {
     320: {
       slidesPerView: 1,
     },
-    769: {
+    768: {
       slidesPerView: 2,
     },
     1248: {
       slidesPerView: 'auto',
     },
   };
-  new SwiperBuilder('bestsellers-slider')
+  new SwiperBuilder('.js__bestsellers-slider')
     .addLoop(true)
     .addSpaceBetween(30)
     .addBreakpoints(breakpoints)
+    .addNavigation(
+      '.js__bestsellers-slider-arrow--right',
+      '.js__bestsellers-slider-arrow--left',
+    )
     .build();
 };

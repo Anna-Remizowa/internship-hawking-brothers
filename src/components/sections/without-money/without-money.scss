@@ -65,7 +65,7 @@
       right: -17%;
       width: 480px;
       height: 480px;
-      background: url(/assets/images/content/fireplace-2.png) center / contain
+      background: url('/assets/images/content/fireplace-2.png') center / contain
         no-repeat;
     }
   }
@@ -81,7 +81,7 @@
     opacity: 0.1;
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 50px 0;
 
     &__content-container {
@@ -130,7 +130,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 16px 0;
 
     &__content-container {

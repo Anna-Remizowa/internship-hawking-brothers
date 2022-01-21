@@ -5,7 +5,7 @@ mixin product_slider(product, addClass)
         a.product-slider__img-link(href= product.href)
           img.product-slider__img(src= product.src)
         .icon-line.icon-line--one.product-slider__icon-line
-          button.icon-line__button.icon-line__button--dark
+          button.icon-line__button.icon-line__button--dark(type="button")
             .icon.icon-line__button-img.icon-line__button-img--shopping.icon-line__button-img--light
       .product-slider__content-box
         a.product-slider__content-title(href= product.href)= product.name

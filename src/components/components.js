@@ -4,8 +4,8 @@ import './footer/footer';
 import { initBestsellersSection } from './sections/bestsellers/bestsellers';
 import { initProjectsSection } from './sections/projects/projects';
 import { initReviewsSection } from './sections/reviews/reviews';
-import { Category } from './sections/category/category';
-import { LeftMenu } from './independent/left-menu/left-menu';
+import { initCategory } from './sections/category/category';
+import { initLeftMenu } from './independent/left-menu/left-menu';
 import { toggleModal } from './utils/utils';
 import { initProductSection } from './sections/product/product';
 
@@ -15,13 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectsSection();
   initReviewsSection();
   initProductSection();
-
-  Category.initModal();
-  Category.initFilters();
-
-  const leftMenu = new LeftMenu('.js__left-menu');
-  leftMenu.initModal('.js__open-catalog');
-  leftMenu.initLeftMenu();
+  initCategory();
+  initLeftMenu();
 
   const modals = document.querySelectorAll('.js__modal--adaptive');
   if (modals) {

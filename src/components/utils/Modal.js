@@ -18,7 +18,7 @@ export class Modal {
   addEventClickButtonOpen() {
     if (this.openButton && this.modal) {
       const self = this;
-      this.openButton.addEventListener('click', function (e) {
+      this.openButton.addEventListener('click', (e) => {
         if (!this.checkWindowSize || window.innerWidth <= this.windowSize) {
           e.preventDefault();
           toggleModal(self.modal);

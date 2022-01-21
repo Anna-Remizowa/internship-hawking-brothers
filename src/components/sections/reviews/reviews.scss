@@ -100,7 +100,7 @@
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 26px 0 46px;
 
     &__title {
@@ -133,7 +133,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding-bottom: 34px;
 
     &__title {

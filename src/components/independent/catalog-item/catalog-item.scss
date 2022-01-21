@@ -39,7 +39,7 @@
       background-repeat: no-repeat;
 
       &--1 {
-        background-image: url(/assets/images/content/pipes-1.png);
+        background-image: url('/assets/images/content/pipes-1.png');
         right: 7%;
         top: -2%;
         width: 71%;
@@ -47,7 +47,7 @@
       }
 
       &--2 {
-        background-image: url(/assets/images/content/img-2.png);
+        background-image: url('/assets/images/content/img-2.png');
         right: -6%;
         top: -22%;
         width: 97%;
@@ -55,7 +55,7 @@
       }
 
       &--3 {
-        background-image: url(/assets/images/content/img-3.png);
+        background-image: url('/assets/images/content/img-3.png');
         right: -1%;
         top: -16%;
         width: 87%;
@@ -63,7 +63,7 @@
       }
 
       &--4 {
-        background-image: url(/assets/images/content/img-4.png);
+        background-image: url('/assets/images/content/img-4.png');
         right: 15%;
         top: 7%;
         width: 63%;
@@ -71,7 +71,7 @@
       }
 
       &--5 {
-        background-image: url(/assets/images/content/img-5.png);
+        background-image: url('/assets/images/content/img-5.png');
         right: 8%;
         top: 0;
         width: 76%;
@@ -79,7 +79,7 @@
       }
 
       &--6 {
-        background-image: url(/assets/images/content/img-6.png);
+        background-image: url('/assets/images/content/img-6.png');
         right: 5%;
         top: -4%;
         width: 81%;
@@ -87,7 +87,7 @@
       }
 
       &--7 {
-        background-image: url(/assets/images/content/img-7.png);
+        background-image: url('/assets/images/content/img-7.png');
         right: -7%;
         top: -14%;
         width: 96%;
@@ -96,7 +96,7 @@
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     &__title {
       bottom: 18%;
       left: -4%;
@@ -105,7 +105,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     &__title {
       bottom: 0;
       left: 0;

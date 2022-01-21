@@ -36,7 +36,7 @@
       }
     }
 
-    @include _tablet1248 {
+    @include tablet1248 {
       display: none;
     }
   }
@@ -83,14 +83,14 @@
     }
   }
 
-  @include _desktop1630 {
+  @include desktop1630 {
     &__phone-me-link,
     &__phone-number {
       display: none;
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     &__inner,
     &__wrapper {
       align-items: flex-start;
@@ -121,7 +121,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     &__inner {
       height: 61px;
       margin-top: 18px;
@@ -225,8 +225,7 @@
     margin: 19px 0 0;
   }
 
-  @include _tablet1248 {
-
+  @include tablet1248 {
     &__box-lists {
       padding-bottom: 30px;
       border-bottom-style: dashed;
@@ -237,7 +236,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding-top: 42px;
 
     &__box-lists,
