@@ -1,6 +1,6 @@
-import Swiper, { Navigation, Thumbs, Zoom } from 'swiper';
+import Swiper, { Navigation, Thumbs, Autoplay } from 'swiper';
 
-Swiper.use([Navigation, Thumbs, Zoom]);
+Swiper.use([Navigation, Thumbs, Autoplay]);
 
 export class SwiperBuilder {
   constructor(sliderName) {
@@ -45,6 +45,11 @@ export class SwiperBuilder {
     return this;
   }
 
+  addAutoplay(autoplay) {
+    this.autoplay = autoplay;
+    return this;
+  }
+
   build() {
     return new Swiper(this.sliderName, {
       direction: this.direction ? this.direction : 'horizontal',
@@ -52,14 +57,11 @@ export class SwiperBuilder {
       spaceBetween: this.spaceBetween,
       slidesPerView: this.slidesPerView,
       navigation: this.navigation ? this.navigation : {},
-      //   {
-      //   nextEl: `.js__${this.sliderName}-arrow--right`,
-      //   prevEl: `.js__${this.sliderName}-arrow--left`,
-      // },
       thumbs: {
         swiper: this.thumbs,
       },
       breakpoints: this.breakpoints,
+      autoplay: this.autoplay,
     });
   }
 }

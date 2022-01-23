@@ -521,27 +521,45 @@ a {
   max-width: 240px;
 
   &--photo {
-    height: auto;
+    height: 120px;
     max-width: 120px;
   }
 
   @include tablet1248 {
-    margin-bottom: 15px;
+    &:not(&--photo, &--review) {
+      margin-bottom: 15px;
+    }
 
-    &:not([type='button'], [type='submit']) {
+    &--review {
+      margin-bottom: 8px;
+    }
+
+    &:not([type='button'], [type='submit'], &--photo) {
       max-width: 354px;
       width: 100%;
     }
 
-    &:not([type='button'], [type='submit'])
-      + &:not([type='button'], [type='submit']) {
+    &:not([type='button'], [type='submit'], &--review)
+    + &:not([type='button'], [type='submit'], &--review) {
       margin-bottom: 25px;
+    }
+  }
+
+  @include mobile767 {
+    &--review {
+      margin-bottom: 0;
+    }
+
+    &--photo {
+      height: 70px;
+      max-width: 100%;
     }
   }
 }
 
 .textarea {
   resize: none;
+  height: 120px;
 }
 
 .list-with-img {

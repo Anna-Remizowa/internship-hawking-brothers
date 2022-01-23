@@ -19,10 +19,9 @@ export class RangeBar{
 
       let divRangeValues = document.createElement('div');
       divRangeValues.className = 'range__values-box';
-      divRangeValues.appendChild(this.rangeValOne =
-        this.#generateValueDOMElement());
+      divRangeValues.appendChild(this.rangeValOne = this.generateValueDOMElement());
       divRangeValues.appendChild(this.rangeValTwo =
-        this.#generateValueDOMElement());
+        this.generateValueDOMElement());
       divRange.appendChild(divRangeValues);
 
       let divRangeSlider = document.createElement('div');
@@ -31,26 +30,25 @@ export class RangeBar{
       this.rangeTrack.className = 'range__track';
       divRangeSlider.appendChild(this.rangeTrack);
       divRangeSlider.appendChild(this.rangeOne =
-        this.#generateSliderDOMElement(this.min, this.max, this.start));
+        this.generateSliderDOMElement(this.min, this.max, this.start));
       divRangeSlider.appendChild(this.rangeTwo =
-        this.#generateSliderDOMElement(this.min, this.max, this.end));
+        this.generateSliderDOMElement(this.min, this.max, this.end));
       divRange.appendChild(divRangeSlider);
 
       range.appendChild(divRange);
     }
 
-    if (this.rangeOne && this.rangeTwo && this.rangeValOne
-      && this.rangeValTwo && this.rangeTrack) {
+    if (this.rangeOne && this.rangeTwo && this.rangeValOne && this.rangeValTwo && this.rangeTrack) {
 
-      this.#checkSlide(true);
-      this.#checkSlide(false);
+      this.checkSlide(true);
+      this.checkSlide(false);
 
       const self = this;
       this.rangeOne.addEventListener('input', function(){
-        self.#checkSlide(true);
+        self.checkSlide(true);
       }, false);
       this.rangeTwo.addEventListener('input', function(){
-        self.#checkSlide(false);
+        self.checkSlide(false);
       }, false);
     }
   }
@@ -59,13 +57,13 @@ export class RangeBar{
     return new RangeBar(range, values);
   }
 
-  #generateValueDOMElement(){
+  generateValueDOMElement(){
     const pElement = document.createElement('p');
     pElement.className = 'range__value';
     return pElement;
   }
 
-  #generateSliderDOMElement(min, max, value){
+  generateSliderDOMElement(min, max, value){
     const inputSlider = document.createElement('input');
     inputSlider.className = 'range__slider';
     inputSlider.type = 'range';
@@ -76,7 +74,7 @@ export class RangeBar{
     return inputSlider;
   }
 
-  #checkSlide(isFirstSlide){
+  checkSlide(isFirstSlide){
     if (parseInt(this.rangeTwo.value) - parseInt(this.rangeOne.value) <= RangeBar.MIN_GAP) {
       if (isFirstSlide){
         this.rangeOne.value = parseInt(this.rangeTwo.value) - RangeBar.MIN_GAP;
@@ -93,10 +91,10 @@ export class RangeBar{
         .replace(RangeBar.REGULAR_DIVIDE, " ");
     }
 
-    this.#fillColor();
+    this.fillColor();
   }
 
-  #fillColor() {
+  fillColor() {
     const percent1 = (this.rangeOne.value / this.max) * 100;
     const percent2 = (this.rangeTwo.value / this.max) * 100;
     this.rangeTrack.style.background = `linear-gradient(to right, #E5E5E5 ${percent1}% , #EA6628 ${percent1}% , #EA6628 ${percent2}% , #E5E5E5 ${percent2}%)`;

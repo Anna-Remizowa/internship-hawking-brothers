@@ -20,5 +20,6 @@ export const initBestsellersSection = () => {
       '.js__bestsellers-slider-arrow--right',
       '.js__bestsellers-slider-arrow--left',
     )
+    .addAutoplay(true)
     .build();
 };

@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const browserSync = require('browser-sync');
 const { watch } = require('gulp');
 
@@ -13,7 +14,7 @@ const { paths } = require('../config');
 const server = () => {
   browserSync.init({
     server: 'dist/',
-  })
+  });
 
   watch(paths.styles.watch, styles);
   watch(paths.fonts.watch, fonts);
@@ -21,6 +22,6 @@ const server = () => {
   watch(paths.sprites.watch, svgSprite);
   watch(paths.images.watch, images);
   watch(paths.scripts.watch, scripts);
-}
+};
 
 module.exports = server;

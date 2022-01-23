@@ -171,3 +171,131 @@
     }
   }
 }
+
+.slider-img {
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--main {
+    max-width: 416px;
+    flex-shrink: 0;
+    margin-right: 8px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+
+    @include tablet1248 {
+      flex-shrink: 1;
+      max-width: 100%;
+      margin-right: 7px;
+    }
+
+    @include mobile767 {
+      margin-right: 0;
+    }
+  }
+
+  &--thumb {
+    max-width: 100px;
+    box-sizing: border-box;
+  }
+
+  &__zoom {
+    &-button {
+      position: absolute;
+      bottom: 17px;
+      right: 17px;
+      z-index: 10;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      mask-size: cover;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 70px;
+    background: #F5F5F5;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: $light-green;
+
+    @include mobile767 {
+      display: flex;
+    }
+  }
+
+  &__slide {
+    &--thumb {
+      cursor: pointer;
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+
+      &--main {
+        padding: 87px 37px 98px 36px;
+
+        @include tablet1248 {
+          padding: 27px 144px 52px;
+        }
+
+        @include mobile767 {
+          padding: 5px 22px 56px;
+        }
+      }
+
+      &--thumb {
+        padding: 12px 13px;
+        border: 1px solid #e5e5e5;
+      }
+    }
+
+    &.swiper-slide-thumb-active &-wrapper--thumb {
+      border: 1px solid $coral;
+    }
+  }
+
+  &__img {
+    display: block;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+
+    &--main {
+      width: 343px;
+      height: 343px;
+
+      @include mobile767 {
+        width: 237px;
+        height: 237px;
+      }
+    }
+
+    &--thumb {
+      width: 74px;
+      height: 74px;
+    }
+  }
+}

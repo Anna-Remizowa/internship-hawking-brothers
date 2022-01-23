@@ -13,3 +13,15 @@ mixin product_slider(product, addClass)
         .price-container.product-slider__content-price
           p.price-container__price-new.product-slider__price-new= product.costNew
           p.price-container__price-old.product-slider__price-old= product.costOld
+
+mixin slider_img(images, addClass, zoom)
+  .swiper.slider-img(class="slider-img--" + addClass + " js__slider-img--" + addClass)
+    if (zoom)
+      p.slider-img__text(class="js__slider-count--"+addClass) 3 / 7
+      button.slider-img__zoom-button.js__slider-img-zoom(type="button")
+        +svg("slider-img__zoom-icon", "assets/images/sprite.svg#zoom")
+    .swiper-wrapper
+      each image in images
+        .swiper-slide.slider-img__slide(class="slider-img__slide--" + addClass)
+          .slider-img__slide-wrapper(class="slider-img__slide-wrapper--" + addClass)
+            img.slider-img__img(class="slider-img__img--" + addClass src=image)
