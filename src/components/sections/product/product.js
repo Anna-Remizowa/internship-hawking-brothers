@@ -87,7 +87,8 @@ export const initProductSection = () => {
 
           tabsContent.forEach((content) => content.classList.remove('active'));
           tabs.querySelector(`[data-tabs-target="${button.dataset.tabsPath}"]`)
-            .classList.add('active');
+            .classList
+            .add('active');
         });
       });
     }
@@ -99,15 +100,17 @@ export const initProductSection = () => {
   const inputPhoto = document.querySelector('.js__input-photo');
   if (boxPhoto && loadPhoto && inputPhoto) {
     inputPhoto.addEventListener('change', function loadFile() {
-      const file = this.files[0];
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        loadPhoto.src = event.target.result;
-      };
-      reader.readAsDataURL(file);
+      if (this.files && this.files.length > 0) {
+        const file = this.files[0];
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          loadPhoto.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
 
-      boxPhoto.setAttribute('hidden', 'true');
-      loadPhoto.removeAttribute('hidden');
+        boxPhoto.setAttribute('hidden', 'true');
+        loadPhoto.removeAttribute('hidden');
+      }
     });
   }
 };
