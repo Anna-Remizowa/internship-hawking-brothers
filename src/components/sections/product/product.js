@@ -1,6 +1,8 @@
-import { SwiperBuilder } from '../../utils/SwiperBuilder';
+import { Fancybox } from '@fancyapps/ui';
+import { SwiperBuilder } from '../../utils/js/SwiperBuilder';
 
 export const initProductSection = () => {
+  /* слайдеры */
   const breakpointsThumb = {
     320: {
       slidesPerView: 1,
@@ -22,46 +24,33 @@ export const initProductSection = () => {
     .addBreakpoints(breakpointsThumb)
     .build();
 
-  const breakpointsMain = {
-    320: {
-      allowTouchMove: true,
-    },
-    768: {
-      allowTouchMove: false,
-    },
-    1248: {
-      allowTouchMove: true,
-    },
-  };
   const productSwiperMain = new SwiperBuilder('.js__slider-img--main')
     .addLoop(false)
     .addSpaceBetween(10)
     .addSlidesPerView(1)
     .addThumbs(productSwiperThumb)
-    .addBreakpoints(breakpointsMain)
     .build();
 
   const sliderSize = productSwiperMain.slides.length ? productSwiperMain.slides.length : 0;
 
   const sliderHiddenCount = document.querySelector('.js__slider-hidden-count');
-  if (sliderHiddenCount && productSwiperMain) {
+  if (sliderHiddenCount) {
     sliderHiddenCount.textContent = `+ ${sliderSize - 3}`;
   }
 
   const sliderNavCount = document.querySelector('.js__slider-count--main');
-  if (sliderNavCount) {
+  if (sliderNavCount && productSwiperMain) {
     productSwiperMain.on('slideChange', () => {
-      sliderNavCount.textContent = `${parseInt(productSwiperMain.activeIndex, 10) + 1} / ${sliderSize}`;
+      sliderNavCount.textContent = `${parseInt(productSwiperMain.realIndex, 10) + 1} / ${sliderSize}`;
     });
 
     sliderNavCount.textContent = `1 / ${sliderSize}`;
   }
 
-  const sliderZoomButtons = document.querySelectorAll('.js__slider-img-zoom');
-  if (sliderZoomButtons) {
-    /* todo: fancybox */
-  }
+  /* fancybox */
+  Fancybox.bind('[data-fancybox="gallery-product"]', {});
 
+  /* элементы на форме товара */
   const plusCount = document.querySelector('.js__product-plus-count');
   const minusCount = document.querySelector('.js__product-minus-count');
   const count = document.querySelector('.js__product-count');
@@ -84,10 +73,11 @@ export const initProductSection = () => {
     });
   });
 
-  const tabs = document.querySelector('.product__tabs');
+  /* табы */
+  const tabs = document.querySelector('.js__tabs-product');
   if (tabs) {
-    const tabsButtons = tabs.querySelectorAll('.product__tabs-btn');
-    const tabsContent = tabs.querySelectorAll('.product__tabs-content');
+    const tabsButtons = tabs.querySelectorAll('.js__tabs-btn');
+    const tabsContent = tabs.querySelectorAll('.js__tabs-content');
 
     if (tabsButtons && tabsContent) {
       tabsButtons.forEach((button) => {
@@ -101,5 +91,23 @@ export const initProductSection = () => {
         });
       });
     }
+  }
+
+  /* загрузка аватара */
+  const boxPhoto = document.querySelector('.js__box-photo');
+  const loadPhoto = document.querySelector('.js__load-photo');
+  const inputPhoto = document.querySelector('.js__input-photo');
+  if (boxPhoto && loadPhoto && inputPhoto) {
+    inputPhoto.addEventListener('change', function loadFile() {
+      const file = this.files[0];
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        loadPhoto.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+
+      boxPhoto.setAttribute('hidden', 'true');
+      loadPhoto.removeAttribute('hidden');
+    });
   }
 };

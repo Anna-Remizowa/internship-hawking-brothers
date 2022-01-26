@@ -1,4 +1,4 @@
-import { toggleModal } from '../utils/utils';
+import { toggleModal } from '../utils/js/utils';
 
 export const initHeader = () => {
   const headerButton = document.querySelector('.header-menu-js');

@@ -34,12 +34,12 @@
 
     &--favorites {
       height: 22px;
-      mask-image: url('/assets/images/svg/favorites.svg');
+      mask-image: url('../images/svg/favorites.svg');
       background-color: $coral;
     }
 
     &--comparison {
-      mask-image: url('/assets/images/svg/balance.svg');
+      mask-image: url('../images/svg/balance.svg');
       background-color: $light-green;
     }
   }
@@ -296,7 +296,8 @@
         flex-direction: column;
         align-items: center;
 
-        &, .product__text--price {
+        &,
+        .product__text--price {
           display: flex;
         }
       }
@@ -345,7 +346,7 @@
       width: 100px;
       margin-top: 7px;
       border-radius: 4px;
-      border: 1px solid #E5E5E5;
+      border: 1px solid #e5e5e5;
 
       @include tablet1248 {
         display: flex;
@@ -355,7 +356,7 @@
         font-weight: bold;
         font-size: 25px;
         line-height: 30px;
-        color: #D5D5D5;
+        color: #d5d5d5;
       }
     }
 
@@ -582,7 +583,7 @@
       bottom: 0;
       width: 100%;
       height: 4px;
-      background-color: #EDF3F3;
+      background-color: #edf3f3;
     }
 
     &-content {
@@ -626,6 +627,50 @@
     }
   }
 
+  &__input {
+    &-box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &[hidden] {
+        display: none;
+      }
+
+      @include mobile767 {
+        flex-direction: row;
+      }
+    }
+
+    &-text {
+      margin-top: 19px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #b1b1b1;
+
+      @include mobile767 {
+        margin: 0 0 0 13px;
+      }
+    }
+
+    &-img {
+      width: auto;
+      height: 100%;
+    }
+
+    &-file {
+      position: absolute;
+      opacity: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+
   &__char {
     &-box {
       display: flex;
@@ -636,7 +681,7 @@
         align-items: flex-start;
         padding-bottom: 8px;
         margin-bottom: 8px;
-        border-bottom: 1px dashed #D5D5D5;
+        border-bottom: 1px dashed #d5d5d5;
       }
     }
 

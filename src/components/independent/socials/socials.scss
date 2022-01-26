@@ -16,20 +16,20 @@
 
     &--vk {
       width: 20px;
-      mask-image: url('/assets/images/svg/vk.svg');
+      mask-image: url('../images/svg/vk.svg');
     }
 
     &--telegram {
       width: 19px;
-      mask-image: url('/assets/images/svg/telegram.svg');
+      mask-image: url('../images/svg/telegram.svg');
     }
 
     &--instagram {
-      mask-image: url('/assets/images/svg/instagram.svg');
+      mask-image: url('../images/svg/instagram.svg');
     }
 
     &--whatsapp {
-      mask-image: url('/assets/images/svg/whatsapp.svg');
+      mask-image: url('../images/svg/whatsapp.svg');
     }
   }
 }

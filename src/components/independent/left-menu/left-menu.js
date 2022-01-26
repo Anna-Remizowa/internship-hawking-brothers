@@ -1,5 +1,5 @@
-import { Modal } from '../../utils/Modal';
-import { toggleModal } from '../../utils/utils';
+import { Modal } from '../../utils/js/Modal';
+import { toggleModal } from '../../utils/js/utils';
 
 export const initLeftMenu = () => {
   const leftMenu = document.querySelector('.js__left-menu');

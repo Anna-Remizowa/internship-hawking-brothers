@@ -1,4 +1,4 @@
-import { SwiperBuilder } from '../../utils/SwiperBuilder';
+import { SwiperBuilder } from '../../utils/js/SwiperBuilder';
 
 export const initBestsellersSection = () => {
   const breakpoints = {

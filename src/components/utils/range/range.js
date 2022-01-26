@@ -1,4 +1,4 @@
-export class RangeBar{
+export class Range {
   static REGULAR_DIVIDE = /\B(?=(\d{3})+(?!\d))/g;
   static MIN_GAP = 0;
   static RANGE_MIN = 0;
@@ -7,10 +7,10 @@ export class RangeBar{
   static END_VALUE = 800000;
 
   constructor(range, values) {
-    this.min = values && values.min ? values.min : RangeBar.RANGE_MIN;
-    this.max = values && values.max ? values.max : RangeBar.RANGE_MAX;
-    this.start = values && values.start ? values.start : RangeBar.START_VALUE;
-    this.end = values && values.end ? values.end : RangeBar.END_VALUE;
+    this.min = values && values.min ? values.min : Range.RANGE_MIN;
+    this.max = values && values.max ? values.max : Range.RANGE_MAX;
+    this.start = values && values.start ? values.start : Range.START_VALUE;
+    this.end = values && values.end ? values.end : Range.END_VALUE;
 
     range = document.querySelector(range);
     if (range){
@@ -54,7 +54,7 @@ export class RangeBar{
   }
 
   static create(range, values){
-    return new RangeBar(range, values);
+    return new Range(range, values);
   }
 
   generateValueDOMElement(){
@@ -75,20 +75,20 @@ export class RangeBar{
   }
 
   checkSlide(isFirstSlide){
-    if (parseInt(this.rangeTwo.value) - parseInt(this.rangeOne.value) <= RangeBar.MIN_GAP) {
+    if (parseInt(this.rangeTwo.value) - parseInt(this.rangeOne.value) <= Range.MIN_GAP) {
       if (isFirstSlide){
-        this.rangeOne.value = parseInt(this.rangeTwo.value) - RangeBar.MIN_GAP;
+        this.rangeOne.value = parseInt(this.rangeTwo.value) - Range.MIN_GAP;
       }else{
-        this.rangeTwo.value = parseInt(this.rangeOne.value) + RangeBar.MIN_GAP;
+        this.rangeTwo.value = parseInt(this.rangeOne.value) + Range.MIN_GAP;
       }
     }
 
     if (isFirstSlide){
       this.rangeValOne.textContent = this.rangeOne.value.toString()
-        .replace(RangeBar.REGULAR_DIVIDE, " ");
+        .replace(Range.REGULAR_DIVIDE, " ");
     }else{
       this.rangeValTwo.textContent = this.rangeTwo.value.toString()
-        .replace(RangeBar.REGULAR_DIVIDE, " ");
+        .replace(Range.REGULAR_DIVIDE, " ");
     }
 
     this.fillColor();

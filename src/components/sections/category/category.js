@@ -1,6 +1,6 @@
-import { Modal } from '../../utils/Modal';
-import { initSelects } from '../../utils/utils';
-import { RangeBar } from '../../utils/RangeBar';
+import { Modal } from '../../utils/js/Modal';
+import { initSelects } from '../../utils/js/utils';
+import { Range } from '../../utils/range/range';
 
 export const initCategory = () => {
   /* инициализация модалки */
@@ -20,7 +20,7 @@ export const initCategory = () => {
   initSelects(selects);
 
   /* инициализация range-бара */
-  RangeBar.create('[data-range="category-range"]', {
+  Range.create('[data-range="category-range"]', {
     start: 20000,
     end: 500000,
   });

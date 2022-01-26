@@ -6,7 +6,7 @@ import { initProjectsSection } from './sections/projects/projects';
 import { initReviewsSection } from './sections/reviews/reviews';
 import { initCategory } from './sections/category/category';
 import { initLeftMenu } from './independent/left-menu/left-menu';
-import { toggleModal } from './utils/utils';
+import { toggleModal } from './utils/js/utils';
 import { initProductSection } from './sections/product/product';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,4 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }, true);
     });
   }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      const openModal = document.querySelector('.js__modal.open');
+      if (openModal) {
+        toggleModal(openModal);
+      }
+    }
+  });
 });

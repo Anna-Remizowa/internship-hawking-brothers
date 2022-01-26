@@ -4,6 +4,14 @@
 /* шаблоны */
 @import '../views/layouts/page/page';
 
+/* utils */
+@import 'utils/scss/img';
+@import 'utils/scss/icon';
+@import 'utils/scss/price';
+@import 'utils/scss/list-with-img';
+@import 'utils/scss/back';
+@import 'utils/range/range';
+
 /* маленькие независимые компоненты */
 @import 'independent/socials/socials';
 @import 'independent/arrows/arrows';
