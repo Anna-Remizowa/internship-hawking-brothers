@@ -18,6 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
   initCategory();
   initLeftMenu();
 
+  const anchor = document.querySelector('.js__anchor');
+  if (anchor) {
+    anchor.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.innerHeight < window.pageYOffset) {
+        anchor.classList.add('visible');
+      } else {
+        anchor.classList.remove('visible');
+      }
+    });
+  }
+
   const modals = document.querySelectorAll('.js__modal--adaptive');
   if (modals) {
     modals.forEach((modal) => {
@@ -41,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* валидация форм */
   const forms = document.querySelectorAll('form[data-validate]');
   if (forms) {
     forms.forEach((form) => {

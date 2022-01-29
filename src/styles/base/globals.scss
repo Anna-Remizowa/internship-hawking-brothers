@@ -1,13 +1,13 @@
 html {
   box-sizing: border-box;
+
+  /* закоментарить для pixelperfect */
+  height: 100%;
 }
 
 html,
 body {
   overflow-x: hidden;
-
-  /* закоментарить для pixelperfect */
-  height: 100%;
 }
 
 *,
@@ -90,6 +90,7 @@ main {
 }
 
 .blocked {
+  height: 100%;
   overflow-y: hidden;
 
   main {
@@ -104,19 +105,64 @@ main {
     }
   }
 
-  .header,
-  .footer {
-    position: fixed;
-  }
+  @include tablet1248 {
+    .header,
+    .footer {
+      position: fixed;
+      z-index: 20;
+    }
 
-  .footer {
-    bottom: 0;
+    .footer {
+      bottom: 0;
+    }
   }
 }
 
 .hidden,
 [hidden] {
   display: none;
+}
+
+.anchor {
+  position: fixed;
+  z-index: 10;
+  bottom: -20%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  background-color: $orange;
+  box-shadow: 0 4px 50px rgb(0 0 0 / 15%);
+  cursor: pointer;
+  transition: bottom 0.7s;
+
+  &.visible {
+    bottom: 5%;
+  }
+
+  @include mobile767 {
+    width: 60px;
+    height: 60px;
+  }
+
+  &__img {
+    @include arrow;
+
+    width: 30px;
+    height: 30px;
+    background-color: $white;
+    background-size: 100%;
+    transform: rotate(180deg);
+
+    @include mobile767 {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
 /* ОСНОВНЫЕ СТИЛИ ШРИФТОВ */

@@ -1,9 +1,3 @@
-@import 'header/header';
-@import 'footer/footer';
-
-/* шаблоны */
-@import '../views/layouts/page/page';
-
 /* utils */
 @import 'utils/scss/img';
 @import 'utils/scss/icon';
@@ -11,6 +5,12 @@
 @import 'utils/scss/list-with-img';
 @import 'utils/scss/back';
 @import 'utils/range/range';
+
+@import 'header/header';
+@import 'footer/footer';
+
+/* шаблоны */
+@import '../views/layouts/page/page';
 
 /* маленькие независимые компоненты */
 @import 'independent/socials/socials';
