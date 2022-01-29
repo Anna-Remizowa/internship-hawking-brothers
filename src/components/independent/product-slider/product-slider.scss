@@ -209,6 +209,11 @@
       border: none;
       background-color: transparent;
       cursor: pointer;
+
+      @include mobile767 {
+        bottom: 15px;
+        right: 12px;
+      }
     }
 
     &-icon {

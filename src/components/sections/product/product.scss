@@ -23,7 +23,7 @@
     }
 
     @include mobile767 {
-      row-gap: 42px;
+      row-gap: 35px;
     }
   }
 
@@ -100,6 +100,10 @@
       position: relative;
       margin-left: 11px;
 
+      @include mobile767 {
+        margin-left: 18px;
+      }
+
       &:hover,
       &.active {
         background: #215359;
@@ -138,6 +142,10 @@
     &-box {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+
+      @include tablet1248 {
+        margin-bottom: 5px;
+      }
     }
 
     &-box &:first-child,
@@ -197,7 +205,7 @@
       color: #4c858b;
 
       @include tablet1248 {
-        margin-top: 17px;
+        margin-top: 12px;
       }
 
       @include mobile767 {
@@ -238,12 +246,13 @@
         }
 
         @include tablet1248 {
+          margin-top: 6px;
           font-size: 30px;
           line-height: 37px;
         }
 
         @include mobile767 {
-          margin: 6px 0 14px;
+          margin: 6px 0 9px;
         }
       }
 
@@ -526,6 +535,10 @@
       margin-top: 8px;
     }
 
+    @include mobile767 {
+      margin-bottom: 11px;
+    }
+
     &-wrapper {
       overflow-x: auto;
     }
@@ -552,7 +565,7 @@
     &-btn {
       cursor: pointer;
       position: relative;
-      padding: 0 0 29px;
+      padding: 0 0 35px;
       border: none;
       background-color: $white;
       font-weight: 600;
@@ -606,6 +619,10 @@
 
       &:not(:last-of-type) {
         margin-bottom: 30px;
+
+        @include mobile767 {
+          margin-bottom: 25px;
+        }
       }
 
       &--highlight {
@@ -616,7 +633,7 @@
       &:last-of-type {
         margin-bottom: 30px;
 
-        @include mobile767 {
+        @include tablet1248 {
           margin-bottom: 0;
         }
       }
@@ -679,8 +696,8 @@
       @include mobile767 {
         flex-direction: column;
         align-items: flex-start;
-        padding-bottom: 8px;
-        margin-bottom: 8px;
+        padding-bottom: 6px;
+        margin-bottom: 3px;
         border-bottom: 1px dashed #d5d5d5;
       }
     }
@@ -781,14 +798,26 @@
       }
     }
 
-    &-box:not(&-box--line) {
-      margin-top: 24px;
-      border-bottom: 1px solid #e0e0e0;
-    }
+    &-box {
+      &--line {
+        flex-direction: row;
+      }
 
-    &-box--line {
-      flex-direction: row;
-      justify-content: space-between;
+      &:not(&--line) {
+        margin-top: 24px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      &--space {
+        margin: 25px 0 0 17px;
+        flex-grow: 1;
+        justify-content: space-between;
+
+        @include mobile767 {
+          margin: 18px 0 0 18px;
+          flex-direction: column;
+        }
+      }
     }
 
     &-text {
@@ -796,13 +825,11 @@
       line-height: 24px;
       color: $black-base;
 
-      &--header,
-      &--date {
-        margin-top: 25px;
+      @include mobile767 {
+        line-height: 26px;
       }
 
       &--header {
-        margin-left: 17px;
         font-weight: 600;
         font-size: 18px;
       }
@@ -814,6 +841,10 @@
 
       &--content {
         margin: 16px 0 21px;
+
+        @include mobile767 {
+          margin: 22px 0 16px;
+        }
       }
     }
   }

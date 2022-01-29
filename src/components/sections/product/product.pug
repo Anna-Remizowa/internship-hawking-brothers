@@ -230,10 +230,10 @@
           each review in reviews
             .product__reviews-box
               .product__reviews-box.product__reviews-box--line
-                .product__reviews-box.product__reviews-box--line
-                  img.image-circle(src= review.src, alt= review.name)
+                img.image-circle(src= review.src, alt= review.name)
+                .product__reviews-box.product__reviews-box--line.product__reviews-box--space
                   p.product__reviews-text.product__reviews-text--header= review.name
-                p.product__reviews-text.product__reviews-text--date= review.date
+                  p.product__reviews-text.product__reviews-text--date= review.date
               p.product__reviews-text.text.product__reviews-text--content= review.review
 
     +bestsellers("С этим товаром покупают")
