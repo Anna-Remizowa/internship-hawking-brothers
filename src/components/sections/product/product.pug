@@ -179,18 +179,24 @@
           | Подробнее об условиях читайте в разделе <span><a class="text product__tabs-text product__tabs-text--highlight" href="#">“Доставка и оплата”.</a></span>
 
       .product__tabs-content.js__tabs-content(data-tabs-target="reviews")
-        form.product__reviews-form
+        form.product__reviews-form(data-validate)
           .product__reviews-form-box
             .product__reviews-form-box.product__reviews-form-box--inputs
-              input.input.input--review(type="text", placeholder="Ваше имя")
-              input.input.input--review(type="text", placeholder="Ваш email")
-            textarea.textarea(placeholder="Текст отзыва")
+              .input-box
+                input.input.input--review(type="text" name="name" placeholder="Ваше имя" required)
+                p.invalid-text Введите имя
+              .input-box
+                input.input.input--review(type="email" name="email" placeholder="Ваш email" required)
+                p.invalid-text Введите корректный email
+            .textarea-box
+              textarea.textarea(name="review" placeholder="Текст отзыва" required)
+              p.invalid-text Введите отзыв
             .product__input-box.input.input--photo
               .product__input-box.js__box-photo
                 +svg("icon icon__add", "assets/images/sprite.svg#add")
                 p.product__input-text Ваше фото
               img.product__input-img.js__load-photo(hidden)
-              input.product__input-file.js__input-photo(type="file" placeholder="Ваше фото")
+              input.product__input-file.js__input-photo(type="file" name="photo" placeholder="Ваше фото")
           button.button.button--main-color.product__reviews-submit(type="submit") Оставить заявку
 
         -

@@ -240,8 +240,14 @@ a {
 }
 
 .input,
-.textarea {
+.input-box,
+.textarea,
+.textarea-box {
   width: 100%;
+}
+
+.input,
+.textarea {
   padding: 17px;
   border-radius: 4px;
   border: 1px solid #e5e5e5;
@@ -255,40 +261,19 @@ a {
   }
 }
 
-.input {
+.input,
+.input-box {
   height: 56px;
   max-width: 240px;
+}
 
+.input {
   &--photo {
     height: 120px;
     max-width: 120px;
   }
 
-  @include tablet1248 {
-    &:not(&--photo, &--review) {
-      margin-bottom: 15px;
-    }
-
-    &--review {
-      margin-bottom: 8px;
-    }
-
-    &:not([type='button'], [type='submit'], &--photo) {
-      max-width: 354px;
-      width: 100%;
-    }
-
-    &:not([type='button'], [type='submit'], &--review)
-      + &:not([type='button'], [type='submit'], &--review) {
-      margin-bottom: 25px;
-    }
-  }
-
   @include mobile767 {
-    &--review {
-      margin-bottom: 0;
-    }
-
     &--photo {
       height: 70px;
       max-width: 100%;
@@ -296,7 +281,53 @@ a {
   }
 }
 
-.textarea {
+.input-box,
+.textarea-box {
+  position: relative;
+}
+
+.input-box {
+  @include tablet1248 {
+    margin-bottom: 15px;
+
+    &,
+    & .input {
+      max-width: 354px;
+      width: 100%;
+    }
+
+    & + & {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.textarea,
+.textarea-box {
   resize: none;
   height: 120px;
+}
+
+.invalid {
+  &-text {
+    position: absolute;
+    bottom: -17px;
+    display: none;
+    font-size: 12px;
+
+    @include tablet1248 {
+      bottom: -13px;
+    }
+  }
+
+  & &-text {
+    display: block;
+  }
+
+  & .input,
+  & .textarea,
+  & &-text {
+    color: red;
+    border-color: red;
+  }
 }

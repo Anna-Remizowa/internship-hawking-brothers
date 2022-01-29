@@ -53,3 +53,92 @@ export const initSelects = (selects) => {
 
   return null;
 };
+
+/* валидация */
+export const validateForm = (form) => {
+  const regEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+  const clearValidity = (field) => {
+    field.setCustomValidity('');
+    field.parentElement.classList.remove('invalid');
+  };
+
+  try {
+    const fields = form.querySelectorAll('[required]');
+
+    fields.forEach((field) => {
+      clearValidity(field);
+
+      field.addEventListener('input', function clearValidityForField() {
+        clearValidity(this);
+      });
+    });
+
+    const submit = form.querySelector('button[type="submit"]');
+    submit.addEventListener('click', (e) => {
+      e.preventDefault();
+      fields.forEach((field) => {
+        if (!field.checkValidity() || (field.type === 'email' && !regEmail.test(field.value)) || (field.type === 'tel' && field.value.length !== 18)) {
+          field.setCustomValidity('error');
+          field.parentElement.classList.add('invalid');
+        } else {
+          clearValidity(field);
+        }
+      });
+
+      if (form.checkValidity()) {
+        form.submit();
+      }
+    });
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+/* маска для номера телефона */
+export const maskPhone = (selector) => {
+  try {
+    const setCursorPosition = (pos, elem) => {
+      elem.focus();
+
+      if (elem.setSelectionRange) {
+        elem.setSelectionRange(pos, pos);
+      } else if (elem.createTextRange) {
+        const range = elem.createTextRange();
+        range.collapse(true);
+        range.moveEnd('character', pos);
+        range.moveStart('character', pos);
+        range.select();
+      }
+    };
+
+    const createMask = (event) => {
+      const input = event.target;
+      const matrix = '+7 (___) ___ __ __';
+      let i = 0;
+      const def = matrix.replace(/\D/g, '');
+      let val = input.value.replace(/\D/g, '');
+
+      if (def.length >= val.length) {
+        val = def;
+      }
+
+      input.value = matrix.replace(/./g, (a) => (/[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a));
+
+      if (event.type === 'blur') {
+        if (input.value.length === 2) {
+          input.value = '';
+        }
+      } else {
+        setCursorPosition(input.value.length, input);
+      }
+    };
+
+    const events = ['input', 'focus', 'blur'];
+    events.forEach((ev) => {
+      selector.addEventListener(ev, createMask);
+    });
+  } catch (e) {
+    console.log(e);
+  }
+};

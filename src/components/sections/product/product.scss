@@ -750,17 +750,25 @@
       }
     }
 
-    &-form-box--inputs .input {
-      width: 240px;
-
-      @include tablet1248 {
-        max-width: 50%;
-        width: 50%;
+    &-form-box--inputs {
+      & .input {
+        max-width: 100%;
       }
 
-      @include mobile767 {
-        max-width: 100%;
-        width: 100%;
+      & .input-box {
+        width: 240px;
+
+        @include tablet1248 {
+          max-width: 50%;
+          width: 50%;
+          margin-bottom: 8px;
+        }
+
+        @include mobile767 {
+          max-width: 100%;
+          width: 100%;
+          margin-bottom: 0;
+        }
       }
     }
 

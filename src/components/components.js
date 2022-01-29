@@ -6,7 +6,7 @@ import { initProjectsSection } from './sections/projects/projects';
 import { initReviewsSection } from './sections/reviews/reviews';
 import { initCategory } from './sections/category/category';
 import { initLeftMenu } from './independent/left-menu/left-menu';
-import { toggleModal } from './utils/js/utils';
+import { maskPhone, toggleModal, validateForm } from './utils/js/utils';
 import { initProductSection } from './sections/product/product';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,4 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  /* валидация форм */
+  const forms = document.querySelectorAll('form[data-validate]');
+  if (forms) {
+    forms.forEach((form) => {
+      validateForm(form);
+    });
+  }
+
+  const inputPhones = document.querySelectorAll('input[type="tel"]');
+  if (inputPhones) {
+    inputPhones.forEach((phone) => {
+      maskPhone(phone);
+    });
+  }
 });
