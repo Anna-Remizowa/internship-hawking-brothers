@@ -1,4 +1,8 @@
 .logo {
+  .not-click {
+    pointer-events: none;
+  }
+
   &__img {
     height: 97px;
     width: 100px;

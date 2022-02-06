@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProductSection();
   initCategory();
   initLeftMenu();
-  initAnchor('js-anchor');
+  initAnchor('.js-anchor');
 
   const modals = document.querySelectorAll('.js-modal--adaptive');
   if (modals) {

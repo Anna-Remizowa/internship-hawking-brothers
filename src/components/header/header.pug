@@ -4,7 +4,7 @@ mixin header(active)
     .container-fluid
       .header__inner
         .logo
-          a.logo__link(href= routing.home)
+          a.logo__link(href= (active ? routing.home : '') class= (active ? '' : 'not-click'))
             img.logo__img(src= "assets/images/logo.png", alt="Дымоход.ру")
         .header__wrapper
           .icon-line.icon-line--one.header__icon.header-menu-js
