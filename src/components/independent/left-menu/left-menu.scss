@@ -38,13 +38,15 @@
     &--one {
       background-color: $black-base;
 
-      &.active-color {
+      &.active-color,
+      &:hover {
         background-color: $red;
       }
     }
 
     &--two {
-      &.active-color {
+      &.active-color,
+      &:hover {
         background-color: $orange;
       }
     }
@@ -53,7 +55,8 @@
       width: 10px;
       height: 10px;
 
-      &.active-color {
+      &.active-color,
+      &:hover {
         background-color: $light-green;
       }
     }
@@ -99,11 +102,12 @@
     }
 
     &-item:not(:last-of-type) &-link-box:not(&-link-box--three) {
-      border-bottom: 1px dashed #e5e5e5;
+      border-bottom: 1px dashed $light-gray;
     }
 
     &-link {
       cursor: pointer;
+      transition: color 0.3s ease-out;
 
       &--one {
         font-weight: 600;
@@ -111,7 +115,8 @@
         line-height: 55px;
         color: $black-base;
 
-        &.active {
+        &.active,
+        &:hover {
           color: $red;
         }
       }
@@ -120,9 +125,10 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 20px;
-        color: #8c8c8c;
+        color: $middle-gray;
 
-        &.active {
+        &.active,
+        &:hover {
           color: $orange;
         }
       }
@@ -132,9 +138,10 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 30px;
-        color: #8c8c8c;
+        color: $middle-gray;
 
-        &.active {
+        &.active,
+        &:hover {
           color: $light-green;
         }
       }

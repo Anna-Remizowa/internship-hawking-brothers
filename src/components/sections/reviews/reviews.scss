@@ -76,7 +76,7 @@
     flex-direction: column;
     width: 400px;
     padding: 33px 29px 36px 52px;
-    background: $white;
+    background-color: $white;
     box-shadow: 0 4px 50px rgb(0 0 0 / 15%);
     box-sizing: border-box;
   }
@@ -146,9 +146,9 @@
     }
 
     &__slider {
-      left: 0;
-      width: 100%;
-      padding: 28px 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      padding: 28px 15px;
 
       &-inner {
         position: relative;

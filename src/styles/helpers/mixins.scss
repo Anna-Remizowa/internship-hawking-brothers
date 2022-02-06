@@ -83,13 +83,13 @@
 
   @include tablet1248 {
     top: 112px;
-    height: calc(100vh - 112px - 69px);
+    height: calc(100vh - 181px);
     box-shadow: none;
   }
 
   @include mobile767 {
     top: 80px;
-    height: calc(100vh - 80px - 69px);
+    height: calc(100vh - 149px);
   }
 }
 

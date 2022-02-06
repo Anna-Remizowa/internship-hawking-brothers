@@ -1,6 +1,6 @@
 import Choices from 'choices.js';
 
-const modals = document.querySelectorAll('.js__modal');
+const modals = document.querySelectorAll('.js-modal');
 
 export const toggleModal = (element) => {
   if (element === null) {
@@ -37,7 +37,7 @@ export const initSelects = (selects) => {
   if (selects) {
     selects.forEach((sel) => {
       let containerClass = 'choices';
-      if (sel.classList.contains('js__select-mini')) {
+      if (sel.classList.contains('js-select-mini')) {
         containerClass += ' choices--mini';
       }
       return new Choices(sel, {
@@ -52,6 +52,27 @@ export const initSelects = (selects) => {
   }
 
   return null;
+};
+
+export const initAnchor = (jsAnchor) => {
+  const anchor = document.querySelector(jsAnchor);
+  if (anchor) {
+    anchor.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.innerHeight < window.pageYOffset) {
+        anchor.classList.add('visible');
+      } else {
+        anchor.classList.remove('visible');
+      }
+    });
+  }
 };
 
 /* валидация */

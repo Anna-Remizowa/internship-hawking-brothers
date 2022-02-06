@@ -1,7 +1,5 @@
 html {
   box-sizing: border-box;
-
-  /* закоментарить для pixelperfect */
   height: 100%;
 }
 
@@ -105,11 +103,19 @@ main {
     }
   }
 
+  .header {
+    padding-right: 17px;
+  }
+
   @include tablet1248 {
     .header,
     .footer {
       position: fixed;
       z-index: 20;
+    }
+
+    .header {
+      padding-right: 0;
     }
 
     .footer {
@@ -296,7 +302,7 @@ a {
 .textarea {
   padding: 17px;
   border-radius: 4px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid $light-gray;
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;

@@ -18,27 +18,37 @@ export const initProductSection = () => {
     },
   };
 
-  const productSwiperThumb = new SwiperBuilder('.js__slider-img--thumb')
+  const productSwiperThumb = new SwiperBuilder('.js-slider-img--thumb')
     .addDirection('vertical')
     .addLoop(false)
     .addBreakpoints(breakpointsThumb)
     .build();
 
-  const productSwiperMain = new SwiperBuilder('.js__slider-img--main')
+  const breakpoints = {
+    320: {
+      direction: 'horizontal',
+    },
+    768: {
+      direction: 'vertical',
+    },
+  };
+
+  const productSwiperMain = new SwiperBuilder('.js-slider-img--main')
     .addLoop(false)
     .addSpaceBetween(10)
     .addSlidesPerView(1)
+    .addBreakpoints(breakpoints)
     .addThumbs(productSwiperThumb)
     .build();
 
   const sliderSize = productSwiperMain.slides.length ? productSwiperMain.slides.length : 0;
 
-  const sliderHiddenCount = document.querySelector('.js__slider-hidden-count');
+  const sliderHiddenCount = document.querySelector('.js-slider-hidden-count');
   if (sliderHiddenCount) {
     sliderHiddenCount.textContent = `+ ${sliderSize - 3}`;
   }
 
-  const sliderNavCount = document.querySelector('.js__slider-count--main');
+  const sliderNavCount = document.querySelector('.js-slider-count--main');
   if (sliderNavCount && productSwiperMain) {
     productSwiperMain.on('slideChange', () => {
       sliderNavCount.textContent = `${parseInt(productSwiperMain.realIndex, 10) + 1} / ${sliderSize}`;
@@ -51,9 +61,9 @@ export const initProductSection = () => {
   Fancybox.bind('[data-fancybox="gallery-product"]', {});
 
   /* элементы на форме товара */
-  const plusCount = document.querySelector('.js__product-plus-count');
-  const minusCount = document.querySelector('.js__product-minus-count');
-  const count = document.querySelector('.js__product-count');
+  const plusCount = document.querySelector('.js-product-plus-count');
+  const minusCount = document.querySelector('.js-product-minus-count');
+  const count = document.querySelector('.js-product-count');
   if (plusCount && minusCount && count) {
     plusCount.addEventListener('click', () => {
       count.value = parseInt(count.value, 10) + 1;
@@ -66,7 +76,7 @@ export const initProductSection = () => {
     });
   }
 
-  const buttonIcons = document.querySelectorAll('.js__product-button-icon');
+  const buttonIcons = document.querySelectorAll('.js-product-button-icon');
   buttonIcons.forEach((button) => {
     button.addEventListener('click', () => {
       button.classList.toggle('active');
@@ -74,10 +84,10 @@ export const initProductSection = () => {
   });
 
   /* табы */
-  const tabs = document.querySelector('.js__tabs-product');
+  const tabs = document.querySelector('.js-tabs-product');
   if (tabs) {
-    const tabsButtons = tabs.querySelectorAll('.js__tabs-btn');
-    const tabsContent = tabs.querySelectorAll('.js__tabs-content');
+    const tabsButtons = tabs.querySelectorAll('.js-tabs-btn');
+    const tabsContent = tabs.querySelectorAll('.js-tabs-content');
 
     if (tabsButtons && tabsContent) {
       tabsButtons.forEach((button) => {
@@ -95,9 +105,9 @@ export const initProductSection = () => {
   }
 
   /* загрузка аватара */
-  const boxPhoto = document.querySelector('.js__box-photo');
-  const loadPhoto = document.querySelector('.js__load-photo');
-  const inputPhoto = document.querySelector('.js__input-photo');
+  const boxPhoto = document.querySelector('.js-box-photo');
+  const loadPhoto = document.querySelector('.js-load-photo');
+  const inputPhoto = document.querySelector('.js-input-photo');
   if (boxPhoto && loadPhoto && inputPhoto) {
     inputPhoto.addEventListener('change', function loadFile() {
       if (this.files && this.files.length > 0) {

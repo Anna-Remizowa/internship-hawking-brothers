@@ -7,7 +7,6 @@
 @import 'utils/range/range';
 
 @import 'header/header';
-@import 'footer/footer';
 
 /* шаблоны */
 @import '../views/layouts/page/page';
@@ -20,6 +19,8 @@
 @import 'independent/breadcrumbs/breadcrumbs';
 @import 'src/components/independent/left-menu/left-menu';
 @import 'src/components/independent/catalog-item/catalog-item';
+
+@import 'footer/footer';
 
 /* секции */
 @import 'sections/start/start';

@@ -25,12 +25,12 @@ export const initProjectsSection = () => {
     },
   };
 
-  new SwiperBuilder('.js__projects-slider')
+  new SwiperBuilder('.js-projects-slider')
     .addLoop(false)
     .addBreakpoints(breakpoints)
     .addNavigation(
-      '.js__projects-slider-arrow--right',
-      '.js__projects-slider-arrow--left',
+      '.js-projects-slider-arrow--right',
+      '.js-projects-slider-arrow--left',
     )
     .build();
 };

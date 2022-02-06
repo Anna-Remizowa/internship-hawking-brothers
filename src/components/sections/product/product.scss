@@ -83,6 +83,8 @@
   }
 
   &__button {
+    transition: background-color 0.3s ease-out;
+
     &--number {
       margin: 0 15px 0 13px;
     }
@@ -355,7 +357,7 @@
       width: 100px;
       margin-top: 7px;
       border-radius: 4px;
-      border: 1px solid #e5e5e5;
+      border: 1px solid $light-gray;
 
       @include tablet1248 {
         display: flex;
@@ -409,7 +411,7 @@
 
   &__detail {
     padding: 16px 0 17px;
-    border-bottom: 1px dashed #e5e5e5;
+    border-bottom: 1px dashed $light-gray;
 
     @include tablet1248 {
       width: 48%;
@@ -468,7 +470,7 @@
         content: '';
         position: absolute;
         display: none;
-        top: 4.5px;
+        top: 4px;
         left: 4px;
         width: 9px;
         height: 9px;
@@ -573,13 +575,15 @@
       line-height: 24px;
       white-space: nowrap;
       color: $gray;
+      transition: color 0.3s ease-out;
 
-      &.active {
+      &.active,
+      &:hover {
         color: $black-base;
+      }
 
-        &::before {
-          background-color: $light-green;
-        }
+      &.active::before {
+        background-color: $light-green;
       }
 
       @media (max-width: 510px) {

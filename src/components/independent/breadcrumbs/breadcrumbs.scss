@@ -1,15 +1,21 @@
 .breadcrumbs {
   padding: 11px 0 16px;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
 
   &__link {
     font-size: 12px;
     line-height: 15px;
     color: $gray;
+    transition: color 0.3s ease-out;
+
+    &.active,
+    &:hover {
+      color: $dark-green;
+    }
 
     &.active {
-      color: $dark-green;
+      pointer-events: none;
     }
   }
 

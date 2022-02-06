@@ -13,6 +13,12 @@
   &__link,
   &__text {
     color: $white;
+    transition: color 0.3s ease-out;
+  }
+
+  &__link:hover,
+  &__title[href]:hover {
+    color: $orange;
   }
 
   &__catalog-items {
@@ -48,6 +54,10 @@
     width: 22px;
     height: 22px;
     mask-size: contain;
+
+    &:hover {
+      background-color: $orange;
+    }
   }
 
   @include tablet1248 {

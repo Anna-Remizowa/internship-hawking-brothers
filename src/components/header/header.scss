@@ -29,6 +29,7 @@
       line-height: 23px;
       font-weight: bold;
       margin-right: 36px;
+      transition: color 0.3s ease-out;
 
       &:hover,
       &.active {
@@ -47,10 +48,23 @@
     line-height: 20px;
     letter-spacing: 0.08em;
     color: $light-green;
+    transition: color 0.3s ease-out;
 
     &--highlight {
       color: $black-base;
       font-weight: bold;
+    }
+
+    &:hover {
+      color: $black-base;
+    }
+  }
+
+  &__icon-line-button {
+    transition: transform 0.3s ease-out;
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 
@@ -64,6 +78,12 @@
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 1px dashed $red;
+    transition: color 0.3s ease-out, border-color 0.3s ease-out;
+
+    &:hover {
+      color: $black-base;
+      border-color: $black-base;
+    }
   }
 
   @media (max-width: 1814px) {
@@ -98,7 +118,7 @@
 
     &__inner {
       height: 80px;
-      border-bottom: 1px solid #e5e5e5;
+      border-bottom: 1px solid $light-gray;
       margin-top: 32px;
     }
 
@@ -181,7 +201,7 @@
 
   &__box-lists {
     padding-bottom: 34px;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid $light-gray;
   }
 
   &__box-support {
@@ -190,13 +210,19 @@
   }
 
   &__container:not(:last-of-type) {
-    margin-right: 51px;
+    margin-right: 200px;
   }
 
   &__title,
   &__link,
   &__text {
     color: $dark-green;
+    transition: color 0.3s ease-out;
+  }
+
+  &__link:hover,
+  &__title[href]:hover {
+    color: $orange;
   }
 
   &__catalog-items {
@@ -226,6 +252,10 @@
   }
 
   @include tablet1248 {
+    &__container:not(:last-of-type) {
+      margin-right: 51px;
+    }
+
     &__box-lists {
       padding-bottom: 30px;
       border-bottom-style: dashed;

@@ -14,6 +14,10 @@
     mask-repeat: no-repeat;
     mask-position: center;
 
+    &:hover {
+      background-color: $black-base;
+    }
+
     &--vk {
       width: 20px;
       mask-image: url('../images/svg/vk.svg');

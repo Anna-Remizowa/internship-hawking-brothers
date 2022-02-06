@@ -12,13 +12,13 @@ export const initBestsellersSection = () => {
       slidesPerView: 'auto',
     },
   };
-  new SwiperBuilder('.js__bestsellers-slider')
+  new SwiperBuilder('.js-bestsellers-slider')
     .addLoop(true)
     .addSpaceBetween(30)
     .addBreakpoints(breakpoints)
     .addNavigation(
-      '.js__bestsellers-slider-arrow--right',
-      '.js__bestsellers-slider-arrow--left',
+      '.js-bestsellers-slider-arrow--right',
+      '.js-bestsellers-slider-arrow--left',
     )
     .addAutoplay(true)
     .build();

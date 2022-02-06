@@ -4,9 +4,9 @@ import { Range } from '../../utils/range/range';
 
 export const initCategory = () => {
   /* инициализация модалки */
-  const openButton = document.querySelector('.js__open-filter');
-  const backButton = document.querySelector('.js__filter-back');
-  const modal = document.querySelector('.js__form-filter');
+  const openButton = document.querySelector('.js-open-filter');
+  const backButton = document.querySelector('.js-filter-back');
+  const modal = document.querySelector('.js-form-filter');
   new Modal(
     openButton,
     backButton,
@@ -16,16 +16,13 @@ export const initCategory = () => {
   ).initButtons();
 
   /* инициализация селектов */
-  const selects = document.querySelectorAll('.js__category-select');
+  const selects = document.querySelectorAll('.js-category-select');
   initSelects(selects);
 
   /* инициализация range-бара */
-  Range.create('[data-range="category-range"]', {
-    start: 20000,
-    end: 500000,
-  });
+  Range.create('[data-range="category-range"]');
 
-  const filterSubmit = document.querySelector('.js__filter-submit');
+  const filterSubmit = document.querySelector('.js-filter-submit');
   if (filterSubmit && openButton) {
     filterSubmit.addEventListener('click', (e) => {
       e.preventDefault();

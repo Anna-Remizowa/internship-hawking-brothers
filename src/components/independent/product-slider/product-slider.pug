@@ -15,13 +15,13 @@ mixin product_slider(product, addClass)
           p.price-container__price-old.product-slider__price-old= product.costOld
 
 mixin slider_img(images, addClass, fancybox)
-  .swiper.slider-img(class="slider-img--" + addClass + " js__slider-img--" + addClass)
+  .swiper.slider-img(class=`slider-img--${addClass} js-slider-img--${addClass}`)
     if (fancybox)
-      p.slider-img__text(class="js__slider-count--"+addClass) 3 / 7
-      button.slider-img__zoom-button.js__slider-img-zoom(type="button")
+      p.slider-img__text(class=`js-slider-count--${addClass}`) 3 / 7
+      button.slider-img__zoom-button.js-slider-img-zoom(type="button")
         +svg("slider-img__zoom-icon", "assets/images/sprite.svg#zoom")
     .swiper-wrapper
       each image in images
-        .swiper-slide.slider-img__slide(class="slider-img__slide--" + addClass)
-          a.slider-img__slide-wrapper(class="slider-img__slide-wrapper--" + addClass href=image data-fancybox=(fancybox ? "gallery-product" : ""))
-            img.slider-img__img(class="slider-img__img--" + addClass src=image)
+        .swiper-slide.slider-img__slide(class=`slider-img__slide--${addClass}`)
+          a.slider-img__slide-wrapper(class=`slider-img__slide-wrapper--${addClass}` href=image data-fancybox=(fancybox ? "gallery-product" : ""))
+            img.slider-img__img(class=`slider-img__img--${addClass}` src=image)

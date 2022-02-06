@@ -1,7 +1,7 @@
 mixin arrows(arrowStyle, adaptive)
   - adaptive = adaptive ? "-adaptive" : ""
   .arrows-container(class=arrowStyle + "__arrows-container" + adaptive)
-    button.arrows-container__arrow(type="button" class= arrowStyle + "__arrow-left js__" + arrowStyle + "-slider-arrow--left")
-      +svg("arrows-container__arrow-img arrows-container__arrow-img--left", "assets/images/sprite.svg#arrow")
-    button.arrows-container__arrow(type="button" class= arrowStyle + "__arrow-right js__" + arrowStyle + "-slider-arrow--right")
-      +svg("arrows-container__arrow-img arrows-container__arrow-img--right", "assets/images/sprite.svg#arrow")
+    button.arrows-container__arrow(type="button" class= `${arrowStyle}__arrow-left js-${arrowStyle}-slider-arrow--left`)
+      .arrows-container__arrow-img.arrows-container__arrow-img--left
+    button.arrows-container__arrow(type="button" class= `${arrowStyle}__arrow-right js-${arrowStyle}-slider-arrow--right`)
+      .arrows-container__arrow-img.arrows-container__arrow-img--right

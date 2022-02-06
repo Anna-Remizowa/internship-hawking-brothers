@@ -10,13 +10,13 @@ export const initReviewsSection = () => {
     },
   };
 
-  new SwiperBuilder('.js__reviews-slider')
+  new SwiperBuilder('.js-reviews-slider')
     .addLoop(false)
     .addSpaceBetween(24)
     .addBreakpoints(breakpoints)
     .addNavigation(
-      '.js__reviews-slider-arrow--right',
-      '.js__reviews-slider-arrow--left',
+      '.js-reviews-slider-arrow--right',
+      '.js-reviews-slider-arrow--left',
     )
     .build();
 };

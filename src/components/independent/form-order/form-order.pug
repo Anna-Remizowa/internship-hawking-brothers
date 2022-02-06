@@ -6,8 +6,8 @@ mixin form_order(text, classParent)
     p.text.form-order__text= text
     form.form-order__form(data-validate)
       .input-box
-        input.input(type="email" name="email" required placeholder="Ваше имя")
-        p.invalid-text Введите корректный email
+        input.input(type="text" name="name" required placeholder="Ваше имя")
+        p.invalid-text Введите корректное имя
       .input-box
         input.input(type="tel" name="tel" required placeholder="Ваш телефон")
         p.invalid-text Введите корректный номер

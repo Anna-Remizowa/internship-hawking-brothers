@@ -19,6 +19,11 @@
       width: 100%;
       height: 287px;
       background-repeat: no-repeat;
+      transition: transform 0.3s ease-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     &-triangle {

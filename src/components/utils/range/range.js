@@ -6,14 +6,14 @@ export class Range {
   static START_VALUE = 10000;
   static END_VALUE = 800000;
 
-  constructor(range, values) {
-    this.min = values && values.min ? values.min : Range.RANGE_MIN;
-    this.max = values && values.max ? values.max : Range.RANGE_MAX;
-    this.start = values && values.start ? values.start : Range.START_VALUE;
-    this.end = values && values.end ? values.end : Range.END_VALUE;
-
+  constructor(range) {
     range = document.querySelector(range);
     if (range){
+      this.min = range.dataset.rangeMin ? range.dataset.rangeMin : Range.RANGE_MIN;
+      this.max = range.dataset.rangeMax ? range.dataset.rangeMax : Range.RANGE_MAX;
+      this.start = range.dataset.rangeStart ? range.dataset.rangeStart : Range.START_VALUE;
+      this.end = range.dataset.rangeEnd ? range.dataset.rangeEnd : Range.END_VALUE;
+
       let divRange = document.createElement('div');
       divRange.className = 'range';
 
@@ -53,8 +53,8 @@ export class Range {
     }
   }
 
-  static create(range, values){
-    return new Range(range, values);
+  static create(range){
+    return new Range(range);
   }
 
   generateValueDOMElement(){

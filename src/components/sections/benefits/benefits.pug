@@ -30,7 +30,7 @@ section.benefits
         each item in benefitsList
           .list-with-img__box
             .img.img__border
-              +svg("img img-absolute list-with-img__img", "assets/images/sprite.svg#"+ item.svg)
+              +svg("img img-absolute list-with-img__img", `assets/images/sprite.svg#${item.svg}`)
             .list-with-img__text-box
               p.list-with-img__title= item.title
               p.text.list-with-img__text= item.text

@@ -5,7 +5,7 @@ mixin bestsellers(title)
         h2.title-overline= title
         +arrows("bestsellers")
 
-      .bestsellers__slider.swiper.js__bestsellers-slider
+      .bestsellers__slider.swiper.js-bestsellers-slider
         .swiper-wrapper
           each product in bestsellers_products
             +product_slider(product, "swiper-slide")
