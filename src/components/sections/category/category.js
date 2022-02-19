@@ -1,38 +1,33 @@
-import {Modal} from "../../utils/Modal";
-import {initSelects} from "../../utils/utils";
-import {RangeBar} from "../../utils/RangeBar";
+import { Modal } from '../../utils/js/Modal';
+import { initSelects } from '../../utils/js/utils';
+import { Range } from '../../utils/range/range';
 
-export class Category {
+export const initCategory = () => {
+  /* инициализация модалки */
+  const openButton = document.querySelector('.js-open-filter');
+  const backButton = document.querySelector('.js-filter-back');
+  const modal = document.querySelector('.js-form-filter');
+  new Modal(
+    openButton,
+    backButton,
+    modal,
+    true,
+    1248,
+  ).initButtons();
 
-  static initModal() {
-    const openButton = document.querySelector(".js__open-filter");
-    const backButton = document.querySelector(".js__filter-back");
-    const modal = document.querySelector(".js__form-filter");
-    this.modal = new Modal(openButton, backButton, modal,
-      true, 1248);
-    this.modal.initButtons();
+  /* инициализация селектов */
+  const selects = document.querySelectorAll('.js-category-select');
+  initSelects(selects);
+
+  /* инициализация range-бара */
+  Range.create('[data-range="category-range"]');
+
+  const filterSubmit = document.querySelector('.js-filter-submit');
+  if (filterSubmit && openButton) {
+    filterSubmit.addEventListener('click', (e) => {
+      e.preventDefault();
+      openButton.classList.add('active');
+      openButton.dispatchEvent(new Event('click'));
+    });
   }
-
-  static initFilters() {
-    const selects = document.querySelectorAll(".js__category-select");
-    initSelects(selects);
-
-    const rangeOne = document.querySelector(".js__range-1");
-    const rangeTwo = document.querySelector(".js__range-2");
-    const rangeValOne = document.querySelector(".js__range-value-start");
-    const rangeValTwo = document.querySelector(".js__range-value-end");
-    const rangeTrack = document.querySelector(".js__range-track");
-    new RangeBar(rangeOne, rangeTwo, rangeValOne,
-      rangeValTwo, rangeTrack).initialize();
-
-    const filterSubmit = document.querySelector(".js__filter-submit");
-    const openButton = document.querySelector(".js__open-filter");
-    if (filterSubmit && openButton) {
-      filterSubmit.addEventListener("click", function (e) {
-        e.preventDefault();
-        openButton.classList.add("active");
-        openButton.dispatchEvent(new Event("click"));
-      });
-    }
-  }
-}
+};

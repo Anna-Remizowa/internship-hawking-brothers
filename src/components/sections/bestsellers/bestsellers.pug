@@ -1,13 +1,14 @@
-section.bestsellers
-  .container
-    .bestsellers__header
-      h2.title-overline Хиты продаж
-      +arrows("bestsellers")
+mixin bestsellers(title)
+  section.bestsellers
+    .container
+      .bestsellers__header
+        h2.title-overline= title
+        +arrows("bestsellers")
 
-    .bestsellers__slider.swiper
-      .swiper-wrapper
-        each product in bestsellers_products
-          +product_slider(product, "swiper-slide")
+      .bestsellers__slider.swiper.js-bestsellers-slider
+        .swiper-wrapper
+          each product in bestsellers_products
+            +product_slider(product, "swiper-slide")
 
-    .bestsellers_arrows
-      +arrows("bestsellers", true)
+      .bestsellers_arrows
+        +arrows("bestsellers", true)

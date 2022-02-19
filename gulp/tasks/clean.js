@@ -1,7 +1,5 @@
 const del = require('del');
 
-const clean = () => {
-  return del('dist')
-}
+const clean = () => del('dist');
 
 module.exports = clean;

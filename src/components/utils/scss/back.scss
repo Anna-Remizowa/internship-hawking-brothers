@@ -1,0 +1,30 @@
+.back {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+
+  &__link {
+    margin-right: 17px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    color: $light-green;
+  }
+
+  &__arrow {
+    @include arrow;
+
+    background-color: $light-green;
+    transform: rotate(-90deg);
+  }
+
+  @include tablet1248 {
+    display: flex;
+  }
+
+  @include mobile767 {
+    margin-right: 0;
+  }
+}

@@ -16,7 +16,8 @@
     margin-bottom: 100px;
   }
 
-  &__container, &__frame {
+  &__container,
+  &__frame {
     position: relative;
   }
 
@@ -29,7 +30,9 @@
     left: -9px;
     width: 771px;
     height: 438px;
-    filter: drop-shadow(0px 46px 145px rgba(52, 29, 30, 0.18)) drop-shadow(0px 11px 33px rgba(52, 29, 143, 0.11)) drop-shadow(0px 4px 10px rgba(52, 29, 143, 0.08));
+    filter: drop-shadow(0 46px 145px rgb(52 29 30 / 18%))
+      drop-shadow(0 11px 33px rgb(52 29 143 / 11%))
+      drop-shadow(0 4px 10px rgb(52 29 143 / 8%));
   }
 
   &__img {
@@ -62,21 +65,24 @@
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 40px 0;
 
-    &__title, &__text {
+    &__title,
+    &__text {
       margin-bottom: 34px;
     }
 
     &__img {
-      &-blob-6, &-blob-7, &-dots {
+      &-blob-6,
+      &-blob-7,
+      &-dots {
         display: none;
       }
     }
   }
 
-  @include _tablet1050 {
+  @include tablet1050 {
     &__container {
       position: relative;
       padding-bottom: 56.25%;
@@ -92,11 +98,13 @@
       height: 100%;
       border-width: 0;
       outline-width: 0;
-      filter: drop-shadow(0px 46px 145px rgba(52, 29, 30, 0.18)) drop-shadow(0px 11px 33px rgba(52, 29, 143, 0.11)) drop-shadow(0px 4px 10px rgba(52, 29, 143, 0.08));
+      filter: drop-shadow(0 46px 145px rgb(52 29 30 / 18%))
+        drop-shadow(0 11px 33px rgb(52 29 143 / 11%))
+        drop-shadow(0 4px 10px rgb(52 29 143 / 8%));
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 16px 0;
 
     &__title {

@@ -1,8 +1,8 @@
 mixin socials(socialList, section)
-  .socials(class=section + "__socials")
+  .socials(class=`${section}__socials`)
     ul.socials__list
       each item in socialList
-        li.socials__item(class=section + "__socials-item")
+        li.socials__item(class=`${section}__socials-item`)
           a.socials__link(href= item.href)
-            div(class="socials__img socials__img--" + item.name + " " + section + "__social-img")
+            div(class=`socials__img socials__img--${item.name} ${section}__social-img`)
 

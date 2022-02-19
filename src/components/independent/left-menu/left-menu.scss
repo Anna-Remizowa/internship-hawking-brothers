@@ -1,10 +1,10 @@
 .left-menu {
-  max-width: 282px;
-  width: 100%;
+  width: 282px;
+  flex-shrink: 0;
   margin: 0;
   height: max-content;
-  padding: 35px 26px 18px 26px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+  padding: 35px 26px 18px;
+  box-shadow: 0 0 40px rgb(0 0 0 / 15%);
 
   &__header {
     display: flex;
@@ -24,7 +24,7 @@
     flex-shrink: 0;
     width: 12px;
     height: 12px;
-    mask-image: url(/assets/images/svg/select-arrow.svg);
+    mask-image: url('../images/svg/select-arrow.svg');
     mask-size: cover;
     background-color: $gray;
     transform: rotate(-90deg);
@@ -38,13 +38,15 @@
     &--one {
       background-color: $black-base;
 
-      &.active-color {
+      &.active-color,
+      &:hover {
         background-color: $red;
       }
     }
 
     &--two {
-      &.active-color {
+      &.active-color,
+      &:hover {
         background-color: $orange;
       }
     }
@@ -53,7 +55,8 @@
       width: 10px;
       height: 10px;
 
-      &.active-color {
+      &.active-color,
+      &:hover {
         background-color: $light-green;
       }
     }
@@ -92,18 +95,19 @@
         justify-content: flex-end;
         padding: 0;
 
-        & > .left-menu__arrow{
+        & > .left-menu__arrow {
           margin-right: 11px;
         }
       }
     }
 
     &-item:not(:last-of-type) &-link-box:not(&-link-box--three) {
-      border-bottom: 1px dashed #E5E5E5;
+      border-bottom: 1px dashed $light-gray;
     }
 
     &-link {
       cursor: pointer;
+      transition: color 0.3s ease-out;
 
       &--one {
         font-weight: 600;
@@ -111,7 +115,8 @@
         line-height: 55px;
         color: $black-base;
 
-        &.active {
+        &.active,
+        &:hover {
           color: $red;
         }
       }
@@ -120,9 +125,10 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 20px;
-        color: #8C8C8C;
+        color: $middle-gray;
 
-        &.active {
+        &.active,
+        &:hover {
           color: $orange;
         }
       }
@@ -132,17 +138,19 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 30px;
-        color: #8C8C8C;
+        color: $middle-gray;
 
-        &.active {
+        &.active,
+        &:hover {
           color: $light-green;
         }
       }
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     @include modal;
+
     max-width: 100%;
     padding: 32px 15px;
 
@@ -165,7 +173,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     &__arrow {
       margin-right: 0;
 

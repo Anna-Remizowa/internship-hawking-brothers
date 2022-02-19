@@ -1,0 +1,94 @@
+.range {
+  &__values-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__value {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: $black-base;
+  }
+
+  &__track {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: 9px 0;
+    width: 100%;
+    height: 3px;
+    background-color: $light-gray;
+  }
+
+  &__slider-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__slider {
+    position: absolute;
+    appearance: none;
+    width: 100%;
+    outline: none;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    pointer-events: none;
+
+    &::-webkit-slider-runnable-track {
+      appearance: none;
+      height: 3px;
+    }
+
+    &::-moz-range-track {
+      appearance: none;
+      height: 3px;
+    }
+
+    &::-ms-track {
+      appearance: none;
+      height: 3px;
+    }
+
+    &::-webkit-slider-thumb {
+      position: relative;
+      appearance: none;
+      height: 15px;
+      width: 11px;
+      top: 17px;
+      mask-image: url('../images/svg/range.svg');
+      background-color: $light-green;
+      mask-size: cover;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    &::-moz-range-thumb {
+      position: relative;
+      appearance: none;
+      height: 15px;
+      width: 11px;
+      top: 17px;
+      mask-image: url('../images/svg/range.svg');
+      background-color: $light-green;
+      mask-size: cover;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    &::-ms-thumb {
+      position: relative;
+      appearance: none;
+      height: 15px;
+      width: 11px;
+      top: 17px;
+      mask-image: url('../images/svg/range.svg');
+      background-color: $light-green;
+      mask-size: cover;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+  }
+}

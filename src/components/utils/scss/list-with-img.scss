@@ -1,0 +1,70 @@
+.list-with-img {
+  display: grid;
+
+  &__box {
+    display: flex;
+  }
+
+  &__img {
+    height: 70px;
+    width: 70px;
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+  }
+
+  &__title,
+  &__text {
+    color: $black-base;
+  }
+
+  &__title {
+    margin-bottom: 11px;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+
+  @include tablet1248 {
+    &__box {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__text-box {
+      margin-top: 26px;
+      margin-left: 0;
+      align-items: center;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 26px;
+      text-align: center;
+    }
+  }
+
+  @include mobile767 {
+    &__img {
+      height: 50px;
+      width: 50px;
+    }
+
+    &__text-box {
+      margin-top: 10px;
+    }
+
+    &__title {
+      margin-bottom: 3px;
+      font-size: 16px;
+    }
+  }
+}

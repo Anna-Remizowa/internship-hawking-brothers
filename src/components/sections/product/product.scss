@@ -1,0 +1,865 @@
+.product {
+  display: flex;
+  padding: 47px 0;
+
+  @include tablet1248 {
+    padding: 62px 0 41px;
+  }
+
+  @include mobile767 {
+    padding: 23px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 30px;
+    row-gap: 62px;
+
+    @include tablet1248 {
+      margin-left: 0;
+      row-gap: 56px;
+    }
+
+    @include mobile767 {
+      row-gap: 35px;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    mask-size: cover;
+
+    &--favorites {
+      height: 22px;
+      mask-image: url('../images/svg/favorites.svg');
+      background-color: $coral;
+    }
+
+    &--comparison {
+      mask-image: url('../images/svg/balance.svg');
+      background-color: $light-green;
+    }
+  }
+
+  &__icon-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: -60px;
+    left: -53px;
+    z-index: 10;
+    display: none;
+    width: max-content;
+    padding: 11px 15px 18px;
+    background: $white;
+    box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 6px;
+      border-style: solid;
+      border-color: $white transparent transparent transparent;
+    }
+
+    &-link {
+      padding-bottom: 3px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      color: $orange;
+      border-bottom: 1px dashed $orange;
+    }
+  }
+
+  &__button {
+    transition: background-color 0.3s ease-out;
+
+    &--number {
+      margin: 0 15px 0 13px;
+    }
+
+    &--favorites {
+      margin-left: 0;
+
+      &:hover,
+      &.active {
+        background: #ae2236;
+      }
+    }
+
+    &--comparison {
+      position: relative;
+      margin-left: 11px;
+
+      @include mobile767 {
+        margin-left: 18px;
+      }
+
+      &:hover,
+      &.active {
+        background: #215359;
+      }
+
+      &.active:hover .product__tooltip {
+        display: block;
+      }
+    }
+
+    &--count {
+      display: none;
+    }
+
+    &:hover .product__icon,
+    &.active .product__icon {
+      background-color: $white;
+    }
+
+    &.active &--count {
+      display: flex;
+    }
+
+    &--main {
+      max-width: 140px;
+      width: 100%;
+    }
+
+    &--second {
+      max-width: 200px;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    &-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      @include tablet1248 {
+        margin-bottom: 5px;
+      }
+    }
+
+    &-box &:first-child,
+    &-box &:last-child {
+      grid-column: 1 / 3;
+    }
+
+    @include tablet1248 {
+      &-box &:nth-child(1),
+      &-box &:nth-child(2) {
+        grid-column: 1;
+      }
+
+      &-box &:nth-child(odd) {
+        grid-row: 1;
+      }
+
+      &-box &:nth-child(3),
+      &-box &:nth-child(4) {
+        grid-column: 2;
+      }
+    }
+
+    @include mobile767 {
+      &-box &:nth-child(1),
+      &-box &:nth-child(2) {
+        grid-column: auto;
+        grid-row: 1;
+      }
+    }
+
+    &--vendor-code,
+    &--highlight {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &--weak,
+    &--bold {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &--vendor-code,
+    &--weak {
+      color: #b1b1b1;
+    }
+
+    &--price-highlight,
+    &--icon {
+      font-size: 40px;
+      line-height: 49px;
+    }
+
+    &--highlight {
+      font-weight: 600;
+      color: #4c858b;
+
+      @include tablet1248 {
+        margin-top: 12px;
+      }
+
+      @include mobile767 {
+        margin-top: 0;
+        text-align: end;
+      }
+    }
+
+    &--bold,
+    &--icon,
+    &--number {
+      color: $black-base;
+    }
+
+    &--vendor-code {
+      margin-bottom: 7px;
+
+      @include mobile767 {
+        margin-bottom: 0;
+      }
+    }
+
+    &--price {
+      text-align: end;
+
+      &::after {
+        content: '\20BD';
+      }
+
+      &-highlight {
+        margin-top: 11px;
+        font-weight: bold;
+        color: #e33e54;
+
+        &::after {
+          margin-left: 8px;
+          color: $black-base;
+        }
+
+        @include tablet1248 {
+          margin-top: 6px;
+          font-size: 30px;
+          line-height: 37px;
+        }
+
+        @include mobile767 {
+          margin: 6px 0 9px;
+        }
+      }
+
+      @include mobile767 {
+        display: none;
+      }
+    }
+
+    &--weak {
+      text-decoration-line: line-through;
+
+      &::after {
+        margin-left: 9px;
+      }
+    }
+
+    &--bold {
+      margin: 16px 0;
+      font-weight: 600;
+
+      @include tablet1248 {
+        display: none;
+      }
+    }
+
+    &--icon {
+      padding: 0;
+    }
+
+    &--number {
+      width: 85%;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 27px;
+      text-align: center;
+      border: none;
+      appearance: textfield;
+    }
+
+    &--number::-webkit-outer-spin-button,
+    &--number::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+
+    &-box--hidden {
+      display: none;
+
+      @include mobile767 {
+        flex-direction: column;
+        align-items: center;
+
+        &,
+        .product__text--price {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    height: 100%;
+    max-height: 530px;
+
+    @include tablet1248 {
+      flex-direction: column;
+      max-height: 100%;
+    }
+
+    &-sliders {
+      display: flex;
+      margin-right: 26px;
+
+      @include tablet1248 {
+        max-height: 422px;
+        margin: 0 0 31px;
+      }
+
+      @include mobile767 {
+        margin-bottom: 25px;
+      }
+    }
+
+    &-slider {
+      display: flex;
+      flex-direction: column;
+
+      @include mobile767 {
+        display: none;
+      }
+    }
+
+    &-hidden {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      height: 100px;
+      width: 100px;
+      margin-top: 7px;
+      border-radius: 4px;
+      border: 1px solid $light-gray;
+
+      @include tablet1248 {
+        display: flex;
+      }
+
+      &-number {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 30px;
+        color: #d5d5d5;
+      }
+    }
+
+    &-form {
+      width: 100%;
+    }
+  }
+
+  &__item-box {
+    display: flex;
+    justify-content: space-between;
+
+    &--column {
+      flex-direction: column;
+
+      @include tablet1248 {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      @include mobile767 {
+        flex-direction: column;
+      }
+    }
+
+    &--icons {
+      @include tablet1248 {
+        margin-right: 32px;
+      }
+      @include mobile767 {
+        margin-right: 0;
+      }
+    }
+
+    @include mobile767 {
+      &:not(&--icons) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__detail {
+    padding: 16px 0 17px;
+    border-bottom: 1px dashed $light-gray;
+
+    @include tablet1248 {
+      width: 48%;
+
+      &-box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+      }
+    }
+
+    @include mobile767 {
+      width: 100%;
+      padding-top: 15px;
+
+      &:not(:first-of-type) {
+        padding-top: 20px;
+      }
+
+      &-box {
+        display: block;
+        margin-bottom: 26px;
+      }
+    }
+
+    &-header {
+      margin-bottom: 16px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: $black-base;
+    }
+
+    &-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 15px;
+    }
+
+    &-radio {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    &-checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 19px;
+      width: 19px;
+      border: 1px solid #d5d5d5;
+      border-radius: 50%;
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: none;
+        top: 4px;
+        left: 4px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: $orange;
+      }
+    }
+
+    &-text {
+      padding-left: 30px;
+      font-size: 14px;
+      color: #7e7e7e;
+      white-space: nowrap;
+    }
+
+    &-label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 19px;
+      cursor: pointer;
+      user-select: none;
+
+      & .product__detail-radio:checked ~ .product__detail-checkmark::after {
+        display: block;
+      }
+
+      & .product__detail-radio:checked ~ .product__detail-text {
+        color: $black-base;
+      }
+    }
+  }
+
+  &__buttons-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+
+    @include tablet1248 {
+      justify-content: flex-end;
+      flex-grow: 1;
+      margin-top: 0;
+      gap: 26px;
+
+      .button {
+        max-width: 200px;
+      }
+    }
+
+    @include mobile767 {
+      flex-direction: column;
+      width: 100%;
+      gap: 16px;
+      margin-top: 23px;
+
+      .button {
+        align-self: center;
+      }
+    }
+  }
+
+  &__tabs {
+    @include tablet1248 {
+      margin-top: 8px;
+    }
+
+    @include mobile767 {
+      margin-bottom: 11px;
+    }
+
+    &-wrapper {
+      overflow-x: auto;
+    }
+
+    &-list {
+      position: relative;
+      display: flex;
+
+      @include mobile767 {
+        width: max-content;
+      }
+    }
+
+    &-item {
+      &:not(:last-of-type) {
+        margin-right: 68px;
+
+        @media (max-width: 510px) {
+          margin-right: 19px;
+        }
+      }
+    }
+
+    &-btn {
+      cursor: pointer;
+      position: relative;
+      padding: 0 0 35px;
+      border: none;
+      background-color: $white;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      white-space: nowrap;
+      color: $gray;
+      transition: color 0.3s ease-out;
+
+      &.active,
+      &:hover {
+        color: $black-base;
+      }
+
+      &.active::before {
+        background-color: $light-green;
+      }
+
+      @media (max-width: 510px) {
+        padding-bottom: 17px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    &-list::before,
+    &-btn::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #edf3f3;
+    }
+
+    &-content {
+      display: none;
+      flex-direction: column;
+      padding-top: 26px;
+
+      &.active {
+        display: flex;
+      }
+    }
+
+    &-text {
+      color: $black-base;
+      white-space: pre-line;
+
+      &::first-line {
+        line-height: 0;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+
+        @include mobile767 {
+          margin-bottom: 25px;
+        }
+      }
+
+      &--highlight {
+        font-weight: 700;
+        color: $orange;
+      }
+
+      &:last-of-type {
+        margin-bottom: 30px;
+
+        @include tablet1248 {
+          margin-bottom: 0;
+        }
+      }
+
+      @include mobile767 {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__input {
+    &-box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &[hidden] {
+        display: none;
+      }
+
+      @include mobile767 {
+        flex-direction: row;
+      }
+    }
+
+    &-text {
+      margin-top: 19px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #b1b1b1;
+
+      @include mobile767 {
+        margin: 0 0 0 13px;
+      }
+    }
+
+    &-img {
+      width: auto;
+      height: 100%;
+    }
+
+    &-file {
+      position: absolute;
+      opacity: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+
+  &__char {
+    &-box {
+      display: flex;
+      align-items: center;
+
+      @include mobile767 {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 6px;
+        margin-bottom: 3px;
+        border-bottom: 1px dashed #d5d5d5;
+      }
+    }
+
+    &-text {
+      position: relative;
+      line-height: 50px;
+      color: $black-base;
+      white-space: nowrap;
+
+      @include mobile767 {
+        font-size: 14px;
+        line-height: 20px;
+
+        &:last-of-type {
+          font-weight: 600;
+          color: $orange;
+        }
+      }
+    }
+
+    &-dots {
+      width: 100%;
+      height: 15px;
+      border-bottom: 1px dashed #d5d5d5;
+
+      @include mobile767 {
+        display: none;
+      }
+    }
+  }
+
+  &__reviews {
+    margin: -3px 0 18px;
+
+    &-form,
+    &-form-box,
+    &-box {
+      display: flex;
+    }
+
+    &-form,
+    &-form-box--inputs,
+    &-box {
+      flex-direction: column;
+    }
+
+    &-form-box {
+      gap: 8px;
+
+      @include tablet1248 {
+        display: grid;
+        grid-template-columns: auto 120px;
+
+        &--inputs {
+          grid-column: 1 / 3;
+          display: flex;
+          flex-direction: row;
+          gap: 30px;
+        }
+      }
+
+      @include mobile767 {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+
+    &-form-box--inputs {
+      & .input {
+        max-width: 100%;
+      }
+
+      & .input-box {
+        width: 240px;
+
+        @include tablet1248 {
+          max-width: 50%;
+          width: 50%;
+          margin-bottom: 8px;
+        }
+
+        @include mobile767 {
+          max-width: 100%;
+          width: 100%;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-submit {
+      margin-top: 32px;
+      align-self: center;
+
+      @include mobile767 {
+        margin-top: 24px;
+      }
+    }
+
+    &-box {
+      &--line {
+        flex-direction: row;
+      }
+
+      &:not(&--line) {
+        margin-top: 24px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      &--space {
+        margin: 25px 0 0 17px;
+        flex-grow: 1;
+        justify-content: space-between;
+
+        @include mobile767 {
+          margin: 18px 0 0 18px;
+          flex-direction: column;
+        }
+      }
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 24px;
+      color: $black-base;
+
+      @include mobile767 {
+        line-height: 26px;
+      }
+
+      &--header {
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      &--date {
+        font-weight: 500;
+        color: $gray;
+      }
+
+      &--content {
+        margin: 16px 0 21px;
+
+        @include mobile767 {
+          margin: 22px 0 16px;
+        }
+      }
+    }
+  }
+
+  .bestsellers,
+  .bestsellers .container {
+    max-width: 906px;
+    padding: 0;
+
+    @include tablet1248 {
+      max-width: 100%;
+    }
+  }
+}

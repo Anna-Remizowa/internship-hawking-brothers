@@ -5,14 +5,12 @@ const browserSync = require('browser-sync');
 
 const { paths } = require('../config');
 
-const views = () => {
-  return src(paths.views.src)
-    .pipe(plumber())
-    .pipe(pug({
-      pretty: true
-    }))
-    .pipe(dest(paths.views.dist))
-    .pipe(browserSync.stream())
-}
+const views = () => src(paths.views.src)
+  .pipe(plumber())
+  .pipe(pug({
+    pretty: true,
+  }))
+  .pipe(dest(paths.views.dist))
+  .pipe(browserSync.stream());
 
 module.exports = views;

@@ -1,14 +1,24 @@
 .footer {
   @include general-footer-header;
-  background-color: #0C2F33;
+
+  width: 100%;
+  background-color: #0c2f33;
   padding: 88px 0;
 
   &__container:last-of-type {
     margin-left: 15px;
   }
 
-  &__title, &__link, &__text {
+  &__title,
+  &__link,
+  &__text {
     color: $white;
+    transition: color 0.3s ease-out;
+  }
+
+  &__link:hover,
+  &__title[href]:hover {
+    color: $orange;
   }
 
   &__catalog-items {
@@ -44,20 +54,24 @@
     width: 22px;
     height: 22px;
     mask-size: contain;
+
+    &:hover {
+      background-color: $orange;
+    }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 25px 0;
+
+    &__container {
+      width: 100%;
+      align-items: center;
+    }
 
     &__container:not(:last-of-type),
     &__title,
     &__text-icon-box {
       display: none;
-    }
-
-    &__container {
-      width: 100%;
-      align-items: center;
     }
 
     &__socials {

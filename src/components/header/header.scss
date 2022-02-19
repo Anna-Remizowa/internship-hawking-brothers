@@ -1,5 +1,10 @@
 .header {
-  &__inner, &__wrapper {
+  width: 100%;
+  z-index: 10;
+  background-color: $white;
+
+  &__inner,
+  &__wrapper {
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -18,31 +23,48 @@
 
     &-link {
       @extend %text;
+
       text-transform: uppercase;
       color: $light-green;
       line-height: 23px;
       font-weight: bold;
       margin-right: 36px;
+      transition: color 0.3s ease-out;
 
-      &:hover, &.active {
+      &:hover,
+      &.active {
         color: $black-base;
       }
     }
 
-    @include _tablet1248 {
+    @include tablet1248 {
       display: none;
     }
   }
 
   &__phone-number {
     @extend %text;
+
     line-height: 20px;
     letter-spacing: 0.08em;
     color: $light-green;
+    transition: color 0.3s ease-out;
 
     &--highlight {
       color: $black-base;
       font-weight: bold;
+    }
+
+    &:hover {
+      color: $black-base;
+    }
+  }
+
+  &__icon-line-button {
+    transition: transform 0.3s ease-out;
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 
@@ -50,11 +72,18 @@
     padding-bottom: 5px;
     margin: 5px 60px 0 70px;
     @extend %small-text;
+
     color: $red;
     line-height: 17px;
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 1px dashed $red;
+    transition: color 0.3s ease-out, border-color 0.3s ease-out;
+
+    &:hover {
+      color: $black-base;
+      border-color: $black-base;
+    }
   }
 
   @media (max-width: 1814px) {
@@ -74,20 +103,22 @@
     }
   }
 
-  @include _desktop1630 {
-    &__phone-me-link, &__phone-number {
+  @include desktop1630 {
+    &__phone-me-link,
+    &__phone-number {
       display: none;
     }
   }
 
-  @include _tablet1248 {
-    &__inner, &__wrapper {
+  @include tablet1248 {
+    &__inner,
+    &__wrapper {
       align-items: flex-start;
     }
 
     &__inner {
       height: 80px;
-      border-bottom: 1px solid #E5E5E5;
+      border-bottom: 1px solid $light-gray;
       margin-top: 32px;
     }
 
@@ -110,20 +141,24 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     &__inner {
-      height: 63px;
-      margin-top: 16px;
+      height: 61px;
+      margin-top: 18px;
     }
 
-    &__icon-line{
-      &-button{
+    .logo {
+      margin-top: 5px;
+    }
+
+    &__icon-line {
+      &-button {
         width: 44px;
         height: 44px;
       }
 
       & .icon-line__button {
-        &:not(:last-of-type){
+        &:not(:last-of-type) {
           display: none;
         }
 
@@ -144,28 +179,20 @@
   }
 }
 
-/*HEADER ВСПЛЫВАЮЩЕЕ*/
+/* HEADER ВСПЛЫВАЮЩЕЕ */
 .header-big {
   @include general-footer-header;
-  position: relative;
-  top: 0;
-  z-index: 10;
-  overflow-y: auto;
-  display: none;
-  width: 100%;
-  height: calc(100vh - 128px);
+  @include modal;
+
   padding: 49px 0;
-  opacity: 0;
-  transition: opacity 0.2s ease-out;
-  background-color: $white;
 
-  &.open, &__box-lists, &__box-support, &__box-support-inner,
-  &__phone-me-link, &__phone-number {
+  &.open,
+  &__box-lists,
+  &__box-support,
+  &__box-support-inner,
+  &__phone-me-link,
+  &__phone-number {
     display: flex;
-  }
-
-  &.visible {
-    opacity: 1;
   }
 
   &__inner {
@@ -174,7 +201,7 @@
 
   &__box-lists {
     padding-bottom: 34px;
-    border-bottom: 1px solid #E5E5E5;
+    border-bottom: 1px solid $light-gray;
   }
 
   &__box-support {
@@ -183,11 +210,19 @@
   }
 
   &__container:not(:last-of-type) {
-    margin-right: 51px;
+    margin-right: 200px;
   }
 
-  &__title, &__link, &__text {
+  &__title,
+  &__link,
+  &__text {
     color: $dark-green;
+    transition: color 0.3s ease-out;
+  }
+
+  &__link:hover,
+  &__title[href]:hover {
+    color: $orange;
   }
 
   &__catalog-items {
@@ -216,8 +251,10 @@
     margin: 19px 0 0;
   }
 
-  @include _tablet1248 {
-    height: calc(100vh - 112px);
+  @include tablet1248 {
+    &__container:not(:last-of-type) {
+      margin-right: 51px;
+    }
 
     &__box-lists {
       padding-bottom: 30px;
@@ -229,11 +266,11 @@
     }
   }
 
-  @include _mobile767 {
-    height: calc(100vh - 80px);
+  @include mobile767 {
     padding-top: 42px;
 
-    &__box-lists, &__box-support {
+    &__box-lists,
+    &__box-support {
       flex-direction: column;
     }
 
@@ -242,7 +279,7 @@
     }
 
     &__box-lists {
-      border: none;
+      border: 0;
       padding-bottom: 18px;
     }
 
@@ -260,6 +297,12 @@
 
     &__text {
       font-size: 14px;
+    }
+  }
+
+  @media (max-width: 510px) {
+    &__catalog-items {
+      grid-gap: 18px 29px;
     }
   }
 }

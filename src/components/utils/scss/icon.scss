@@ -1,0 +1,97 @@
+.icon {
+  width: 22px;
+  height: 22px;
+  mask-size: cover;
+
+  &__menu {
+    mask-image: url('../images/svg/menu.svg');
+    background-color: $light-green;
+
+    &.close {
+      mask-image: url('../images/svg/close.svg');
+    }
+
+    @include mobile767 {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__add {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.icon-line {
+  display: flex;
+  margin-left: 33px;
+
+  &--one {
+    margin-left: 36px;
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+    height: 56px;
+    width: 56px;
+    border: 1px solid;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+
+    &-img {
+      &--shopping {
+        width: 24px;
+        mask-image: url('../images/svg/shopping-cart.svg');
+        background-color: $black-base;
+      }
+
+      &--light {
+        background-color: $white;
+      }
+    }
+
+    &-link {
+      justify-content: center;
+      display: flex;
+    }
+
+    &--main {
+      border-color: $light-green;
+    }
+
+    &--light {
+      border-color: $light-gray;
+    }
+
+    &--dark {
+      background-color: $dark-green;
+    }
+
+    &-circle-count {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: -3px;
+      top: 0;
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      background-color: $coral;
+      color: $white;
+    }
+
+    &-count-text {
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 13px;
+      color: $white;
+    }
+  }
+}

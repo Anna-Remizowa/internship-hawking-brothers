@@ -21,7 +21,7 @@
       img: 'img__blob9',
       imgClass: 'catalog-item__img-content--4',
       title: "Камины",
-      href: "/fireplaces.html"
+      href: routing.fireplaces
     },
     {
       img: 'img__blob10',
@@ -44,9 +44,6 @@
   ]
 
 .catalog
-  .container
-    h1.title-big.catalog__title Каталог товаров
-    +breadcrumbs(breadcrumbsCategory_Catalog)
-    .catalog__container
-      each catalog in catalogs
-        +catalog-item(catalog.img, catalog.imgClass, catalog.title, catalog.href)
+  .catalog__container
+    each catalog in catalogs
+      +catalog-item(catalog.img, catalog.imgClass, catalog.title, catalog.href)

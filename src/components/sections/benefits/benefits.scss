@@ -1,5 +1,5 @@
 .benefits {
-  padding: 146px 0 0;
+  padding: 148px 0 0;
 
   &__inner {
     position: relative;
@@ -11,7 +11,7 @@
     margin: 63px 0;
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding-bottom: 0;
 
     &__list-with-img {
@@ -20,17 +20,17 @@
     }
   }
 
-  @include _tablet1050 {
+  @include tablet1050 {
     padding-top: 65px;
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding-top: 25px;
 
     &__list-with-img {
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 19px;
-      margin: 29px 0;
+      margin: 31px 0;
     }
   }
 }

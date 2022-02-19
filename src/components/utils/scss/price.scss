@@ -1,0 +1,24 @@
+.price-container {
+  display: flex;
+  align-items: center;
+
+  &__price-new {
+    color: $coral;
+
+    &::after {
+      color: $black-base;
+    }
+  }
+
+  &__price-old {
+    text-decoration-line: line-through;
+    color: $gray;
+  }
+
+  &__price-new::after,
+  &__price-old::after {
+    margin-left: 15px;
+    content: '\20BD';
+    text-decoration-line: none;
+  }
+}

@@ -1,11 +1,11 @@
 -
   var breadcrumbHome = {
-  href: "/",
+  href: routing.home,
   name: "Главная", };
 
 -
   var breadcrumbCatalog = {
-    href: "/catalog.html",
+    href: routing.catalog,
     name: "Каталог", };
 
 -
@@ -13,12 +13,11 @@
     breadcrumbHome,
     breadcrumbCatalog,
     {
-      href: "#",
+      href: routing.fireplaces,
       name: "Камины",
-      customClass: "js__open-catalog",
     },
     {
-      href: "#",
+      href: "",
       name: "",
       customClass: "active"
     }
@@ -28,8 +27,8 @@
   var breadcrumbsCategory_Catalog = [
     breadcrumbHome,
     {
-      href: "/catalog.html",
-      name: "Каталог",
+      href: "",
+      name: breadcrumbCatalog.name,
       customClass: "active"
     },
   ]

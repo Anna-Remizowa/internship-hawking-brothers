@@ -1,65 +1,76 @@
 mixin resetBox(resetClass)
-  .category__filter-reset-box.js__filter-reset(class= resetClass)
+  .category__filter-reset-box.js-filter-reset(class= resetClass)
     +svg("icon category__filter-trash", "assets/images/sprite.svg#trash")
     p.category__filter-link Сбросить фильтр
 
-mixin category(content)
+mixin category(leftMenu)
   .category
-    .container
-      h1.title-big.category__title.js__title= content.name
-      +breadcrumbs(content.breadcrumbs)
-      .category__header
-        h3.category__header-title.js__title
-        .category__header-arrow
-      form.category__filter.js__form-filter.js__modal
-        .category__filter-container
-          .category__filter-hidden
-            +resetBox("category__filter-reset-box--hidden")
-            .back.js__filter-back
-              p.back__link Назад
-              .back__arrow
-          select.category__select.js__category-select
-            option(selected disabled) Бренд
-          select.category__select.js__category-select
-            option(selected disabled) Материал облицовки
-          select.category__select.js__category-select
-            option(selected disabled) Расположение
-          select.category__select.js__category-select
-            option(selected disabled) Серия
-          select.category__select.js__category-select
-            option(selected disabled) Балка
-          .category__filter-price-box
-            p.category__filter-text Цена
-            .category__filter-values
-              p.category__filter-range-value.js__range-value-start 0
-              p.category__filter-range-value.js__range-value-end 100
-            .category__slider-range
-              .category__slider-track.js__range-track
-              input.category__range.js__range-1(type="range" value="20000" min="0" max="1000000" step="1")
-              input.category__range.js__range-2(type="range" value="500000" min="0" max="1000000" step="1")
-          +resetBox()
-          button.button.button--secondary-color.category__filter-button.js__filter-submit(type="submit") Применить фильтр
+    form.category__filter.js-form-filter.js-modal.js-modal--adaptive
+      .category__filter-container
+        .category__filter-hidden
+          +resetBox("category__filter-reset-box--hidden")
+          .back.js-filter-back
+            p.back__link Назад
+            .back__arrow
+        select.category__select.js-category-select
+          option(selected disabled) Бренд
+          option Бренд 1
+          option Бренд 2
+          option Бренд 3
+          option Бренд 4
+        select.category__select.js-category-select
+          option(selected disabled) Материал облицовки
+          option Материал облицовки 1
+          option Материал облицовки 2
+          option Материал облицовки 3
+          option Материал облицовки 4
+        select.category__select.js-category-select
+          option(selected disabled) Расположение
+          option Расположение 1
+          option Расположение 2
+          option Расположение 3
+          option Расположение 4
+        select.category__select.js-category-select
+          option(selected disabled) Серия
+          option Серия 1
+          option Серия 2
+          option Серия 3
+          option Серия 4
+        select.category__select.js-category-select
+          option(selected disabled) Балка
+          option Балка 1
+          option Балка 2
+          option Балка 3
+          option Балка 4
+        .category__filter-price-box
+          p.category__filter-text Цена
+          .category__range(data-range='category-range' data-range-start='20000' data-range-end='500000')
+        +resetBox()
+        button.button.button--secondary-color.category__filter-button.js-filter-submit(type="submit") Применить фильтр
 
-      .category__container
-        +left-menu(content.leftMenu)
-        .category__content-box
-          .category__content-header
-            .category__content-header-box.category__content-header-box--sort
-              p.category__content-text Сортировать по:
-              select.category__select.js__category-select
-                option.category__select-option от нового к старому
-                option.category__select-option от старого к новому
-                option.category__select-option по популярности
-            .category__content-header-box.category__content-header-box--count
-              p.category__content-text Выводить по:
-              select.category__select.js__category-select.js__select-mini
-                option.category__select-option 15
-                option.category__select-option 50
-                option.category__select-option 100
-                option.category__select-option Все
-            .category__content-filter-box.js__open-filter
-              .category__filter-number.js__filter-number 3
-              .category__filter-icon
-          .category__content-items
-            - for (var x = 0; x < 12; x++)
-              +product_slider(bestsellers_products[0], "category__product-slider")
+    .category__container
+      .category__header
+        h3.category__header-title.js-title
+        .category__header-arrow.js-open-catalog
+      +left-menu(leftMenu)
+      .category__content-box
+        .category__content-header
+          .category__content-header-box.category__content-header-box--sort
+            p.category__content-text Сортировать по:
+            select.category__select.js-category-select
+              option.category__select-option от нового к старому
+              option.category__select-option от старого к новому
+              option.category__select-option по популярности
+          .category__content-header-box.category__content-header-box--count
+            p.category__content-text Выводить по:
+            select.category__select.js-category-select.js-select-mini
+              option.category__select-option 15
+              option.category__select-option 50
+              option.category__select-option 100
+              option.category__select-option Все
+          .category__content-filter-box.js-open-filter
+            .category__filter-number.js-filter-number 3
+            .category__filter-icon
+        .category__content-items
+          - for (var x = 0; x < 12; x++)
+            +product_slider(bestsellers_products[0], "category__product-slider")

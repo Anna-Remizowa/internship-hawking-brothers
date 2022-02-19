@@ -1,6 +1,7 @@
 mixin breadcrumbs(links)
-  .breadcrumbs
-    each key, index in links
-      a.breadcrumbs__link(href= key.href class= (key.customClass ? key.customClass : ""))= key.name
-      if (index < links.length - 1)
-        +svg("breadcrumbs__small-arrow", "assets/images/sprite.svg#small-arrow")
+  if (links)
+    .breadcrumbs
+      each key, index in links
+        a.breadcrumbs__link(href= key.href class= (key.customClass ? key.customClass : ""))= key.name
+        if (index < links.length - 1)
+          +svg("breadcrumbs__small-arrow", "assets/images/sprite.svg#small-arrow")

@@ -1,7 +1,17 @@
-@import 'header/header';
-@import 'footer/footer';
+/* utils */
+@import 'utils/scss/img';
+@import 'utils/scss/icon';
+@import 'utils/scss/price';
+@import 'utils/scss/list-with-img';
+@import 'utils/scss/back';
+@import 'utils/range/range';
 
-/*маленькие независимые компоненты*/
+@import 'header/header';
+
+/* шаблоны */
+@import '../views/layouts/page/page';
+
+/* маленькие независимые компоненты */
 @import 'independent/socials/socials';
 @import 'independent/arrows/arrows';
 @import 'independent/form-order/form-order';
@@ -10,7 +20,9 @@
 @import 'src/components/independent/left-menu/left-menu';
 @import 'src/components/independent/catalog-item/catalog-item';
 
-/*секции*/
+@import 'footer/footer';
+
+/* секции */
 @import 'sections/start/start';
 @import 'sections/bestsellers/bestsellers';
 @import 'sections/projects/projects';
@@ -26,3 +38,4 @@
 @import 'sections/reviews/reviews';
 @import 'sections/category/category';
 @import 'sections/catalog/catalog';
+@import 'sections/product/product';

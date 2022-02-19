@@ -46,7 +46,7 @@ section.installation
       .list-with-img.installation__list-with-img
         each item in installationList
           .list-with-img__box.installation__list-box
-            +svg("img list-with-img__img installation__list-img", "assets/images/sprite.svg#" + item.svg)
+            +svg("img list-with-img__img installation__list-img", `assets/images/sprite.svg#${item.svg}`)
             .list-with-img__text-box.installation__list-text-box
               p.list-with-img__title.installation__list-title= item.title
               p.text.list-with-img__text.installation__text= item.text

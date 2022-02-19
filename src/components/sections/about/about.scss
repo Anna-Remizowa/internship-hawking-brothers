@@ -1,5 +1,5 @@
 .about {
-  padding: 50px 0 90px 0;
+  padding: 50px 0 90px;
 
   &__inner {
     position: relative;
@@ -28,7 +28,7 @@
       max-height: 140px;
       padding: 48px 32px 0;
       display: flex;
-      border: 1px solid #E5E5E5;
+      border: 1px solid $light-gray;
       border-radius: 4px;
     }
 
@@ -89,11 +89,12 @@
       right: 2%;
       width: 385px;
       height: 550px;
-      background: url(/assets/images/content/fireplace.png) center / contain no-repeat;
+      background: url('../images/content/fireplace.png') center / contain
+        no-repeat;
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 53px 0;
 
     &__title {
@@ -119,28 +120,29 @@
     }
   }
 
-  @include _mobile767 {
-    padding: 4px 0;
+  @include mobile767 {
+    padding: 17px 0;
 
     &__title {
       margin-bottom: 47px;
     }
 
     &__content {
+      width: 100%;
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 37px;
-    }
-
-    &__content {
-      width: 100%;
 
       &-item {
-        padding: 32px 19px 19px;
+        padding: 32px 19px 14px;
       }
 
       &-title {
-        top: -25px;
-        left: auto;
+        top: -22px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: max-content;
         font-size: 40px;
         line-height: 49px;
       }
@@ -148,6 +150,7 @@
       &-text {
         font-size: 14px;
         text-align: center;
+        align-self: center;
       }
     }
   }

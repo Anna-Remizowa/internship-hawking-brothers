@@ -34,7 +34,7 @@
       color: $light-green;
     }
 
-    &:first-of-type{
+    &:first-of-type {
       margin-bottom: 34px;
     }
   }
@@ -76,7 +76,7 @@
       right: 2%;
       width: 433px;
       height: 476px;
-      background: url(/assets/images/content/man.png) center / contain no-repeat;
+      background: url('../images/content/man.png') center / contain no-repeat;
     }
 
     &-arrow {
@@ -91,7 +91,7 @@
     left: -82px;
   }
 
-  @include _desktop1630 {
+  @include desktop1630 {
     &__img {
       &-blob-4 {
         width: 650px;
@@ -103,7 +103,7 @@
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 39px 0;
 
     &__content {
@@ -112,7 +112,7 @@
 
     &__part-container {
       width: 100%;
-      margin: 0 0 48px 0;
+      margin: 0 0 48px;
       text-align: center;
     }
 
@@ -131,11 +131,14 @@
     &__img {
       height: 476px;
 
-      &-blob-4, &-man {
+      &-blob-4,
+      &-man {
         width: 100%;
       }
 
-      &-triangle--one, &-triangle--two, &-arrow {
+      &-triangle--one,
+      &-triangle--two,
+      &-arrow {
         display: none;
       }
     }
@@ -146,15 +149,16 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 13px 0;
 
     &__title {
       font-size: 18px;
       line-height: 26px;
 
-      &:last-of-type{
+      &:last-of-type {
         font-size: 24px;
+        margin-bottom: 14px;
       }
     }
 
@@ -170,13 +174,18 @@
         display: block;
       }
 
-      &:first-of-type{
-        margin-bottom: 21px;
+      &:first-of-type {
+        line-height: 31px;
+        margin-bottom: 18px;
       }
     }
 
+    &__text + &__text {
+      text-align: center;
+    }
+
     &__part-container {
-      margin-bottom: 24px;
+      margin-bottom: 35px;
     }
 
     &__img {

@@ -1,5 +1,5 @@
 .without-money {
-  padding: 57px 0 164px 0;
+  padding: 57px 0 164px;
 
   &__inner {
     display: flex;
@@ -11,7 +11,7 @@
     width: 630px;
   }
 
-  &__title:last-of-type{
+  &__title:last-of-type {
     margin-bottom: 27px;
   }
 
@@ -65,7 +65,8 @@
       right: -17%;
       width: 480px;
       height: 480px;
-      background: url(/assets/images/content/fireplace-2.png) center / contain no-repeat;
+      background: url('../images/content/fireplace-2.png') center / contain
+        no-repeat;
     }
   }
 
@@ -80,7 +81,7 @@
     opacity: 0.1;
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 50px 0;
 
     &__content-container {
@@ -90,7 +91,7 @@
     &__title {
       line-height: 50px;
 
-      &:last-of-type{
+      &:last-of-type {
         margin-bottom: 18px;
       }
     }
@@ -115,7 +116,9 @@
         height: 100%;
       }
 
-      &-dots, &-triangle--one, &-triangle--two {
+      &-dots,
+      &-triangle--one,
+      &-triangle--two {
         display: none;
       }
     }
@@ -127,7 +130,7 @@
     }
   }
 
-  @include _mobile767 {
+  @include mobile767 {
     padding: 16px 0;
 
     &__content-container {
@@ -135,11 +138,12 @@
       align-items: center;
     }
 
-    &__title{
+    &__title {
       font-size: 18px;
       line-height: 26px;
 
-      &:last-of-type{
+      &:last-of-type {
+        margin-bottom: 22px;
         font-size: 24px;
       }
     }
@@ -147,6 +151,7 @@
     &__text {
       max-width: 100%;
       margin-bottom: 19px;
+      font-size: 14px;
     }
 
     &__img {

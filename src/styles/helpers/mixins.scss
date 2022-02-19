@@ -1,5 +1,4 @@
 @mixin general-footer-header {
-
   &__inner {
     display: flex;
   }
@@ -51,30 +50,53 @@
     }
 
     &--time::before {
-      background-image: url(/assets/images/svg/time.svg);
+      background-image: url('../images/svg/time.svg');
     }
 
     &--location::before {
-      background-image: url(/assets/images/svg/location.svg);
+      background-image: url('../images/svg/location.svg');
     }
   }
 }
 
 @mixin modal {
   position: fixed;
-  top: 0;
+  top: 128px;
   left: 0;
-  z-index: 10;
+  z-index: 20;
   display: none;
   overflow-y: auto;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 128px);
   margin: 0;
-  opacity: 0;
-  transition: opacity 0.2s ease-out;
   background-color: $white;
 
-  &.visible {
-    opacity: 1;
+  > * {
+    position: relative;
+    transition: left 0.4s ease-out;
+    left: -110%;
   }
+
+  &.visible > * {
+    left: 0;
+  }
+
+  @include tablet1248 {
+    top: 112px;
+    height: calc(100vh - 181px);
+    box-shadow: none;
+  }
+
+  @include mobile767 {
+    top: 80px;
+    height: calc(100vh - 149px);
+  }
+}
+
+@mixin arrow {
+  width: 12px;
+  height: 12px;
+  mask-image: url('../images/svg/select-arrow.svg');
+  mask-size: cover;
+  border: none;
 }

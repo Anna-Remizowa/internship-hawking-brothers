@@ -1,0 +1,136 @@
+.logo {
+  .not-click {
+    pointer-events: none;
+  }
+
+  &__img {
+    height: 97px;
+    width: 100px;
+  }
+
+  @include tablet1248 {
+    &__img {
+      position: relative;
+      top: -8px;
+      height: 64px;
+      width: 64px;
+    }
+  }
+
+  @include mobile767 {
+    &__img {
+      height: 47px;
+      width: 48px;
+    }
+  }
+}
+
+.img {
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &-absolute {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__blob1,
+  &__blob2,
+  &__blob3,
+  &__blob4,
+  &__blob8,
+  &__blob9,
+  &__blob10,
+  &__blob11,
+  &__border {
+    background-position: center;
+  }
+
+  &__blob1 {
+    background-image: url('../images/svg/blob-1.svg');
+  }
+
+  &__blob2 {
+    background-image: url('../images/svg/blob-2.svg');
+  }
+
+  &__blob3 {
+    background-image: url('../images/svg/blob-3.svg');
+  }
+
+  &__blob4 {
+    background-image: url('../images/svg/blob-4.svg');
+  }
+
+  &__blob5 {
+    background-image: url('../images/svg/blob-5.svg');
+  }
+
+  &__blob6 {
+    background-image: url('../images/svg/blob-6.svg');
+  }
+
+  &__blob7 {
+    background-image: url('../images/svg/blob-7.svg');
+  }
+
+  &__blob8 {
+    background-image: url('../images/svg/blob-8.svg');
+  }
+
+  &__blob9 {
+    background-image: url('../images/svg/blob-9.svg');
+  }
+
+  &__blob10 {
+    background-image: url('../images/svg/blob-10.svg');
+  }
+
+  &__blob11 {
+    background-image: url('../images/svg/blob-11.svg');
+  }
+
+  &__dots,
+  &__triangle,
+  &__triangle-2 {
+    background-position: left;
+  }
+
+  &__dots {
+    background-image: url('../images/svg/dots.svg');
+    width: 4%;
+    height: 21%;
+  }
+
+  &__triangle {
+    background-image: url('../images/svg/triangle.svg');
+    width: 8%;
+    height: 5%;
+  }
+
+  &__triangle-2 {
+    background-image: url('../images/svg/triangle-2.svg');
+    width: 27%;
+    height: 27%;
+  }
+
+  &__border {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 179px;
+    height: 142px;
+    background-image: url('../images/svg/border.svg');
+
+    @include tablet1050 {
+      height: 139px;
+    }
+
+    @include mobile767 {
+      min-width: 121px;
+      height: 95px;
+    }
+  }
+}

@@ -7,7 +7,8 @@
     align-items: center;
   }
 
-  &__title, &__small-title {
+  &__title,
+  &__small-title {
     line-height: 40px;
     text-align: center;
     color: $black-base;
@@ -43,8 +44,8 @@
     max-width: 594px;
     width: 100%;
     height: 1px;
-    margin: 35px 0 31px 0;
-    background: #E5E5E5;
+    margin: 35px 0 31px;
+    background-color: $light-gray;
   }
 
   &__questions {
@@ -70,7 +71,7 @@
     }
   }
 
-  @include _tablet1248 {
+  @include tablet1248 {
     padding: 26px 0;
 
     &__title {
@@ -88,7 +89,7 @@
     }
 
     &__line {
-      margin: 33px 0 26px 0;
+      margin: 33px 0 26px;
     }
 
     &__questions {
@@ -106,14 +107,15 @@
     }
   }
 
-  @include _mobile767 {
-
+  @include mobile767 {
     &__title {
+      margin-bottom: 0;
       font-size: 22px;
     }
 
     &__small-title {
       font-size: 14px;
+      line-height: 27px;
     }
 
     &__header {
@@ -121,11 +123,16 @@
     }
 
     &__line {
-      margin: 25px 0 18px 0;
+      margin: 25px 0 18px;
     }
 
     &__questions {
       flex-direction: column;
+      margin-bottom: 22px;
+
+      &-text {
+        margin-left: -6px;
+      }
     }
   }
 }
